@@ -2,5 +2,5 @@ requirements_file: requirements.txt
 
 sphinx:
   builder: html
-  configuration: docs/source/conf.py
+  configuration: source/docs/conf.py
   fail_on_warning: false

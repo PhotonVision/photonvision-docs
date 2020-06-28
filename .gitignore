@@ -1,8 +1,7 @@
-node_modules
-yarn.lock
 build/*
 .DS_Store
 .vscode/*
 source/_build
+source/_build
 docs/build
-docs/source/_build
+source/docs/_build

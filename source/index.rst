@@ -1,20 +1,24 @@
-.. PhotonVision documentation master file, created by
-   sphinx-quickstart on Sat Jun 27 14:16:03 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+PhotonVision
+============
 
-Welcome to PhotonVision's documentation!
-========================================
+PhotonVision is fork of [Chameleon Vision](https://github.com/Chameleon-Vision/chameleon-vision/), a free open-source software for FRC teams to use for vision processing on their robots. 
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+Contact Us
+----------
 
+To report a bug or submit a feature request in PhotonVision, please `submit an issue on the PhotonVision GitHub <https://github.com/PhotonVision/photonvision>`_ or `contact the developers on Discord <https://discord.gg/KS76FrX>`_. 
 
+If you find a problem in this documentation, please submit an issue on the `PhotonVision Documentation GitHub <https://github.com/PhotonVision/photonvision-docs>`_.
 
-Indices and tables
-==================
+Source Code
+-----------
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+The source code for all PhotonVision projects is available through our `GitHub organization <https://github.com/PhotonVision>`_.
+
+   - `PhotonVision <https://github.com/PhotonVision/photonvision>`_
+   - `PhotonVision ReadTheDocs <https://photonvision-docs.readthedocs.io/en/latest/>`_
+
+License
+-------
+
+Usage of PhotonVision must fall under all terms of the `GNU GPL v3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`_
