@@ -7,22 +7,6 @@
 	padding: 15px;
 }
 
-.color-strip {
-	height: 10px;
-	margin :0;
-	padding: 0;
-	position: relative;
-	width: 100%;
-	z-index: 999;
-}
-
-.color-strip div {
-	display: block;
-	float: left;
-	height: 100%;
-	width: 25%;
-}
-
 .rst-versions {
 	width: 320px !important;
 }
@@ -70,6 +54,18 @@
 
 .wy-nav-side,.wy-side-nav-search,.wy-nav-top {
 	background: #006492;
+}
+
+.icon.icon-home {
+	color: #39A4D5 !important;
+}
+
+.wy-menu-vertical li.current>a span.toctree-expand {
+	color: #006492 !important;
+}
+
+.wy-menu-vertical li span.toctree-expand {
+	color: #FFD843 !important;
 }
 
 /* Hide color bar on mobile */
