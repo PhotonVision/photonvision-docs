@@ -1,4 +1,4 @@
-# Chameleon-Vision ReadTheDocs
+# PhotonVision ReadTheDocs
 
 [![Documentation Status](https://readthedocs.org/projects/chameleon-vision/badge/?version=latest)](https://chameleon-vision.readthedocs.io/en/latest/?badge=latest)
 
