@@ -7,16 +7,6 @@
 	padding: 15px;
 }
 
-.color-strip {
-	height: 10px;
-	margin :0;
-	padding: 0;
-	position: relative;
-	width: 100%;
-	z-index: 999;
-	background: #FFD843;
-}
-
 .rst-versions {
 	width: 320px !important;
 }
@@ -32,8 +22,15 @@
 
 .wy-nav-content {
 	background: #fcfcfc;
+	border-left: 10px solid #FFD843;
 }
 
+@media screen and (max-width: 768px) {
+	.wy-nav-content {
+		border-left: none;
+		border-top: 10px solid #FFD843;
+	}
+}
 
 /* Tweaks to make sidebar scroll look pretty */
 .wy-side-scroll {
