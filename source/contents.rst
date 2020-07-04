@@ -2,8 +2,11 @@ Contents
 ========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Hello
 
-..    docs/getting-started/getting-started-frc-control-system/index
-..    docs/getting-started/running-a-benchtop/index
+.. toctree::
+   :maxdepth: 1
+   :caption: For Developers
+   
+   docs/developers/index
