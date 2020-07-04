@@ -50,7 +50,7 @@ In the photonvision-server directory (${PROJECT_DIR}/photon-server):
 Build and Run the Source
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the photonvision-server directory (${PROJECT_DIR}/photon-server):
+To compile and run the project, issue the following command in the photonvision-server directory (${PROJECT_DIR}/photon-server):
 
 .. code-block:: bash
 
