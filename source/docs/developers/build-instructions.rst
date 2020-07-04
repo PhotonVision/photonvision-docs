@@ -1,7 +1,7 @@
 Build Instructions
 ==================
 
-This section contains the build instructions from the source code available at `our Github page <https://github.com/PhotonVision/photonvision>`_.
+This section contains the build instructions from the source code available at `our GitHub page <https://github.com/PhotonVision/photonvision>`_.
 
 Development Setup
 -----------------
