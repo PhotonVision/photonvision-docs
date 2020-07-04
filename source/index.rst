@@ -3,6 +3,16 @@ PhotonVision
 
 PhotonVision is fork of [Chameleon Vision](https://github.com/Chameleon-Vision/chameleon-vision/), a free open-source software for FRC teams to use for vision processing on their robots. 
 
+Contents
+--------
+
+.. toctree::
+   :maxdepth: 2
+   :caption: For Developers
+   
+   docs/developers/index
+
+
 Contact Us
 ----------
 
