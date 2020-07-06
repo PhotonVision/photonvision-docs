@@ -1,0 +1,37 @@
+{# Import the theme's layout. #}
+{% extends '!layout.html' %}
+
+{%- block extrafooter %}
+{# Add custom things to the head HTML tag #}
+
+<div class="dark-mode-toggle-container">
+    <strong class="light-label">L</strong>
+
+    <label class="dark-mode-toggle">
+        <input type="checkbox" id="switch" name="theme"/><label class="toggle" for="switch">Toggle</label>
+    </label>
+
+    <strong class="dark-label">D</strong>
+</div>
+
+<script>
+    var checkbox = document.querySelector('input[name=theme]');
+
+    checkbox.addEventListener('change', function() {
+        if(this.checked) {
+            document.body.setAttribute('data-theme', 'dark')
+        } else {
+            document.body.setAttribute('data-theme', 'light')
+        }
+    })
+</script>
+
+{# Call the parent block #}
+{{ super() }}
+{%- endblock %}
+
+
+{%- block body_tag %}
+  <body dir=ltr
+         data-md-color-primary={{ theme_color_primary }} data-md-color-accent={{ theme_color_accent }} data-theme="light">
+{%- endblock %}
