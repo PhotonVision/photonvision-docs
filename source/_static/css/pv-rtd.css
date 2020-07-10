@@ -7,44 +7,12 @@
 	padding: 15px;
 }
 
-.color-strip {
-	height: 10px;
-	margin :0;
-	padding: 0;
-	position: relative;
-	width: 100%;
-	z-index: 999;
-}
-
-.color-strip .fblue {
-	background: #009cd7;
-}
-
-.color-strip .fgreen {
-	background: #00a651;
-}
-
-.color-strip .forange {
-	background: #f57e25;
-}
-
-.color-strip .fred {
-	background: #ed1c24;
-}
-
-.color-strip div {
-	display: block;
-	float: left;
-	height: 100%;
-	width: 25%;
-}
-
 .rst-versions {
 	width: 320px !important;
 }
 
 .header-bar {
-	background: #003974;
+	background: #006492;
 	min-height: 60px;
 }
 
@@ -54,6 +22,14 @@
 
 .wy-nav-content {
 	background: #fcfcfc;
+	border-left: 10px solid #FFD843;
+}
+
+@media screen and (max-width: 768px) {
+	.wy-nav-content {
+		border-left: none;
+		border-top: 10px solid #FFD843;
+	}
 }
 
 /* Tweaks to make sidebar scroll look pretty */
@@ -76,11 +52,27 @@
 }
 
 .wy-nav-content-wrap{
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#003974',endColorstr='#003974',GradientType=1);background:#003974;background:-moz-linear-gradient(left,#003974,#6cc2c9,#003974);background:-webkit-gradient(linear,left top,right top,color-stop(0%,#003974),color-stop(50%,#6cc2c9),color-stop(100%,#003974));background:-webkit-linear-gradient(left,#003974,#6cc2c9,#003974);background:-o-linear-gradient(left,#003974,#6cc2c9,#003974);background:-ms-linear-gradient(left,#003974,#6cc2c9,#003974);background:linear-gradient(to right,#003974,#6cc2c9,#003974)
+	background: #006492;
+}
+
+.wy-side-nav-search{
+	background: #006492;
 }
 
 .wy-nav-side,.wy-side-nav-search,.wy-nav-top {
-	background: #003974;
+	background: #006492;
+}
+
+.icon.icon-home {
+	color: #39A4D5 !important;
+}
+
+.wy-menu-vertical li.current>a span.toctree-expand {
+	color: #006492 !important;
+}
+
+.wy-menu-vertical li span.toctree-expand {
+	color: #FFD843 !important;
 }
 
 /* Hide color bar on mobile */
@@ -96,4 +88,54 @@
 	.wy-nav-side {
 		width: 300px;
 	}
+}
+
+.rst-content .toctree-wrapper>p.caption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend {
+	margin-top: 0;
+	font-weight: 700;
+	font-family: Roboto Slab, ff-tisa-web-pro, Georgia, Arial, sans-serif
+}
+
+p {
+	line-height: 24px;
+	font-size: 16px;
+	margin: 0 0 6px
+}
+
+h1 {
+	font-size: 175%
+}
+
+.rst-content .toctree-wrapper>p.caption,
+h2 {
+	font-size: 150%
+}
+
+h3 {
+	font-size: 125%
+}
+
+h4 {
+	font-size: 115%
+}
+
+h5 {
+	font-size: 110%
+}
+
+h6 {
+	font-size: 100%
+}
+
+.rst-content .section ol li>*,
+.rst-content .section ul li>* {
+	margin-top: 0px;
+	margin-bottom: 12px
 }

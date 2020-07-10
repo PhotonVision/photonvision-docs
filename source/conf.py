@@ -21,7 +21,6 @@ project = 'PhotonVision'
 copyright = '2020, PhotonVision'
 author = 'Banks Troutman, Matt Morley'
 
-
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -29,7 +28,8 @@ author = 'Banks Troutman, Matt Morley'
 # ones.
 extensions = [
 	"sphinx_rtd_theme",
-    'sphinx.ext.autosectionlabel',
+	'sphinx.ext.autosectionlabel',
+	'sphinx_tabs.tabs'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -40,6 +40,9 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+# Enable hover content on glossary term
+hoverxref_roles = ['term']
+
 # Autosection labels prefix document path and filename
 autosectionlabel_prefix_document = True
 
@@ -48,7 +51,7 @@ autosectionlabel_prefix_document = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-#html_theme = 'alabaster'
+# html_theme = 'alabaster'
 html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -56,10 +59,22 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_logo = 'assets/RoundLogo.png'
+# html_context  = { 'css_files': [ 'theme_overrides.css' ] }
+
+html_logo = 'assets/RectLogo.png'
 html_favicon = 'assets/RoundLogo.png'
 html_theme_options = {
-    'logo_only': True,
-    'display_version': False,
-    'style_nav_header_background': '#2c2c2c'
+	'logo_only': True,
+	'collapse_navigation': True,
+	'sticky_navigation': False,
+	'titles_only': True
 }
+
+
+# Applying the css stylesheet.
+def setup(app):
+	app.add_css_file('css/pv-rtd.css')
+
+suppress_warnings = ['epub.unknown_project_files']
+
+sphinx_tabs_valid_builders = ['epub', 'linkcheck']
