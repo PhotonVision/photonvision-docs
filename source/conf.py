@@ -29,8 +29,15 @@ author = 'Banks Troutman, Matt Morley'
 extensions = [
 	"sphinx_rtd_theme",
 	'sphinx.ext.autosectionlabel',
-	'sphinx_tabs.tabs'
+	'sphinx_tabs.tabs',
+	"sphinxext.opengraph"
 ]
+
+# Configure OpenGraph support
+
+ogp_site_url = "https://docs.photonvision.org/en/latest/"
+ogp_site_name = "PhotonVision Documentation"
+ogp_image = "https://raw.githubusercontent.com/PhotonVision/photonvision-docs/master/source/assets/RectLogo.png"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
