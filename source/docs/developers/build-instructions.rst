@@ -49,7 +49,7 @@ In the photon-server directory:
 
       ``./gradlew buildAndCopyUI``
 
-   .. group-tab:: MacOS
+   .. group-tab:: macOS
 
       ``./gradlew buildAndCopyUI``
 
@@ -68,7 +68,7 @@ To compile and run the project, issue the following command in the photon-server
 
       ``./gradlew run``
 
-   .. group-tab:: MacOS
+   .. group-tab:: macOS
 
       ``./gradlew run``
 
@@ -84,7 +84,7 @@ Running the following command under the photon-server directory will build the j
 
       ``./gradlew shadowJar``
 
-   .. group-tab:: MacOS
+   .. group-tab:: macOS
 
       ``./gradlew shadowJar``
 
