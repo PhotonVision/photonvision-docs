@@ -10,7 +10,7 @@ Prerequisites
 ~~~~~~~~~~~~~
 
 | **Java Development Kit:** This project requires Java Development Kit (JDK) 11 to be compiled. This is the same Java version that comes with WPILib. If you don't have this JDK with WPILib, you can follow the instructions to install JDK 11 for your platform `here <https://bell-sw.com/pages/liberica_install_guide-11.0.7//>`_.
-| **Node JS:** The UI is written in Node JS. To compile the UI, Node 10 or newer is required. To install Node JS follow the instructions for your platform `the official Node JS website <https://nodejs.org/en/download/>`_.
+| **Node JS:** The UI is written in Node JS. To compile the UI, Node 10 or newer is required. To install Node JS follow the instructions for your platform `on the official Node JS website <https://nodejs.org/en/download/>`_.
 
 Compiling Instructions
 ----------------------
@@ -32,7 +32,7 @@ or alternatively download to source code from github and extract the zip:
 Install Necessary Node JS Dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the photonvision-client directory (${PROJECT_DIR}/photon-client):
+In the photon-client directory:
 
 .. code-block:: bash
 
@@ -41,23 +41,53 @@ In the photonvision-client directory (${PROJECT_DIR}/photon-client):
 Build and Copy UI to Java Source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the photonvision-server directory (${PROJECT_DIR}/photon-server):
+In the photon-server directory:
 
-.. code-block:: bash
+.. tabs::
 
-      gradlew buildAndCopyUI
+   .. group-tab:: Linux
+
+      ``./gradlew buildAndCopyUI``
+
+   .. group-tab:: macOS
+
+      ``./gradlew buildAndCopyUI``
+
+   .. group-tab:: Windows (cmd)
+
+      ``gradlew buildAndCopyUI``
 
 Build and Run the Source
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To compile and run the project, issue the following command in the photonvision-server directory (${PROJECT_DIR}/photon-server):
+To compile and run the project, issue the following command in the photon-server directory:
 
-.. code-block:: bash
+.. tabs::
 
-      gradlew run
+   .. group-tab:: Linux
 
-Running the following command under the photonvision-server directory (${PROJECT_DIR}/photon-server) will build the jar under ${PROJECT_DIR}/photon-server/build/libs:
+      ``./gradlew run``
 
-.. code-block:: bash
-   
-      gradlew shadowJar 
+   .. group-tab:: macOS
+
+      ``./gradlew run``
+
+   .. group-tab:: Windows (cmd)
+
+      ``gradlew run``
+
+Running the following command under the photon-server directory will build the jar under photon-server/build/libs:
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      ``./gradlew shadowJar``
+
+   .. group-tab:: macOS
+
+      ``./gradlew shadowJar``
+
+   .. group-tab:: Windows (cmd)
+
+      ``gradlew shadowJar``

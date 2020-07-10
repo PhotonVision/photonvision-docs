@@ -8,7 +8,6 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: For Developers
    
    docs/developers/index
 

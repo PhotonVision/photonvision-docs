@@ -1,5 +1,7 @@
+For Developers
+==============
+
 .. toctree::
-   :maxdepth: 1
-   :caption: For Developers
+   :maxdepth: 2
 
    build-instructions
