@@ -10,6 +10,7 @@ Contents
    :maxdepth: 2
    
    docs/developers/index
+   docs/photonlib/index
 
 
 Contact Us
