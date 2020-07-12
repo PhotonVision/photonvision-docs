@@ -9,7 +9,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   docs/photonlib/index
+   docs/programming/photonlib/index
    docs/contributing/index
 
 
