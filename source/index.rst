@@ -1,21 +1,22 @@
 PhotonVision
 ============
 
-PhotonVision is fork of `Chameleon Vision <https://github.com/Chameleon-Vision/chameleon-vision/>`_, a free open-source software for FRC teams to use for vision processing on their robots. 
+PhotonVision is fork of `Chameleon Vision <https://github.com/Chameleon-Vision/chameleon-vision/>`_, a free open-source software for FRC teams to use for vision processing on their robots.
 
 Contents
 --------
 
 .. toctree::
    :maxdepth: 2
-   
-   docs/developers/index
+
+   docs/photonlib/index
+   docs/contributing/index
 
 
 Contact Us
 ----------
 
-To report a bug or submit a feature request in PhotonVision, please `submit an issue on the PhotonVision GitHub <https://github.com/PhotonVision/photonvision>`_ or `contact the developers on Discord <https://discord.gg/KS76FrX>`_. 
+To report a bug or submit a feature request in PhotonVision, please `submit an issue on the PhotonVision GitHub <https://github.com/PhotonVision/photonvision>`_ or `contact the developers on Discord <https://discord.gg/KS76FrX>`_.
 
 If you find a problem in this documentation, please submit an issue on the `PhotonVision Documentation GitHub <https://github.com/PhotonVision/photonvision-docs>`_.
 

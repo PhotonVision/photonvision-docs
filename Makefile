@@ -5,11 +5,16 @@
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SOURCEDIR     = source
+LINTER        = doc8
+LINTEROPTS    = --ignore D001 # D001 is linelength
 BUILDDIR      = build
 
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+lint:
+	@$(LINTER) $(LINTEROPTS) $(SOURCEDIR)
 
 .PHONY: help Makefile
 
