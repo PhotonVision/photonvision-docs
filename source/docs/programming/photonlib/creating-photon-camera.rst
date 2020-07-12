@@ -63,7 +63,7 @@ Getting Yaw, Pitch, and Area
 
 Getting the Pipeline Result (Advanced)
 --------------------------------------
-One can also use the ``getLastResult()``/``GetLastResult()`` (Java and C++ respectively) to obtain the latest :ref:`pipeline result <docs/photonlib/simple-pipeline-result:Simple Pipeline Result>`. An advantage of using this method is that it returns a container with information that is guaranteed to be from the same timestamp. This is important if you are using this data for latency compensation or in an estimator.
+One can also use the ``getLastResult()``/``GetLastResult()`` (Java and C++ respectively) to obtain the latest :ref:`pipeline result <docs/programming/photonlib/simple-pipeline-result:Simple Pipeline Result>`. An advantage of using this method is that it returns a container with information that is guaranteed to be from the same timestamp. This is important if you are using this data for latency compensation or in an estimator.
 
 .. tabs::
    .. code-tab:: java

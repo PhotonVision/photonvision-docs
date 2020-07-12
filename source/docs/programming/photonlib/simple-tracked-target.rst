@@ -3,7 +3,7 @@ Simple Tracked Target
 
 What is a Simple Tracked Target?
 --------------------------------
-A simple tracked target contains information about each target from a :ref:`pipeline result <docs/photonlib/simple-pipeline-result:Simple Pipeline Result>`. This information includes yaw, pitch, area, and robot relative pose.
+A simple tracked target contains information about each target from a :ref:`pipeline result <docs/programming/photonlib/simple-pipeline-result:Simple Pipeline Result>`. This information includes yaw, pitch, area, and robot relative pose.
 
 Retrieving Data from a Simple Tracked Target
 --------------------------------------------
