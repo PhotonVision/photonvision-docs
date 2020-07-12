@@ -33,3 +33,14 @@ License
 -------
 
 Usage of PhotonVision must fall under all terms of the `GNU GPL v3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`_
+
+.. toctree::
+    :caption: For Developers
+    :maxdepth: 1
+
+    docs/developers/build-instructions
+
+
+Index
+~~~~~
+:ref:`genindex`

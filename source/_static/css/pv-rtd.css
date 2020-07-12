@@ -1,21 +1,35 @@
 body[data-theme="light"] {
-	--text-bg-color: white;
-	--text-color: rgba(0,0,0,.87);
+	--text-bg-color: #FFFFFF;
+	--text-color: rgba(0, 0, 0, 0.87);
+	--typeset-color: rgba(0,0,0, 0.54);
 	--link-accent: #006492;
 	--link-accent-1: #FFD843;
 }
 
 body[data-theme="dark"] {
-	--text-bg-color: black;
+	--text-bg-color: #242c37;
 	--text-color: rgba(255, 255, 255, 0.87);
+	--typeset-color: rgba(255, 255, 255, 0.54);
 	--link-accent: #FFD843;
 	--link-accent-1: #006492;
 }
 
+.md-nav__link[data-md-state=blur] {
+	color: var(--typeset-color);
+}
+
 .md-main__inner {
+	transition: 0.3s;
 	background-color: var(--text-bg-color);
 	color: var(--text-color);
-	transition: 0.3s;
+}
+
+.md-typeset, .md-typeset h1 {
+	color: var(--text-color);
+}
+
+.md-grid {
+	max-width: inherit;
 }
 
 a:link {
@@ -97,29 +111,32 @@ input:checked + .toggle:after {
 	display: flex;
 }
 
-.md-header,.md-tabs {
+.md-header, .md-tabs, .md-nav__source {
 	background-color: #006492 !important;
 }
 
-.md-nav__title {
-	background-color: #006492 !important;
+.md-nav, .md-nav--primary {
+	background-color: var(--text-bg-color);
 }
 
-.md-nav__source {
-	background-color: #006492 !important;
-}
+/* 1220 */
 
 /* Hide color bar on mobile */
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 1220px) {
+	.md-nav__source {
+		background-color: #004a6c !important;
+	}
+
 	.md-nav__title {
 		background-color: #006492 !important;
 	}
-} */
+}
 
 @media screen and (max-width: 435px) {
 	.dark-mode-toggle-container {
 		position: relative;
 	}
+
 	.md-footer-meta__inner {
 		display: block;
 	}
