@@ -3,7 +3,7 @@ Creating a PhotonCamera
 
 What is a PhotonCamera?
 -----------------------
-``PhotonCamera`` is a class in PhotonLib that allows a user to interact with one camera that is connected to hardware that is running Photon Vision. Through this class, users can retrieve yaw, pitch, roll, robot-relative pose, latency, and a wealth of other information. 
+``PhotonCamera`` is a class in PhotonLib that allows a user to interact with one camera that is connected to hardware that is running Photon Vision. Through this class, users can retrieve yaw, pitch, roll, robot-relative pose, latency, and a wealth of other information.
 
 Constructing a PhotonCamera
 ---------------------------
@@ -12,8 +12,8 @@ The ``PhotonCamera`` class has two constructors: one that takes a ``NetworkTable
 .. note:: To determine the name of the network table that PhotonVision is broadcasting information over, please see the Settings tab in the PhotonVision UI. The default network table name is ``photonvision``.
 
 .. tabs::
-   .. code-tab:: java      
-      
+   .. code-tab:: java
+
       // Creates a new PhotonCamera.
       PhotonCamera camera = new PhotonCamera("photonvision");
 
@@ -51,7 +51,7 @@ Getting Yaw, Pitch, and Area
       double yaw = camera.getFirstTargetYaw();
       double pitch = camera.getFirstTargetPitch();
       double area = camera.getFirstTargetArea();
- 
+
    .. code-tab:: c++
 
       // Get the yaw, pitch, and area from the camera.

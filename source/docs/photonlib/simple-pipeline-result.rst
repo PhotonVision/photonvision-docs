@@ -17,7 +17,7 @@ Each pipeline result has a ``hasTargets()``/``HasTargets()`` (Java and C++ respe
       boolean hasTargets = result.hasTargets();
 
    .. code-tab:: c++
-      
+
       // Check if the latest result has any targets.
       bool hasTargets = result.HasTargets();
 

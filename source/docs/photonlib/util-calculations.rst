@@ -6,7 +6,7 @@ Calculating Distance to Target
 ------------------------------
 If your camera is at a fixed height on your robot and the height of the target is fixed, you can calculate the distance to the target based on your camera's pitch and the :ref:`pitch to the target <docs/photonlib/creating-photon-camera:Getting Yaw, Pitch, and Area>`.
 
-.. tabs:: 
+.. tabs::
    .. code-tab:: java
 
       // Constants
@@ -19,7 +19,7 @@ If your camera is at a fixed height on your robot and the height of the target i
         kCameraHeight, kTargetHeight, kCameraPitch, Math.toRadians(camera.getFirstTargetPitch());
 
    .. code-tab:: c++
-    
+
       #include <photonlib/lib/PhotonUtils.h>
       #include <units/length.h>
       #include <units/angle.h>
