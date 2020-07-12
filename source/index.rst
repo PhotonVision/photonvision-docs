@@ -9,8 +9,8 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   docs/developers/index
    docs/photonlib/index
+   docs/contributing/index
 
 
 Contact Us

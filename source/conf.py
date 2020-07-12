@@ -30,7 +30,8 @@ extensions = [
 	"sphinx_rtd_theme",
 	'sphinx.ext.autosectionlabel',
 	'sphinx_tabs.tabs',
-	"sphinxext.opengraph"
+	"sphinxext.opengraph",
+	"sphinxcontrib.ghcontributors"
 ]
 
 # Configure OpenGraph support
