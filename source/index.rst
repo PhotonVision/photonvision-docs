@@ -26,7 +26,7 @@ Source Code
 The source code for all PhotonVision projects is available through our `GitHub organization <https://github.com/PhotonVision>`_.
 
    - `PhotonVision <https://github.com/PhotonVision/photonvision>`_
-   - `PhotonVision ReadTheDocs <https://photonvision-docs.readthedocs.io/en/latest/>`_
+   - `PhotonVision ReadTheDocs <https://github.com/PhotonVision/photonvision-docs/>`_
 
 License
 -------
