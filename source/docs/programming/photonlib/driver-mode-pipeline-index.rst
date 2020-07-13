@@ -17,7 +17,7 @@ You can use the ``setDriverMode()``/``SetDriverMode()`` (Java and C++ respective
       // Set driver mode to on.
       camera.SetDriverMode(true);
 
-.. todo:: Add link to description on Driver Mode once those docs are complete.
+.. Add link to description on Driver Mode once those docs are complete.
 
 Setting the Pipeline Index
 --------------------------
@@ -34,4 +34,4 @@ You can use the ``setPipelineIndex()``/``SetPipelineIndex()`` (Java and C++ resp
       // Change pipeline to 2
       camera.SetPipelineIndex(2);
 
-.. todo:: Add link to description of pipelines once those docs are complete.
+.. Add link to description of pipelines once those docs are complete.
