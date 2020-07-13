@@ -1,6 +1,6 @@
 Driver Mode and Pipeline Index
 ==============================
-After :ref`creating a ``PhotonCamera`` <docs/programming/photonlib/creating-photon-camera:Constructing a PhotonCamera>` one can toggle Driver Mode and change the Pipeline Index of the vision program from robot code.
+After :ref:`creating a PhotonCamera <docs/programming/photonlib/creating-photon-camera:Constructing a PhotonCamera>`, one can toggle Driver Mode and change the Pipeline Index of the vision program from robot code.
 
 Toggle Driver Mode
 ------------------
