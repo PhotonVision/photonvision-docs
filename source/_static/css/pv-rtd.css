@@ -1,16 +1,20 @@
-body[data-theme="light"] {
+html[data-theme="light"] {
 	--text-bg-color: #FFFFFF;
 	--text-color: rgba(0, 0, 0, 0.87);
 	--typeset-color: rgba(0,0,0, 0.54);
+	--code-bg-color: hsla(0, 0%, 90%, .5);
+	--code-color: #37474f;
 	--link-accent: #006492;
 	--link-accent-1: #FFD843;
 }
 
-body[data-theme="dark"] {
+html[data-theme="dark"] {
 	--text-bg-color: #242c37;
 	--text-color: rgba(255, 255, 255, 0.87);
 	--typeset-color: rgba(255, 255, 255, 0.54);
-	--link-accent: #FFD843;
+	--code-bg-color: hsla(0, 0%, 10%, .5);
+	--code-color: #7b9eb0;
+	--link-accent: #39A4D5;
 	--link-accent-1: #006492;
 }
 
@@ -18,8 +22,7 @@ body[data-theme="dark"] {
 	color: var(--typeset-color);
 }
 
-.md-main__inner {
-	transition: 0.3s;
+.md-main__inner, .md-typeset code, .md-search__scrollwrap, .md-search__input {
 	background-color: var(--text-bg-color);
 	color: var(--text-color);
 }
@@ -28,11 +31,19 @@ body[data-theme="dark"] {
 	color: var(--text-color);
 }
 
+.md-typeset pre {
+	margin: 0;
+}
+
 .md-grid {
 	max-width: inherit;
 }
 
-a:link {
+.md-nav__link--active {
+	color: var(--link-accent);
+}
+
+.md-typeset a {
 	color: var(--link-accent);
 }
 
@@ -99,12 +110,12 @@ input:checked + .toggle:after {
 
 .light-label {
 	padding-right: 10px;
-	color: var(--link-accent-1);
+	color: #FFD843;
 }
 
 .dark-label {
 	padding-left: 10px;
-	color: var(--link-accent);
+	color: #006492;
 }
 
 .md-footer-meta__inner {
@@ -115,11 +126,13 @@ input:checked + .toggle:after {
 	background-color: #006492 !important;
 }
 
-.md-nav, .md-nav--primary {
-	background-color: var(--text-bg-color);
+.md-nav, .md-nav__list, .md-nav--primary {
+	background-color: var(--text-bg-color) !important;
 }
 
-/* 1220 */
+.admonition.note {
+	width: fit-content;
+}
 
 /* Hide color bar on mobile */
 @media screen and (max-width: 1220px) {
@@ -127,8 +140,14 @@ input:checked + .toggle:after {
 		background-color: #004a6c !important;
 	}
 
-	.md-nav__title {
+	.md-nav__title--site {
 		background-color: #006492 !important;
+	}
+}
+
+@media only screen and (min-width: 88.25em) {
+	.md-sidebar--secondary {
+		margin-left: 100%;
 	}
 }
 
@@ -152,7 +171,6 @@ h6,
 legend {
 	margin-top: 0;
 	font-weight: 700;
-	font-family: Roboto Slab, ff-tisa-web-pro, Georgia, Arial, sans-serif
 }
 
 p {

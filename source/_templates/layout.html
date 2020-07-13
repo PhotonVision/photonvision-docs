@@ -1,6 +1,18 @@
 {# Import the theme's layout. #}
 {% extends '!layout.html' %}
 
+{%- block extrahead %}
+<script>
+    if(localStorage.getItem("colorTheme") === "dark") {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+</script>
+
+{# Call the parent block #}
+{{ super() }}
+{% endblock %}
+
 {%- block extrafooter %}
 {# Add custom things to the head HTML tag #}
 
@@ -17,18 +29,17 @@
 <script>
     var checkbox = document.querySelector('input[name=theme]');
 
-    if(localStorage.getItem("colorTheme") == "dark") {
-        document.body.setAttribute('data-theme', 'dark')
+    if(localStorage.getItem("colorTheme") === "dark") {
         checkbox.checked = true;
     }
 
     checkbox.addEventListener('change', function() {
         if(this.checked) {
-            document.body.setAttribute('data-theme', 'dark')
-            localStorage.setItem("colorTheme", "dark")
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem("colorTheme", "dark");
         } else {
-            document.body.setAttribute('data-theme', 'light')
-            localStorage.setItem("colorTheme", "light")
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem("colorTheme", "light");
         }
     })
 </script>
@@ -38,7 +49,7 @@
 {%- endblock %}
 
 
-{%- block body_tag %}
+<!-- {%- block body_tag %}
   <body dir=ltr
-         data-md-color-primary={{ theme_color_primary }} data-md-color-accent={{ theme_color_accent }} data-theme="light">
-{%- endblock %}
+         data-md-color-primary={{ theme_color_primary }} data-md-color-accent={{ theme_color_accent }} data-theme="">
+{%- endblock %} -->
