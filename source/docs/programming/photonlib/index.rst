@@ -6,6 +6,7 @@ PhotonLib: Robot Code Interface
 
    adding-vendordep
    creating-photon-camera
+   driver-mode-pipeline-index
    simple-pipeline-result
    simple-tracked-target
    util-calculations
