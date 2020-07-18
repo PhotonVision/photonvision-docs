@@ -59,7 +59,7 @@ Getting Yaw, Pitch, and Area
       double pitch = camera.GetFirstTargetPitch();
       double area = camera.GetBestTargetArea();
 
-.. note:: The units for yaw and pitch are degrees and use standard computer vision directionality. Therefore, a negative yaw means that the recognized target is to the left of the center of the screen and a negative pitch means that the recognized target is below the center of the screen.
+.. note:: The units for yaw and pitch are degrees and use standard computer vision directionality. Therefore, a negative yaw means that the recognized target is to the left of the center of the screen and a negative pitch means that the recognized target is below the center of the screen. Furthermore, area is scaled from 0-100, representing the percentage of the screen taken up by the bounding box.
 
 Getting the Pipeline Result (Advanced)
 --------------------------------------
