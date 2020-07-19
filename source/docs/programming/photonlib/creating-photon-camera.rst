@@ -13,14 +13,14 @@ The ``PhotonCamera`` class has two constructors: one that takes a ``NetworkTable
    .. code-tab:: java
 
       // Creates a new PhotonCamera.
-      PhotonCamera camera = new PhotonCamera("photonvision");
+      PhotonCamera camera = new PhotonCamera("MyCamera");
 
    .. code-tab:: c++
 
       #include <photonlib/lib/PhotonCamera.h>
 
       // Creates a new PhotonCamera.
-      photonlib::PhotonCamera camera{"photonvision"};
+      photonlib::PhotonCamera camera{"MyCamera"};
 
 
 Checking for Existence of Targets
