@@ -10,6 +10,7 @@ Contents
    :maxdepth: 2
 
    docs/programming/photonlib/index
+   docs/programming/nt-api/nt-api
    docs/contributing/index
 
 
