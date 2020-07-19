@@ -7,9 +7,7 @@ What is a PhotonCamera?
 
 Constructing a PhotonCamera
 ---------------------------
-The ``PhotonCamera`` class has two constructors: one that takes a ``NetworkTable`` and another that takes in the name of the network table that PhotonVision is broadcasting information over. For ease of use, it is recommended to use the latter.
-
-.. note:: To determine the name of the network table that PhotonVision is broadcasting information over, please see the Settings tab in the PhotonVision UI. The default network table name is ``photonvision``.
+The ``PhotonCamera`` class has two constructors: one that takes a ``NetworkTable`` and another that takes in the name of the network table that PhotonVision is broadcasting information over. For ease of use, it is recommended to use the latter. The name of the NetworkTable (for the string constructor) should be the same as the camera's nickname (from the PhotonVision UI).
 
 .. tabs::
    .. code-tab:: java
