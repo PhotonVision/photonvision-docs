@@ -5,8 +5,6 @@ More advanced users may want to create their own NetworkTables entries to retrie
 
 The tables below contain the the name of the key for each entry that PhotonVision sends over the network and a short description of the key. The entries should be extracted from a subtable with your camera's nickname (visible in the PhotonVision UI) under the main ``photonvision`` table.
 
-.. note:: The default NT table name is ``photonvision``.
-
 Getting Target Information
 --------------------------
 +-------------------+--------------+--------------------------------------------------------------------------+
