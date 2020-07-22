@@ -6,6 +6,7 @@ html[data-theme="light"] {
 	--code-bg-color: hsla(0, 0%, 90%, .5);
 	--bq-color: rgba(0,0,0,.26); /* Block Quote */
 	--code-color: #37474f;
+	--code-tab-bgcolor: #f8f8f8;
 	--link-accent: #006492;
 	--link-hover: #39A4D5;
 	--icon-accent: #006492;
@@ -19,6 +20,7 @@ html[data-theme="dark"] {
 	--code-bg-color: hsla(0, 0%, 10%, .5);
 	--bq-color: rgba(255,255,255,.26); /* Block Quote */
 	--code-color: #7b9eb0;
+	--code-tab-bgcolor: #1b2129;
 	--link-accent: #39A4D5;
 	--link-hover: #FFD843;
 	--icon-accent: #FFD843;
@@ -209,6 +211,22 @@ input:checked + .toggle:after {
 	color: var(--typeset-color);
 }
 
+/* Tabs */
+.ui.tabular.menu .item, .ui.attached:not(.message)+.ui.attached.segment:not(.top) {
+	background-color: var(--text-bg-color) !important;
+}
+
+.sphinx-tabs .sphinx-menu a.active.item, .ui.tabular.menu, .ui.attached:not(.message)+.ui.attached.segment:not(.top) {
+	border-color: rgba(0, 0, 0, 0.26) !important;
+}
+
+.highlight {
+	background-color: var(--code-tab-bgcolor) !important;
+}
+
+.md-typeset code, .md-typeset pre {
+	color: var(--text-color) !important;
+}
 
 /* Margin for the "Show Source" link */
 .md-nav__extra_link {
