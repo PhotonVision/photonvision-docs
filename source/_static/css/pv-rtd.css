@@ -34,6 +34,10 @@ html[data-theme="dark"] {
 	color: var(--text-color);
 }
 
+.md-container {
+	background-color: var(--text-bg-color);
+}
+
 .md-typeset code {
 	background-color: var(--inline-code-bg-color);
 	color: var(--code-color);
