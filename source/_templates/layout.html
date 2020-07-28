@@ -3,10 +3,17 @@
 
 {%- block extrahead %}
 <script>
-    if(localStorage.getItem("colorTheme") === "dark") {
+    if (localStorage.getItem("colorTheme") === "dark") {
         document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
+    } else if (localStorage.getItem("colorTheme") === "light") {
         document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+        var userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (userPrefersDark) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+       } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
     }
 
 </script>
@@ -31,21 +38,33 @@
 <script>
     var checkbox = document.querySelector('input[name=theme]');
 
-    if(localStorage.getItem("colorTheme") === "dark") {
+    if (localStorage.getItem("colorTheme") === "dark") {
         // Auto check the checkbox if the stored theme was "dark".
         checkbox.checked = true;
     }
     
-
     checkbox.addEventListener('change', function() {
-        if(this.checked) {
+        if (this.checked) {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem("colorTheme", "dark");
         } else {
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem("colorTheme", "light");
         }
-    })
+    });
+
+    window.matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', event => {
+        if (event.matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem("colorTheme", "dark");
+            checkbox.checked = true;
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem("colorTheme", "light");
+            checkbox.checked = false;
+        }
+    });
 </script>
 
 {# Call the parent block #}
