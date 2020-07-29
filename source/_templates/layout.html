@@ -38,8 +38,10 @@
 <script>
     var checkbox = document.querySelector('input[name=theme]');
 
-    if (localStorage.getItem("colorTheme") === "dark") {
-        // Auto check the checkbox if the stored theme was "dark".
+    var element = document.documentElement.getAttribute('data-theme');
+
+    if (element == 'dark') {
+        // Auto check the checkbox if the set theme is "dark".
         checkbox.checked = true;
     }
     

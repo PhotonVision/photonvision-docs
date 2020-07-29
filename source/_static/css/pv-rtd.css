@@ -89,8 +89,16 @@ a:hover {
 	color: var(--link-hover) !important;
 }
 
+/* Injected element styling */
+.ethical-fixedfooter {
+	width: -webkit-fill-available !important;
+}
 
-/* The dark mode toggle switch */
+.rst-versions.rst-badge {
+	display: done;
+}
+
+/* Dark mode toggle switch */
 .dark-mode-toggle-container {
 	position: absolute;
 	right: 0px;
@@ -160,6 +168,7 @@ input:checked + .toggle:after {
 
 .md-footer-meta__inner {
 	display: flex;
+	align-items: center;
 }
 
 
@@ -298,7 +307,7 @@ input:checked + .toggle:after {
 	}
 }
 
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 450px) {
 	.dark-mode-toggle-container {
 		position: relative;
 	}
