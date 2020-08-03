@@ -23,7 +23,7 @@ You can also create a systemd service that will automatically run on startup. To
     Description=Service that runs PhotonVision
 
     [Service]
-    WorkingDirectory=/opt/photonvision
+    WorkingDirectory=/path/to/photonvision
     ExecStart=/usr/bin/java -jar /path/to/photonvision/photonvision.jar
 
     [Install]
