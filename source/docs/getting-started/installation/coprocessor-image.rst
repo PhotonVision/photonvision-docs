@@ -6,7 +6,7 @@ Raspberry Pi Installation
 -------------------------
 Because we anticipate that most teams will use a Raspberry Pi as their co-processor, we have created a Pi image that users can flash onto their Raspberry Pi that contains the latest version of PhotonVision along with the setup necessary to automatically start PhotonVision on startup.
 
-Downloading he Pi Image
+Downloading the Pi Image
 ^^^^^^^^^^^^^^^^^^^^^^^
 Download the latest release of the PhotonVision Pi image from the `photon-pi-gen releases page <https://github.com/PhotonVision/photon-pi-gen/releases>`_ to the location of your choice. You do not need to extract the downloaded ZIP file.
 
