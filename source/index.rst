@@ -9,6 +9,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
+   docs/getting-started/index
    docs/programming/photonlib/index
    docs/programming/nt-api/nt-api
    docs/contributing/index
