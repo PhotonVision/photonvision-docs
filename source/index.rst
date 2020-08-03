@@ -7,12 +7,12 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    docs/getting-started/index
-   docs/programming/photonlib/index
-   docs/programming/nt-api/nt-api
-   docs/contributing/index
+   docs/hardware/index
+   docs/programming/index
+   docs/other/index
 
 
 Contact Us
