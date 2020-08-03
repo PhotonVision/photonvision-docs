@@ -6,13 +6,13 @@ Raspberry Pi Installation
 -------------------------
 Because we anticipate that most teams will use a Raspberry Pi as their co-processor, we have created a Pi image that users can flash onto their Raspberry Pi that contains the latest version of PhotonVision along with the setup necessary to automatically start PhotonVision on startup.
 
-Downloading and Extracting the Pi Image
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Download the latest release of the PhotonVision Pi image from the `photon-pi-gen releases page <https://github.com/PhotonVision/photon-pi-gen/releases>`_. This will download a ZIP file, which contains the ``.img`` image file. Extract the enclosed ``.img`` file to any location.
+Downloading he Pi Image
+^^^^^^^^^^^^^^^^^^^^^^^
+Download the latest release of the PhotonVision Pi image from the `photon-pi-gen releases page <https://github.com/PhotonVision/photon-pi-gen/releases>`_ to the location of your choice. You do not need to extract the downloaded ZIP file.
 
 Flashing the Pi Image
 ^^^^^^^^^^^^^^^^^^^^^
-It is recommended to use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash ``.img`` files onto a Raspberry Pi. Simply select the extracted ``.img`` file, select your microSD card (we recommend an SD card with a capacity of 8 GB or higher), and flash. For more detailed instructions on using Etcher, please see the `Etcher website <https://www.balena.io/etcher/>`_.
+It is recommended to use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto a Raspberry Pi. Simply select the downloaded ``.zip`` file, select your microSD card (we recommend an SD card with a capacity of 8 GB or higher), and flash. For more detailed instructions on using Etcher, please see the `Etcher website <https://www.balena.io/etcher/>`_.
 
 Final Steps
 ^^^^^^^^^^^
