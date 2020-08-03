@@ -1,8 +1,6 @@
 Advanced Command Line Usage
 ===========================
-This article will go over some advanced command line usage that will help you configure PhotonVision on a Linux coprocessor such as the Raspberry Pi. For ease of use, it is highly recommended to use the install script.
-
-.. todo: Add reference to install script documentation once that is done.
+This article will go over some advanced command line usage that will help you configure PhotonVision on a Linux coprocessor such as the Raspberry Pi. For ease of use, it is highly recommended to use the :ref:`Pi image or install script <docs/getting-started/installation/coprocessor-image:Installing PhotonVision>`.
 
 Running a JAR File
 ------------------
