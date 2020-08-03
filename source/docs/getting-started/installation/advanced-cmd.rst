@@ -6,7 +6,7 @@ This article will go over some advanced command line usage that will help you co
 
 Running a JAR File
 ------------------
-Assuming ``java`` has been installed, and the appropriate environment variables have been set upon installation (a package manager like ``apt`` should automatically set these), you can use ``java -jar`` to run a JAR file. If you downloaded the latest stable JAR of PhotonVision from the GitHub releases page, you can run the following to start the program:
+Assuming ``java`` has been installed, and the appropriate environment variables have been set upon installation (a package manager like ``apt`` should automatically set these), you can use ``java -jar`` to run a JAR file. If you downloaded the latest stable JAR of PhotonVision from the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_, you can run the following to start the program:
 
 .. code-block:: bash
 
