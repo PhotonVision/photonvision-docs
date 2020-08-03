@@ -40,38 +40,38 @@ Checking for Existence of Targets
 
 Getting Yaw, Pitch, and Area
 ----------------------------
-``PhotonCamera`` contains three convenience methods for retrieving the yaw, pitch, and area of the best target. These methods are ``getFirstTargetYaw()``/``GetFirstTargetYaw()``, ``getFirstTargetPitch()``/``GetFirstTargetPitch()``, and ``getBestTargetArea()``/``GetBestTargetArea()`` for Java and C++ respectively.
+``PhotonCamera`` contains three convenience methods for retrieving the yaw, pitch, and area of the best target. These methods are ``getBestTargetYaw()``/``GetBestTargetYaw()``, ``getBestTargetPitch()``/``GetBestTargetPitch()``, and ``getBestTargetArea()``/``GetBestTargetArea()`` for Java and C++ respectively.
 
 .. tabs::
    .. code-tab:: java
 
       // Get the yaw, pitch, and area from the camera.
-      double yaw = camera.getFirstTargetYaw();
-      double pitch = camera.getFirstTargetPitch();
-      double area = camera.getFirstTargetArea();
+      double yaw = camera.getBestTargetYaw();
+      double pitch = camera.getBestTargetPitch();
+      double area = camera.getBestTargetArea();
 
    .. code-tab:: c++
 
       // Get the yaw, pitch, and area from the camera.
-      double yaw = camera.GetFirstTargetYaw();
-      double pitch = camera.GetFirstTargetPitch();
+      double yaw = camera.GetBestTargetYaw();
+      double pitch = camera.GetBestTargetPitch();
       double area = camera.GetBestTargetArea();
 
 .. note:: The units for yaw and pitch are degrees and use standard computer vision directionality. Therefore, a negative yaw means that the recognized target is to the left of the center of the screen and a negative pitch means that the recognized target is below the center of the screen. Furthermore, area is scaled from 0-100, representing the percentage of the screen taken up by the bounding box.
 
 Getting the Pipeline Result (Advanced)
 --------------------------------------
-One can also use the ``getLastResult()``/``GetLastResult()`` (Java and C++ respectively) to obtain the latest :ref:`pipeline result <docs/programming/photonlib/simple-pipeline-result:Simple Pipeline Result>`. An advantage of using this method is that it returns a container with information that is guaranteed to be from the same timestamp. This is important if you are using this data for latency compensation or in an estimator.
+One can also use the ``getLatestResult()``/``GetLatestResult()`` (Java and C++ respectively) to obtain the latest :ref:`pipeline result <docs/programming/photonlib/simple-pipeline-result:Photon Pipeline Result>`. An advantage of using this method is that it returns a container with information that is guaranteed to be from the same timestamp. This is important if you are using this data for latency compensation or in an estimator.
 
 .. tabs::
    .. code-tab:: java
 
       // Get the latest pipeline result.
-      SimplePipelineResult result = camera.getLastResult();
+      PhotonPipelineResult result = camera.getLatestResult();
 
    .. code-tab:: c++
 
       // Get the latest pipeline result.
-      photonlib::SimplePipelineResult result = camera.GetLastResult();
+      photonlib::PhotonPipelineResult result = camera.GetLatestResult();
 
 .. note:: Unlike other vision software solutions, using the latest result guarantees that all information is from the same timestamp. This is achieveable because the PhotonVision backend sends a byte-packed string of data which is then deserialized by PhotonLib to get target data. For more information, check out the `PhotonLib source code <https://github.com/PhotonVision/photonlib>`_.

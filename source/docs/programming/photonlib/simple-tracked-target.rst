@@ -1,11 +1,11 @@
-Simple Tracked Target
+Photon Tracked Target
 =====================
 
-What is a Simple Tracked Target?
+What is a Photon Tracked Target?
 --------------------------------
-A simple tracked target contains information about each target from a :ref:`pipeline result <docs/programming/photonlib/simple-pipeline-result:Simple Pipeline Result>`. This information includes yaw, pitch, area, and robot relative pose.
+A tracked target contains information about each target from a :ref:`pipeline result <docs/programming/photonlib/simple-pipeline-result:Photon Pipeline Result>`. This information includes yaw, pitch, area, and robot relative pose.
 
-Retrieving Data from a Simple Tracked Target
+Retrieving Data from a Photon Tracked Target
 --------------------------------------------
 You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getArea()``/``GetArea()``, ``getSkew()``/``GetSkew()``,and ``getRobotRelativePose()``/``GetRobotRelativePose()`` methods (Java and C++ respectively) within the tracked target class to retrieve the yaw, pitch, area, skew, and robot-relative pose of the target.
 

@@ -1,10 +1,10 @@
-Simple Pipeline Result
+Photon Pipeline Result
 ======================
 
-What is a Simple Pipeline Result?
+What is a Photon Pipeline Result?
 ---------------------------------
 
-A ``SimplePipelineResult`` is a container that contains all information about currently detected targets from a ``PhotonCamera``. You can :ref:`retrieve the latest pipeline result <docs/programming/photonlib/creating-photon-camera:Getting the Pipeline Result (Advanced)>` using the ``getLastResult()``/``GetLastResult()`` (Java and C++ respectively) on a ``PhotonCamera`` instance.
+A ``PhotonPipelineResult`` is a container that contains all information about currently detected targets from a ``PhotonCamera``. You can :ref:`retrieve the latest pipeline result <docs/programming/photonlib/creating-photon-camera:Getting the Pipeline Result (Advanced)>` using the ``getLatestResult()``/``GetLatestResult()`` (Java and C++ respectively) on a ``PhotonCamera`` instance.
 
 Checking for Existence of Targets
 ---------------------------------
@@ -24,18 +24,18 @@ Each pipeline result has a ``hasTargets()``/``HasTargets()`` (Java and C++ respe
 
 Getting a List of Targets
 -------------------------
-You can get a list of :ref:`simple tracked targets <docs/programming/photonlib/simple-tracked-target:Simple Tracked Target>` using the ``getTargets()``/``GetTargets()`` (Java and C++ respectively) method from a pipeline result.
+You can get a list of :ref:`tracked targets <docs/programming/photonlib/simple-tracked-target:Photon Tracked Target>` using the ``getTargets()``/``GetTargets()`` (Java and C++ respectively) method from a pipeline result.
 
 .. tabs::
    .. code-tab:: java
 
       // Get a list of currently tracked targets.
-      List<SimpleTrackedTarget> targets = result.getTargets();
+      List<PhotonTrackedTarget> targets = result.getTargets();
 
    .. code-tab:: c++
 
       // Get a list of currently tracked targets.
-      std::vector<photonlib::SimpleTrackedTarget> targets = result.GetTargets();
+      wpi::ArrayRef<photonlib::PhotonTrackedTarget> targets = result.GetTargets();
 
 Getting the Pipeline Latency
 ----------------------------
