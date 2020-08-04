@@ -5,5 +5,5 @@ Installation
    :maxdepth: 2
 
    coprocessor-image
-   advanced-cmd
    pc-installation
+   advanced-cmd
