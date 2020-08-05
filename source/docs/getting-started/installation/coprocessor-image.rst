@@ -31,4 +31,6 @@ We provide an `install script <https://git.io/JJrEP>`_ for other Debian-based sy
 
 .. note:: Your co-processor will require an Internet connection for this process to work correctly.
 
+.. note:: The install script has only been tested on Debian/Raspberry Pi OS Buster and Ubuntu Bionic. If any issues arise with your specific OS, please open an issue on our `issues page <https://github.com/PhotonVision/photonvision/issues>`_.
+
 For installation on any other co-processors, we recommend reading the :ref:`advanced command line documentation <docs/getting-started/installation/advanced-cmd:Advanced Command Line Usage>`.
