@@ -7,7 +7,7 @@ A tracked target contains information about each target from a :ref:`pipeline re
 
 Retrieving Data from a Photon Tracked Target
 --------------------------------------------
-You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getArea()``/``GetArea()``, ``getSkew()``/``GetSkew()``,and ``getRobotRelativePose()``/``GetRobotRelativePose()`` methods (Java and C++ respectively) within the tracked target class to retrieve the yaw, pitch, area, skew, and robot-relative pose of the target.
+You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getArea()``/``GetArea()``, ``getSkew()``/``GetSkew()``,and ``getCameraToTarget()``/``GetCameraToTarget()`` methods (Java and C++ respectively) within the tracked target class to retrieve the yaw, pitch, area, skew, and the camera-to-target transform.
 
 .. tabs::
    .. code-tab:: java
@@ -17,7 +17,7 @@ You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getA
       double pitch = target.getPitch();
       double area = target.getArea();
       double skew = target.getSkew();
-      Pose2d pose = target.getRobotRelativePose();
+      Transform2d pose = target.getCameraToTarget();
 
    .. code-tab:: c++
 
@@ -26,8 +26,8 @@ You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getA
       double pitch = target.GetPitch();
       double area = target.GetArea();
       double skew = target.GetSkew();
-      frc::Pose2d pose = target.GetRobotRelativePose();
+      frc::Transform2d pose = target.GetCameraToTarget();
 
 .. note:: The units for yaw, pitch, and skew are degrees and use standard computer vision directionality. Therefore, a negative yaw means that the recognized target is to the left of the center of the screen, a negative pitch means that the recognized target is below the center of the screen, and skew values are counter-clockwise-positive measured with respect to the horizontal (taking portrait/landscape mode into account). Furthermore, area is scaled from 0-100, representing the percentage of the screen taken up by the bounding box.
 
-.. note:: The robot relative pose returns the pose of the target in a coordinate frame where the robot is the origin and the heading of the robot is along the x-axis. For more information about the ``Pose2d`` class, see `here <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/geometry/pose.html#pose>`_.
+.. note:: The camera-to-target transform represents a 2d transformation (translation and rotation) to the target. For more information on how this works, please see the `2d transform documentation <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/geometry/transformations.html#transform2d-and-twist2d>`_.
