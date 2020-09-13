@@ -9,4 +9,5 @@ PhotonLib: Robot Code Interface
    driver-mode-pipeline-index
    simple-pipeline-result
    simple-tracked-target
+   controlling-led
    util-calculations
