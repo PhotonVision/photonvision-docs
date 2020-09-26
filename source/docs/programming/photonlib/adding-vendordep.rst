@@ -13,7 +13,7 @@ Click on the WPI icon on the top right of your VS Code window or hit Ctrl+Shift+
 
 Paste the following URL into the box that pops up:
 
-``https://maven.photonvision.org/artifactory/libs-release/photonlib.json``
+``https://maven.photonvision.org/repository/internal/org/photonvision/lib/PhotonLib-json/1.0/PhotonLib-json-1.0.json``
 
 .. note:: It is recommended to Build Robot Code at least once when connected to the Internet before heading to an area where Internet connectivity is limited (for example, a competition). This ensures that the relevant files are downloaded to your filesystem.
 
