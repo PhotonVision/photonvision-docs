@@ -13,7 +13,7 @@ Supported Coprocessors
          * All features will work
          * Everything will be kept up to date
      -   * Gloworm
-         * Rasberry Pi 3 and Rasberry Pi 4 with the official Pi image with the Pi Cam, PS3ye, or the Microsoft LifeCam3000
+         * Raspberry Pi 3 and Raspberry Pi 4 with the official Pi image with the Pi Cam, PS3ye, or the Microsoft LifeCam3000
    * - Compatible
      -   * No guarantee of support on Discord
          * Major features will work

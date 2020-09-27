@@ -12,7 +12,7 @@ Using PhotonVision allows the user to calibrate for their specific camera, which
 
 High FPS Processing
 ^^^^^^^^^^^^^^^^^^^
-Compared to the alternative softwares, PhotonVision boasts higher frames per second which allows for a smoother video stream and detection of targets. This ensures that you get the greatest accuracy possible at time of your shot.
+Compared to alternative solutions, PhotonVision boasts higher frames per second which allows for a smoother video stream and detection of targets. This ensures that you get the greatest accuracy possible at time of your shot.
 
 Fully Open Source
 ^^^^^^^^^^^^^^^^^
