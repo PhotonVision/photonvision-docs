@@ -15,7 +15,7 @@ Creating a ``systemd`` Service
 ------------------------------
 You can also create a systemd service that will automatically run on startup. To do so, first navigate to ``/lib/systemd/system``. Create a file called ``photonvision.service`` (or name it whatever you want) using ``touch photonvision.service``. Then open this file in the editor of your choice and paste the following text:
 
-.. code-block:: none
+.. code-block::
 
     [Unit]
     Description=Service that runs PhotonVision

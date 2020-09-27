@@ -1,6 +1,6 @@
 Advantages
 ==========
-PhotonVision has a myriad of advantages over similar solutions, including: 
+PhotonVision has a myriad of advantages over similar solutions, including:
 
 Easy to Use User Interface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

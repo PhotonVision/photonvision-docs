@@ -1,7 +1,7 @@
 Supported Coprocessors
 ======================
 
-.. list-table:: 
+.. list-table::
    :widths: 15 30 45
    :header-rows: 1
 
