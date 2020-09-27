@@ -1,3 +1,3 @@
 Supported Cameras
 =================
-We support any USB camera, however, Logitech cameras don't work well with PhotonVision. We recommend the Microsoft LifeCam HD-3000 Camera which is available from `Andymark <https://www.andymark.com/products/microsoft-lifecam-hd-3000-camera>`_. Additionally, ELP webcam modules are also recommended which can be found on Amazon, Ebay, Alibaba, or many other online sources.
+We support any USB camera, however, Logitech cameras don't work well with PhotonVision. We recommend the Microsoft LifeCam HD-3000 Camera, which is available from Andymark. Additionally, ELP webcam modules are also recommended which can be found on Amazon, Ebay, Alibaba, or many other online sources.
