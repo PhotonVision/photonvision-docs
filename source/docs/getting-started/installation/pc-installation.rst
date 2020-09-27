@@ -12,7 +12,7 @@ Running PhotonVision
 --------------------
 To run PhotonVision, open a terminal window of your choice and run the following command:
 
-.. code-block::
+.. code-block:: none
 
    $ java -jar /path/to/photonvision/photonvision-xxx.jar --disable-networking
 
