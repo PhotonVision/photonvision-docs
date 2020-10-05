@@ -7,4 +7,6 @@ Code Examples
    aimingatatarget
    gettinginrangeofthetarget
    aimandrange
+   3d
+   robotsim
    infiniterecharge
