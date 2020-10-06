@@ -1,18 +1,18 @@
 Thresholding
 ============
 
-In this step, we want to tune our HSV thresholds such that only the goal color remains after the thresholding. The `HSV color representation <https://en.wikipedia.org/wiki/HSL_and_HSV>`__ is similar to RGB in that it represents colors. However, HSV represents colors with hue, saturation and value components. Hue refers to the color, while saturation and value describe its richness and brightness. 
+In this step, we want to tune our HSV thresholds such that only the goal color remains after the thresholding. The `HSV color representation <https://en.wikipedia.org/wiki/HSL_and_HSV>`__ is similar to RGB in that it represents colors. However, HSV represents colors with hue, saturation and value components. Hue refers to the color, while saturation and value describe its richness and brightness.
 
-In PhotonVision, HSV thresholds is available in the "Threshold" tab. 
+In PhotonVision, HSV thresholds is available in the "Threshold" tab.
 
 Color Picker
 ------------
 
-The color picker can be used to quickly adjust HSV values. "Set to average" will set the HSV range to the color of the pixel selected, while "shrink range" and "expand range" will change the HSV threshold to include or exclude the selected pixel, respectively. 
+The color picker can be used to quickly adjust HSV values. "Set to average" will set the HSV range to the color of the pixel selected, while "shrink range" and "expand range" will change the HSV threshold to include or exclude the selected pixel, respectively.
 
 Erode and Dilate
 ----------------
 
-Erode and dilate are sometimes used in combination to help eliminate noise by first "eroding" away small contours, then "dilating" to scale back up contours. This operation is not necessary for good vision tracking performance, and it is not suggested to be used when it is possible not to. To reduce noise, we suggest changing HSV thresholds or reducing camera brightness. 
+Erode and dilate are sometimes used in combination to help eliminate noise by first "eroding" away small contours, then "dilating" to scale back up contours. This operation is not necessary for good vision tracking performance, and it is not suggested to be used when it is possible not to. To reduce noise, we suggest changing HSV thresholds or reducing camera brightness.
 
 .. warning:: Erode or Dilate will make the calculated 3d target pose inaccurate. For this reason, we strongly suggest disabling erode or dilate while in 3d processing mode.
