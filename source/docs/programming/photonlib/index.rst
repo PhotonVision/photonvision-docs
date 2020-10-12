@@ -2,7 +2,6 @@ PhotonLib: Robot Code Interface
 ===============================
 
 .. toctree::
-   :maxdepth: 2
 
    adding-vendordep
    creating-photon-camera

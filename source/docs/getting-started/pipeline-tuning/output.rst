@@ -10,6 +10,13 @@ In this section, the Target Offset Point changes where the "center" of the targe
 
 This section also includes a switch to enable processing and sending multiple targets, up to 5, simultaneously. This information is available through photonlib. Note that the :code:`GetPitch`/:code:`GetYaw` methods will report the pitch/yaw of the "best" (lowest indexed) target.
 
+.. raw:: html
+
+        <video width="85%" controls>
+            <source src="../../../_static/assets/offsetandmultiple.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
 Robot Offset
 ------------
 

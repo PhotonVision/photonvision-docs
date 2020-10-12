@@ -16,6 +16,13 @@ Fullness is a measurement of the ratio between the contour's area and the area o
 
 Finally, speckle rejection is an algorithm that can discard contours whose area are below a certain percentage of the average area of all visible contours. This might be useful in rejecting stray lights or image noise.
 
+.. raw:: html
+
+        <video width="85%" controls>
+            <source src="../../../_static/assets/AreaRatioExtent.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
 Contour Grouping and Sorting
 ----------------------------
 
@@ -30,3 +37,10 @@ Finally, target sort defines how targets are ranked, from "best" to "worst." The
 - Rightmost (Best target on the right, worst on left)
 - Leftmost
 - Centermost
+
+.. raw:: html
+
+        <video width="85%" controls>
+            <source src="../../../_static/assets/groupingSorting.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>

@@ -2,7 +2,6 @@ Pipeline Tuning
 ===============
 
 .. toctree::
-   :maxdepth: 2
 
    input
    thresholding

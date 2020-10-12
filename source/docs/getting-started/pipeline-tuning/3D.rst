@@ -9,6 +9,18 @@ The target model dropdown is used to select the target model used to compute tar
 
 If solvePNP is working correctly, the target should be displayed as a small rectangle within the "Target Location" minimap. The X/Y/Angle reading will also be dispayed in the "Target Info" card.
 
+.. raw:: html
+
+        <video width="85%" controls>
+            <source src="../../../_static/assets/3d2019.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video width="85%" controls>
+            <source src="../../../_static/assets/3d2020.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+
 Contour Simplification
 ----------------------
 
