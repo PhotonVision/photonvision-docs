@@ -7,7 +7,7 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
 
    docs/getting-started/index
    docs/hardware/index
