@@ -83,7 +83,7 @@ html_theme_options = {
 	'color_primary': '#006492',
 	'color_accent': 'yellow',
 	'repo_name': 'PhotonVision',
-	'globaltoc_depth': 2,
+	'globaltoc_depth': 99,
 }
 
 
