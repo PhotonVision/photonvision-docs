@@ -10,7 +10,7 @@ Contents
    :maxdepth: 2
 
    docs/getting-started/index
-   
+
 .. toctree::
    :maxdepth: 1
 
@@ -20,7 +20,7 @@ Contents
    :maxdepth: 2
 
    docs/programming/index
-   
+
 .. toctree::
    :maxdepth: 2
 

@@ -1,11 +1,11 @@
-Getting Started 
+Getting Started
 ===============
 
 .. toctree::
    :maxdepth: 1
 
    about/index
-   
+
 .. toctree::
    :maxdepth: 2
 
