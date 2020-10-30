@@ -62,7 +62,7 @@ html_title = "PhotonVision Docs"
 html_theme = 'sphinx_material'
 
 html_sidebars = {
-    "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
+    "**": ["logo-text.html", "globaltoc.html", "searchbox.html"]
 }
 
 # Enabling the Sphinx Material Theme version dropdown.
@@ -83,7 +83,7 @@ html_theme_options = {
 	'color_primary': '#006492',
 	'color_accent': 'yellow',
 	'repo_name': 'PhotonVision',
-	'globaltoc_depth': 99,
+	'globaltoc_depth': 3,
 }
 
 

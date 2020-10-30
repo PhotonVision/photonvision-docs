@@ -23,8 +23,8 @@ html[data-theme="dark"] {
 	--code-color: #7b9eb0;
 	--code-tab-bg-color: #1b2129;
 	--tab-bg-color: rgba(0, 0, 0, 0.40);
-	--link-accent: #39A4D5;
-	--link-hover: #FFD843;
+	--link-accent: #FFD843;
+	--link-hover: #ffffff;
 	--icon-accent: #FFD843;
 }
 
