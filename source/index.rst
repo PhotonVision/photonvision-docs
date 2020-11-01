@@ -7,11 +7,23 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    docs/getting-started/index
-   docs/hardware/index
+
+.. toctree::
+   :maxdepth: 1
+
+   docs/hardware.rst
+
+.. toctree::
+   :maxdepth: 2
+
    docs/programming/index
+
+.. toctree::
+   :maxdepth: 2
+
    docs/other/index
 
 

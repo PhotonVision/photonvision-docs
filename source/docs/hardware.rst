@@ -1,6 +1,14 @@
-Supported Coprocessors
-======================
+Hardware
+========
 
+Supported Cameras
+-----------------
+
+We support any USB camera, however, Logitech cameras don't work well with PhotonVision. We recommend the Microsoft LifeCam HD-3000 Camera, which is available from Andymark. The Raspberry Pi Camera Module V1 and V2 are supported with a supported Rasberry Pi. Additionally, ELP webcam modules are also recommended which can be found on Amazon, Ebay, Alibaba, or many other online sources.
+
+
+Supported Coprocessors
+----------------------
 .. list-table::
    :widths: 15 30 45
    :header-rows: 1
@@ -26,3 +34,13 @@ Supported Coprocessors
          * No guarantees
      -   * macOS
          * Anything not listed above
+
+Vendors
+-------
+* Gloworm
+
+  * `Website/Documentation <https://gloworm.vision/>`_
+
+  * `Image <https://github.com/gloworm-vision/pi-gen/releases/>`_
+
+  * `Discord <https://discord.gg/DncQRky>`_
