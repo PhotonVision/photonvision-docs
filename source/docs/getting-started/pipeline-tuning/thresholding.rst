@@ -23,10 +23,3 @@ The color picker can be used to quickly adjust HSV values. "Set to average" will
             <source src="../../../_static/assets/colorPicker.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-
-Erode and Dilate
-----------------
-
-Erode and dilate are sometimes used in combination to help eliminate noise by first "eroding" away small contours, then "dilating" to scale back up contours. This operation is not necessary for good vision tracking performance, and it is not suggested to be used when it is possible not to. To reduce noise, we suggest changing HSV thresholds or reducing camera brightness.
-
-.. warning:: Erode or Dilate will make the calculated 3d target pose inaccurate. For this reason, we strongly suggest disabling erode or dilate while in 3d processing mode.
