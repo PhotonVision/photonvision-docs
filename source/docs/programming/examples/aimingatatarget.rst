@@ -16,7 +16,49 @@ Now that you have properly set up your vision system and have tuned a pipeline, 
 .. tabs::
    .. code-tab:: java
 
-      // TODO: Add code
+      public class Robot extends TimedRobot {
+
+         // Change this to match the name of your camera
+         PhotonCamera camera = new PhotonCamera("photonvision");
+
+         // PID constants should be tuned per robot
+         PIDController controller = new PIDController(.1, 0, 0);
+
+         XboxController xboxController;
+
+         // Drive motors
+         PWMVictorSPX leftMotor = new PWMVictorSPX(0);
+         PWMVictorSPX rightMotor = new PWMVictorSPX(1);
+         DifferentialDrive drive = new DifferentialDrive(leftMotor, rightMotor);
+
+         @Override
+         public void robotInit() {
+            xboxController = new XboxController(0);
+         }
+
+         @Override
+         public void teleopPeriodic() {
+            var forwardSpeed = xboxController.getY(GenericHID.Hand.kRight);
+            var rotationSpeed = xboxController.getX(GenericHID.Hand.kLeft);
+
+            // If the A button's pressed, try to track a target
+            if(xboxController.getAButton()) {
+                  // Querry the latest result
+                  var result = camera.getLatestResult();
+
+                  // If we have no targets, do nothing
+                  if(!result.hasTargets()) {
+                     drive.tankDrive(0, 0);
+                  }
+
+                  // Rotation speed is the output of the PID controller
+                  rotationSpeed = controller.calculate(result.getBestTarget().getYaw(), 0);
+            }
+
+            // Use our forward/turn speeds
+            drive.arcadeDrive(forwardSpeed, rotationSpeed);
+         }
+      }
 
    .. code-tab:: c++
 
