@@ -40,7 +40,7 @@ Changing Settings
 
 Saving Images
 -----------------
-PhotonVision can save images to file on command. The image is saved when PhotonVision detects the command went from ``false`` to ``true``. 
+PhotonVision can save images to file on command. The image is saved when PhotonVision detects the command went from ``false`` to ``true``.
 
 Be careful saving images rapidly - it will slow vision processing performance and take up disk space very quickly.
 
