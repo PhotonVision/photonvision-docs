@@ -20,7 +20,7 @@ If your camera is at a fixed height on your robot and the height of the target i
 
    .. code-tab:: c++
 
-      #include <photonlib/lib/PhotonUtils.h>
+      #include <photonlib/PhotonUtils.h>
       #include <units/length.h>
       #include <units/angle.h>
 
