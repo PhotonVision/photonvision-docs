@@ -17,7 +17,7 @@ The ``PhotonCamera`` class has two constructors: one that takes a ``NetworkTable
 
    .. code-tab:: c++
 
-      #include <photonlib/lib/PhotonCamera.h>
+      #include <photonlib/PhotonCamera.h>
 
       // Creates a new PhotonCamera.
       photonlib::PhotonCamera camera{"MyCamera"};
