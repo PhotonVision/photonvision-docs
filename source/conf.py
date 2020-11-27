@@ -29,7 +29,9 @@ extensions = [
 	"sphinx_rtd_theme",
 	'sphinx.ext.autosectionlabel',
 	'sphinx_tabs.tabs',
-        'notfound.extension',
+    'sphinx.ext.todo',
+	'notfound.extension',
+    'sphinxcontrib.remoteliteralinclude',
 	"sphinxext.opengraph",
 	"sphinxcontrib.ghcontributors"
 ]

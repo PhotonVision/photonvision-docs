@@ -14,72 +14,24 @@ In FRC, a mechanism usually has to be a certain distance away from it’s target
 
 .. warning:: The PhotonLib utility to calculate distance depends on the camera being at a different vertical height than the camera. If this is not the case, a different method for estimating distance, such as target width or area, must be used.
 
+The following example is from the PhotonLib example repository (`Java <https://github.com/Photo1nVision/photonlib-examples/tree/main/java/getting-in-range>`_/`C++ <https://github.com/PhotonVision/photonlib-examples/tree/main/cpp/getting-in-range>`_).
+
 .. tabs::
 
-   .. code-tab:: java
+  .. group-tab:: Java
 
-      public class Robot extends TimedRobot {
+    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/main/java/getting-in-range/src/main/java/frc/robot/Robot.java
+      :language: java
+      :linenos:
 
-         // Constants such as camera and target height stored. Change per robot and goal!
-         final double CAMERA_HEIGHT_METERS = Units.inchesToMeters(24);
-         final double TARGET_HEIGHT_METERS = Units.feetToMeters(5);
-         // Angle between horizontal and the camera.
-         final double CAMERA_PITCH_RADIANS = Units.degreesToRadians(0);
+  .. group-tab:: C++ (Header)
 
-         // How far from the target we want to be
-         final double GOAL_RANGE_METERS = Units.feetToMeters(3);
+    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/main/cpp/getting-in-range/src/main/include/Robot.h
+      :language: c++
+      :linenos:
 
-         // Change this to match the name of your camera
-         PhotonCamera camera = new PhotonCamera("photonvision");
+  .. group-tab:: C++ (Source)
 
-         // PID constants should be tuned per robot
-         final double P_GAIN = 0.1;
-         final double D_GAIN = 0.0;
-         PIDController controller = new PIDController(P_GAIN, 0, D_GAIN);
-
-         XboxController xboxController;
-
-         // Drive motors
-         PWMVictorSPX leftMotor = new PWMVictorSPX(0);
-         PWMVictorSPX rightMotor = new PWMVictorSPX(1);
-         DifferentialDrive drive = new DifferentialDrive(leftMotor, rightMotor);
-
-         @Override
-         public void robotInit() {
-            xboxController = new XboxController(0);
-         }
-
-         @Override
-         public void teleopPeriodic() {
-            double forwardSpeed;
-            double rotationSpeed = xboxController.getX(GenericHID.Hand.kLeft);
-
-            if(xboxController.getAButton()) {
-                  // Vision-alignment mode
-                  // Query the latest result from PhotonVision
-                  var result = camera.getLatestResult();
-
-                  if(result.hasTargets()) {
-                     // First calculate range
-                     double range = PhotonUtils.calculateDistanceToTargetMeters(CAMERA_HEIGHT_METERS,
-                        TARGET_HEIGHT_METERS, CAMERA_PITCH_RADIANS, result.getBestTarget().getPitch());
-
-                     // Use this range as the measurement we give to the PID controller.
-                     forwardSpeed = controller.calculate(range, GOAL_RANGE_METERS);
-                  } else {
-                     // If we have no targets, stay still.
-                     forwardSpeed = 0;
-                  }
-            } else {
-                  //Manual Driver Mode
-                  forwardSpeed = xboxController.getY(GenericHID.Hand.kRight);
-            }
-
-            // Use our forward/turn speeds to control the drivetrain
-            drive.arcadeDrive(forwardSpeed, rotationSpeed);
-         }
-      }
-
-   .. code-tab:: c++
-
-      // TODO: Add code
+    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/main/cpp/getting-in-range/src/main/cpp/Robot.cpp
+      :language: c++
+      :linenos:
