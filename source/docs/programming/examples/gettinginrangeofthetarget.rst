@@ -14,7 +14,7 @@ In FRC, a mechanism usually has to be a certain distance away from it’s target
 
 .. warning:: The PhotonLib utility to calculate distance depends on the camera being at a different vertical height than the camera. If this is not the case, a different method for estimating distance, such as target width or area, must be used.
 
-The following example is from the PhotonLib example repository (`Java <https://github.com/Photo1nVision/photonlib-examples/tree/main/java/getting-in-range>`_/`C++ <https://github.com/PhotonVision/photonlib-examples/tree/main/cpp/getting-in-range>`_).
+The following example is from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonlib-examples/tree/main/java/getting-in-range>`_/`C++ <https://github.com/PhotonVision/photonlib-examples/tree/main/cpp/getting-in-range>`_).
 
 .. tabs::
 
