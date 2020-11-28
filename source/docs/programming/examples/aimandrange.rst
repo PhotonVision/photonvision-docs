@@ -17,18 +17,18 @@ The following example is from the PhotonLib example repository (`Java <https://g
 
   .. group-tab:: Java
 
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/master/java/aim-and-range/src/main/java/frc/robot/Robot.java
+    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/main/java/aim-and-range/src/main/java/frc/robot/Robot.java
       :language: java
       :linenos:
 
   .. group-tab:: C++ (Header)
 
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/master/cpp/aim-and-range/src/main/include/Robot.h
+    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/main/cpp/aim-and-range/src/main/include/Robot.h
       :language: c++
       :linenos:
 
   .. group-tab:: C++ (Source)
 
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/master/cpp/aim-and-range/src/main/cpp/Robot.cpp
+    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/main/cpp/aim-and-range/src/main/cpp/Robot.cpp
       :language: c++
       :linenos:
