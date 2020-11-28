@@ -83,7 +83,7 @@ Images are stored within the photonvision configuration directory. Running the "
       camera.TakeOutputSnapshot();
 
 
-.. note:: Saving images to file takes a bit of time and uses up disk space, so doing it frequently is not recommended. In general, the camera will save an image every 500ms. Calling these methods faster will not result in additional images. Consider tying it to a button press on the driver controller, or the start of an autonomous routine.
+.. note:: Saving images to file takes a bit of time and uses up disk space, so doing it frequently is not recommended. In general, the camera will save an image every 500ms. Calling these methods faster will not result in additional images. Consider tying image captures to a button press on the driver controller, or an appropriate point in an autonomous routine.
 
 
 Getting the Pipeline Result (Advanced)
