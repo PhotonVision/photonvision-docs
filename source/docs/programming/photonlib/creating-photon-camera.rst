@@ -59,6 +59,33 @@ Getting Yaw, Pitch, and Area
 
 .. note:: The units for yaw and pitch are degrees and use standard computer vision directionality. Therefore, a negative yaw means that the recognized target is to the left of the center of the screen and a negative pitch means that the recognized target is below the center of the screen. Furthermore, area is scaled from 0-100, representing the percentage of the screen taken up by the bounding box.
 
+Saving Pictures to File
+-----------------------
+A ``PhotonCamera`` can save still images from the input or output video streams to file. This is useful for debugging what a camera is seeing while on the field and confirming targets are being identified properly.
+
+Images are stored within the photonvision configuration directory. Running the "Export" operation in the settings tab will download a .zip file which contains the image captures.
+
+.. tabs::
+   .. code-tab:: java
+
+      // Capture pre-process camera stream image
+      camera.takeInputSnapshot();
+
+      // Capture post-process camera stream image
+      camera.takeOutputSnapshot();
+
+   .. code-tab:: c++
+
+      // Capture pre-process camera stream image
+      camera.TakeInputSnapshot();
+
+      // Capture post-process camera stream image
+      camera.TakeOutputSnapshot();
+
+
+.. note:: Saving images to file takes a bit of time and uses up disk space, so doing it frequently is not recommended. In general, the camera will save an image every 500ms. Calling these methods faster will not result in additional images. Consider tying image captures to a button press on the driver controller, or an appropriate point in an autonomous routine.
+
+
 Getting the Pipeline Result (Advanced)
 --------------------------------------
 One can also use the ``getLatestResult()``/``GetLatestResult()`` (Java and C++ respectively) to obtain the latest :ref:`pipeline result <docs/programming/photonlib/simple-pipeline-result:Photon Pipeline Result>`. An advantage of using this method is that it returns a container with information that is guaranteed to be from the same timestamp. This is important if you are using this data for latency compensation or in an estimator.

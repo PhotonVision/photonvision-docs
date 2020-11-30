@@ -37,6 +37,25 @@ Changing Settings
 | ``driverMode``    | ``boolean`` | Toggles driver mode.        |
 +-------------------+-------------+-----------------------------+
 
+
+Saving Images
+-----------------
+PhotonVision can save images to file on command. The image is saved when PhotonVision detects the command went from ``false`` to ``true``.
+
+PhotonVision will automatically set these back to ``false`` after 500ms.
+
+Be careful saving images rapidly - it will slow vision processing performance and take up disk space very quickly.
+
+Images are returned as part of the .zip package from the "Export" operation in the Settings tab.
+
++----------------------+-------------+----------------------------------------------------+
+|         Key          |    Type     |                     Description                    |
++======================+=============+====================================================+
+| ``inputSaveImgCmd``  | ``boolean`` | Triggers saving the current input image to file.   |
++----------------------+-------------+----------------------------------------------------+
+| ``outputSaveImgCmd`` | ``boolean`` | Triggers saving the current output image to file.  |
++----------------------+-------------+----------------------------------------------------+
+
 Global Entries
 --------------
 These entries are global, meaning that they should be called on the main ``photonvision`` table.
