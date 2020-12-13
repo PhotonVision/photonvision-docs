@@ -21,7 +21,7 @@ PhotonVision stores and loads settings in the :code:`photonvision_config` direct
 
 - imgSaves
 
-   - Contains images saved with the input/output save commands. 
+   - Contains images saved with the input/output save commands.
 
 - logs
 
