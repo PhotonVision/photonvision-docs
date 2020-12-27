@@ -7,3 +7,4 @@ Programming
    photonlib/index
    nt-api/nt-api
    examples/index
+   config/index
