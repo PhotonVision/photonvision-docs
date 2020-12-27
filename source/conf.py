@@ -96,7 +96,7 @@ html_theme_options = {
         },
     "dark_css_variables" : {
         "color-background-primary": "#121212",
-        "color-background-secondary": "#080808",
+        "color-background-secondary": "#006492",
         "color-background-hover": "#efeff400",
         "color-background-hover--transparent": "#efeff400",
         "color-brand-primary": "#ffd843",
