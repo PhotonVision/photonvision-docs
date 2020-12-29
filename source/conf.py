@@ -70,10 +70,14 @@ html_logo = 'assets/RoundLogo.png'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
+#def setup(app):
+    #app.add_css_file('css/pv-rtd.css')
+    
+pygments_dark_style = "monokai"
 
 html_theme_options = {
     "sidebar_hide_name": True,
+    
     "light_css_variables": {
         # Both theme variables
         "font-stack": '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
@@ -81,13 +85,13 @@ html_theme_options = {
         "admonition-title-font-size": "1rem",
         # Light theme only variables
         "color-background-primary": "#ffffff",
-        "color-background-secondary": "#006492",
+        "color-background-secondary": "#f7f7f7",
         "color-background-hover": "#efeff400",
         "color-background-hover--transparent": "#efeff400",
-        "color-brand-primary": "#ffd843",
+        "color-brand-primary": "#006492",
         "color-brand-content": "#006492",
         "color-foreground-primary": "#2d2d2d",
-        "color-foreground-secondary": "#ffffff",
+        "color-foreground-secondary": "#39a4d5",
         "color-foreground-muted": "#2d2d2d",
         "color-foreground-border": "#ffffff",
         "color-background-border": "ffffff",
@@ -106,14 +110,12 @@ html_theme_options = {
         "color-foreground-secondary": "#ffffff",
         "color-foreground-muted": "#ffffff",
         "color-foreground-border": "#ffffff",
-        "color-background-border": "ff0000",
+        "color-background-border": "#ffffff",
         "sidebar-width": "10rem",
         "color-api-overall": "#101010",
     },
 }
 
-
- 
 
     
 suppress_warnings = ['epub.unknown_project_files']
