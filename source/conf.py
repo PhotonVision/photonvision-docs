@@ -70,8 +70,8 @@ html_logo = 'assets/RoundLogo.png'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-#def setup(app):
-    #app.add_css_file('css/pv-rtd.css')
+def setup(app):
+    app.add_css_file('css/pv-rtd.css')
     
 pygments_dark_style = "monokai"
 
@@ -113,6 +113,7 @@ html_theme_options = {
         "color-background-border": "#ffffff",
         "sidebar-width": "10rem",
         "color-api-overall": "#101010",
+        "color-inline-code-background": "#0d0d0d",
     },
 }
 

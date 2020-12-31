@@ -1,317 +1,38 @@
-html[data-theme="light"] {
-	--text-bg-color: #FFFFFF;
-	--text-color: rgba(0, 0, 0, 0.87);
-	--highlight-color: #FFD843;
-	--typeset-color: rgba(0, 0, 0, 0.54);
-	--bq-color: rgba(0, 0, 0, 0.26); /* Block Quote */
-	--inline-code-bg-color: hsla(0, 0%, 90%, .5);
-	--code-color: #37474f;
-	--code-tab-bg-color: #f8f8f8;
-	--tab-bg-color: rgba(0, 0, 0, 0.075);
-	--link-accent: #006492;
-	--link-hover: #39A4D5;
-	--icon-accent: #006492;
-}
 
-html[data-theme="dark"] {
-	--text-bg-color: #242c37;
-	--text-color: rgba(255, 255, 255, 0.87);
-	--highlight-color: #006492;
-	--typeset-color: rgba(255, 255, 255, 0.54);
-	--bq-color: rgba(255, 255, 255, 0.26); /* Block Quote */
-	--inline-code-bg-color: hsla(0, 0%, 10%, .5);
-	--code-color: #7b9eb0;
-	--code-tab-bg-color: #1b2129;
-	--tab-bg-color: rgba(0, 0, 0, 0.40);
-	--link-accent: #FFD843;
-	--link-hover: #ffffff;
-	--icon-accent: #FFD843;
-}
-
-/* Main Text Styling */
-.md-main__inner {
-	background-color: var(--text-bg-color);
-	color: var(--text-color);
-}
-
-.md-container {
-	background-color: var(--text-bg-color);
-}
-
-.md-typeset code {
-	background-color: var(--inline-code-bg-color);
-	color: var(--code-color);
-}
-
-.md-typeset, .md-typeset h1 {
-	color: var(--text-color);
-}
-
-.md-typeset pre {
-	margin: 0;
-}
-
-.md-typeset blockquote {
-	color: var(--text-color);
-	border-color: var(--bq-color);
-}
-
-.md-typeset a {
-	color: var(--link-accent);
-}
-
-span.highlighted {
-	background-color: var(--highlight-color);
-}
-
-.md-grid {
-	max-width: inherit;
-}
-
-/* Links */
-.md-nav__link[data-md-state=blur] {
-	color: var(--typeset-color);
-}
-
-.md-nav__link--active {
-	color: var(--link-accent);
-}
-
-.md-source:hover {
-	opacity: 1 !important;
-}
-
-.md-footer-nav__link:hover {
-	opacity: 1 !important;
-}
-
-a:hover {
-	color: var(--link-hover) !important;
-}
-
-/* Injected element styling */
-.ethical-fixedfooter {
-	width: -webkit-fill-available !important;
-}
-
-.rst-versions.rst-badge {
-	display: done;
-}
-
-/* Dark mode toggle switch */
-.dark-mode-toggle-container {
-	position: absolute;
-	right: 0px;
-	padding: 10px;
-	display: inline-flex;
-	align-items: center;
-	color: #394a56;
-}
-
-.dark-mode-toggle {
-	align-items: center;
-	display: inline-flex;
-}
-
-input[type=checkbox]{
-	height: 0;
-	width: 0;
-	margin: 0;
-	visibility: hidden;
-}
-
-.toggle {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 52px;
-	height: 27px;
-	background: grey;
-	display: block;
-	border-radius: 52px;
-	position: relative;
-}
-
-.toggle:after {
-	content: '';
-	position: absolute;
-	top: 2.5px;
-	left: 2.5px;
-	width: 22px;
-	height: 22px;
-	background: #fff;
-	border-radius: 90px;
-	transition: 0.3s;
-}
-
-input:checked + .toggle {
-	background: #FFD843;
-}
-
-input:checked + .toggle:after {
-	left: calc(100% - 2.5px);
-	transform: translateX(-100%);
-}
-
-.toggle:active:after {
-	width: 40px;
-}
-
-.light-label {
-	padding-right: 10px;
-	color: #FFD843;
-}
-
-.dark-label {
-	padding-left: 10px;
-	color: #006492;
-}
-
-.md-footer-meta__inner {
-	display: flex;
-	align-items: center;
-}
-
-
-.md-header, .md-tabs, .md-nav__source {
-	background-color: #006492 !important;
-}
-
-.md-nav, .md-nav__list, .md-nav--primary {
-	background-color: var(--text-bg-color) !important;
-}
-
-
-.md-source__fact {
-	padding: 0 !important;
-}
-
-.admonition.note {
-	width: fit-content;
-}
-
-
-/* Getting the search bars to work with dark theme */
-[data-md-toggle=search]:checked~.md-header .md-search__input{
-	background-color: var(--text-bg-color);
-	color: var(--text-color);
-}
-
-[data-md-toggle=search]:checked~.md-header .md-search__input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-	color: var(--text-color);
-	opacity: 1; /* Firefox */
-}
-  
-[data-md-toggle=search]:checked~.md-header .md-search__input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-	color: var(--text-color);
-}
-
-[data-md-toggle=search]:checked~.md-header .md-search__input::-ms-input-placeholder { /* Microsoft Edge */
-	color: var(--text-color);
-}
-
-[data-md-toggle=search]:checked~.md-header .md-search__scrollwrap {
-	background-color: var(--text-bg-color);
-	color: var(--text-color);
-}
-
-[data-md-toggle=search]:checked~.md-header .md-search__input+.md-search__icon {
-	color: var(--icon-accent);
-}
-
-[data-md-toggle=search]:checked~.md-header .md-search__input:valid~.md-search__icon[type=reset] {
-	color: var(--icon-accent);
-}
-
-.md-search-result__meta {
-	color: var(--typeset-color);
-}
-
-/* Tabs */
-.ui.tabular.menu .item {
-	background-color: var(--text-bg-color) !important;
-}
-
-.ui.tabular.menu .active.item, .ui.attached:not(.message)+.ui.attached.segment:not(.top) {
-	background-color: var(--tab-bg-color) !important;
-}
-
-.ui.tabular.menu, .ui.tabular.menu .active.item, .ui.attached:not(.message)+.ui.attached.segment:not(.top) {
-	border: none !important;
-}
-
-.highlight {
-	background-color: var(--code-tab-bg-color) !important;
-}
-
-.md-typeset code, .md-typeset pre {
-	color: var(--text-color) !important;
-}
-
-/* Margin for the "Show Source" link */
-.md-nav__extra_link {
-	margin: 0.625em !important;
-}
-
-
-@media screen and (max-width: 1220px) {
-	.md-nav__source {
-		background-color: #004a6c !important;
-	}
-
-	.md-nav__title--site {
-		background-color: #006492 !important;
-	}
-}
-
-@media only screen and (min-width: 88.25em) {
-	.md-sidebar--secondary {
-		margin-left: 100%;
-	}
-}
-
-@media only screen and (max-width: 76.1875em) {
-	html .md-nav .md-nav--secondary .md-nav__title {
-		color: var(--text-color) !important;
-	}
-
-	html .md-nav--primary .md-nav__title:before {
-		color: var(--icon-accent) !important;
-	}
-}
-
-@media only screen and (max-width: 59.9375em) {
-	.md-search__scrollwrap, .md-search__input {
-		background-color: var(--text-bg-color);
-		color: var(--text-color);
-	}
-
-	.md-icon.md-search__icon {
-		color: var(--icon-accent);
-	}
-
-	.md-search__input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-		color: var(--text-color);
-		opacity: 1; /* Firefox */
-	}
-	  
-	.md-search__input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-	color: var(--text-color);
-	}
-	
-	.md-search__input::-ms-input-placeholder { /* Microsoft Edge */
-	color: var(--text-color);
-	}
-
-	.md-search__overlay {
-		background-color: var(--text-bg-color);
-	}
-}
-
-@media screen and (max-width: 450px) {
-	.dark-mode-toggle-container {
+@media (prefers-color-scheme: dark) {
+    .ui.segment {
 		position: relative;
+		background: #171717;
+	}
+	.sphinx-tab {
+		border-color: #171717 !important;
+		box-sizing: border-box;
 	}
 
-	.md-footer-meta__inner {
-		display: block;
+	.ui.tabular.menu .active.item {
+		background: #171717;
 	}
+	.sphinx-tabs .sphinx-menu {
+		border-bottom-color: #171717 !important;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.sphinx-tabs .sphinx-menu a.active.item {
+		border-color: #171717 !important;
+	}
+}
+.sidebar-drawer {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    width: 15em;
+    min-width: 15em;
+}
+.content {
+    padding: 0 3em;
+    width: 65em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
