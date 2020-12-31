@@ -111,7 +111,6 @@ html_theme_options = {
         "color-foreground-muted": "#ffffff",
         "color-foreground-border": "#ffffff",
         "color-background-border": "#ffffff",
-        "sidebar-width": "10rem",
         "color-api-overall": "#101010",
         "color-inline-code-background": "#0d0d0d",
     },
