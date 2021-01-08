@@ -5,6 +5,8 @@ In addition to storing logs in timestamped files in the config directory, Photon
 
 .. note:: When the program first starts, it sends logs from startup to the client that first connects. This does not happen on subsequent connections.
 
+.. note:: Logs are stored inside the :code:`photonvision_config/logs` directory. Exporting the settings ZIP will also download all old logs for further review.
+
 .. raw:: html
 
     <video width="85%" controls>
