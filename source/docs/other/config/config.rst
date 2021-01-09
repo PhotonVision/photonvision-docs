@@ -1,7 +1,13 @@
 PhotonVision's Configuration Directory
 ======================================
 
-PhotonVision stores and loads settings in the :code:`photonvision_config` directory, in the same folder as the PhotonVision JAR is stored. On the Pi image as well as the Gloworm, this is in the :code:`/opt/photonvision` directory. The contents of this directory can be exported as a zip archive from the settings page of the interface, under "export settings". This export will contain everything detailed below. These settings can later be uploaded using "import settings", to restore configurations from previous backups. The directory structure is outlined below.
+PhotonVision stores and loads settings in the :code:`photonvision_config` directory, in the same folder as the PhotonVision JAR is stored. On the Pi image as well as the Gloworm, this is in the :code:`/opt/photonvision` directory. The contents of this directory can be exported as a zip archive from the settings page of the interface, under "export settings". This export will contain everything detailed below. These settings can later be uploaded using "import settings", to restore configurations from previous backups.
+
+
+Directory Structure
+-------------------
+
+The directory structure is outlined below.
 
 .. image:: images/configDir.png
    :width: 600

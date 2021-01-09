@@ -20,7 +20,6 @@ If solvePNP is working correctly, the target should be displayed as a small rect
             Your browser does not support the video tag.
         </video>
 
-
 Contour Simplification
 ----------------------
 
