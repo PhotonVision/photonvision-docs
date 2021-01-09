@@ -62,42 +62,59 @@ html_title = "PhotonVision Docs"
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinx_material'
-
-html_sidebars = {
-    "**": ["logo-text.html", "globaltoc.html", "searchbox.html"]
-}
-
-# Enabling the Sphinx Material Theme version dropdown.
-version_dropdown = True
+html_theme = 'furo'
+html_favicon = 'assets/RoundLogo.png'
+html_logo = 'assets/RoundLogo.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
-html_favicon = 'assets/RoundLogo.png'
-html_logo = 'assets/RectLogo.png'
+def setup(app):
+    app.add_css_file('css/pv-rtd.css')
+    
+pygments_dark_style = "monokai"
 
 html_theme_options = {
-	'base_url': 'https://docs.photonvision.org/',
-	'repo_url': 'https://github.com/PhotonVision/photonvision',
-	'theme_color': '#006492',
-	'color_primary': '#006492',
-	'color_accent': 'yellow',
-	'repo_name': 'PhotonVision',
-	'globaltoc_depth': 3,
+    "sidebar_hide_name": True,
+    
+    "light_css_variables": {
+        # Both theme variables
+        "font-stack": '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
+        "admonition-font-size": "1rem",
+        "admonition-title-font-size": "1rem",
+        # Light theme only variables
+        "color-background-primary": "#ffffff",
+        "color-background-secondary": "#f7f7f7",
+        "color-background-hover": "#efeff400",
+        "color-background-hover--transparent": "#efeff400",
+        "color-brand-primary": "#006492",
+        "color-brand-content": "#006492",
+        "color-foreground-primary": "#2d2d2d",
+        "color-foreground-secondary": "#39a4d5",
+        "color-foreground-muted": "#2d2d2d",
+        "color-foreground-border": "#ffffff",
+        "color-background-border": "ffffff",
+        "sidebar-width": "10rem",
+        "color-api-overall": "#101010",
+        },
+    "dark_css_variables" : {
+        "color-background-primary": "#242c37",
+        "color-background-secondary": "#006492",
+        "color-background-hover": "#efeff400",
+        "color-background-hover--transparent": "#efeff400",
+        "color-brand-primary": "#ffd843",
+        "color-brand-secondary": "#39a4d5",
+        "color-brand-content": "#ffd843",
+        "color-foreground-primary": "#ffffff",
+        "color-foreground-secondary": "#ffffff",
+        "color-foreground-muted": "#ffffff",
+        "color-foreground-border": "#ffffff",
+        "color-background-border": "#ffffff",
+        "color-api-overall": "#101010",
+        "color-inline-code-background": "#0d0d0d",
+    },
 }
-
-
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
-
-# Applying the css stylesheet.
-def setup(app):
-	app.add_css_file('css/pv-rtd.css')
 
 suppress_warnings = ['epub.unknown_project_files']
 
