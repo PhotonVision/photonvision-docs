@@ -1,5 +1,5 @@
-Logging in PhotonVision
-=======================
+Logging
+=======
 
 In addition to storing logs in timestamped files in the config directory, PhotonVision streams logs to the web dashboard. These logs can be viewed later by pressing the \` key. In this view, logs can be filtered by level or downloaded.
 

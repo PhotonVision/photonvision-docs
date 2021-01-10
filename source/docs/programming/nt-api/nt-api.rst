@@ -56,6 +56,8 @@ Images are returned as part of the .zip package from the "Export" operation in t
 | ``outputSaveImgCmd`` | ``boolean`` | Triggers saving the current output image to file.  |
 +----------------------+-------------+----------------------------------------------------+
 
+.. warning:: If you manage to make calls to these commands faster than 500ms (between calls), additional photos will not be captured.
+
 Global Entries
 --------------
 These entries are global, meaning that they should be called on the main ``photonvision`` table.
