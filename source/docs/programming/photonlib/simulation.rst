@@ -41,24 +41,23 @@ It requires a number of pieces of configuration to accurately simulate your phys
 
         String camName = "MyCamera";
         double cameDiagFOV = 75.0; // degrees
-        double camPitch = 0.0; // degrees
-        Transform2d cameraToRobot = new Transform2d(1.2, 0.0); // meters
+        double camPitch = 0.0;     // degrees
+        Transform2d cameraToRobot = new Transform2d(new Translation2d(1.2, 0.0), new Rotation2d()); // meters
         double camHeightOffGround = 0.85; // meters
-        double maxLEDRange = 20; // meters
-        int camResolutionHeight = 640; // pixels
-        int camResolutionWidth = 480; // pixels
-        double minTargetArea = 10; // square pixels
+        double maxLEDRange = 20;          // meters
+        int camResolutionHeight = 640;    // pixels
+        int camResolutionWidth = 480;     // pixels
+        double minTargetArea = 10;        // square pixels
 
-        var simVision = new SimVisionSystem(camName,
-                                            cameDiagFOV,
-                                            camPitch,
-                                            cameraToRobot,
-                                            camHeightOffGround,
-                                            maxLEDRange,
-                                            maxLEDRange,
-                                            camResolutionHeight,
-                                            camResolutionWidth,
-                                            minTargetArea);
+        visionSys = new SimVisionSystem(camName,
+                                        cameDiagFOV,
+                                        camPitch,
+                                        cameraToRobot,
+                                        camHeightOffGround,
+                                        maxLEDRange,
+                                        camResolutionHeight,
+                                        camResolutionWidth,
+                                        minTargetArea);
 
    .. code-tab:: c++
 
@@ -67,7 +66,7 @@ It requires a number of pieces of configuration to accurately simulate your phys
         std::string camName = "MyCamera";
         units::degree_t cameDiagFOV (75.0);
         units::degree_t camPitch (0.0);
-        frc::Transform2d cameraToRobot (1.2_m, 0.0_m);
+        frc::Transform2d cameraToRobot (frc::Translation2d(1.2_m, 0.0_m), frc::Rotation2d());
         units::meter_t camHeightOffGround (0.85);
         units::meter_t  maxLEDRange (20);
         int camResolutionHeight = 640; // pixels
@@ -79,7 +78,6 @@ It requires a number of pieces of configuration to accurately simulate your phys
                                              camPitch,
                                              cameraToRobot,
                                              camHeightOffGround,
-                                             maxLEDRange,
                                              maxLEDRange,
                                              camResolutionHeight,
                                              camResolutionWidth,
@@ -93,8 +91,8 @@ After declaring the system, you should create and add one ``SimVisionTarget`` pe
 
         var targetPose = new Pose2d(new Translation2d(25,10), new Rotation2d()); // meters
         double targetHeightAboveGround = 2.3; // meters
-        double targetWidth = 0.54; // meters
-        double targetHeight = 0.25; // meters
+        double targetWidth = 0.54;           // meters
+        double targetHeight = 0.25;          // meters
 
         var newTgt = new SimVisionTarget(targetPose,
                                          targetHeightAboveGround,
@@ -143,13 +141,15 @@ A ``SimPhotonCamera`` can be created for this purpose. It provides an interface 
 .. tabs::
    .. code-tab:: java
 
-        void SimulationInit(){
+        @Override
+        public void simulationInit() {
             //  ...
             cam = new SimPhotonCamera("MyCamera");
             //  ...
         }
 
-        void SimulationPeriodic(){
+        @Override
+        public void simulationPeriodic() {
             //  ...
             ArrayList<PhotonTrackedTarget> visibleTgtList = new ArrayList<PhotonTrackedTarget>();
             visibleTgtList.add(new PhotonTrackedTarget(yawDegrees, pitchDegrees, area, skew, camToTargetTrans)); // Repeat for each target that you see
