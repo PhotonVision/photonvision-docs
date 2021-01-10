@@ -46,3 +46,9 @@ Vendors
   * `Image <https://github.com/gloworm-vision/pi-gen/releases/>`_
 
   * `Discord <https://discord.gg/DncQRky>`_
+
+* SnakeEyes
+
+  * `Website <https://www.playingwithfusion.com/productview.php?pdid=133>`_
+
+  * `Image/Documentation <https://github.com/PlayingWithFusion/SnakeEyesDocs/blob/master/PhotonVision/readme.md>`_
