@@ -45,8 +45,8 @@ It requires a number of pieces of configuration to accurately simulate your phys
         Transform2d cameraToRobot = new Transform2d(new Translation2d(1.2, 0.0), new Rotation2d()); // meters
         double camHeightOffGround = 0.85; // meters
         double maxLEDRange = 20;          // meters
-        int camResolutionHeight = 640;    // pixels
-        int camResolutionWidth = 480;     // pixels
+        int camResolutionWidth = 640;     // pixels
+        int camResolutionHeight = 480;    // pixels
         double minTargetArea = 10;        // square pixels
 
         visionSys = new SimVisionSystem(camName,
@@ -55,8 +55,8 @@ It requires a number of pieces of configuration to accurately simulate your phys
                                         cameraToRobot,
                                         camHeightOffGround,
                                         maxLEDRange,
-                                        camResolutionHeight,
                                         camResolutionWidth,
+                                        camResolutionHeight,
                                         minTargetArea);
 
    .. code-tab:: c++
@@ -69,9 +69,9 @@ It requires a number of pieces of configuration to accurately simulate your phys
         frc::Transform2d cameraToRobot (frc::Translation2d(1.2_m, 0.0_m), frc::Rotation2d());
         units::meter_t camHeightOffGround (0.85);
         units::meter_t  maxLEDRange (20);
-        int camResolutionHeight = 640; // pixels
-        int camResolutionWidth = 480;  // pixels
-        double minTargetArea = 10;     // square pixels
+        int camResolutionWidth = 640;   // pixels
+        int camResolutionHeight = 480;  // pixels
+        double minTargetArea = 10;      // square pixels
 
         photonlib::SimVisionSystem simVision(camName,
                                              camDiagFOV,
@@ -79,8 +79,8 @@ It requires a number of pieces of configuration to accurately simulate your phys
                                              cameraToRobot,
                                              camHeightOffGround,
                                              maxLEDRange,
-                                             camResolutionHeight,
                                              camResolutionWidth,
+                                             camResolutionHeight,
                                              minTargetArea);
 
 
@@ -163,13 +163,13 @@ A ``SimPhotonCamera`` can be created for this purpose. It provides an interface 
 
         //  ...
 
-        void SimInit(){
+        void Robot::SimulationInit(){
             //  ...
             cam = SimPhotonCamera("MyCamera");
             //  ...
         }
 
-        void SimPeriodic(){
+        void Robot::SimulationPeriodic(){
             //  ...
             std::vector<PhotonTrackedTarget> visibleTgtList = {};
             visibleTgtList.push_back(PhotonTrackedTarget(yawAngle, pitchAngle, area, 0.0, camToTargetTrans));
