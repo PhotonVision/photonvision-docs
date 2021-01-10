@@ -40,7 +40,7 @@ It requires a number of pieces of configuration to accurately simulate your phys
    .. code-tab:: java
 
         String camName = "MyCamera";
-        double cameDiagFOV = 75.0; // degrees
+        double camDiagFOV = 75.0; // degrees
         double camPitch = 0.0;     // degrees
         Transform2d cameraToRobot = new Transform2d(new Translation2d(1.2, 0.0), new Rotation2d()); // meters
         double camHeightOffGround = 0.85; // meters
@@ -50,7 +50,7 @@ It requires a number of pieces of configuration to accurately simulate your phys
         double minTargetArea = 10;        // square pixels
 
         visionSys = new SimVisionSystem(camName,
-                                        cameDiagFOV,
+                                        camDiagFOV,
                                         camPitch,
                                         cameraToRobot,
                                         camHeightOffGround,
@@ -64,7 +64,7 @@ It requires a number of pieces of configuration to accurately simulate your phys
         #include "photonlib/SimVisionSystem.h"
 
         std::string camName = "MyCamera";
-        units::degree_t cameDiagFOV (75.0);
+        units::degree_t camDiagFOV (75.0);
         units::degree_t camPitch (0.0);
         frc::Transform2d cameraToRobot (frc::Translation2d(1.2_m, 0.0_m), frc::Rotation2d());
         units::meter_t camHeightOffGround (0.85);
@@ -74,7 +74,7 @@ It requires a number of pieces of configuration to accurately simulate your phys
         double minTargetArea = 10;     // square pixels
 
         photonlib::SimVisionSystem simVision(camName,
-                                             cameDiagFOV,
+                                             camDiagFOV,
                                              camPitch,
                                              cameraToRobot,
                                              camHeightOffGround,
@@ -163,13 +163,13 @@ A ``SimPhotonCamera`` can be created for this purpose. It provides an interface 
 
         //  ...
 
-        Robot::SimulationInit(){
+        void SimInit(){
             //  ...
             cam = SimPhotonCamera("MyCamera");
             //  ...
         }
 
-        Robot::SimulationPeriodic(){
+        void SimPeriodic(){
             //  ...
             std::vector<PhotonTrackedTarget> visibleTgtList = {};
             visibleTgtList.push_back(PhotonTrackedTarget(yawAngle, pitchAngle, area, 0.0, camToTargetTrans));
