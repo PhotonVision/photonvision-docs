@@ -1,13 +1,13 @@
 PhotonVision
 ============
 
-PhotonVision is fork of `Chameleon Vision <https://github.com/Chameleon-Vision/chameleon-vision/>`_, a free open-source software for FRC teams to use for vision processing on their robots.
+Welcome to the official documentation of PhotonVision! PhotonVision is free, fast, and easy-to-use vision processing solution for the *FIRST*\ Robotics Competition. PhotonVision is designed to get vision working on your robot *quickly*, without the significant cost of other similar solutions. PhotonVision supports a variety of COTS hardware, including the Raspberry Pi 3 and 4, the `Gloworm smart camera <https://gloworm.vision>`_, and the `SnakeEyes Pi hat <https://www.playingwithfusion.com/productview.php?pdid=133>`_.
 
 Contents
 --------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    docs/getting-started/index
 
@@ -17,7 +17,7 @@ Contents
    docs/hardware.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    docs/programming/index
 
@@ -45,4 +45,4 @@ The source code for all PhotonVision projects is available through our `GitHub o
 License
 -------
 
-Usage of PhotonVision must fall under all terms of the `GNU GPL v3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`_
+PhotonVision is licensed under the `GNU GPL v3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`_
