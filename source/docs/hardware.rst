@@ -12,9 +12,9 @@ Supported Cameras
 
 * USB Cameras
 
-  * Reccomended: MicrosoftLifeCam HD-3000 (avaliable from AndyMark)
+  * Recomended: Microsoft LifeCam HD-3000 (available from AndyMark)
 
-  * Most Logitech cameras (specifically the Logitech C270 HD Webcam (PN: 960-000694)) will not work with PhotonVision. The PS3ye needs a workaround to be usable, for more information see :ref:`our Known Issues page <docs/other/known-issues:Hardware Issues>`
+  * Most Logitech cameras (specifically the Logitech C270 HD Webcam (PN: 960-000694)) will not work with PhotonVision. The PS3Eye needs a workaround to be usable, for more information see :ref:`our Known Issues page <docs/other/known-issues:Hardware Issues>`
 
 * ELP Cameras
 
