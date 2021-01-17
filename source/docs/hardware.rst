@@ -9,13 +9,13 @@ Supported Cameras
 * Pi Camera Module V1 and V2
 
   * The V1 is strongly preferred over the V2 due to the V2 having undesireable FOV choices.
-  
+
 * USB Cameras
- 
+
   * Reccomended: MicrosoftLifeCam HD-3000 (avaliable from AndyMark)
 
   * Most Logitech cameras (specifically the Logitech C270 HD Webcam (PN: 960-000694)) will not work with PhotonVision. The PS3ye needs a workaround to be usable, for more information see :ref:`our Known Issues page <docs/other/known-issues:Hardware Issues>`
-  
+
 * ELP Cameras
 
 Supported Coprocessors
