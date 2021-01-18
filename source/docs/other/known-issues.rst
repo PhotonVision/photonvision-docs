@@ -10,3 +10,10 @@ Due to an issue with Linux kernels, the drivers for the PS3Eye are no longer sup
 
 Software Issues
 ---------------
+
+LED Control
+^^^^^^^^^^^
+
+The logic for controlling LED mode when `multiple cameras are connected` is not fully fleshed out.
+
+For now, if you are using multiple cameras, it is recommended that teams set the value of the NetworkTables entry :code:`photonvision/ledMode` from the robot code to control LED state.
