@@ -22,42 +22,24 @@ The ``PhotonCamera`` class has two constructors: one that takes a ``NetworkTable
       // Creates a new PhotonCamera.
       photonlib::PhotonCamera camera{"MyCamera"};
 
+.. warning:: Teams must have unique names for all of their cameras regardless of which coprocessor they are attached to.
 
-Checking for Existence of Targets
----------------------------------
-``PhotonCamera`` has a ``hasTargets()/HasTargets()`` method (Java and C++ respectively) that users can utilize to check if their vision system is detecting any targets.
-
-.. tabs::
-   .. code-tab:: java
-
-      // Check if there are any targets.
-      boolean targets = camera.hasTargets();
-
-   .. code-tab:: c++
-
-      // Check if there are any targets.
-      bool targets = camera.HasTargets();
-
-Getting Yaw, Pitch, and Area
-----------------------------
-``PhotonCamera`` contains three convenience methods for retrieving the yaw, pitch, and area of the best target. These methods are ``getBestTargetYaw()``/``GetBestTargetYaw()``, ``getBestTargetPitch()``/``GetBestTargetPitch()``, and ``getBestTargetArea()``/``GetBestTargetArea()`` for Java and C++ respectively.
+Getting the Pipeline Result
+---------------------------
+Use the ``getLatestResult()``/``GetLatestResult()`` (Java and C++ respectively) to obtain the latest :ref:`pipeline result <docs/programming/photonlib/simple-pipeline-result:Photon Pipeline Result>`. An advantage of using this method is that it returns a container with information that is guaranteed to be from the same timestamp. This is important if you are using this data for latency compensation or in an estimator.
 
 .. tabs::
    .. code-tab:: java
 
-      // Get the yaw, pitch, and area from the camera.
-      double yaw = camera.getBestTargetYaw();
-      double pitch = camera.getBestTargetPitch();
-      double area = camera.getBestTargetArea();
+      // Get the latest pipeline result.
+      PhotonPipelineResult result = camera.getLatestResult();
 
    .. code-tab:: c++
 
-      // Get the yaw, pitch, and area from the camera.
-      double yaw = camera.GetBestTargetYaw();
-      double pitch = camera.GetBestTargetPitch();
-      double area = camera.GetBestTargetArea();
+      // Get the latest pipeline result.
+      photonlib::PhotonPipelineResult result = camera.GetLatestResult();
 
-.. note:: The units for yaw and pitch are degrees and use standard computer vision directionality. Therefore, a negative yaw means that the recognized target is to the left of the center of the screen and a negative pitch means that the recognized target is below the center of the screen. Furthermore, area is scaled from 0-100, representing the percentage of the screen taken up by the bounding box.
+.. note:: Unlike other vision software solutions, using the latest result guarantees that all information is from the same timestamp. This is achieveable because the PhotonVision backend sends a byte-packed string of data which is then deserialized by PhotonLib to get target data. For more information, check out the `PhotonLib source code <https://github.com/PhotonVision/photonvision/tree/master/photon-lib>`_.
 
 Saving Pictures to File
 -----------------------
@@ -86,19 +68,4 @@ Images are stored within the photonvision configuration directory. Running the "
 .. note:: Saving images to file takes a bit of time and uses up disk space, so doing it frequently is not recommended. In general, the camera will save an image every 500ms. Calling these methods faster will not result in additional images. Consider tying image captures to a button press on the driver controller, or an appropriate point in an autonomous routine.
 
 
-Getting the Pipeline Result (Advanced)
---------------------------------------
-One can also use the ``getLatestResult()``/``GetLatestResult()`` (Java and C++ respectively) to obtain the latest :ref:`pipeline result <docs/programming/photonlib/simple-pipeline-result:Photon Pipeline Result>`. An advantage of using this method is that it returns a container with information that is guaranteed to be from the same timestamp. This is important if you are using this data for latency compensation or in an estimator.
 
-.. tabs::
-   .. code-tab:: java
-
-      // Get the latest pipeline result.
-      PhotonPipelineResult result = camera.getLatestResult();
-
-   .. code-tab:: c++
-
-      // Get the latest pipeline result.
-      photonlib::PhotonPipelineResult result = camera.GetLatestResult();
-
-.. note:: Unlike other vision software solutions, using the latest result guarantees that all information is from the same timestamp. This is achieveable because the PhotonVision backend sends a byte-packed string of data which is then deserialized by PhotonLib to get target data. For more information, check out the `PhotonLib source code <https://github.com/PhotonVision/photonlib>`_.

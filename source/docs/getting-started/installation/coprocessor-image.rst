@@ -18,6 +18,10 @@ Final Steps
 ^^^^^^^^^^^
 Simply insert the flashed microSD card into your Raspberry Pi and boot it up. After the initial setup process, your Raspberry Pi should be configured for PhotonVision. You can verify this by making sure your Raspberry Pi and computer are connected to the same network and navigating to ``photonvision.local:5800`` in your browser on your computer.
 
+Troubleshooting
+^^^^^^^^^^^^^^^
+If ``photonvision.local:5800`` does not resolve, your mDNS is not set up correctly. To fix this, download `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network. Once you find it, set the IP to your static IP in PhotonVision. If you continue to have issues, do not hesistate to :ref:`contact us. <index:Contact Us>`
+
 Other Debian-Based Co-Processor Installation
 --------------------------------------------
 We provide an `install script <https://git.io/JJrEP>`_ for other Debian-based systems (with ``apt``) that will automatically install PhotonVision and make sure that it runs on startup.
