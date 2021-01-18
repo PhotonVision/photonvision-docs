@@ -67,3 +67,9 @@ These entries are global, meaning that they should be called on the main ``photo
 +=============+=========+==========================================================+
 | ``ledMode`` | ``int`` | Sets the LED Mode (-1: default, 0: off, 1: on, 2: blink) |
 +-------------+---------+----------------------------------------------------------+
+
+.. warning::
+   Setting the LED mode to -1 (default) when `multiple` cameras are connected may result in unexpected behavior. :ref:`This is a known limitation of PhotonVision. <docs/other/known-issues:LED Control>`
+
+   Single camera operation should work without issue.
+
