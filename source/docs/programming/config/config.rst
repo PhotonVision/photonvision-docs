@@ -44,7 +44,7 @@ The directory structure is outlined below.
 Importing and Exporting Settings
 --------------------------------
 
-The entire settings directory can be exported as a ZIP archive, and later restored from it, from the settings page.
+The entire settings directory can be exported as a ZIP archive from the settings page.
 
 
 .. raw:: html
@@ -53,3 +53,16 @@ The entire settings directory can be exported as a ZIP archive, and later restor
         <source src="../../../_static/assets/import-export-settings.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+
+A variety of files can be imported back into PhotonVision:
+
+- ZIP Archive (:code:`.zip`)
+   - Useful for restoring a full configuration from a different PhotonVision instance.
+- Single Config File
+   - Currently-supported Files
+      - :code:`hardwareConfig.json`
+      - :code:`hardwareSettings.json`
+      - :code:`networkSettings.json`
+   - Useful for simple hardware or network configuration tasks without overwriting all settings.
+
+
