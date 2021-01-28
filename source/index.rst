@@ -23,9 +23,9 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   
+
    docs/examples/index
- 
+
 .. toctree::
    :maxdepth: 2
 
