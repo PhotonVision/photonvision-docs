@@ -4,7 +4,7 @@ Getting in Range of the Target
 Knowledge and Equipment Needed
 -----------------------------------------------
 
-- Everything required in :ref:`Aiming at a Target <docs/programming/examples/aimingatatarget:Knowledge and Equipment Needed>`.
+- Everything required in :ref:`Aiming at a Target <docs/examples/aimingatatarget:Knowledge and Equipment Needed>`.
 - Large space where your robot can move around freely
 
 Code

@@ -21,6 +21,7 @@ Each pipeline result has a ``hasTargets()``/``HasTargets()`` (Java and C++ respe
       // Check if the latest result has any targets.
       bool hasTargets = result.HasTargets();
 
+.. warning:: You must *always* check if the result has a target via ``hasTargets()``/``HasTargets()`` before getting targets or else you may get a null pointer exception. Further, you must use the same result in every subsequent call in that loop.
 
 Getting a List of Targets
 -------------------------
