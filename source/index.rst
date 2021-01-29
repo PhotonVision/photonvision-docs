@@ -7,7 +7,7 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
 
    docs/getting-started/index
 
@@ -20,6 +20,11 @@ Contents
    :maxdepth: 3
 
    docs/programming/index
+
+.. toctree::
+   :maxdepth: 2
+
+   docs/examples/index
 
 .. toctree::
    :maxdepth: 2
@@ -45,4 +50,4 @@ The source code for all PhotonVision projects is available through our `GitHub o
 License
 -------
 
-PhotonVision is licensed under the `GNU GPL v3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`_
+PhotonVision is licensed under the `GNU GPL v3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`_.
