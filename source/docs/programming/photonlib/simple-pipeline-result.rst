@@ -50,7 +50,7 @@ You can get the :ref:`best target <docs/getting-started/pipeline-tuning/contour-
 
    .. code-tab:: c++
 
-      // Get the current best target. 
+      // Get the current best target.
       photonlib::PhotonTrackedTarget target = result.GetBestTarget();
 
 Getting the Pipeline Latency
