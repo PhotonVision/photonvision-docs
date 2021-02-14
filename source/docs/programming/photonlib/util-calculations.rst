@@ -16,7 +16,7 @@ If your camera is at a fixed height on your robot and the height of the target i
 
       // Get distance to target.
       double distanceMeters = PhotonUtils.calculateDistanceToTargetMeters(
-        kCameraHeight, kTargetHeight, kCameraPitch, Math.toRadians(camera.getFirstTargetPitch());
+        kCameraHeight, kTargetHeight, kCameraPitch, Math.toRadians(target.getPitch());
 
    .. code-tab:: c++
 
@@ -31,7 +31,7 @@ If your camera is at a fixed height on your robot and the height of the target i
 
       // Get distance to target.
       units::meter_t distance = photonlib::PhotonUtils::CalculateDistanceToTarget(
-        kCameraHeight, kTargetHeight, kCameraPitch, units::degree_t(camera.GetFirstTargetPitch()));
+        kCameraHeight, kTargetHeight, kCameraPitch, units::degree_t(target.GetPitch()));
 
 .. note:: The C++ version of PhotonLib uses the Units library. For more information, see `here <https://docs.wpilib.org/en/stable/docs/software/basic-programming/cpp-units.html>`_.
 
@@ -44,12 +44,12 @@ You can get a `translation <https://docs.wpilib.org/en/latest/docs/software/adva
 
       // Calculate a translation from the camera to the target.
       Translation2d translation = PhotonUtils.estimateTargetTranslation2d(
-        distanceMeters, Rotation2d.fromDegrees(-camera.getFirstTargetYaw()));
+        distanceMeters, Rotation2d.fromDegrees(-target.getYaw()));
 
    .. code-tab:: c++
 
       // Calculate a translation from the camera to the target.
       frc::Translation2d translation = photonlib::PhotonUtils::EstimateTargetTranslation(
-        distance, frc::Rotation2d(units::degree_t(-camera.GetFirstTargetYaw())));
+        distance, frc::Rotation2d(units::degree_t(-target.GetYaw())));
 
 .. note:: We are negating the yaw from the camera from CV (computer vision) conventions to standard mathematical conventions. In standard mathematical conventions, as you turn counter-clockwise, angles become more positive.
