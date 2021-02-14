@@ -22,6 +22,8 @@ Troubleshooting
 ^^^^^^^^^^^^^^^
 If ``photonvision.local:5800`` does not resolve, your mDNS is not set up correctly. To fix this, download `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network. Once you find it, set the IP to your static IP in PhotonVision. If you continue to have issues, do not hesistate to :ref:`contact us. <index:Contact Us>`
 
+.. note:: If using the gloworm image you will need to connect to ``gloworm.local:5800``.  If you have changed the hostname you will connect to ``%yourhostname%.local:5800``.
+
 Other Debian-Based Co-Processor Installation
 --------------------------------------------
 We provide an `install script <https://git.io/JJrEP>`_ for other Debian-based systems (with ``apt``) that will automatically install PhotonVision and make sure that it runs on startup.
