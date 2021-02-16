@@ -1,7 +1,7 @@
 Installing PhotonVision on a Romi
 =================================
 
-The Romi is a small robot that can be controlled with the WPILib software.  The main controller is a Raspberry Pi that must be imaged with `WPILibPi <https://docs.wpilib.org/en/latest/docs/romi-robot/imaging-romi.html>`_ .
+The `Romi <https://docs.wpilib.org/en/latest/docs/romi-robot/index.html>`_ is a small robot that can be controlled with the WPILib software.  The main controller is a Raspberry Pi that must be imaged with `WPILibPi <https://docs.wpilib.org/en/latest/docs/romi-robot/imaging-romi.html>`_ .
 
 Installation
 ------------
@@ -16,4 +16,4 @@ Next from the SSH terminal run ``sudo vi /home/pi/runCamera`` then arrow down to
 
 .. image:: images/runcamera.png
 
-After it comes back up you should be able to `locate the PhotonVision UI <https://gloworm.vision/docs/quickstart/#finding-gloworm>`_ at: ``http://10.0.0.2:5800/``.
+After it reboots you should be able to `locate the PhotonVision UI <https://gloworm.vision/docs/quickstart/#finding-gloworm>`_ at: ``http://10.0.0.2:5800/``.
