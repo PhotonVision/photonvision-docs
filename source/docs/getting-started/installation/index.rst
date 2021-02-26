@@ -7,3 +7,4 @@ Installation
    coprocessor-image
    pc-installation
    advanced-cmd
+   romi
