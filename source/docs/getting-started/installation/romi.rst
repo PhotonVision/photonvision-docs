@@ -12,8 +12,8 @@ Follow the process for installing PhotonVision on :ref:`"Other Debian-Based Co-P
 
 The WPILibPi image includes FRCVision which reserves USB cameras by default so we need to edit the /home/pi/runCamera script to disable it.  First we will need to make the file system writeable, the easiest way to do this is to go to ``10.0.0.2`` and choose "Writable" at the top.
 
-Next from the SSH terminal run ``sudo vi /home/pi/runCamera`` then arrow down to the echo line and press "o" to add a new line.  Then type ``sleep 10000`` and press "Esc".  Arrow down to the beginning of the exec line and press "i" (to insert) and then add ``#`` before the exec command to comment it out.  Lastly hit "Esc" and then type ":wq" to save the file.  Now reboot the Romi by typing ``sudo reboot``.
+Next from the SSH terminal run ``sudo nano /home/pi/runCamera`` then arrow down to the start of the exec line and press "Enter" to add a new line.  Then add ``#`` before the exec command to comment it out.  Then arrow up to the new line and type ``sleep 10000``.  Hit "Ctrl + O" and then "Enter" to save the file.  Finally press "Ctrl + X" to exit nano.  Now reboot the Romi by typing ``sudo reboot``.
 
-.. image:: images/runcamera.png
+.. image:: images/nano.png
 
 After it reboots you should be able to `locate the PhotonVision UI <https://gloworm.vision/docs/quickstart/#finding-gloworm>`_ at: ``http://10.0.0.2:5800/``.
