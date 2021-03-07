@@ -16,10 +16,10 @@ When you need to update your JAR file, run the following:
 
 .. code-block:: bash
 
-	wget https://git.io/JqkQ9 -O update.sh
-	sudo chmod +x update.sh
-	sudo ./update.sh
-	sudo reboot now
+    wget https://git.io/JqkQ9 -O update.sh
+    sudo chmod +x update.sh
+    sudo ./update.sh
+    sudo reboot now
 
 Creating a ``systemd`` Service
 ------------------------------
