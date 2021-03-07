@@ -10,6 +10,16 @@ Assuming ``java`` has been installed, and the appropriate environment variables 
 
     java -jar /path/to/photonvision/photonvision.jar
 
+Updating a JAR File
+-------------------
+When you need to update your JAR file, run the following:
+
+.. code-block:: bash
+
+	wget https://git.io/JqkQ9 -O update.sh
+	sudo chmod +x update.sh
+	sudo ./update.sh
+	sudo reboot now
 
 Creating a ``systemd`` Service
 ------------------------------
