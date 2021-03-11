@@ -10,6 +10,8 @@ Downloading the Pi Image
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Download the latest release of the PhotonVision Pi image from the `photon-pi-gen releases page <https://github.com/PhotonVision/photon-pi-gen/releases>`_ to the location of your choice. You do not need to extract the downloaded ZIP file.
 
+.. note:: If using a `Gloworm <https://gloworm.vision/>`_, you will need to use the image found :ref:`here. <docs/hardware:vendors>`
+
 Flashing the Pi Image
 ^^^^^^^^^^^^^^^^^^^^^
 It is recommended to use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto a Raspberry Pi. Simply select the downloaded ``.zip`` file, select your microSD card (we recommend an SD card with a capacity of 8 GB or higher), and flash. For more detailed instructions on using Etcher, please see the `Etcher website <https://www.balena.io/etcher/>`_.
@@ -18,9 +20,11 @@ Final Steps
 ^^^^^^^^^^^
 Simply insert the flashed microSD card into your Raspberry Pi and boot it up. After the initial setup process, your Raspberry Pi should be configured for PhotonVision. You can verify this by making sure your Raspberry Pi and computer are connected to the same network and navigating to ``photonvision.local:5800`` in your browser on your computer.
 
-Troubleshooting
-^^^^^^^^^^^^^^^
-If ``photonvision.local:5800`` does not resolve, your mDNS is not set up correctly. To fix this, download `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network. Once you find it, set the IP to your static IP in PhotonVision. If you continue to have issues, do not hesistate to :ref:`contact us. <index:Contact Us>`
+.. note:: If using a `Gloworm <https://gloworm.vision/>`_, you will need to navigate to ``gloworm.local:5800``.
+
+Troubleshooting/Setting a Static IP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If ``photonvision.local:5800`` or ``gloworm.local:5800`` do not resolve, your mDNS is not set up correctly. To fix this, download `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network. Once you find it, set the IP to your static IP in PhotonVision. Instructions for that can be found :ref:`here. <docs/getting-started/Settings:Networking>` If you continue to have issues, do not hesistate to :ref:`contact us. <index:Contact Us>`
 
 Other Debian-Based Co-Processor Installation
 --------------------------------------------

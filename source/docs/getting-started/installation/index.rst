@@ -8,3 +8,4 @@ Installation
    pc-installation
    advanced-cmd
    limelight
+   romi
