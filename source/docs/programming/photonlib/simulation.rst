@@ -49,7 +49,7 @@ It requires a number of pieces of configuration to accurately simulate your phys
         int camResolutionHeight = 480;    // pixels
         double minTargetArea = 10;        // square pixels
 
-        visionSys = new SimVisionSystem(camName,
+        simVision = new SimVisionSystem(camName,
                                         camDiagFOV,
                                         camPitch,
                                         cameraToRobot,
