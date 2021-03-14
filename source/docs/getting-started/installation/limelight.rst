@@ -18,6 +18,8 @@ After installation you should be able to `locate the camera <https://gloworm.vis
 
 After connecting you may want to set a static IP address.  This can be done by going to the "Settings" page and changing the radio button in the center to "Static".  We recommend following the configuration listed `here <https://docs.wpilib.org/en/latest/docs/networking/networking-introduction/ip-configurations.html>`_ which is usually ``10.TE.AM.11`` for the first IP Camera.  If you would like to change the gloworm.local to something more intuitive you can modify the hostname.
 
+For version 2 (2+ should work fine) of the Limelight we have found that you need to modify the hardwareConfig.json file.  You will need to :ref:`import </docs/programming/config/config:Importing and Exporting Settings>` the hardwareConfig.json file with the 
+
 Troubleshooting
 ---------------
 
