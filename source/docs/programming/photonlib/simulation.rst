@@ -21,7 +21,7 @@ Targets are considered in view if:
 3) The target's in-image pixel size is greater than ``minTargetArea``
 4) The distance from the camera to the target is less than ``maxLEDRange``
 
-.. warning:: Only the `rawBytes` network tables object is updated in network tables currently. The other normal NT entries are not present but interaction through PhontonLib remains the same.  Actual camera images are also not simulated.
+.. warning:: Only the ``rawBytes`` network tables object is updated in network tables currently. The other normal NT entries are not present but interaction through PhontonLib remains the same.  Actual camera images are also not simulated.
 
 Latency of processing is not yet modeled.
 
@@ -126,7 +126,7 @@ Finally, while running the simulation, process simulated camera frames by provid
 
         simVision.ProcessFrame(robotPose);
 
-This will cause NetworkTables `rawBytes` field to update properly with targets information, representing any targets that are in view of the robot.
+This will cause NetworkTables ``rawBytes`` field to update properly with targets information, representing any targets that are in view of the robot.
 
 Robot software which uses PhotonLib to interact with a camera running PhotonVision should work the same as though a real camera was hooked up and active.
 
