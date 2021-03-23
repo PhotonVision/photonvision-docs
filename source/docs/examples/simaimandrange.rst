@@ -18,7 +18,7 @@ This example builds upon that, adding support for simulating robot motion and in
 .. raw:: html
 
         <video width="85%" controls>
-            <source src="../../../_static/assets/simaimandrange.mp4" type="video/mp4">
+            <source src="../../_static/assets/simaimandrange.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 

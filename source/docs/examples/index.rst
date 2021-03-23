@@ -8,6 +8,4 @@ Code Examples
    gettinginrangeofthetarget
    aimandrange
    simaimandrange
-   3dTracking
    simposeest
-   infiniterecharge
