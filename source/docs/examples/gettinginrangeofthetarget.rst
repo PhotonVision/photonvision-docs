@@ -16,25 +16,25 @@ In FRC, a mechanism usually has to be a certain distance away from it’s target
 
 .. note:: There is no strict minimum delta-height necessary for this method to be applicable, just a requirement that a delta exists.
 
-The following example is from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonlib-examples/tree/main/java/getting-in-range>`_/`C++ <https://github.com/PhotonVision/photonlib-examples/tree/main/cpp/getting-in-range>`_).
+The following example is from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/src/main/java/org/photonlib/examples/getinrange>`_/`C++ <https://github.com/PhotonVision/photonvision/tree/master/photonlib-cpp-examples/src/main/cpp/examples/getinrange>`_).
 
 .. tabs::
 
   .. group-tab:: Java
 
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/main/java/getting-in-range/src/main/java/frc/robot/Robot.java
+    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/getinrange/Robot.java
       :language: java
       :linenos:
 
   .. group-tab:: C++ (Header)
 
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/main/cpp/getting-in-range/src/main/include/Robot.h
+    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/getinrange/include/Robot.h
       :language: c++
       :linenos:
 
   .. group-tab:: C++ (Source)
 
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonlib-examples/main/cpp/getting-in-range/src/main/cpp/Robot.cpp
+    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/getinrange/cpp/Robot.cpp
       :language: c++
       :linenos:
 
