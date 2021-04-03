@@ -13,32 +13,20 @@ The directory structure is outlined below.
    :width: 600
    :alt: Config directory structure
 
-- calibImgs
-
+* calibImgs
    - Images saved from the last run of the calibration routine
-
-- cameras
-
+* cameras
    - Contains a subfolder for each camera. This folder contains the following files:
-
-      - pipelines folder, which contains a :code:`json` file for each user-created pipeline.
-      - config.json, which contains all camera-specific configuration. This includes FOV, pitch, current pipeline index, and calibration data
-      - drivermode.json, which contains settings for the driver mode pipeline
-
-- imgSaves
-
+      + pipelines folder, which contains a :code:`json` file for each user-created pipeline.
+      + config.json, which contains all camera-specific configuration. This includes FOV, pitch, current pipeline index, and calibration data
+      + drivermode.json, which contains settings for the driver mode pipeline
+* imgSaves
    - Contains images saved with the input/output save commands.
-
-- logs
-
+* logs
    - Contains timestamped logs in the format :code:`photonvision-YYYY-MM-D_HH-MM-SS.log`. Note that on Pi or Gloworm these timestamps will likely be significantly behind the real time.
-
-- hardwareSettings.json
-
+* hardwareSettings.json
    - Contains hardware settings. Currently this includes only the LED brightness.
-
-- networkSettings.json
-
+* networkSettings.json
    - Contains network settings, including team number, static/dynamic settings, and hostname.
 
 Importing and Exporting Settings
