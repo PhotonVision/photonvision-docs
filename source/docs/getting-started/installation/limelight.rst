@@ -3,9 +3,9 @@ Installing PhotonVision on a Limelight
 
 The Limelight is a proven, reliable, and easy-to-use smart camera.  However, many of the features of PhotonVision exceed the capabilities of the current Limelight software, so loading the PhotonVision software onto the Limelight hardware gives teams the best of both worlds.  Some of the unique features PhotonVision provides are:
 
-- Multiple Targets each reporting their own information.
-- Multiple Cameras each running their own independant pipeline.
-- PhotonLib making it easier to retrieve data.
+- Multiple Targets that each report their own information.
+- Multiple cameras, each of which run an independent pipeline at the same time.
+- PhotonLib, which makes it easier to retrieve and do calculations on vision data.
 - Up to 2x faster processing at higher resolutions.
 - Open Source and constantly improving.
 
@@ -23,7 +23,7 @@ Download the hardwareConfig.json file for the version of your Limelight:
 - :download:`LimeLight Version 2 <files/LimeLight2/hardwareConfig.json>`.
 - :download:`LimeLight Version 2+ <files/LimeLight2+/hardwareConfig.json>`.
 
-You will then need to :ref:`import <docs/programming/config/config:Importing and Exporting Settings>` that hardwareConfig.json file.
+You will then need to :ref:`import <docs/programming/config/config:Importing and Exporting Settings>` that hardwareConfig.json file.  This is **REQUIRED** to get the LEDS working and set the correct camera FOV.
 
 Troubleshooting
 ---------------
