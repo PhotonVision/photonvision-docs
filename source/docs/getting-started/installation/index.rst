@@ -7,4 +7,5 @@ Installation
    coprocessor-image
    pc-installation
    advanced-cmd
+   limelight
    romi
