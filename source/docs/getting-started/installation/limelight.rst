@@ -20,8 +20,8 @@ After connecting you may want to set a static IP address.  This can be done by g
 
 Download the hardwareConfig.json file for the version of your Limelight:
 
-- :download:`LimeLight Version 2 <files/LimeLight2/hardwareConfig.json>`.
-- :download:`LimeLight Version 2+ <files/LimeLight2+/hardwareConfig.json>`.
+- :download:`Limelight Version 2 <files/Limelight2/hardwareConfig.json>`.
+- :download:`Limelight Version 2+ <files/Limelight2+/hardwareConfig.json>`.
 
 You will then need to :ref:`import <docs/programming/config/config:Importing and Exporting Settings>` that hardwareConfig.json file.  This is **REQUIRED** to get the LEDS working and set the correct camera FOV.
 
