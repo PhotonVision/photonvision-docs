@@ -18,11 +18,16 @@ After installation you should be able to `locate the camera <https://gloworm.vis
 
 After connecting you may want to set a static IP address.  This can be done by going to the "Settings" page and changing the radio button in the center to "Static".  We recommend following the configuration listed `here <https://docs.wpilib.org/en/latest/docs/networking/networking-introduction/ip-configurations.html>`_ which is usually ``10.TE.AM.11`` for the first IP Camera.  If you would like to change the gloworm.local to something more intuitive you can modify the hostname.
 
-For version 2 (2+ should work fine) of the Limelight we have found that you need to modify the hardwareConfig.json file.  You will need to :ref:`import </docs/programming/config/config:Importing and Exporting Settings>` the hardwareConfig.json file with the 
+Download the hardwareConfig.json file for the version of your Limelight:
+
+- :download:`LimeLight Version 2 <files/LimeLight2/hardwareConfig.json>`
+- :download:`LimeLight Version 2+ <files/LimeLight2+/hardwareConfig.json>`
+
+You will then need to :ref:`import <docs/programming/config/config:Importing and Exporting Settings>` that hardwareConfig.json file.
 
 Troubleshooting
 ---------------
 
-To turn the LED lights off or on you need to modify the ``ledMode`` network tables entry.
+To turn the LED lights off or on you need to modify the ``ledMode`` network tables entry or the ``camera.setLED`` of PhotonLib.
 
 To find multiple targets you will need to go to the output tab and click the "Show multiple targets" toggle.
