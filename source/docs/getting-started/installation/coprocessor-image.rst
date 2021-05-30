@@ -14,7 +14,9 @@ Download the latest release of the PhotonVision Pi image from the `photon-pi-gen
 
 Flashing the Pi Image
 ^^^^^^^^^^^^^^^^^^^^^
-It is recommended to use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto a Raspberry Pi. Simply select the downloaded ``.zip`` file, select your microSD card (we recommend an SD card with a capacity of 8 GB or higher), and flash. For more detailed instructions on using Etcher, please see the `Etcher website <https://www.balena.io/etcher/>`_.
+It is recommended to use `usbimager <https://gitlab.com/bztsrc/usbimager#usbimager>`_ to flash an image onto a Raspberry Pi. Specific instructions on using usbimager can be found `here <https://gitlab.com/bztsrc/usbimager#usage>`_. Simply select the downloaded ``.zip`` file, select your microSD card (we recommend an SD card with a capacity of 8 GB or higher), and flash.
+
+.. note:: If using Windows, SmartScreen may flag this application as unsafe. However, you can just click more info and then ``Run anyway``. This is a trusted application and all of the code within it can be found `here. <https://gitlab.com/bztsrc/usbimager>`_
 
 Final Steps
 ^^^^^^^^^^^
