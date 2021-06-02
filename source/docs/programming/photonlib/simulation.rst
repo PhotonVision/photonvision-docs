@@ -36,6 +36,8 @@ A ``SimVisionSystem`` represents the camera, coprocessor, and PhotonVision softw
 
 It requires a number of pieces of configuration to accurately simulate your physical setup. Match them to your configuration in PhotonVision, and to your robot's physical dimensions.
 
+.. note:: Many of the numbers used below are for the 2020/2021 game and will not be relevant in the future. You can calculate these numbers yourself (``targetHeight``,``targetWidth``, and ``targetHeightAboveGround``) using documentation/drawings provided by FIRST at kickoff.
+
 .. tabs::
    .. code-tab:: java
 
@@ -90,9 +92,9 @@ After declaring the system, you should create and add one ``SimVisionTarget`` pe
    .. code-tab:: java
 
         var targetPose = new Pose2d(new Translation2d(25,10), new Rotation2d()); // meters
-        double targetHeightAboveGround = 2.3; // meters
-        double targetWidth = 0.54;           // meters
-        double targetHeight = 0.25;          // meters
+        double targetHeightAboveGround = Units.inchesToMeters(81.19); // meters
+        double targetWidth = Units.inchesToMeters(41.30) - Units.inchesToMeters(6.70); // meters
+        double targetHeight = Units.inchesToMeters(98.19) - Units.inchesToMeters(81.19); // meters
 
         var newTgt = new SimVisionTarget(targetPose,
                                          targetHeightAboveGround,
@@ -104,9 +106,9 @@ After declaring the system, you should create and add one ``SimVisionTarget`` pe
    .. code-tab:: c++
 
         frc::Pose2d targetPose (frc::Translation2d(25_m, 10_m), frc::Rotation2d());
-        units::meter_t targetHeightAboveGround (2.3);
-        units::meter_t targetWidth (0.54);
-        units::meter_t targetHeight (0.25);
+        units::meter_t targetHeightAboveGround = 81.19_in;
+        units::meter_t targetWidth 34.6_in;
+        units::meter_t targetHeight 17_in;
 
         photonlib::SimVisionTarget newTgt (targetPose,
                                            targetHeightAboveGround,
