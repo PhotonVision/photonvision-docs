@@ -16,4 +16,4 @@ Getting Started
 
    pipeline-tuning/index
    Settings
-   UsingPhotonVisionAtCompetition
+   Networking
