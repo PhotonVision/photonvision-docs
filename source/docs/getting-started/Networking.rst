@@ -10,11 +10,11 @@ If you would like to access your Ethernet-connected vision device from a compute
 .. tabs::
 
    .. code-tab:: java
-   
+
          PortForwarder.add(5800, "photonvision.local", 5800);
 
    .. code-tab:: c++
-   
+
          wpi::PortForwarder::GetInstance().Add(5800, "wpilibpi.local", 5800);
 
 Camera Stream Ports
