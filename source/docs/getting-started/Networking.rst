@@ -15,7 +15,7 @@ If you would like to access your Ethernet-connected vision device from a compute
 
    .. code-tab:: c++
    
-         wpi::PortForwarder::GetInstance().Add(5800, "wpilibpi.local", );
+         wpi::PortForwarder::GetInstance().Add(5800, "wpilibpi.local", 5800);
 
 Camera Stream Ports
 ^^^^^^^^^^^^^^^^^^^
