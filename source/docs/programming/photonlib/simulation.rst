@@ -107,7 +107,7 @@ After declaring the system, you should create and add one ``SimVisionTarget`` pe
    .. code-tab:: c++
 
         frc::Pose2d targetPose (frc::Translation2d(25_m, 10_m), frc::Rotation2d());
-		// https://firstfrc.blob.core.windows.net/frc2020/PlayingField/2020FieldDrawing-SeasonSpecific.pdf
+        // https://firstfrc.blob.core.windows.net/frc2020/PlayingField/2020FieldDrawing-SeasonSpecific.pdf
         units::meter_t targetHeightAboveGround = 89.69_in;
         units::meter_t targetWidth 38.6_in;
         units::meter_t targetHeight 17_in;
