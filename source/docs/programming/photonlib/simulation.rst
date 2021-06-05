@@ -92,9 +92,7 @@ After declaring the system, you should create and add one ``SimVisionTarget`` pe
    .. code-tab:: java
 
         var targetPose = new Pose2d(new Translation2d(25,10), new Rotation2d()); // meters
-		
         // https://firstfrc.blob.core.windows.net/frc2020/PlayingField/2020FieldDrawing-SeasonSpecific.pdf
-		
         double targetHeightAboveGround = Units.inchesToMeters(89.69); // meters
         double targetWidth = Units.inchesToMeters(41.30) - Units.inchesToMeters(6.70) + Units.inchesToMeters(2*2.0); // meters
         double targetHeight = Units.inchesToMeters(98.19) - Units.inchesToMeters(81.19); // meters
@@ -109,9 +107,7 @@ After declaring the system, you should create and add one ``SimVisionTarget`` pe
    .. code-tab:: c++
 
         frc::Pose2d targetPose (frc::Translation2d(25_m, 10_m), frc::Rotation2d());
-		
 		// https://firstfrc.blob.core.windows.net/frc2020/PlayingField/2020FieldDrawing-SeasonSpecific.pdf
-		
         units::meter_t targetHeightAboveGround = 89.69_in;
         units::meter_t targetWidth 38.6_in;
         units::meter_t targetHeight 17_in;
