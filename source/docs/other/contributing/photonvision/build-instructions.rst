@@ -41,7 +41,7 @@ In the photon-client directory:
 Build and Copy UI to Java Source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the photon-server directory:
+In the root directory:
 
 .. tabs::
 
@@ -60,7 +60,7 @@ In the photon-server directory:
 Build and Run the Source
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To compile and run the project, issue the following command in the photon-server directory:
+To compile and run the project, issue the following command in the root directory:
 
 .. tabs::
 
@@ -76,7 +76,7 @@ To compile and run the project, issue the following command in the photon-server
 
       ``gradlew run``
 
-Running the following command under the photon-server directory will build the jar under photon-server/build/libs:
+Running the following command under the root directory will build the jar under photon-server/build/libs:
 
 .. tabs::
 
