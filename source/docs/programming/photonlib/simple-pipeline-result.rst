@@ -11,6 +11,7 @@ Checking for Existence of Targets
 Each pipeline result has a ``hasTargets()``/``HasTargets()`` (Java and C++ respectively) method to inform the user as to whether the result contains any targets.
 
 .. tabs::
+
    .. code-tab:: java
 
       // Check if the latest result has any targets.
