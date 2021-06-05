@@ -23,10 +23,10 @@ If your camera is at a fixed height on your robot and the height of the target i
       .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/getinrange/include/Robot.h
          :language: cpp
          :lines: 35-41
-      
+
       .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/getinrange/cpp/Robot.cpp
          :language: cpp
-         :lines: 34-36	  
+         :lines: 34-36
 
 .. note:: The C++ version of PhotonLib uses the Units library. For more information, see `here <https://docs.wpilib.org/en/stable/docs/software/basic-programming/cpp-units.html>`_.
 
