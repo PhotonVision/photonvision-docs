@@ -63,7 +63,7 @@ You can get your robot's ``Pose2D`` on the field using various camera data, targ
 
       // Calculate robot's field relative pose
       Pose2D robotPose = PhotonUtils.estimateFieldToRobot(
-	    kCameraHeight, kTargetHeight, kCameraPitch, kTargetPitch, Rotation2d.fromDegrees(-target.getYaw()), gyro.getRotation2d(), targetPose, cameraToRobot);
+        kCameraHeight, kTargetHeight, kCameraPitch, kTargetPitch, Rotation2d.fromDegrees(-target.getYaw()), gyro.getRotation2d(), targetPose, cameraToRobot);
 
    .. code-tab:: c++
 
