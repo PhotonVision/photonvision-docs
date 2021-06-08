@@ -56,7 +56,7 @@ You can get a `translation <https://docs.wpilib.org/en/latest/docs/software/adva
 
 Estimating Field Relative Pose
 ------------------------------
-You can get your robot's ``Pose2D`` on the field using various camera data, target yaw, gyro angle, target pose, and camera position.
+You can get your robot's ``Pose2D`` on the field using various camera data, target yaw, gyro angle, target pose, and camera position. This method estimates the target's relative position using ``estimateCameraToTargetTranslation`` (which uses pitch and yaw to estimate range and heading), and the robot's gyro to estimate the rotation of the target.
 
 .. tabs::
    .. code-tab:: java
