@@ -37,94 +37,54 @@ A ``SimVisionSystem`` represents the camera, coprocessor, and PhotonVision softw
 It requires a number of pieces of configuration to accurately simulate your physical setup. Match them to your configuration in PhotonVision, and to your robot's physical dimensions.
 
 .. tabs::
-   .. code-tab:: java
 
-        String camName = "MyCamera";
-        double camDiagFOV = 75.0; // degrees
-        double camPitch = 0.0;     // degrees
-        Transform2d cameraToRobot = new Transform2d(new Translation2d(1.2, 0.0), new Rotation2d()); // meters
-        double camHeightOffGround = 0.85; // meters
-        double maxLEDRange = 20;          // meters
-        int camResolutionWidth = 640;     // pixels
-        int camResolutionHeight = 480;    // pixels
-        double minTargetArea = 10;        // square pixels
+   .. group-tab:: Java
 
-        simVision = new SimVisionSystem(camName,
-                                        camDiagFOV,
-                                        camPitch,
-                                        cameraToRobot,
-                                        camHeightOffGround,
-                                        maxLEDRange,
-                                        camResolutionWidth,
-                                        camResolutionHeight,
-                                        minTargetArea);
+      .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+         :language: java
+         :lines: 66-87
 
-   .. code-tab:: c++
+   .. group-tab:: C++
 
-        #include "photonlib/SimVisionSystem.h"
-
-        std::string camName = "MyCamera";
-        units::degree_t camDiagFOV (75.0);
-        units::degree_t camPitch (0.0);
-        frc::Transform2d cameraToRobot (frc::Translation2d(1.2_m, 0.0_m), frc::Rotation2d());
-        units::meter_t camHeightOffGround (0.85);
-        units::meter_t  maxLEDRange (20);
-        int camResolutionWidth = 640;   // pixels
-        int camResolutionHeight = 480;  // pixels
-        double minTargetArea = 10;      // square pixels
-
-        photonlib::SimVisionSystem simVision(camName,
-                                             camDiagFOV,
-                                             camPitch,
-                                             cameraToRobot,
-                                             camHeightOffGround,
-                                             maxLEDRange,
-                                             camResolutionWidth,
-                                             camResolutionHeight,
-                                             minTargetArea);
-
+      .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
+         :language: cpp
+         :lines: 72-92
 
 After declaring the system, you should create and add one ``SimVisionTarget`` per target on the field you are attempting to detect.
 
 .. tabs::
-   .. code-tab:: java
 
-        var targetPose = new Pose2d(new Translation2d(25,10), new Rotation2d()); // meters
-        double targetHeightAboveGround = 2.3; // meters
-        double targetWidth = 0.54;           // meters
-        double targetHeight = 0.25;          // meters
+   .. group-tab:: Java
 
-        var newTgt = new SimVisionTarget(targetPose,
-                                         targetHeightAboveGround,
-                                         targetWidth,
-                                         targetHeight);
+      .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+         :language: java
+         :lines: 89-108
 
-        simVision.addSimVisionTarget(newTgt);
+   .. group-tab:: C++
 
-   .. code-tab:: c++
+      .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
+         :language: cpp
+         :lines: 95-103
 
-        frc::Pose2d targetPose (frc::Translation2d(25_m, 10_m), frc::Rotation2d());
-        units::meter_t targetHeightAboveGround (2.3);
-        units::meter_t targetWidth (0.54);
-        units::meter_t targetHeight (0.25);
-
-        photonlib::SimVisionTarget newTgt (targetPose,
-                                           targetHeightAboveGround,
-                                           targetWidth,
-                                           targetHeight);
-
-        simVision.AddSimVisionTarget(newTgt);
+      .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
+         :language: cpp
+         :lines: 41
 
 Finally, while running the simulation, process simulated camera frames by providing the robot's pose to the system.
 
 .. tabs::
-   .. code-tab:: java
 
-        simVision.processFrame(robotPose);
+   .. group-tab:: Java
 
-   .. code-tab:: c++
+      .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+         :language: java
+         :lines: 132
 
-        simVision.ProcessFrame(robotPose);
+   .. group-tab:: C++
+
+      .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/sim/DrivetrainSim.cpp
+         :language: cpp
+         :lines: 40
 
 This will cause most NetworkTables fields to update properly, representing any targets that are in view of the robot.
 
