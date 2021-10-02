@@ -61,11 +61,11 @@ You can also get the pipeline latency from a pipeline result using the ``getLate
    .. code-tab:: java
 
       // Get the pipeline latency.
-      double latencySeconds = getLatencyMillis() / 1000.0;
+      double latencySeconds = result.getLatencyMillis() / 1000.0;
 
    .. code-tab:: c++
 
       // Get the pipeline latency.
-      units::second_t latency = GetLatency();
+      units::second_t latency = result.GetLatency();
 
 .. note:: The C++ version of PhotonLib returns the latency in a unit container. For more information on the Units library, see `here <https://docs.wpilib.org/en/stable/docs/software/basic-programming/cpp-units.html>`_.
