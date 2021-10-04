@@ -35,4 +35,3 @@ For HSV tuning, start with Hue, as it is the most important/differentiating fact
 .. image:: images/hsl_top.png
    :width: 600
    :alt: HSV chart
- 
