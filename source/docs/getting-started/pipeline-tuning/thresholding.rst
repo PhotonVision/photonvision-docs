@@ -26,12 +26,13 @@ The color picker can be used to quickly adjust HSV values. "Set to average" will
 
 Tuning Steps
 ------------
-The following steps were derived from FRC 254's 2016 Championships presentation on computer vision and allow you to accurately tune PhotonVision to track your target.
+The following steps were derived from FRC 254's 2016 Championship presentation on computer vision and allows you to accurately tune PhotonVision to track your target.
 
-In order to properly capture the colors that you want, first turn your exposure low until you have a mostly dark image with the taget still showing. A darker image ensures that you don't see things that aren't your target (ex. overhead lights). Be careful not to overexpose your image (you will be able to tell this if a target looks more cyan/white or equivalent instead of green when looking at it through the video feed) since that can give you poor results.
+In order to properly capture the colors that you want, first turn your exposure low until you have a mostly dark image with the target still showing. A darker image ensures that you don't see things that aren't your target (ex. overhead lights). Be careful not to overexpose your image (you will be able to tell this if a target looks more cyan/white or equivalent instead of green when looking at it through the video feed) since that can give you poor results.
 
 For HSV tuning, start with Hue, as it is the most important/differentiating factor when it comes to detecting color. You want to make the range for Hue as small as possible in order to get accurate tracking, feel free to reference the chart below to help. After you have properly tuned Hue, then tune for high saturation/color intensity (S), and then brightness (V). Using this method will decrease the likelihood that you need to calibrate on the field.
 
 .. image:: images/hsl_top.png
    :width: 600
    :alt: HSV chart
+ 
