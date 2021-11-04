@@ -30,7 +30,7 @@ The following steps were derived from FRC 254's 2016 Championship presentation o
 
 In order to properly capture the colors that you want, first turn your exposure low until you have a mostly dark image with the target still showing. A darker image ensures that you don't see things that aren't your target (ex. overhead lights). Be careful not to overexpose your image (you will be able to tell this if a target looks more cyan/white or equivalent instead of green when looking at it through the video feed) since that can give you poor results.
 
-For HSV tuning, start with Hue, as it is the most important/differentiating factor when it comes to detecting color. You want to make the range for Hue as small as possible in order to get accurate tracking, feel free to reference the chart below to help. After you have properly tuned Hue, then tune for high saturation/color intensity (S), and then brightness (V). Using this method will decrease the likelihood that you need to calibrate on the field.
+For HSV tuning, start with Hue, as it is the most important/differentiating factor when it comes to detecting color. You want to make the range for Hue as small as possible in order to get accurate tracking. Feel free to reference the chart below to help. After you have properly tuned Hue, tune for high saturation/color intensity (S), and then brightness (V). Using this method will decrease the likelihood that you need to calibrate on the field. Saturation and Value's upper bounds will often end up needing to be the maximum (255).
 
 .. image:: images/hsl_top.png
    :width: 600
