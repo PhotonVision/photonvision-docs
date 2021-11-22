@@ -35,7 +35,7 @@ Contents
 Contact Us
 ----------
 
-To report a bug or submit a feature request in PhotonVision, please `submit an issue on the PhotonVision GitHub <https://github.com/PhotonVision/photonvision>`_ or `contact the developers on Discord <https://discord.gg/KS76FrX>`_.
+To report a bug or submit a feature request in PhotonVision, please `submit an issue on the PhotonVision GitHub <https://github.com/PhotonVision/photonvision>`_ or `contact the developers on Discord <https://discord.com/invite/KS76FrX>`_.
 
 If you find a problem in this documentation, please submit an issue on the `PhotonVision Documentation GitHub <https://github.com/PhotonVision/photonvision-docs>`_.
 

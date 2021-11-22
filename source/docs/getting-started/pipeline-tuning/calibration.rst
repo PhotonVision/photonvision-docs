@@ -3,7 +3,7 @@ Calibrating Your Camera
 
 In order to use :ref:`3d mode <docs/getting-started/pipeline-tuning/3D:3D Tuning>`, your camera must be calibrated at the desired resolution. This calibration process must be repeated for each resolution at which users wish to use 3D mode.
 
-To calibrate a camera, images of a chessboard (or grid of dots) are taken. by comparing where the grid corners (or dots) should be in object space (for example, a dot once every inch in an 8x6 grid) with where they appear in the camera image, we can find a least-squares estimate for intrinsic camera properties like focal lengths, center point, and distortion coefficients. For more on camera calibration, please review the `OpenCV documentation <https://docs.opencv.org/master/dc/dbb/tutorial_py_calibration.html>`_.
+To calibrate a camera, images of a chessboard (or grid of dots) are taken. by comparing where the grid corners (or dots) should be in object space (for example, a dot once every inch in an 8x6 grid) with where they appear in the camera image, we can find a least-squares estimate for intrinsic camera properties like focal lengths, center point, and distortion coefficients. For more on camera calibration, please review the `OpenCV documentation <https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html>`_.
 
 .. warning:: While any resolution can be calibrated, resolutions lower than 960x720 are often too low to provide accurate results.
 

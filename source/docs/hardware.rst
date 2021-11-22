@@ -73,7 +73,7 @@ Vendors
 
   * `Image <https://github.com/gloworm-vision/pi-gen/releases/>`_
 
-  * `Discord <https://discord.gg/DncQRky>`_
+  * `Discord <https://discord.com/invite/DncQRky>`_
 
 * SnakeEyes
 
