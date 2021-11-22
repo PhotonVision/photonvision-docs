@@ -2,7 +2,7 @@ PC Installation
 ===============
 It is also possible to install PhotonVision on your personal computer and use your webcam for occasional testing. Note that you will need JDK 11 or higher to be able to run PhotonVision.
 
-.. note:: Due to `cscore <https://github.com/wpilibsuite/allwpilib/tree/master/cscore>`_ restrictions, the PhotonVision server backend cannot run on macOS.
+.. note:: Due to `cscore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ restrictions, the PhotonVision server backend cannot run on macOS.
 
 Downloading the Latest Stable Release of PhotonVision
 -----------------------------------------------------
