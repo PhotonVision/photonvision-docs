@@ -8,7 +8,7 @@ Because we anticipate that most teams will use a Raspberry Pi as their co-proces
 
 Downloading the Pi Image
 ^^^^^^^^^^^^^^^^^^^^^^^^
-Download the latest release of the PhotonVision Pi image from the `photon-pi-gen releases page <https://github.com/PhotonVision/photon-pi-gen/releases>`_ to the location of your choice. You do not need to extract the downloaded ZIP file.
+Download the latest release of the PhotonVision Pi image from the `releases page <https://github.com/PhotonVision/photonvision/releases>`_ to the location of your choice. You do not need to extract the downloaded ZIP file.
 
 .. note:: If using a `Gloworm <https://gloworm.vision/>`_, you will need to use the image found :ref:`here. <docs/hardware:vendors>`
 
