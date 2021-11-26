@@ -5,4 +5,5 @@ Other
 
    contributing/index
    known-issues
+   troubleshooting-tips
 

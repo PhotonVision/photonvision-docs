@@ -33,9 +33,9 @@ First, in the main :code:`Robot` source file, we add support to periodically upd
 
     .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/Robot.java
       :language: java
-      :lines: 109-123
+      :lines: 107-120
       :linenos:
-      :lineno-start: 109
+      :lineno-start: 107
 
   .. group-tab:: C++
 
