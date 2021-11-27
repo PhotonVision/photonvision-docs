@@ -54,7 +54,7 @@ Images are stored within the PhotonVision configuration directory. Running the "
 
       // Capture post-process camera stream image
       camera.takeOutputSnapshot();
-	
+
     .. code-block:: C++
 
       // Capture pre-process camera stream image
