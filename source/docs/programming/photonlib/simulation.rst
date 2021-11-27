@@ -53,7 +53,7 @@ After declaring the system, you should create and add one ``SimVisionTarget`` pe
       .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
          :language: java
          :lines: 87-108
- 
+
       .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
          :language: c++
          :lines: 95-103, 38-42
