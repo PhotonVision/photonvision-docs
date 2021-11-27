@@ -33,7 +33,8 @@ extensions = [
 	'notfound.extension',
     'sphinxcontrib.remoteliteralinclude',
 	"sphinxext.opengraph",
-	"sphinxcontrib.ghcontributors"
+	"sphinxcontrib.ghcontributors",
+    "sphinx_design"
 ]
 
 # Configure OpenGraph support

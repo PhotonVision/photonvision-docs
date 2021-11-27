@@ -7,3 +7,4 @@ sphinxcontrib-ghcontributors==0.2.2
 sphinx-notfound-page==0.5
 sphinxcontrib-remoteliteralinclude==0.0.4
 sphinx-rtd-theme
+sphinx-design

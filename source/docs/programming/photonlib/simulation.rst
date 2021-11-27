@@ -36,55 +36,39 @@ A ``SimVisionSystem`` represents the camera, coprocessor, and PhotonVision softw
 
 It requires a number of pieces of configuration to accurately simulate your physical setup. Match them to your configuration in PhotonVision, and to your robot's physical dimensions.
 
-.. tabs::
+.. tab-set-code::
 
-   .. group-tab:: Java
+     .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+        :language: java
+        :lines: 64-85
 
-      .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
-         :language: java
-         :lines: 66-87
-
-   .. group-tab:: C++
-
-      .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
-         :language: cpp
-         :lines: 72-92
+     .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
+        :language: c++
+        :lines: 71-85
 
 After declaring the system, you should create and add one ``SimVisionTarget`` per target on the field you are attempting to detect.
 
-.. tabs::
-
-   .. group-tab:: Java
+.. tab-set-code::
 
       .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
          :language: java
-         :lines: 89-108
-
-   .. group-tab:: C++
-
+         :lines: 87-108
+		 
       .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
-         :language: cpp
-         :lines: 95-103
-
-      .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
-         :language: cpp
-         :lines: 41
+         :language: c++
+         :lines: 95-103, 38-42
 
 Finally, while running the simulation, process simulated camera frames by providing the robot's pose to the system.
 
-.. tabs::
-
-   .. group-tab:: Java
+.. tab-set-code::
 
       .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
          :language: java
-         :lines: 132
-
-   .. group-tab:: C++
+         :lines: 128-129
 
       .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/sim/DrivetrainSim.cpp
-         :language: cpp
-         :lines: 40
+         :language: c++
+         :lines: 39-40
 
 This will cause most NetworkTables fields to update properly, representing any targets that are in view of the robot.
 
@@ -98,8 +82,8 @@ Advanced users may wish to directly provide target information based on an exist
 
 A ``SimPhotonCamera`` can be created for this purpose. It provides an interface where the user can supply target data via a list of ``PhotonTrackedTarget`` objects.
 
-.. tabs::
-   .. code-tab:: java
+.. tab-set-code::
+   .. code-block:: java
 
         @Override
         public void simulationInit() {
@@ -117,7 +101,7 @@ A ``SimPhotonCamera`` can be created for this purpose. It provides an interface 
             //  ...
         }
 
-   .. code-tab:: c++
+   .. code-block:: c++
 
         #include "photonlib/SimPhotonCamera.h"
 

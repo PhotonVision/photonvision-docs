@@ -36,9 +36,9 @@ Specifically, to incorporate Photon Vision, we need to create a :code:`PhotonCam
 
     .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/robot/DrivetrainPoseEstimator.java
       :language: java
-      :lines: 43-43
+      :lines: 41
       :linenos:
-      :lineno-start: 43
+      :lineno-start: 41
 
   .. group-tab:: C++
 
@@ -53,9 +53,9 @@ Then, during periodic execution, we read back results. If we see a target in the
 
     .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/robot/DrivetrainPoseEstimator.java
       :language: java
-      :lines: 81-88
+      :lines: 67-86
       :linenos:
-      :lineno-start: 81
+      :lineno-start: 67
 
   .. group-tab:: C++
 
@@ -74,9 +74,9 @@ First, we create a new :code:`SimVisionSystem` to represent our camera and copro
 
     .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/sim/DrivetrainSim.java
       :language: java
-      :lines: 71-93
+      :lines: 69-90
       :linenos:
-      :lineno-start: 71
+      :lineno-start: 69
 
   .. group-tab:: C++
 
@@ -90,9 +90,9 @@ Next, we create objects to represent the physical location and size of the visio
 
     .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/robot/Constants.java
       :language: java
-      :lines: 64-93
+      :lines: 71-93
       :linenos:
-      :lineno-start: 64
+      :lineno-start: 71
 
   .. group-tab:: C++
 
@@ -106,9 +106,9 @@ Finally, we add our target to the simulated vision system.
 
     .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/sim/DrivetrainSim.java
       :language: java
-      :lines: 95-95
+      :lines: 92-94
       :linenos:
-      :lineno-start: 95
+      :lineno-start: 92
 
   .. group-tab:: C++
 
@@ -128,9 +128,9 @@ Once we have all the properties of our simulated vision system defined, the work
 
     .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/sim/DrivetrainSim.java
       :language: java
-      :lines: 136-137
+      :lines: 133-134
       :linenos:
-      :lineno-start: 136
+      :lineno-start: 133
 
   .. group-tab:: C++
 
