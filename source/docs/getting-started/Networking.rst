@@ -12,11 +12,11 @@ If you would like to access your Ethernet-connected vision device from a compute
     .. code-block:: java
 
         PortForwarder.add(5800, "photonvision.local", 5800);
-		
+	
     .. code-block:: C++
 
         wpi::PortForwarder::GetInstance().Add(5800, "photonvision.local", 5800);
-		
+	
 .. note:: The address in the code above (``photonvision.local``) is the hostname of the coprocessor. This can be different depending on your hardware (ex. for the Gloworm it will be ``gloworm.local``)
 
 Camera Stream Ports

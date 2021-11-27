@@ -84,7 +84,7 @@ Next, we create objects to represent the physical location and size of the visio
       :lines: 87-100
       :linenos:
       :lineno-start: 87
-	  
+
   .. group-tab:: C++
 
     .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h

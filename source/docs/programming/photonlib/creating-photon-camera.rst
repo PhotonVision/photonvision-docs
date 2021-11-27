@@ -11,13 +11,14 @@ The ``PhotonCamera`` class has two constructors: one that takes a ``NetworkTable
 
 .. tab-set-code::
 
-	.. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
-         :language: java
-         :lines: 43-44
-		 
-	.. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
-         :language: c++
-         :lines: 35-36
+
+     .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
+        :language: java
+        :lines: 43-44
+
+     .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
+        :language: c++
+        :lines: 35-36
 
 .. warning:: Teams must have unique names for all of their cameras regardless of which coprocessor they are attached to.
 
@@ -27,21 +28,22 @@ Use the ``getLatestResult()``/``GetLatestResult()`` (Java and C++ respectively) 
 
 .. tab-set-code::
 
-	.. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
-         :language: java
-         :lines: 71-72
-		 
-	.. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp
+
+     .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
+        :language: java
+        :lines: 71-72
+
+     .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp
          :language: c++
          :lines: 28-29
 
-.. note:: Unlike other vision software solutions, using the latest result guarantees that all information is from the same timestamp. This is achieveable because the PhotonVision backend sends a byte-packed string of data which is then deserialized by PhotonLib to get target data. For more information, check out the `PhotonLib source code <https://github.com/PhotonVision/photonvision/tree/master/photon-lib>`_.
+.. note:: Unlike other vision software solutions, using the latest result guarantees that all information is from the same timestamp. This is achievable because the PhotonVision backend sends a byte-packed string of data which is then deserialized by PhotonLib to get target data. For more information, check out the `PhotonLib source code <https://github.com/PhotonVision/photonvision/tree/master/photon-lib>`_.
 
 Saving Pictures to File
 -----------------------
 A ``PhotonCamera`` can save still images from the input or output video streams to file. This is useful for debugging what a camera is seeing while on the field and confirming targets are being identified properly.
 
-Images are stored within the photonvision configuration directory. Running the "Export" operation in the settings tab will download a .zip file which contains the image captures.
+Images are stored within the PhotonVision configuration directory. Running the "Export" operation in the settings tab will download a .zip file which contains the image captures.
 
 .. tab-set-code::
 
@@ -52,7 +54,7 @@ Images are stored within the photonvision configuration directory. Running the "
 
       // Capture post-process camera stream image
       camera.takeOutputSnapshot();
-		
+	
     .. code-block:: C++
 
       // Capture pre-process camera stream image
