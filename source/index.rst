@@ -6,24 +6,28 @@ Welcome to the official documentation of PhotonVision! PhotonVision is free, fas
 .. grid:: 2
 
     .. grid-item-card::  Getting Started
-		:link: docs/getting-started/index.html
+		:link: docs/getting-started/index
+		:link-type: doc
 		
 		Get started with installing PhotonVision, creating a pipeline, and tuning it for usage in competitions.
 		
     .. grid-item-card::  Programming Reference and PhotonLib
-		:link: docs/programming/index.html
+		:link: docs/programming/index
+		:link-type: doc
 		
 		Learn more PhotonLib, our vendor dependency which makes it easier for teams to retrieve vision data, make various calculations, and more.
 	
 .. grid:: 2
 
     .. grid-item-card::  Code Examples
-		:link: docs/examples/index.html
+		:link: docs/examples/index
+		:link-type: doc
 		
 		View various step by step guides on how to use data from PhotonVision in your code, along with a game-specific example.
 		
     .. grid-item-card::  Contributing
-		:link: docs/other/contributing/index.html
+		:link: docs/other/contributing/index
+		:link-type: doc
 		
 		Interested in helping with PhotonVision? Learn more about how to contribute to our main code base, documentation, and more.
 
