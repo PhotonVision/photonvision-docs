@@ -17,7 +17,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PhotonVision'
-copyright = '2020, PhotonVision'
+copyright = '2021, PhotonVision'
 author = 'Banks Troutman, Matt Morley'
 
 # -- General configuration ---------------------------------------------------
@@ -31,9 +31,10 @@ extensions = [
 	'sphinx_tabs.tabs',
     'sphinx.ext.todo',
 	'notfound.extension',
-    'sphinxcontrib.remoteliteralinclude',
+    'sphinxext.remoteliteralinclude',
 	"sphinxext.opengraph",
-	"sphinxcontrib.ghcontributors"
+	"sphinxcontrib.ghcontributors",
+    "sphinx_design"
 ]
 
 # Configure OpenGraph support
@@ -64,26 +65,23 @@ html_title = "PhotonVision Docs"
 # a list of builtin themes.
 html_theme = 'furo'
 html_favicon = 'assets/RoundLogo.png'
-html_logo = 'assets/RoundLogo.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-def setup(app):
-    app.add_css_file('css/pv-rtd.css')
-    
+
 pygments_dark_style = "monokai"
 
 html_theme_options = {
     "sidebar_hide_name": True,
+    "light_logo": "assets/RoundLogoLight.png",
+    "dark_logo": "assets/RoundLogo.png",
     
     "light_css_variables": {
-        # Both theme variables
-        "font-stack": '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
+        "font-stack": '-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;',
         "admonition-font-size": "1rem",
         "admonition-title-font-size": "1rem",
-        # Light theme only variables
         "color-background-primary": "#ffffff",
         "color-background-secondary": "#f7f7f7",
         "color-background-hover": "#efeff400",
@@ -95,7 +93,6 @@ html_theme_options = {
         "color-foreground-muted": "#2d2d2d",
         "color-foreground-border": "#ffffff",
         "color-background-border": "ffffff",
-        "sidebar-width": "10rem",
         "color-api-overall": "#101010",
         },
     "dark_css_variables" : {
@@ -109,8 +106,8 @@ html_theme_options = {
         "color-foreground-primary": "#ffffff",
         "color-foreground-secondary": "#ffffff",
         "color-foreground-muted": "#ffffff",
-        "color-foreground-border": "#ffffff",
-        "color-background-border": "#ffffff",
+        "color-foreground-border": "transparent",
+        "color-background-border": "transparent",
         "color-api-overall": "#101010",
         "color-inline-code-background": "#0d0d0d",
     },
