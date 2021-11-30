@@ -65,3 +65,9 @@ You can get your robot's ``Pose2D`` on the field using various camera data, targ
       // Calculate robot's field relative pose
       frc::Pose2D robotPose = photonlib::EstimateFieldToRobot(
         kCameraHeight, kTargetHeight, kCameraPitch, kTargetPitch, frc::Rotation2d(units::degree_t(-target.GetYaw())), frc::Rotation2d(units::degree_t(gyro.GetRotation2d)), targetPose, cameraToRobot);
+
+This ``Pose2D`` object can be used in estimating the robot's current location relative to the detected target. 
+
+This is useful in closed-loop control algorithms which adjust the robot's position. See `WPILib docs <https://docs.wpilib.org/en/stable/docs/software/advanced-controls/state-space/state-space-pose_state-estimators.html?highlight=vision#wpilib-pose-estimators>`_ for more information. In particular, the ``addVisionMeasurement`` API in WPILib's pose estimator classes is available to consume camera pose estimations.
+
+
