@@ -5,7 +5,7 @@ Settings
 
 General
 ^^^^^^^
-Here, you can view general data on your system, including version, hardware, your platform, and performace statistics. You can also export/import the settings in a .zip file or restart PhotonVision/your coprocessor.
+Here, you can view general data on your system, including version, hardware, your platform, and performance statistics. You can also export/import the settings in a .zip file or restart PhotonVision/your coprocessor.
 
 Networking
 ^^^^^^^^^^

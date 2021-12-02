@@ -24,5 +24,5 @@ You can use multiple cameras within PhotonVision, allowing you to see multiple a
 
 Low Latency
 ^^^^^^^^^^^
-PhotonVision provides low latency processing to make sure you vision measurements as fast as possible and makes complex vision tasks easier. We guarentee that all measurements are sent from the same timestamp, making life easier for your programmers.
+PhotonVision provides low latency processing to make sure you vision measurements as fast as possible and makes complex vision tasks easier. We guarantee that all measurements are sent from the same timestamp, making life easier for your programmers.
 

@@ -43,13 +43,13 @@ Use the ``getLatestResult()``/``GetLatestResult()`` (Java and C++ respectively) 
          :language: cpp
          :lines: 39-40
 
-.. note:: Unlike other vision software solutions, using the latest result guarantees that all information is from the same timestamp. This is achieveable because the PhotonVision backend sends a byte-packed string of data which is then deserialized by PhotonLib to get target data. For more information, check out the `PhotonLib source code <https://github.com/PhotonVision/photonvision/tree/master/photon-lib>`_.
+.. note:: Unlike other vision software solutions, using the latest result guarantees that all information is from the same timestamp. This is achievable because the PhotonVision backend sends a byte-packed string of data which is then deserialized by PhotonLib to get target data. For more information, check out the `PhotonLib source code <https://github.com/PhotonVision/photonvision/tree/master/photon-lib>`_.
 
 Saving Pictures to File
 -----------------------
 A ``PhotonCamera`` can save still images from the input or output video streams to file. This is useful for debugging what a camera is seeing while on the field and confirming targets are being identified properly.
 
-Images are stored within the photonvision configuration directory. Running the "Export" operation in the settings tab will download a .zip file which contains the image captures.
+Images are stored within the PhotonVision configuration directory. Running the "Export" operation in the settings tab will download a .zip file which contains the image captures.
 
 .. tabs::
    .. code-tab:: java

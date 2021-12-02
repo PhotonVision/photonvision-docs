@@ -8,7 +8,7 @@ Target Manipulation
 
 In this section, the Target Offset Point changes where the "center" of the target is. This can be useful if the pitch/yaw of the middle of the top edge of the target is desired, rather than the center of mass of the target. The "top"/"bottom"/"left"/"right" of the target are defined by the Target Orientation selection. For example, a 400x200px target in landscape mode would have the "top" offset point located at the middle of the uppermost long edge of the target, while in portrait mode the "top" offset point would be located in the middle of the topmost short edge (in this case, either the left or right sides).
 
-This section also includes a switch to enable processing and sending multiple targets, up to 5, simultaneously. This information is available through photonlib. Note that the :code:`GetPitch`/:code:`GetYaw` methods will report the pitch/yaw of the "best" (lowest indexed) target.
+This section also includes a switch to enable processing and sending multiple targets, up to 5, simultaneously. This information is available through PhotonLib. Note that the :code:`GetPitch`/:code:`GetYaw` methods will report the pitch/yaw of the "best" (lowest indexed) target.
 
 .. raw:: html
 
