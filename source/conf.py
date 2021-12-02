@@ -115,4 +115,4 @@ html_theme_options = {
 
 suppress_warnings = ['epub.unknown_project_files']
 
-sphinx_tabs_valid_builders = ['epub', 'linkcheck']
+sphinx_tabs_valid_builders = ['epub', 'linkcheck', 'lint']

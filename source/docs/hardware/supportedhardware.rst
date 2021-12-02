@@ -1,11 +1,10 @@
-Hardware
-========
-
 Supported Hardware
-------------------
+==================
+
+PhotonVision is developed and tested on a number of Commercial, Off-the-Shelf vision processing hardware solutions.
 
 Supported Cameras
-^^^^^^^^^^^^^^^^^
+-----------------
 * Pi Camera Module V1 and V2
 
   * The V1 is strongly preferred over the V2 due to the V2 having undesireable FOV choices.
@@ -19,12 +18,12 @@ Supported Cameras
 * ELP Cameras
 
 Supported Coprocessors
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 * Raspberry Pi 3 (any version)
 * Raspberry Pi 4 (any version)
 
 Reccomended Hardware Combinations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 The following combinations are ranked from best to worst:
 
 1. Raspberry Pi 3 with Pi Camera
@@ -33,8 +32,8 @@ The following combinations are ranked from best to worst:
 4. Raspberry Pi 3 with USB Camera
 
 GPU Acceleration
-^^^^^^^^^^^^^^^^
-PhotonVision uses GPU Acceleration in order to maximize processing performance, however it is only supported on the Rasperry Pi 3, which is why it is reccomended over the Pi 4. For the technical information on why it is not supported on the Raspberry Pi 4, please see `here. <https://www.chiefdelphi.com/t/announcing-gloworm-an-inexpensive-and-open-source-vision-module/386370/61?u=pietroglyph>`_
+----------------
+PhotonVision uses GPU Acceleration in order to maximize processing performance, however it is only supported on the Raspberry Pi 3, which is why it is recommended over the Pi 4. For the technical information on why it is not supported on the Raspberry Pi 4, please see `here. <https://www.chiefdelphi.com/t/announcing-gloworm-an-inexpensive-and-open-source-vision-module/386370/61?u=pietroglyph>`_
 
 
 Support Levels
