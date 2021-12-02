@@ -7,4 +7,3 @@ Hardware
    supportedhardware
    customhardware
 
-
