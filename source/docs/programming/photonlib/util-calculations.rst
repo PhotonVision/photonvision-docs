@@ -9,11 +9,11 @@ If your camera is at a fixed height on your robot and the height of the target i
 .. tab-set-code::
 
 
-     .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/getinrange/Robot.java
+     .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/getinrange/Robot.java
         :language: java
         :lines: 71-86
 
-     .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/getinrange/cpp/Robot.cpp
+     .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/getinrange/cpp/Robot.cpp
         :language: cpp
         :lines: 31-39
 

@@ -71,7 +71,7 @@ html_favicon = 'assets/RoundLogo.png'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-pygments_dark_style = "monokai"
+pygments_style = "sphinx"
 
 html_theme_options = {
     "sidebar_hide_name": True,

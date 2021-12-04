@@ -12,11 +12,11 @@ The ``PhotonCamera`` class has two constructors: one that takes a ``NetworkTable
 .. tab-set-code::
 
 
-     .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
+     .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
         :language: java
         :lines: 43-44
 
-     .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
+     .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
         :language: c++
         :lines: 35-36
 
@@ -29,11 +29,11 @@ Use the ``getLatestResult()``/``GetLatestResult()`` (Java and C++ respectively) 
 .. tab-set-code::
 
 
-     .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
+     .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
         :language: java
         :lines: 71-72
 
-     .. remoteliteralinclude:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp
+     .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp
          :language: c++
          :lines: 28-29
 

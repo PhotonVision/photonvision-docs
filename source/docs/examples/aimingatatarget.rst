@@ -15,22 +15,22 @@ Now that you have properly set up your vision system and have tuned a pipeline, 
 
 The following example is from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget>`_/`C++ <https://github.com/PhotonVision/photonvision/tree/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget>`_).
 
-.. tabs::
+.. tab-set::
 
-  .. group-tab:: Java
+    .. tab-item:: Java
 
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
-      :language: java
-      :linenos:
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
+         :language: java
+         :linenos:
+		 
+    .. tab-item:: C++ (Header)
 
-  .. group-tab:: C++ (Header)
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
+         :language: c++
+         :linenos:
+		 
+    .. tab-item:: C++ (Source)
 
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
-      :language: c++
-      :linenos:
-
-  .. group-tab:: C++ (Source)
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp
-      :language: c++
-      :linenos:
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp
+         :language: c++
+         :linenos:

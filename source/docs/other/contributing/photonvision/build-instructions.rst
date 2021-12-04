@@ -43,17 +43,18 @@ Build and Copy UI to Java Source
 
 In the root directory:
 
-.. tabs::
 
-   .. group-tab:: Linux
+.. tab-set::
 
-      ``./gradlew buildAndCopyUI``
-
-   .. group-tab:: macOS
+   .. tab-item:: Linux
 
       ``./gradlew buildAndCopyUI``
 
-   .. group-tab:: Windows (cmd)
+   .. tab-item:: macOS
+
+      ``./gradlew buildAndCopyUI``
+
+   .. tab-item:: Windows (cmd)
 
       ``gradlew buildAndCopyUI``
 
@@ -62,32 +63,32 @@ Build and Run the Source
 
 To compile and run the project, issue the following command in the root directory:
 
-.. tabs::
+.. tab-set::
 
-   .. group-tab:: Linux
-
-      ``./gradlew run``
-
-   .. group-tab:: macOS
+   .. tab-item:: Linux
 
       ``./gradlew run``
 
-   .. group-tab:: Windows (cmd)
+   .. tab-item:: macOS
+
+      ``./gradlew run``
+
+   .. tab-item:: Windows (cmd)
 
       ``gradlew run``
 
 Running the following command under the root directory will build the jar under photon-server/build/libs:
 
-.. tabs::
+.. tab-set::
 
-   .. group-tab:: Linux
-
-      ``./gradlew shadowJar``
-
-   .. group-tab:: macOS
+   .. tab-item:: Linux
 
       ``./gradlew shadowJar``
 
-   .. group-tab:: Windows (cmd)
+   .. tab-item:: macOS
+
+      ``./gradlew shadowJar``
+
+   .. tab-item:: Windows (cmd)
 
       ``gradlew shadowJar``

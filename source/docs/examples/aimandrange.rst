@@ -17,30 +17,18 @@ The following example is from the PhotonLib example repository (`Java <https://g
 
     .. tab-item:: Java
 
-      .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimandrange/Robot.java
-      :language: java
-      :linenos:
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimandrange/Robot.java
+         :language: java
+         :linenos:
+		 
+    .. tab-item:: C++ (Header)
 
-    .. tab-item:: Label2
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimandrange/include/Robot.h
+         :language: cpp
+         :linenos:
+		 
+    .. tab-item:: C++ (Source)
 
-        Content 2
-
-.. tabs::
-
-  .. group-tab:: Java
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimandrange/Robot.java
-      :language: java
-      :linenos:
-
-  .. group-tab:: C++ (Header)
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimandrange/include/Robot.h
-      :language: c++
-      :linenos:
-
-  .. group-tab:: C++ (Source)
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimandrange/cpp/Robot.cpp
-      :language: c++
-      :linenos:
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimandrange/cpp/Robot.cpp
+         :language: cpp
+         :linenos:

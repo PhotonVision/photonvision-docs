@@ -27,19 +27,15 @@ Walkthrough
 
 First, in the main :code:`Robot` source file, we add support to periodically update a new simulation-specific object. This logic only gets used while running in simulation:
 
-.. tabs::
+.. tab-set-code::
 
-  .. group-tab:: Java
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/Robot.java
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/Robot.java
       :language: java
       :lines: 108-120
       :linenos:
       :lineno-start: 108
 
-  .. group-tab:: C++
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/Robot.cpp
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/Robot.cpp
       :language: c++
       :lines: 62
       :linenos:
@@ -54,19 +50,15 @@ Creating the Simulated Vision System
 
 First, we create a new :code:`SimVisionSystem` to represent our camera and coprocessor running PhotonVision.
 
-.. tabs::
+.. tab-set-code::
 
-  .. group-tab:: Java
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
       :language: java
       :lines: 64-85
       :linenos:
       :lineno-start: 64
 
-  .. group-tab:: C++
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
       :language: c++
       :lines: 71-85
       :linenos:
@@ -75,19 +67,15 @@ First, we create a new :code:`SimVisionSystem` to represent our camera and copro
 
 Next, we create objects to represent the physical location and size of the vision targets we are calibrated to detect. This example models the down-field high goal vision target from the 2020 and 2021 games.
 
-.. tabs::
+.. tab-set-code::
 
-  .. group-tab:: Java
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
       :language: java
       :lines: 87-100
       :linenos:
       :lineno-start: 87
 
-  .. group-tab:: C++
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
       :language: c++
       :lines: 87-102
       :linenos:
@@ -95,19 +83,15 @@ Next, we create objects to represent the physical location and size of the visio
 
 Finally, we add our target to the simulated vision system.
 
-.. tabs::
+.. tab-set-code::
 
-  .. group-tab:: Java
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
       :language: java
       :lines: 104-108
       :linenos:
       :lineno-start: 104
 
-  .. group-tab:: C++
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
       :language: c++
       :lines: 36-42
       :linenos:
@@ -121,19 +105,15 @@ Updating the Simulated Vision System
 
 Once we have all the properties of our simulated vision system defined, the work to do at runtime becomes very minimal. Simply pass in the robot's pose periodically to the simulated vision system.
 
-.. tabs::
+.. tab-set-code::
 
-  .. group-tab:: Java
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
       :language: java
       :lines: 128-129
       :linenos:
       :lineno-start: 129
 
-  .. group-tab:: C++
-
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/sim/DrivetrainSim.cpp
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/sim/DrivetrainSim.cpp
       :language: c++
       :lines: 39-40
       :linenos:

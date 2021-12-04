@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-furo==2020.12.30.b24
-sphinx==3.1.1
-sphinx-tabs==1.1.12
-sphinxext-opengraph==0.2.0
-doc8==0.8.1
-sphinxcontrib-ghcontributors==0.2.2
-sphinx-notfound-page==0.5
-sphinxcontrib-remoteliteralinclude==0.0.4
-sphinx-rtd-theme
-sphinx-design
-=======
 furo
 sphinx
 sphinx-tabs
@@ -20,4 +8,3 @@ sphinx-notfound-page
 sphinxext-remoteliteralinclude
 sphinx-rtd-theme
 sphinx_design
->>>>>>> upstream/master
