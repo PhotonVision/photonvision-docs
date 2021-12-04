@@ -13,6 +13,18 @@ Now that you know how to both aim and get in range of the target, it is time to 
 
 The following example is from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimandrange>`_/`C++ <https://github.com/PhotonVision/photonvision/tree/master/photonlib-cpp-examples/src/main/cpp/examples/aimandrange>`_).
 
+.. tab-set::
+
+    .. tab-item:: Java
+
+      .. remoteliteralinclude:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimandrange/Robot.java
+      :language: java
+      :linenos:
+
+    .. tab-item:: Label2
+
+        Content 2
+
 .. tabs::
 
   .. group-tab:: Java
