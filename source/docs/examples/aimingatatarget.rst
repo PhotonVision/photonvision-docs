@@ -28,7 +28,7 @@ The following example is from the PhotonLib example repository (`Java <https://g
        .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
          :language: c++
          :linenos:
- 
+
     .. tab-item:: C++ (Source)
 
        .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp

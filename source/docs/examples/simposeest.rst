@@ -40,7 +40,7 @@ Specifically, to incorporate Photon Vision, we need to create a :code:`PhotonCam
          :linenos:
          :lineno-start: 41
 
-		 
+
     .. tab-item:: C++
 
        :code:`//Coming soon!`
@@ -57,7 +57,7 @@ Then, during periodic execution, we read back results. If we see a target in the
          :linenos:
          :lineno-start: 67
 
-		 
+
     .. tab-item:: C++
 
        :code:`//Coming soon!`
@@ -79,7 +79,7 @@ First, we create a new :code:`SimVisionSystem` to represent our camera and copro
          :linenos:
          :lineno-start: 69
 
-		 
+
     .. tab-item:: C++
 
        :code:`//Coming soon!`
@@ -96,7 +96,7 @@ Next, we create objects to represent the physical location and size of the visio
          :linenos:
          :lineno-start: 71
 
-		 
+
     .. tab-item:: C++
 
        :code:`//Coming soon!`
@@ -113,7 +113,7 @@ Finally, we add our target to the simulated vision system.
          :linenos:
          :lineno-start: 92
 
-		 
+
     .. tab-item:: C++
 
        :code:`//Coming soon!`
@@ -136,7 +136,7 @@ Once we have all the properties of our simulated vision system defined, the work
          :linenos:
          :lineno-start: 133
 
-		 
+
     .. tab-item:: C++
 
        :code:`//Coming soon!`
