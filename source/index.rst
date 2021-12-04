@@ -63,9 +63,9 @@ Sitemap
    docs/getting-started/index
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
 
-   docs/hardware.rst
+   docs/hardware/index
 
 .. toctree::
    :maxdepth: 3

@@ -21,7 +21,7 @@ Targets are considered in view if:
 3) The target's in-image pixel size is greater than ``minTargetArea``
 4) The distance from the camera to the target is less than ``maxLEDRange``
 
-.. warning:: Not all network tables objects are updated in simulation. The interaction through PhontonLib remains the same.  Actual camera images are also not simulated.
+.. warning:: Not all network tables objects are updated in simulation. The interaction through PhotonLib remains the same.  Actual camera images are also not simulated.
 
 Latency of processing is not yet modeled.
 

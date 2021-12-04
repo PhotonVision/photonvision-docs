@@ -10,7 +10,7 @@ Downloading the Pi Image
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Download the latest release of the PhotonVision Pi image from the `releases page <https://github.com/PhotonVision/photonvision/releases>`_ to the location of your choice. You do not need to extract the downloaded ZIP file.
 
-.. note:: If using a `Gloworm <https://gloworm.vision/>`_, you will need to use the image found :ref:`here. <docs/hardware:vendors>`
+.. note:: If using a `Gloworm <https://gloworm.vision/>`_, you will need to use the image found :ref:`here. <docs/hardware/supportedhardware:vendors>`
 
 Flashing the Pi Image
 ^^^^^^^^^^^^^^^^^^^^^
@@ -24,7 +24,7 @@ Simply insert the flashed microSD card into your Raspberry Pi and boot it up. Af
 
 Troubleshooting/Setting a Static IP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If ``photonvision.local:5800`` or ``gloworm.local:5800`` do not resolve, your mDNS is not set up correctly. To fix this, download `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network. Once you find it, set the IP to your static IP in PhotonVision. Instructions for that can be found :ref:`here. <docs/getting-started/Settings:Networking>` If you continue to have issues, do not hesistate to :ref:`contact us. <index:Contact Us>`
+If ``photonvision.local:5800`` or ``gloworm.local:5800`` do not resolve, your mDNS is not set up correctly. To fix this, download `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network. Once you find it, set the IP to your static IP in PhotonVision. Instructions for that can be found :ref:`here. <docs/getting-started/Settings:Networking>` If you continue to have issues, do not hesitate to :ref:`contact us. <index:Contact Us>`
 
 Other Debian-Based Co-Processor Installation
 --------------------------------------------
