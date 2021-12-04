@@ -4,7 +4,7 @@ Deploying on Custom Hardware
 Configuration
 -------------
 
-By default, PhotonVision attempts to make minimal assumptions of the hardware it runs on. However, it may be configured to enable more functionality.
+By default, PhotonVision attempts to make minimal assumptions of the hardware it runs on. However, it may be configured to enable custom LED control, branding, and other functionality.
 
 ``hardwareConfig.json`` is the location for this configuration. It is included when settings are exported, and can be uploaded as part of a .zip, or on its own.
 
@@ -13,8 +13,8 @@ LED Support
 
 For Raspberry-Pi based hardware, PhotonVision can use `PiGPIO <https://abyz.me.uk/rpi/pigpio/>`_ to control IO pins. The mapping of which pins control which LED's is part of the hardware config.
 
-.. tabs::
-   .. code-tab:: json
+.. tab-set-code::
+   .. code-block:: json
 
       {
         "ledPins" : [ 13 ],
@@ -37,8 +37,8 @@ For Non-Raspberry-Pi hardware, users must provide valid hardware-specific comman
 
 Leaving a command blank will disable the associated functionality.
 
-.. tabs::
-   .. code-tab:: json
+.. tab-set-code::
+   .. code-block::  json
 
       {
         "cpuTempCommand" : "",
@@ -57,8 +57,8 @@ Known Camera FOV
 
 If your hardware contains a camera with a known field of vision, it can be entered into the hardware configuration. This will prevent users from editing it in the GUI.
 
-.. tabs::
-   .. code-tab:: json
+.. tab-set-code::
+   .. code-block:: json
 
       {
         "vendorFOV" : 98.9
@@ -69,8 +69,8 @@ Cosmetic & Branding
 
 To help differentiate your hardware from other solutions, some customization is allowed.
 
-.. tabs::
-   .. code-tab:: json
+.. tab-set-code::
+   .. code-block:: json
 
       {
         "deviceName" : "Super Cool Custom Hardware",
@@ -85,8 +85,8 @@ Example
 
 Here is a complete example ``hardwareConfig.json``:
 
-.. tabs::
-   .. code-tab:: json
+.. tab-set-code::
+   .. code-block:: json
 
       {
         "deviceName" : "Blinky McBlinkface",
