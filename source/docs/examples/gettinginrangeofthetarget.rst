@@ -25,13 +25,13 @@ The following example is from the PhotonLib example repository (`Java <https://g
        .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/getinrange/Robot.java
          :language: java
          :linenos:
-		 
+
     .. tab-item:: C++ (Header)
 
        .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/getinrange/include/Robot.h
          :language: c++
          :linenos:
-		 
+
     .. tab-item:: C++ (Source)
 
        .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/getinrange/cpp/Robot.cpp

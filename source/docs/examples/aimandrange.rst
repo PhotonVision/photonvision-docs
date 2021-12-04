@@ -20,13 +20,13 @@ The following example is from the PhotonLib example repository (`Java <https://g
        .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimandrange/Robot.java
          :language: java
          :linenos:
-		 
+
     .. tab-item:: C++ (Header)
 
        .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimandrange/include/Robot.h
          :language: cpp
          :linenos:
-		 
+
     .. tab-item:: C++ (Source)
 
        .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/aimandrange/cpp/Robot.cpp
