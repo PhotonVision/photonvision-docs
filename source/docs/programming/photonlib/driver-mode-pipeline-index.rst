@@ -4,34 +4,34 @@ After :ref:`creating a PhotonCamera <docs/programming/photonlib/creating-photon-
 
 Toggle Driver Mode
 ------------------
-You can use the ``setDriverMode()``/``SetDriverMode()`` (Java and C++ respectively) to toggle driver mode from your robot program.
+You can use the ``setDriverMode()``/``SetDriverMode()`` (Java and C++ respectively) to toggle driver mode from your robot program. Driver mode is an unfiltered / normal view of the camera to be used while driving the robot.
 
-.. tabs::
-   .. code-tab:: java
+.. tab-set-code::
 
-      // Set driver mode to on.
-      camera.setDriverMode(true);
+    .. code-block:: java
 
-   .. code-tab:: c++
+        // Set driver mode to on.
+        camera.setDriverMode(true);
 
-      // Set driver mode to on.
-      camera.SetDriverMode(true);
+    .. code-block:: C++
 
-.. Add link to description on Driver Mode once those docs are complete.
+        // Set driver mode to on.
+        camera.SetDriverMode(true);
 
 Setting the Pipeline Index
 --------------------------
 You can use the ``setPipelineIndex()``/``SetPipelineIndex()`` (Java and C++ respectively) to dynamically change the vision pipeline from your robot program.
 
-.. tabs::
-   .. code-tab:: java
+.. tab-set-code::
 
-      // Change pipeline to 2
-      camera.setPipelineIndex(2);
+    .. code-block:: java
 
-   .. code-tab:: c++
+        // Change pipeline to 2
+        camera.setPipelineIndex(2);
 
-      // Change pipeline to 2
-      camera.SetPipelineIndex(2);
+    .. code-block:: C++
+
+        // Change pipeline to 2
+        camera.SetPipelineIndex(2);
 
 .. Add link to description of pipelines once those docs are complete.

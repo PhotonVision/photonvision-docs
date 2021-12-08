@@ -7,15 +7,15 @@ Port Forwarding
 
 If you would like to access your Ethernet-connected vision device from a computer when tethered to the USB port on the roboRIO, you can use `WPILib's <https://docs.wpilib.org/en/stable/docs/networking/networking-utilities/portforwarding.html>`_ ``PortForwarder``.
 
-.. tabs::
+.. tab-set-code::
 
-   .. code-tab:: java
+    .. code-block:: java
 
-         PortForwarder.add(5800, "photonvision.local", 5800);
+        PortForwarder.add(5800, "photonvision.local", 5800);
 
-   .. code-tab:: c++
+    .. code-block:: C++
 
-         wpi::PortForwarder::GetInstance().Add(5800, "photonvision.local", 5800);
+        wpi::PortForwarder::GetInstance().Add(5800, "photonvision.local", 5800);
 
 .. note:: The address in the code above (``photonvision.local``) is the hostname of the coprocessor. This can be different depending on your hardware (ex. for the Gloworm it will be ``gloworm.local``)
 

@@ -9,8 +9,8 @@ Retrieving Data from a Photon Tracked Target
 --------------------------------------------
 You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getArea()``/``GetArea()``, ``getSkew()``/``GetSkew()``,and ``getCameraToTarget()``/``GetCameraToTarget()`` methods (Java and C++ respectively) within the tracked target class to retrieve the yaw, pitch, area, skew, and the camera-to-target transform.
 
-.. tabs::
-   .. code-tab:: java
+.. tab-set-code::
+   .. code-block:: java
 
       // Get information from target.
       double yaw = target.getYaw();
@@ -19,7 +19,7 @@ You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getA
       double skew = target.getSkew();
       Transform2d pose = target.getCameraToTarget();
 
-   .. code-tab:: c++
+   .. code-block:: c++
 
       // Get information from target.
       double yaw = target.GetYaw();
