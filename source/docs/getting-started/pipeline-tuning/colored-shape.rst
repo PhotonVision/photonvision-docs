@@ -32,7 +32,7 @@ Only the settings used for the current target shape are available.
 
 * Radius - Percentage of the frame that the radius of the circle represents.
 
-* Max Canny Threshold - This sets the amount of change between pixels needed to be considered an edge. The smaller it is, the more false circles may be detected. Circles, corresponding to the larger accumulator values, will be returned first.
+* Max Canny Threshold - This sets the amount of change between pixels needed to be considered an edge. The smaller it is, the more false circles may be detected. Circles with more points along their ring having high contrast values will be returned first.
 
 * Circle Accuracy - This determines how perfect the circle contour must be in order to be considered a circle.  Low values (<40) are required to detect things that aren't perfect circles.
 
