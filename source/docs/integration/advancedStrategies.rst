@@ -12,7 +12,7 @@ Knowledge and Equipment Needed
   - Accurate camera calibration to support "3D mode" required
 - A Drivetrain with wheels and sensors
   - Sufficient sensors to measure wheel rotation
-  - Capable of closed-loop velocity control 
+  - Capable of closed-loop velocity control
 - A gyroscope or IMU measuring actual robot heading
 - Experience using some path-planning library (WPILib is our recommendation)
 
@@ -25,9 +25,9 @@ A simple algorithm for using this measurement is:
 
 #. Assume your robot needs to be at a fixed ``Pose2D`` *relative to the target*.
 #. When triggered:
-   #. Read the most recent vision measurement - this is your *actual* pose. 
+   #. Read the most recent vision measurement - this is your *actual* pose.
    #. Generate a simple trajectory to the goal position
-   #. Execute the trajectory 
+   #. Execute the trajectory
 
 .. note:: There is not currently an example demonstrating this technique.
 
