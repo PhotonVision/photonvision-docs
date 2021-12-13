@@ -17,7 +17,7 @@ The simplest way to use a vision processing result is to first determine how far
 1. Read the current angle to the target from the vision Coprocessor.
 2. If too far in one direction, command the drivetrain to rotate in the opposite direction to compensate.
 
-See the  :ref:`Aiming at a Target <docs/examples/aimingatatarget>` example for more information.
+See the  :ref:`Aiming at a Target <docs/examples/aimingatatarget:Knowledge and Equipment Needed>` example for more information.
 
 .. note:: Sometimes, these strategies have also involved incorporating a gyroscope. This can be necessary due to the high latency of vision processing algorithms. However, advancements in the tools available (including PhotonVision) has made that unnecessary for most applications.
 
@@ -29,7 +29,7 @@ By looking at the position of the target in the "vertical" direction in the imag
 1. Read the current distance to the target from the vision Coprocessor.
 2. If too far in one direction, command the drivetrain to travel in the opposite direction to compensate.
 
-See the :ref:`Getting in Range of the Target <docs/examples/gettinginrangeofthetarget>` example for more information.
+See the :ref:`Getting in Range of the Target <docs/examples/gettinginrangeofthetarget:Knowledge and Equipment Needed>` example for more information.
 
 
 Angle + Range
@@ -37,5 +37,5 @@ Angle + Range
 
 Since the previous two alignment strategies work on independent axes of the robot, there's no reason you can't do them simultaneously.
 
-See the :ref:`Aim and Range <docs/examples/aimandrange>` example for more information.
+See the :ref:`Aim and Range <docs/examples/aimandrange:Knowledge and Equipment Needed>` example for more information.
 

@@ -22,11 +22,25 @@ Content
 
 .. grid:: 2
 
+    .. grid-item-card::  Integration
+        :link: docs/integration/index
+        :link-type: doc
+
+        Pick how to use vision processing results to control a physical robot.
+
     .. grid-item-card::  Code Examples
         :link: docs/examples/index
         :link-type: doc
 
         View various step by step guides on how to use data from PhotonVision in your code, along with a game-specific example.
+
+.. grid:: 2
+
+    .. grid-item-card::  Hardware
+        :link: docs/hardware/index
+        :link-type: doc
+
+        Select appropriate hardware for high-quality, easy vision target detection.
 
     .. grid-item-card::  Contributing
         :link: docs/other/contributing/index
@@ -66,6 +80,11 @@ Sitemap
    :maxdepth: 3
 
    docs/hardware/index
+
+.. toctree::
+   :maxdepth: 3
+
+   docs/integration/index
 
 .. toctree::
    :maxdepth: 3

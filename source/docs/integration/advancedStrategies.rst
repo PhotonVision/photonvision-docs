@@ -23,11 +23,11 @@ When using 3D mode in PhotonVision, the `SolvePNP Algorithm <https://en.wikipedi
 
 A simple algorithm for using this measurement is:
 
-1. Assume your robot needs to be at a fixed ``Pose2D`` *relative to the target*.
-2. When triggered:
-  a. Read the most recent vision measurement - this is your *actual* pose. 
-  b. Generate a simple trajectory to the goal position
-  c. Execute the trajectory 
+#. Assume your robot needs to be at a fixed ``Pose2D`` *relative to the target*.
+#. When triggered:
+   #. Read the most recent vision measurement - this is your *actual* pose. 
+   #. Generate a simple trajectory to the goal position
+   #. Execute the trajectory 
 
 .. note:: There is not currently an example demonstrating this technique.
 
@@ -40,5 +40,5 @@ When using this strategy, the measurements made by the camera are *fused* with m
 
 In turn, this best-guess position is used to path plan to the known positions on the field, which may or may not have vision targets nearby.
 
-See the  :ref:`Pose Estimation <docs/examples/simposeest>` example for more information.
+See the  :ref:`Pose Estimation <docs/examples/simposeest:Knowledge and Equipment Needed>` example for more information.
 

@@ -1,6 +1,12 @@
 Using WPILib Pose Estimation, Simulation, and PhotonVision Together
 ===================================================================
 
+Knowledge and Equipment Needed
+-----------------------------------------------
+
+- Everything required in :ref:`Combining Aiming and Getting in Range <docs/examples/aimandrange:Knowledge and Equipment Needed>`, plus some familiarity with WPILib pose estimation functionality.
+
+
 Background
 ----------
 
