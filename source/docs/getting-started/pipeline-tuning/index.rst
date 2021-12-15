@@ -8,6 +8,7 @@ Pipeline Tuning
    input
    thresholding
    contour-filtering
+   colored-shape
    output
    calibration
    3D
