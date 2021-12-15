@@ -3,7 +3,7 @@ Advanced Strategies
 
 Advanced strategies for using vision processing results involve working with the robot's *pose* on the field. A *pose* is a combination an X/Y coordinate, and an angle describing where the robot's front is pointed. It is always considered *relative* to some fixed point on the field.
 
-WPILib provides a ``Pose2D`` class to describe poses in software.
+WPILib provides a `Pose2d <https://docs.wpilib.org/en/stable/docs/software/advanced-controls/geometry/pose.html>`_  class to describe poses in software.
 
 Knowledge and Equipment Needed
 ------------------------------
