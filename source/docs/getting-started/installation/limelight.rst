@@ -14,6 +14,8 @@ Imaging
 
 Follow the same process used to `image your Limelight <https://docs.limelightvision.io/en/latest/getting_started.html#imaging>`_ but use the .zip file of the latest `Gloworm image <https://github.com/gloworm-vision/pi-gen/releases>`_ of PhotonVision.  The `Gloworm <https://gloworm.vision/>`_ is a smart camera similar to the Limelight in many ways.
 
+.. warning:: We reccomend that you :ref:`update PhotonVision <docs/getting-started/installation/coprocessor-image:Raspberry Pi Installation>` after you image the Limelight if the Gloworm image is older than the latest stable PhotonVision release.
+
 After installation you should be able to `locate the camera <https://gloworm.vision/docs/quickstart/#finding-gloworm>`_ at: ``http://gloworm.local:5800/``
 
 After connecting you may want to set a static IP address.  This can be done by going to the "Settings" page and changing the radio button in the center to "Static".  We recommend following the configuration listed `here <https://docs.wpilib.org/en/latest/docs/networking/networking-introduction/ip-configurations.html>`_ which is usually ``10.TE.AM.11`` for the first IP Camera.  If you would like to change the gloworm.local to something more intuitive you can modify the hostname.
