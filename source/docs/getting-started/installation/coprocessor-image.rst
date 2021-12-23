@@ -47,7 +47,18 @@ For installation on any other co-processors, we recommend reading the :ref:`adva
 Updating PhotonVision
 ^^^^^^^^^^^^^^^^^^^^^
 
-In order to update the PhotonVision image, you have two options.
+In order to update the PhotonVision image, you have three options.
 
 1. Export your settings, reimage your coprocessor using the instructions above, and import your settings back in.
-2. Download the latest stable .jar from `our releases page <https://github.com/PhotonVision/photonvision/releases>`_, go to the settings tab, and upload the .jar using the Offline Update button.
+
+2. Run the following script (if using a Gloworm / Limelight):
+
+.. code-block:: bash
+
+   $ scp [jar name].jar pi@gloworm.local:~/
+   $ ssh pi@gloworm.local
+   $ sudo systemctl stop photonvision.service
+   $ sudo mv [jar name].jar /opt/photonvision/photonvision.jar
+   $ sudo systemctl start photonvision.service
+
+3. Download the latest stable .jar from `our releases page <https://github.com/PhotonVision/photonvision/releases>`_, go to the settings tab, and upload the .jar using the Offline Update button.
