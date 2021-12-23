@@ -5,10 +5,10 @@ Pipeline Tuning
    :maxdepth: 0
    :titlesonly:
 
+   about-pipelines
    input
    thresholding
    contour-filtering
-   colored-shape
    output
    calibration
    3D
