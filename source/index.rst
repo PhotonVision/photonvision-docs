@@ -72,31 +72,19 @@ Sitemap
 -------
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
-   docs/getting-started/index
-
-.. toctree::
-   :maxdepth: 3
-
+   docs/getting-started/about/index
+   docs/getting-started/installation/index
+   docs/getting-started/pipeline-tuning/index
+   docs/getting-started/Settings
    docs/hardware/index
-
-.. toctree::
-   :maxdepth: 3
-
+   docs/getting-started/Networking
+   docs/programming/photonlib/index
+   docs/programming/nt-api
+   docs/programming/config/index
    docs/integration/index
-
-.. toctree::
-   :maxdepth: 3
-
-   docs/programming/index
-
-.. toctree::
-   :maxdepth: 2
-
    docs/examples/index
-
-.. toctree::
-   :maxdepth: 2
-
-   docs/other/index
+   docs/other/known-issues
+   docs/other/troubleshooting-tips
+   docs/other/contributing/index
