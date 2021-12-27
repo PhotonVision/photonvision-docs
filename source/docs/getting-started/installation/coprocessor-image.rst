@@ -27,7 +27,8 @@ Troubleshooting/Setting a Static IP
 If ``photonvision.local:5800`` or ``gloworm.local:5800`` do not resolve, your mDNS is not set up correctly. To fix this, download `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network. Once you find it, set the IP to your static IP in PhotonVision. Instructions for that can be found :ref:`here. <docs/getting-started/Settings:Networking>` If you continue to have issues, do not hesitate to :ref:`contact us. <index:Contact Us>`
 
 Other Debian-Based Co-Processor Installation
---------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 We provide an `install script <https://git.io/JJrEP>`_ for other Debian-based systems (with ``apt``) that will automatically install PhotonVision and make sure that it runs on startup.
 
 .. code-block:: bash
@@ -42,3 +43,22 @@ We provide an `install script <https://git.io/JJrEP>`_ for other Debian-based sy
 .. note:: The install script has only been tested on Debian/Raspberry Pi OS Buster and Ubuntu Bionic. If any issues arise with your specific OS, please open an issue on our `issues page <https://github.com/PhotonVision/photonvision/issues>`_.
 
 For installation on any other co-processors, we recommend reading the :ref:`advanced command line documentation <docs/getting-started/installation/advanced-cmd:Advanced Command Line Usage>`.
+
+Updating PhotonVision
+^^^^^^^^^^^^^^^^^^^^^
+
+In order to update the PhotonVision image, you have three options.
+
+1. Export your settings, reimage your coprocessor using the instructions above, and import your settings back in.
+
+2. Run the following script (if using a Gloworm / Limelight):
+
+.. code-block:: bash
+
+   $ scp [jar name].jar pi@gloworm.local:~/
+   $ ssh pi@gloworm.local
+   $ sudo systemctl stop photonvision.service
+   $ sudo mv [jar name].jar /opt/photonvision/photonvision.jar
+   $ sudo systemctl start photonvision.service
+
+3. Download the latest stable .jar from `our releases page <https://github.com/PhotonVision/photonvision/releases>`_, go to the settings tab, and upload the .jar using the Offline Update button.
