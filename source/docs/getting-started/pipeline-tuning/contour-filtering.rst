@@ -39,10 +39,10 @@ The contours tab has new options for specifying the properties of your colored s
 .. image:: images/triangle.png
    :width: 600
    :alt: Dropdown to select the colored shape pipeline type.
-   
+
 Only the settings used for the current target shape are available.
 
-* Shape Simplification - This is the only setting available for polygon, triangle, and quadrilateral target shapes.  This setting also needs to be fairly high (>75) if you are having any problems getting pefectly clean edges.  This high setting helps prevent imperfections in the edge from being counted as a seperate edge.
+* Shape Simplification - This is the only setting available for polygon, triangle, and quadrilateral target shapes.  If you are having issues with edges being "noisy" or "unclean", adjust this setting to be higher (>75).  This high setting helps prevent imperfections in the edge from being counted as a separate edge.
 
 * Circle Match Distance - How close the centroid of a contour must be to the center of the circle in order for them to be matched.  This value is usually pretty small (<25) as you usually only want to identify circles that are nearly centered in the contour.
 
