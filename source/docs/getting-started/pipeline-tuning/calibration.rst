@@ -31,7 +31,7 @@ Now, we'll capture images of our chessboard from various angles. The most import
             Your browser does not support the video tag.
         </video>
 
-For advanced users, these calibrations can be later accessed by :ref:`exporting your config directory <docs/programming/config/config:Directory Structure>` and viewing the camera's config.json file. Furthermore, the most recent snapshots will be saved to the calibImgs directory.
+For advanced users, these calibrations can be later accessed by :ref:`exporting your config directory <docs/hardware/config:Directory Structure>` and viewing the camera's config.json file. Furthermore, the most recent snapshots will be saved to the calibImgs directory.
 
 .. image:: images/calibImgs.png
    :width: 600

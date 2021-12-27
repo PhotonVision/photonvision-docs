@@ -23,7 +23,7 @@ Download the hardwareConfig.json file for the version of your Limelight:
 - :download:`Limelight Version 2 <files/Limelight2/hardwareConfig.json>`.
 - :download:`Limelight Version 2+ <files/Limelight2+/hardwareConfig.json>`.
 
-You will then need to :ref:`import <docs/programming/config/config:Importing and Exporting Settings>` that hardwareConfig.json file.  This is **REQUIRED** to get the LEDS working and set the correct camera FOV.
+You will then need to :ref:`import <docs/hardware/config:Importing and Exporting Settings>` that hardwareConfig.json file.  This is **REQUIRED** to get the LEDS working and set the correct camera FOV.
 
 Troubleshooting
 ---------------

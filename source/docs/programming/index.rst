@@ -8,4 +8,3 @@ Programming Reference
 
    photonlib/index
    nt-api
-   config/index
