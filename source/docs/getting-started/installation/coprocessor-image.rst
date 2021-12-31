@@ -10,7 +10,9 @@ Downloading the Pi Image
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Download the latest release of the PhotonVision Pi image from the `releases page <https://github.com/PhotonVision/photonvision/releases>`_ to the location of your choice. You do not need to extract the downloaded ZIP file.
 
-.. note:: If using a `Gloworm <https://gloworm.vision/>`_, you will need to use the image found :ref:`here. <docs/hardware/supportedhardware:vendors>`
+.. note:: If using a `Gloworm <https://gloworm.vision/>`_, or a `SnakeEyes Hat <https://www.playingwithfusion.com/productview.php?pdid=133>`_, you will need to use the image found :ref:`here. <docs/hardware/supportedhardware:vendors>`
+
+.. note:: If using you will need to use the image found :ref:`here. <docs/hardware/supportedhardware:vendors>`
 
 Flashing the Pi Image
 ^^^^^^^^^^^^^^^^^^^^^
