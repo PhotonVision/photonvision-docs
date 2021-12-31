@@ -1,5 +1,13 @@
-NetworkTables API
-=================
+NetworkTables
+=============
+About
+^^^^^
+
+.. warning::
+    PhotonVision interfaces with PhotonLib, our vendor dependency, using NetworkTables. If you are running PhotonVision on a robot (ie. with a RoboRIO), you should **turn the NetworkTables server switch (in the settings tab) off** in order to get PhotonLib to work. Also ensure that you set your team number. The NetworkTables server should only be enabled if you know what you're doing!
+
+API
+^^^
 
 More advanced users may want to create their own NetworkTables entries to retrieve data instead of using :ref:`PhotonLib <docs/programming/photonlib/index:PhotonLib: Robot Code Interface>`. However, it is recommended for most users to use PhotonLib as it simplifies the user code experience.
 
