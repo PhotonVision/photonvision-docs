@@ -14,7 +14,7 @@ LED Support
 For Raspberry-Pi based hardware, PhotonVision can use `PiGPIO <https://abyz.me.uk/rpi/pigpio/>`_ to control IO pins. The mapping of which pins control which LED's is part of the hardware config. The pins are active-high: set high when LED's are commanded on, and set low when commanded off.
 
 .. tab-set-code::
-   .. code-block:: json-object
+   .. code-block:: javascript
 
       {
         "ledPins" : [ 13 ],
@@ -38,7 +38,7 @@ For Non-Raspberry-Pi hardware, users must provide valid hardware-specific comman
 Leaving a command blank will disable the associated functionality.
 
 .. tab-set-code::
-   .. code-block::  json-object
+   .. code-block::  javascript
 
       {
         "cpuTempCommand" : "",
@@ -58,7 +58,7 @@ Known Camera FOV
 If your hardware contains a camera with a known field of vision, it can be entered into the hardware configuration. This will prevent users from editing it in the GUI.
 
 .. tab-set-code::
-   .. code-block:: json-object
+   .. code-block:: javascript
 
       {
         "vendorFOV" : 98.9
@@ -70,7 +70,7 @@ Cosmetic & Branding
 To help differentiate your hardware from other solutions, some customization is allowed.
 
 .. tab-set-code::
-   .. code-block:: json-object
+   .. code-block:: javascript
 
       {
         "deviceName" : "Super Cool Custom Hardware",
@@ -86,7 +86,7 @@ Example
 Here is a complete example ``hardwareConfig.json``:
 
 .. tab-set-code::
-   .. code-block:: json-object
+   .. code-block:: javascript
 
       {
         "deviceName" : "Blinky McBlinkface",
