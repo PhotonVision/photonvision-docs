@@ -86,7 +86,7 @@ Example
 Here is a complete example ``hardwareConfig.json``:
 
 .. tab-set-code::
-   .. code-block:: 
+   .. code-block::
 
       {
         "deviceName" : "Blinky McBlinkface",
