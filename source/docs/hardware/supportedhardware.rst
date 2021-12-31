@@ -77,5 +77,9 @@ Vendors
 * SnakeEyes
 
   * `Website <https://www.playingwithfusion.com/productview.php?pdid=133>`_
+  
+  * `Image <https://github.com/PlayingWithFusion/SnakeEyesDocs/releases/latest>`_
 
   * `Image/Documentation <https://github.com/PlayingWithFusion/SnakeEyesDocs/blob/master/PhotonVision/readme.md>`_
+  
+  
