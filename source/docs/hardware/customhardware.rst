@@ -11,7 +11,7 @@ By default, PhotonVision attempts to make minimal assumptions of the hardware it
 LED Support
 -----------
 
-For Raspberry-Pi based hardware, PhotonVision can use `PiGPIO <https://abyz.me.uk/rpi/pigpio/>`_ to control IO pins. The mapping of which pins control which LED's is part of the hardware config.
+For Raspberry-Pi based hardware, PhotonVision can use `PiGPIO <https://abyz.me.uk/rpi/pigpio/>`_ to control IO pins. The mapping of which pins control which LED's is part of the hardware config. The pins are active-high: set high when LED's are commanded on, and set low when commanded off.
 
 .. tab-set-code::
    .. code-block:: json-object
