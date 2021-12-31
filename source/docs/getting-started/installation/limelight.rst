@@ -12,18 +12,22 @@ The Limelight is a proven, reliable, and easy-to-use smart camera.  However, man
 Imaging
 -------
 
-Follow the same process used to `image your Limelight <https://docs.limelightvision.io/en/latest/getting_started.html#imaging>`_ but use the .zip file of the latest `Gloworm image <https://github.com/gloworm-vision/pi-gen/releases>`_ of PhotonVision.  The `Gloworm <https://gloworm.vision/>`_ is a smart camera similar to the Limelight in many ways.
-
-After installation you should be able to `locate the camera <https://gloworm.vision/docs/quickstart/#finding-gloworm>`_ at: ``http://gloworm.local:5800/``
-
-After connecting you may want to set a static IP address.  This can be done by going to the "Settings" page and changing the radio button in the center to "Static".  We recommend following the configuration listed `here <https://docs.wpilib.org/en/latest/docs/networking/networking-introduction/ip-configurations.html>`_ which is usually ``10.TE.AM.11`` for the first IP Camera.  If you would like to change the gloworm.local to something more intuitive you can modify the hostname.
-
 Download the hardwareConfig.json file for the version of your Limelight:
 
 - :download:`Limelight Version 2 <files/Limelight2/hardwareConfig.json>`.
 - :download:`Limelight Version 2+ <files/Limelight2+/hardwareConfig.json>`.
 
-You will then need to :ref:`import <docs/programming/config/config:Importing and Exporting Settings>` that hardwareConfig.json file.  This is **REQUIRED** to get the LEDS working and set the correct camera FOV.
+Save this file. You will need it once PhotonVision is installed. This is **REQUIRED** to get the LEDS working and set the correct camera FOV.
+
+Follow the same process used to `image your Limelight <https://docs.limelightvision.io/en/latest/getting_started.html#imaging>`_ but use the .zip file of the latest `Gloworm image <https://github.com/gloworm-vision/pi-gen/releases>`_ of PhotonVision.  The `Gloworm <https://gloworm.vision/>`_ is a smart camera similar to the Limelight in many ways.
+
+.. warning:: We reccomend that you :ref:`update PhotonVision <docs/getting-started/installation/coprocessor-image:Raspberry Pi Installation>` after you image the Limelight if the Gloworm image is older than the latest stable PhotonVision release.
+
+After installation you should be able to `locate the camera <https://gloworm.vision/docs/quickstart/#finding-gloworm>`_ at: ``http://gloworm.local:5800/``
+
+After connecting you may want to set a static IP address.  This can be done by going to the "Networking" section in the "Settings" page and changing the "Static/DHCP" selector in the center to "Static", then entering your desired IP in the field below the selector.  As listed `here <https://docs.wpilib.org/en/latest/docs/networking/networking-introduction/ip-configurations.html>`_, for a robot, this IP must be ``10.TE.AM.X``. The ``X`` can be variable, but we recommend using ``10.TE.AM.11`` for the first IP Camera.  If you would like to change the gloworm.local to something more intuitive you can modify the hostname.
+
+You will then need to :ref:`import <docs/programming/config/config:Importing and Exporting Settings>` the hardwareConfig.json file you downloaded earlier. Again, this is **REQUIRED** or the LEDS will not work and the target measurements will be incorrect.
 
 Troubleshooting
 ---------------
