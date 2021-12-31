@@ -68,18 +68,18 @@ Vendors
 -------
 * Gloworm
 
-  * `Website/Documentation <https://gloworm.vision/>`_
+  * `Website/Documentation <https://gloworm.vision/>`__
 
-  * `Image <https://github.com/gloworm-vision/pi-gen/releases/>`_
+  * `Image <https://github.com/gloworm-vision/pi-gen/releases/>`__
 
-  * `Discord <https://discord.com/invite/DncQRky>`_
+  * `Discord <https://discord.com/invite/DncQRky>`__
 
 * SnakeEyes
 
-  * `Website <https://www.playingwithfusion.com/productview.php?pdid=133>`_
+  * `Website <https://www.playingwithfusion.com/productview.php?pdid=133>`__
   
-  * `Image <https://github.com/PlayingWithFusion/SnakeEyesDocs/releases/latest>`_
+  * `Image <https://github.com/PlayingWithFusion/SnakeEyesDocs/releases/latest>`__
 
-  * `Image/Documentation <https://github.com/PlayingWithFusion/SnakeEyesDocs/blob/master/PhotonVision/readme.md>`_
+  * `Documentation <https://github.com/PlayingWithFusion/SnakeEyesDocs/blob/master/PhotonVision/readme.md>`__
   
   
