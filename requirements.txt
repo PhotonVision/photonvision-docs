@@ -6,3 +6,4 @@ sphinxcontrib-ghcontributors==0.2.2
 sphinx-notfound-page==0.8
 sphinxext-remoteliteralinclude==0.3.0
 sphinx_design==0.0.13
+pygments==2.10.0
