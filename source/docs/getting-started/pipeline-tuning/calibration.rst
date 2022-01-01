@@ -14,9 +14,7 @@ Calibration with PhotonVision
 
 The Cameras tab of the UI houses PhotonVision's camera calibration tooling. It assists users with calibrating their cameras, as well as allows them to view previously calibrated resolutions. We support both dot- and chessboard calibrations.
 
-From this point on, we will assume that the standard 8x8 chessboard, linked from the cameras tab of the UI, is used. That file can also be found :download:`here <images/PhotonVisionCheckerboard.pdf>`.
-
-In the Camera Calibration tab, we'll print out the chessboard using the "Download Chessboard" button. This should be printed on 8.5x11 printer paper.
+In the Camera Calibration tab, we'll print out the calibration target using the "Download" button. This should be printed on 8.5x11 printer paper. This page shows using an 8x8 chessboard.
 
 .. warning:: Ensure that there is no scaling applied during printing (it should be at 100%) and that the PDF is printed as is on regular printer paper. Check the square size with calibers or an accurate measuring device after printing to ensure squares are sized properly. For optimal results, various resources are available online to calibrate your specific printer if needed.
 
