@@ -1,3 +1,5 @@
+:orphan:
+
 Programming Reference
 =====================
 
@@ -5,5 +7,4 @@ Programming Reference
    :maxdepth: 1
 
    photonlib/index
-   nt-api/nt-api
-   config/index
+   nt-api

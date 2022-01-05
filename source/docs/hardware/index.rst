@@ -6,4 +6,5 @@ Hardware
 
    supportedhardware
    customhardware
+   config
 
