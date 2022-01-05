@@ -28,7 +28,6 @@ author = 'Banks Troutman, Matt Morley'
 extensions = [
 	"sphinx_rtd_theme",
 	'sphinx.ext.autosectionlabel',
-	'sphinx_tabs.tabs',
     'sphinx.ext.todo',
 	'notfound.extension',
     'sphinxext.remoteliteralinclude',
