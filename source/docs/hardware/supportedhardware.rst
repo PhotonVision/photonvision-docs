@@ -70,7 +70,7 @@ Vendors
 
   * `Website/Documentation <https://gloworm.vision/>`__
 
-  * `Image <https://github.com/gloworm-vision/pi-gen/releases/>`__
+  * `Image <https://github.com/gloworm-vision/pi-img-updator/releases>`__
 
   * `Discord <https://discord.com/invite/DncQRky>`__
 
