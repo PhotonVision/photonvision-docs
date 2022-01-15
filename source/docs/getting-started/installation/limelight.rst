@@ -19,7 +19,7 @@ Download the hardwareConfig.json file for the version of your Limelight:
 
 Save this file. You will need it once PhotonVision is installed. This is **REQUIRED** to get the LEDS working and set the correct camera FOV.
 
-Follow the same process used to `image your Limelight <https://docs.limelightvision.io/en/latest/getting_started.html#imaging>`_ but use the .zip file of the latest `Gloworm image <https://github.com/gloworm-vision/pi-gen/releases>`_ of PhotonVision.  The `Gloworm <https://gloworm.vision/>`_ is a smart camera similar to the Limelight in many ways.
+Follow the same process used to `image your Limelight <https://docs.limelightvision.io/en/latest/getting_started.html#imaging>`_ but use the .zip file of the latest `Gloworm image <https://github.com/gloworm-vision/pi-img-updator/releases>`_ of PhotonVision.  The `Gloworm <https://gloworm.vision/>`_ is a smart camera similar to the Limelight in many ways.
 
 .. warning:: We reccomend that you :ref:`update PhotonVision <docs/getting-started/installation/coprocessor-image:Updating PhotonVision>` after you image the Limelight if the Gloworm image is older than the latest stable PhotonVision release.
 
