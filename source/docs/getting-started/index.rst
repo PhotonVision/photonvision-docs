@@ -17,5 +17,4 @@ Getting Started
    :maxdepth: 2
 
    pipeline-tuning/index
-   Settings
    Networking
