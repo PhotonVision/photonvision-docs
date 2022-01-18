@@ -9,7 +9,7 @@ In addition to storing logs in timestamped files in the config directory, Photon
 
 .. raw:: html
 
-    <video width="85%" controls>
-        <source src="../../../_static/assets/logGui.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        <video width="85%" controls>
+            <source src="../../_static/assets/logGui.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
