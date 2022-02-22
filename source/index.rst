@@ -1,7 +1,7 @@
 .. image:: assets/PhotonVision-Header-onWhite.png
   :alt: PhotonVision
 
-Welcome to the official documentation of PhotonVision! PhotonVision is free, fast, and easy-to-use vision processing solution for the *FIRST*\  Robotics Competition. PhotonVision is designed to get vision working on your robot *quickly*, without the significant cost of other similar solutions. PhotonVision supports a variety of COTS hardware, including the Raspberry Pi 3 and 4, the `Gloworm smart camera <https://gloworm.vision>`_, and the `SnakeEyes Pi hat <https://www.playingwithfusion.com/productview.php?pdid=133>`_.
+Welcome to the official documentation of PhotonVision! PhotonVision is the free, fast, and easy-to-use vision processing solution for the *FIRST*\  Robotics Competition. PhotonVision is designed to get vision working on your robot *quickly*, without the significant cost of other similar solutions. PhotonVision supports a variety of COTS hardware, including the Raspberry Pi 3 and 4, the `Gloworm smart camera <https://gloworm.vision>`_, and the `SnakeEyes Pi hat <https://www.playingwithfusion.com/productview.php?pdid=133>`_.
 
 Content
 -------
@@ -18,7 +18,7 @@ Content
         :link: docs/programming/index
         :link-type: doc
 
-        Learn more PhotonLib, our vendor dependency which makes it easier for teams to retrieve vision data, make various calculations, and more.
+        Learn more about PhotonLib, our vendor dependency which makes it easier for teams to retrieve vision data, make various calculations, and more.
 
 .. grid:: 2
 
