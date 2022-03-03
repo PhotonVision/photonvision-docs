@@ -68,7 +68,7 @@ Finally, while running the simulation, process simulated camera frames by provid
 
       .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/sim/DrivetrainSim.cpp
          :language: c++
-         :lines: 46=47
+         :lines: 46-47
 
 This will cause most NetworkTables fields to update properly, representing any targets that are in view of the robot.
 
