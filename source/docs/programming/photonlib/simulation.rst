@@ -40,11 +40,11 @@ It requires a number of pieces of configuration to accurately simulate your phys
 
      .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
         :language: java
-        :lines: 64-85
+        :lines: 72-93
 
      .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
         :language: c++
-        :lines: 71-85
+        :lines: 78-92
 
 After declaring the system, you should create and add one ``SimVisionTarget`` per target on the field you are attempting to detect.
 
@@ -52,11 +52,11 @@ After declaring the system, you should create and add one ``SimVisionTarget`` pe
 
       .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
          :language: java
-         :lines: 87-108
+         :lines: 95-108, 113-114
 
       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
          :language: c++
-         :lines: 95-103, 38-42
+         :lines: 94-109, 46-48
 
 Finally, while running the simulation, process simulated camera frames by providing the robot's pose to the system.
 
@@ -64,11 +64,11 @@ Finally, while running the simulation, process simulated camera frames by provid
 
       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
          :language: java
-         :lines: 128-129
+         :lines: 136-137
 
       .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/sim/DrivetrainSim.cpp
          :language: c++
-         :lines: 39-40
+         :lines: 46-47
 
 This will cause most NetworkTables fields to update properly, representing any targets that are in view of the robot.
 
