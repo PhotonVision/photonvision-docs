@@ -35,4 +35,4 @@ You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getA
 
 .. note:: The camera-to-target transform represents a 2d transformation (translation and rotation) to the target. For more information on how this works, please see the `2d transform documentation <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/geometry/transformations.html#transform2d-and-twist2d>`_.
 
-..note:: ``getCorners()``/``GetCorners()`` will return the 4 corners of the minimum bounding box rectangle (in no particular order). This is useful for users interested in curve fitting and other more advanced techniques.
+.. note:: ``getCorners()``/``GetCorners()`` will return the 4 corners of the minimum bounding box rectangle (in no particular order). This is useful for users interested in curve fitting and other more advanced techniques.
