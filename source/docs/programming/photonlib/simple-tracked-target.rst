@@ -7,7 +7,7 @@ A tracked target contains information about each target from a :ref:`pipeline re
 
 Retrieving Data from a Photon Tracked Target
 --------------------------------------------
-You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getArea()``/``GetArea()``, ``getSkew()``/``GetSkew()``,``getCorners()``/``GetCorners()``, and ``getCameraToTarget()``/``GetCameraToTarget()`` methods (Java and C++ respectively) within the tracked target class to retrieve the yaw, pitch, area, skew, target corners, and the camera-to-target transform.
+You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getArea()``/``GetArea()``, ``getSkew()``/``GetSkew()``, ``getCorners()``/``GetCorners()``, and ``getCameraToTarget()``/``GetCameraToTarget()`` methods (Java and C++ respectively) within the tracked target class to retrieve the yaw, pitch, area, skew, target corners, and the camera-to-target transform.
 
 .. tab-set-code::
    .. code-block:: java
@@ -35,4 +35,4 @@ You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getA
 
 .. note:: The camera-to-target transform represents a 2d transformation (translation and rotation) to the target. For more information on how this works, please see the `2d transform documentation <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/geometry/transformations.html#transform2d-and-twist2d>`_.
 
-..note:: ``getCorners()``/``GetCorners()`` will return the 4 corners of the minimum bounding box rectangle (in no particular order). This is useful for users interested in curve fitting and other more advanced techniques.
+.. note:: ``getCorners()``/``GetCorners()`` will return the 4 corners of the minimum bounding box rectangle (in no particular order). This is useful for users interested in curve fitting and other more advanced techniques.
