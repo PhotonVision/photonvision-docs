@@ -7,7 +7,7 @@ A tracked target contains information about each target from a :ref:`pipeline re
 
 Retrieving Data from a Photon Tracked Target
 --------------------------------------------
-You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getArea()``/``GetArea()``, ``getSkew()``/``GetSkew()``,``getCorners()``/``GetCorners()``, and ``getCameraToTarget()``/``GetCameraToTarget()`` methods (Java and C++ respectively) within the tracked target class to retrieve the yaw, pitch, area, skew, target corners, and the camera-to-target transform.
+You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getArea()``/``GetArea()``, ``getSkew()``/``GetSkew()``, ``getCorners()``/``GetCorners()``, and ``getCameraToTarget()``/``GetCameraToTarget()`` methods (Java and C++ respectively) within the tracked target class to retrieve the yaw, pitch, area, skew, target corners, and the camera-to-target transform.
 
 .. tab-set-code::
    .. code-block:: java
