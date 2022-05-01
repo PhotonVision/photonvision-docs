@@ -1,16 +1,15 @@
 Using WPILib Pose Estimation, Simulation, and PhotonVision Together
 ===================================================================
 
+The following example comes from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest>`_).  Full code is available at that links.
+
 Knowledge and Equipment Needed
 -----------------------------------------------
 
 - Everything required in :ref:`Combining Aiming and Getting in Range <docs/examples/aimandrange:Knowledge and Equipment Needed>`, plus some familiarity with WPILib pose estimation functionality.
 
-
 Background
 ----------
-
-Full code may be found in the PhotonLib repository (`Java <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest>`_).
 
 This example builds upon WPILib's `Differential Drive Pose Estimator <https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples/differentialdriveposeestimator>`_. It adds a :code:`PhotonCamera` to gather estimates of the robot's position on the field. This in turn can be used for aligning with vision targets, and increasing accuracy of autonomous routines.
 
@@ -34,18 +33,18 @@ The :code:`DrivetrainPoseEstimator` class is responsible for generating an estim
 
 Please reference the `WPILib documentation <https://docs.wpilib.org/en/stable/docs/software/advanced-controls/state-space/state-space-pose_state-estimators.html>`_ on using the :code:`DifferentialDrivePoseEstimator` class.
 
-Specifically, to incorporate Photon Vision, we need to create a :code:`PhotonCamera`:
+For both simulation and on-robot code, we create objects to represent the physical location and size of the vision targets we are calibrated to detect. This example models the down-field high goal vision target from the 2020 and 2021 games.
 
 .. tab-set::
 
     .. tab-item:: Java
        :sync: java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/robot/DrivetrainPoseEstimator.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/robot/Constants.java
          :language: java
-         :lines: 41
+         :lines: 79-101
          :linenos:
-         :lineno-start: 41
+         :lineno-start: 79
 
 
     .. tab-item:: C++
@@ -53,19 +52,37 @@ Specifically, to incorporate Photon Vision, we need to create a :code:`PhotonCam
 
        :code:`//Coming soon!`
 
-
-Then, during periodic execution, we read back results. If we see a target in the image, we pass the camera-measured pose of the robot to the :code:`DifferentialDrivePoseEstimator`.
+To incorporate Photon Vision, we need to create a :code:`PhotonCamera`:
 
 .. tab-set::
 
     .. tab-item:: Java
        :sync: java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/robot/DrivetrainPoseEstimator.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/robot/DrivetrainPoseEstimator.java
          :language: java
-         :lines: 67-86
+         :lines: 49
          :linenos:
-         :lineno-start: 67
+         :lineno-start: 49
+
+
+    .. tab-item:: C++
+       :sync: cpp
+
+       :code:`//Coming soon!`
+
+During periodic execution, we read back camera results. If we see a target in the image, we pass the camera-measured pose of the robot to the :code:`DifferentialDrivePoseEstimator`.
+
+.. tab-set::
+
+    .. tab-item:: Java
+       :sync: java
+
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/robot/DrivetrainPoseEstimator.java
+         :language: java
+         :lines: 82-94
+         :linenos:
+         :lineno-start: 82
 
 
     .. tab-item:: C++
@@ -85,11 +102,11 @@ First, we create a new :code:`SimVisionSystem` to represent our camera and copro
     .. tab-item:: Java
        :sync: java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/sim/DrivetrainSim.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/sim/DrivetrainSim.java
          :language: java
-         :lines: 69-90
+         :lines: 77-98
          :linenos:
-         :lineno-start: 69
+         :lineno-start: 77
 
 
     .. tab-item:: C++
@@ -97,37 +114,18 @@ First, we create a new :code:`SimVisionSystem` to represent our camera and copro
 
        :code:`//Coming soon!`
 
-Next, we create objects to represent the physical location and size of the vision targets we are calibrated to detect. This example models the down-field high goal vision target from the 2020 and 2021 games.
+Then, we add our target to the simulated vision system.
 
 .. tab-set::
 
     .. tab-item:: Java
        :sync: java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/robot/Constants.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/sim/DrivetrainSim.java
          :language: java
-         :lines: 71-93
+         :lines: 100-102
          :linenos:
-         :lineno-start: 71
-
-
-    .. tab-item:: C++
-       :sync: cpp
-
-       :code:`//Coming soon!`
-
-Finally, we add our target to the simulated vision system.
-
-.. tab-set::
-
-    .. tab-item:: Java
-       :sync: java
-
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/sim/DrivetrainSim.java
-         :language: java
-         :lines: 92-94
-         :linenos:
-         :lineno-start: 92
+         :lineno-start: 100
 
 
     .. tab-item:: C++
@@ -141,18 +139,18 @@ If you have additional targets you want to detect, you can add them in the same 
 Updating the Simulated Vision System
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once we have all the properties of our simulated vision system defined, the work to do at runtime becomes very minimal. Simply pass in the robot's pose periodically to the simulated vision system.
+Once we have all the properties of our simulated vision system defined, the remaining work is minimal. Periodically, pass in the robot's pose to the simulated vision system.
 
 .. tab-set::
 
     .. tab-item:: Java
        :sync: java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/sim/DrivetrainSim.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simposeest/sim/DrivetrainSim.java
          :language: java
-         :lines: 133-134
+         :lines: 141-142
          :linenos:
-         :lineno-start: 133
+         :lineno-start: 141
 
 
     .. tab-item:: C++

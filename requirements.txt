@@ -7,4 +7,5 @@ sphinxcontrib-ghcontributors
 sphinx-notfound-page
 sphinxext-remoteliteralinclude
 sphinx_design==0.0.13
+sphinx-rtd-theme==1.0.0
 pygments==2.10.0
