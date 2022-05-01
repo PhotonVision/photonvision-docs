@@ -1,5 +1,5 @@
-Installing PhotonVision on a Limelight
-======================================
+Limelight Installation
+======================
 
 The Limelight is a proven, reliable, and easy-to-use smart camera.  However, many of the features of PhotonVision exceed the capabilities of the current Limelight software, so loading the PhotonVision software onto the Limelight hardware gives teams the best of both worlds.  Some of the unique features PhotonVision provides are:
 
