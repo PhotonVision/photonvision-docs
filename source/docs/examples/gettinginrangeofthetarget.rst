@@ -13,13 +13,13 @@ Knowledge and Equipment Needed
 Code
 -------
 
-In FRC, a mechanism usually has to be a certain distance away from its target in order to be effective and score. In the previous example, we showed how to aim your robot at the target. Now we will show how to move to a certain distance from the target. 
+In FRC, a mechanism usually has to be a certain distance away from its target in order to be effective and score. In the previous example, we showed how to aim your robot at the target. Now we will show how to move to a certain distance from the target.
 
-For proper functionality of just this example, ensure that your robot is pointed towards the target. 
+For proper functionality of just this example, ensure that your robot is pointed towards the target.
 
 While the operator holds down a button, the robot will drive towards the target and get in range.
 
-This example uses P term of the PID loop and PhotonLib and the distance function of PhotonUtils. 
+This example uses P term of the PID loop and PhotonLib and the distance function of PhotonUtils.
 
 .. warning:: The PhotonLib utility to calculate distance depends on the camera being at a different vertical height than the target. If this is not the case, a different method for estimating distance, such as target width or area, should be used. In general, this method becomes more accurate as range decreases and as the height difference increases.
 
