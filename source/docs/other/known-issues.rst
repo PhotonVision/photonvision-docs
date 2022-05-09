@@ -14,6 +14,6 @@ Software Issues
 LED Control
 ^^^^^^^^^^^
 
-The logic for controlling LED mode when `multiple cameras are connected` is not fully fleshed out.
+The logic for controlling LED mode when `multiple cameras are connected` is not fully fleshed out. In its current state, LED control is only enabled when a Pi Camera Module is not in driver mode—meaning a USB camera on its own is unable to control the LEDs.
 
 For now, if you are using multiple cameras, it is recommended that teams set the value of the NetworkTables entry :code:`photonvision/ledMode` from the robot code to control LED state.
