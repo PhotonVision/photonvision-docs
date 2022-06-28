@@ -1,5 +1,5 @@
-Installing PhotonVision on a Romi
-=================================
+Romi Installation
+=================
 
 The `Romi <https://docs.wpilib.org/en/latest/docs/romi-robot/index.html>`_ is a small robot that can be controlled with the WPILib software.  The main controller is a Raspberry Pi that must be imaged with `WPILibPi <https://docs.wpilib.org/en/latest/docs/romi-robot/imaging-romi.html>`_ .
 
