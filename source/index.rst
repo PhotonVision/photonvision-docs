@@ -3,8 +3,6 @@
 
 Welcome to the official documentation of PhotonVision! PhotonVision is the free, fast, and easy-to-use vision processing solution for the *FIRST*\  Robotics Competition. PhotonVision is designed to get vision working on your robot *quickly*, without the significant cost of other similar solutions. PhotonVision supports a variety of COTS hardware, including the Raspberry Pi 3 and 4, the Gloworm smart camera, and the `SnakeEyes Pi hat <https://www.playingwithfusion.com/productview.php?pdid=133>`_.
 
-Content
--------
 
 .. grid:: 2
 
@@ -47,6 +45,24 @@ Content
         :link-type: doc
 
         Interested in helping with PhotonVision? Learn more about how to contribute to our main code base, documentation, and more.
+		
+.. grid:: 1
+
+	.. grid-item-card:: Fiducials (Beta)
+		:link: docs/fiducials/index
+		:link-type: doc
+		
+		Learn more about our beta fiducials pipeline, including how to install, use, and implement them at your offseason.
+
+
+.. grid:: 1
+
+	.. grid-item-card:: Fiducials (Beta)
+		:link: docs/fiducials/index
+		:link-type: doc
+		
+		Learn more about our beta fiducials pipeline, including how to install, use, and implement them at your offseason.
+
 
 Source Code
 -----------
@@ -77,12 +93,14 @@ Sitemap
    docs/getting-started/about/index
    docs/getting-started/installation/index
    docs/getting-started/pipeline-tuning/index
+   docs/fiducials/index
    docs/hardware/index
    docs/programming/photonlib/index
-   docs/programming/nt-api
    docs/integration/index
    docs/examples/index
    docs/getting-started/Networking
+   docs/programming/nt-api
+   docs/programming/logging
    docs/other/known-issues
    docs/other/troubleshooting-tips
    docs/other/contributing/index
