@@ -7,4 +7,6 @@ Hardware
    supportedhardware
    customhardware
    config
+   Settings
+   logging
 

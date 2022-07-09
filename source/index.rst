@@ -77,14 +77,12 @@ Sitemap
    docs/getting-started/about/index
    docs/getting-started/installation/index
    docs/getting-started/pipeline-tuning/index
-   docs/getting-started/Settings
-   docs/programming/logging
    docs/hardware/index
-   docs/getting-started/Networking
    docs/programming/photonlib/index
    docs/programming/nt-api
    docs/integration/index
    docs/examples/index
+   docs/getting-started/Networking
    docs/other/known-issues
    docs/other/troubleshooting-tips
    docs/other/contributing/index
