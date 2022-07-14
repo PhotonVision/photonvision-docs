@@ -19,11 +19,11 @@ Download the hardwareConfig.json file for the version of your Limelight:
 
 Save this file. You will need it once PhotonVision is installed. This is **REQUIRED** to get the LEDS working and set the correct camera FOV.
 
-Follow the same process used to `image your Limelight <https://docs.limelightvision.io/en/latest/getting_started.html#imaging>`_ but use the .zip file of the latest `Gloworm image <https://github.com/gloworm-vision/pi-img-updator/releases>`_ of PhotonVision.  The `Gloworm <https://gloworm.vision/>`_ is a smart camera similar to the Limelight in many ways.
+Follow the same process used to `image your Limelight <https://docs.limelightvision.io/en/latest/getting_started.html#imaging>`_ but use the .zip file of the latest `Gloworm image <https://github.com/gloworm-vision/pi-img-updator/releases>`_ of PhotonVision.  The `Gloworm <https://web.archive.org/web/20220525051734/https://gloworm.vision//>`_ is a smart camera similar to the Limelight in many ways.
 
 .. warning:: We reccomend that you :ref:`update PhotonVision <docs/getting-started/installation/coprocessor-image:Updating PhotonVision>` after you image the Limelight if the Gloworm image is older than the latest stable PhotonVision release.
 
-After installation you should be able to `locate the camera <https://gloworm.vision/docs/quickstart/#finding-gloworm>`_ at: ``http://gloworm.local:5800/``
+After installation you should be able to `locate the camera <https://web.archive.org/web/20220525051734/https://gloworm.vision//docs/quickstart/#finding-gloworm>`_ at: ``http://gloworm.local:5800/``
 
 After connecting you may want to set a static IP address.  This can be done by going to the "Networking" section in the "Settings" page and changing the "Static/DHCP" selector in the center to "Static", then entering your desired IP in the field below the selector.  As listed `here <https://docs.wpilib.org/en/latest/docs/networking/networking-introduction/ip-configurations.html>`_, for a robot, this IP must be ``10.TE.AM.X``. The ``X`` can be variable, but we recommend using ``10.TE.AM.11`` for the first IP Camera.  If you would like to change the gloworm.local to something more intuitive you can modify the hostname.
 

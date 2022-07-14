@@ -16,6 +16,6 @@ Next, from the SSH terminal, run ``sudo nano /home/pi/runCamera`` then arrow dow
 
 .. image:: images/nano.png
 
-After it reboots, you should be able to `locate the PhotonVision UI <https://gloworm.vision/docs/quickstart/#finding-gloworm>`_ at: ``http://10.0.0.2:5800/``.
+After it reboots, you should be able to `locate the PhotonVision UI <https://web.archive.org/web/20220525051734/https://gloworm.vision//docs/quickstart/#finding-gloworm>`_ at: ``http://10.0.0.2:5800/``.
 
 .. warning:: In order for settings, logs, etc. to be saved / take effect, ensure that PhotonVision is in writable mode.
