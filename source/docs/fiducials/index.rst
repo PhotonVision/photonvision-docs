@@ -1,7 +1,7 @@
 :orphan:
 
-Fiducials (Beta)
-================
+Fiducials / AprilTags
+=====================
 
 .. toctree::
    :maxdepth: 1

@@ -1,6 +1,8 @@
 About Fiducials / April Tags
 ============================
 
+.. important:: For the 2023 FRC Game, FIRST HQ has announced that visual fiducial markers (AprilTags) will be used on the field in addition to retroreflective tape. More information can be found in the `blog post here <https://www.firstinspires.org/robotics/frc/blog/2022-control-system-reporting-2023-updates-and-beta-testing>`_. Get ahead of the game by setting up PhotonVision and start detecting AprilTags in the offseason so you're ready for whatever the 2023 game has to offer!
+
 |
 
 .. image:: assets/apriltag.png
@@ -19,5 +21,3 @@ This has clear advantages over the traditional method of retroreflective tape ba
 * Easier for teams to construct (don't need expensive tape, just a printer)
 * Bright lights are no longer necessary for tracking
 * It prepares students for industry, and much more.
-
-During the 2022-2023 offseason, PhotonVision is looking for events that are willing to demo AprilTags in order to spread awareness and serve as a proof of concept for potential implementation in future FIRST games.

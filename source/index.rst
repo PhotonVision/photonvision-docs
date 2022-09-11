@@ -93,9 +93,9 @@ Sitemap
    docs/getting-started/about/index
    docs/getting-started/installation/index
    docs/getting-started/pipeline-tuning/index
-   docs/fiducials/index
    docs/hardware/index
    docs/programming/photonlib/index
+   docs/fiducials/index
    docs/integration/index
    docs/examples/index
    docs/getting-started/Networking

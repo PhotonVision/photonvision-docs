@@ -9,9 +9,11 @@ Pipeline Tuning
 
 |
 
+.. note:: Unlike with retroreflective tape, fiducial tracking is not very dependent on lighting consistency. This means that the default settings on the "Input" tab should be fine. If you have trouble detecting tags due to low light, you may want to try increasing exposure, but this will likely decrease your achievable framerate.
+
 Target Family
 -------------
-Target families are defined by two numbers (before and after the h). The first number is the number of bits the tag is able to encode (which means more tags are available in the respective family) and the second is the hamming distance. Hamming distance describes the ability for error correction while identifying tag ids. A high hamming distance generally means that it will be easier for a tag to be identified even if there are errors. However, as hamming distance increases, the number of available tags decreases. At this time, PhotonVision only offers 36h11 tags, which can either be found here `here <https://github.com/AprilRobotics/apriltag-imgs/tree/master/tag36h11>`_. or in the field guide (linked on previous page).
+Target families are defined by two numbers (before and after the h). The first number is the number of bits the tag is able to encode (which means more tags are available in the respective family) and the second is the hamming distance. Hamming distance describes the ability for error correction while identifying tag ids. A high hamming distance generally means that it will be easier for a tag to be identified even if there are errors. However, as hamming distance increases, the number of available tags decreases. The 2023 FRC game will be using 36h11 tags, which can either be found here `here <https://github.com/AprilRobotics/apriltag-imgs/tree/master/tag36h11>`_. or in the field guide (linked on previous page).
 
 Decimate
 --------
