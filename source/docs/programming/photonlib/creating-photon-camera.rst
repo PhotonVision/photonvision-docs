@@ -12,13 +12,13 @@ The ``PhotonCamera`` class has two constructors: one that takes a ``NetworkTable
 .. tab-set-code::
 
 
-     .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
+     .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
         :language: java
-        :lines: 43-44
+        :lines: 51-52
 
-     .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
+     .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
         :language: c++
-        :lines: 35-36
+        :lines: 42-43
 
 .. warning:: Teams must have unique names for all of their cameras regardless of which coprocessor they are attached to.
 
@@ -29,13 +29,13 @@ Use the ``getLatestResult()``/``GetLatestResult()`` (Java and C++ respectively) 
 .. tab-set-code::
 
 
-     .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
+     .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
         :language: java
-        :lines: 71-72
+        :lines: 79-80
 
-     .. rli:: https://github.com/PhotonVision/photonvision/raw/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp
+     .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp
          :language: c++
-         :lines: 28-29
+         :lines: 35-36
 
 .. note:: Unlike other vision software solutions, using the latest result guarantees that all information is from the same timestamp. This is achievable because the PhotonVision backend sends a byte-packed string of data which is then deserialized by PhotonLib to get target data. For more information, check out the `PhotonLib source code <https://github.com/PhotonVision/photonvision/tree/master/photon-lib>`_.
 

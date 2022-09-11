@@ -9,13 +9,13 @@ If your camera is at a fixed height on your robot and the height of the target i
 .. tab-set-code::
 
 
-     .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-java-examples/src/main/java/org/photonlib/examples/getinrange/Robot.java
+     .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-java-examples/src/main/java/org/photonlib/examples/getinrange/Robot.java
         :language: java
-        :lines: 71-86
+        :lines: 78-94
 
-     .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/master/photonlib-cpp-examples/src/main/cpp/examples/getinrange/cpp/Robot.cpp
+     .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-cpp-examples/src/main/cpp/examples/getinrange/cpp/Robot.cpp
         :language: cpp
-        :lines: 31-39
+        :lines: 33-46
 
 .. note:: The C++ version of PhotonLib uses the Units library. For more information, see `here <https://docs.wpilib.org/en/stable/docs/software/basic-programming/cpp-units.html>`_.
 
