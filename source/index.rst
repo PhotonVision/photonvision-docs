@@ -45,7 +45,7 @@ Welcome to the official documentation of PhotonVision! PhotonVision is the free,
         :link-type: doc
 
         Interested in helping with PhotonVision? Learn more about how to contribute to our main code base, documentation, and more.
-	
+
 .. grid:: 1
 
     .. grid-item-card:: Fiducials (Beta)
