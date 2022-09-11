@@ -18,7 +18,7 @@ Target families are defined by two numbers (before and after the h). The first n
 Decimate
 --------
 
-Generally, increasing decimate will decrease reduce the sampling rate within the image. This will lead to increased detection time while decreasing detection distance. 
+Generally, increasing decimate will decrease reduce the sampling rate within the image. This will lead to increased detection time while decreasing detection distance.
 
 Blur
 ----

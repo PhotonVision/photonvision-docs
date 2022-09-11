@@ -45,23 +45,23 @@ Welcome to the official documentation of PhotonVision! PhotonVision is the free,
         :link-type: doc
 
         Interested in helping with PhotonVision? Learn more about how to contribute to our main code base, documentation, and more.
-		
+	
 .. grid:: 1
 
-	.. grid-item-card:: Fiducials (Beta)
-		:link: docs/fiducials/index
-		:link-type: doc
-		
-		Learn more about our beta fiducials pipeline, including how to install, use, and implement them at your offseason.
+    .. grid-item-card:: Fiducials (Beta)
+        :link: docs/fiducials/index
+        :link-type: doc
+
+        Learn more about our beta fiducials pipeline, including how to install, use, and implement them at your offseason.
 
 
 .. grid:: 1
 
-	.. grid-item-card:: Fiducials (Beta)
-		:link: docs/fiducials/index
-		:link-type: doc
-		
-		Learn more about our beta fiducials pipeline, including how to install, use, and implement them at your offseason.
+    .. grid-item-card:: Fiducials (Beta)
+        :link: docs/fiducials/index
+        :link-type: doc
+
+        Learn more about our AprilTags/fiducials pipeline, including how to install, use, and implement them at your offseason.
 
 
 Source Code
