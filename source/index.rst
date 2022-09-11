@@ -100,7 +100,7 @@ Sitemap
    docs/examples/index
    docs/getting-started/Networking
    docs/programming/nt-api
-   docs/programming/logging
+   docs/hardware/logging
    docs/other/known-issues
    docs/other/troubleshooting-tips
    docs/other/contributing/index

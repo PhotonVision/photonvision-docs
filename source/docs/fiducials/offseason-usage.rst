@@ -3,9 +3,9 @@ Offseason Usage
 
 If you are interested in using AprilTags at your offseason, feel free to contact us via :ref:`Discord <index:Contact Us>` or `Chief Delphi <https://www.chiefdelphi.com/t/visual-fiducials-in-future-frc-games/408688>`_.
 
-* `Field Assembly Manual <www.google.com>`_
-* `Tag Pose Information <www.google.com>`_
-* `AprilTag Printout <www.google.com>`_
+* `Field Assembly Manual <https://www.google.com/>`_
+* `Tag Pose Information <https://www.google.com/>`_
+* `AprilTag Printout <https://www.google.com/>`_
 
 Feedback
 --------
