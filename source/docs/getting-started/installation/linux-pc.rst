@@ -13,7 +13,7 @@ PhotonVision requires a JDK installed and on the system path. JDK 11 or higher i
 
 Downloading the Latest Stable Release of PhotonVision
 -----------------------------------------------------
-Download the latest stable release of PhotonVision from the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_. 
+Download the latest stable release of PhotonVision from the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_.
 
 Running PhotonVision
 --------------------

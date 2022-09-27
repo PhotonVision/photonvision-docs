@@ -10,7 +10,7 @@ Flashing the Pi Image
 ---------------------
 An 8GB or larger card is recommended.
 
-Use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto a Raspberry Pi. Select the downloaded ``.zip`` file, select your microSD card, and flash. 
+Use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto a Raspberry Pi. Select the downloaded ``.zip`` file, select your microSD card, and flash.
 
 For more detailed instructions on using Etcher, please see the `Etcher website <https://www.balena.io/etcher/>`_.
 
@@ -24,9 +24,9 @@ Troubleshooting/Setting a Static IP
 -----------------------------------
 If ``http://photonvision.local:5800`` does not resolve, or you do not want to use mDNS, try to connect to the IP address directly.
 
-Download and run `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network. 
+Download and run `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network.
 
-Once you find it, set the IP to a desired :ref:`static IP in PhotonVision. <docs/hardware/Settings:Networking>` 
+Once you find it, set the IP to a desired :ref:`static IP in PhotonVision. <docs/hardware/Settings:Networking>`
 
 Updating PhotonVision
 ---------------------
