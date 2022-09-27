@@ -16,7 +16,7 @@ For more detailed instructions on using Etcher, please see the `Etcher website <
 
 Final Steps
 -----------
-Insert the flashed microSD card into your Raspberry Pi and boot it up. The first boot may take a few minutes as the Pi expands teh filesystem. Be sure not to unplug during this process.
+Insert the flashed microSD card into your Raspberry Pi and boot it up. The first boot may take a few minutes as the Pi expands the filesystem. Be sure not to unplug during this process.
 
 After the initial setup process, your Raspberry Pi should be configured for PhotonVision. You can verify this by making sure your Raspberry Pi and computer are connected to the same network and navigating to ``http://photonvision.local:5800`` in your browser on your computer.
 
