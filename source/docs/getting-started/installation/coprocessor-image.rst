@@ -10,7 +10,7 @@ Downloading the Pi Image
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Download the latest release of the PhotonVision Pi image from the `releases page <https://github.com/PhotonVision/photonvision/releases>`_ to the location of your choice. You do not need to extract the downloaded ZIP file.
 
-.. note:: If using a Gloworm or a `SnakeEyes Hat <https://www.playingwithfusion.com/productview.php?pdid=133>`_, you will need to use the image found :ref:`here. <docs/hardware/supportedhardware:vendors>`
+.. note:: If using a `Gloworm <https://web.archive.org/web/20220525051734/https://gloworm.vision//>`_, or a `SnakeEyes Hat <https://www.playingwithfusion.com/productview.php?pdid=133>`_, you will need to use the image found :ref:`here. <docs/hardware/supportedhardware:vendors>`
 
 
 Flashing the Pi Image
@@ -21,7 +21,7 @@ Final Steps
 ^^^^^^^^^^^
 Simply insert the flashed microSD card into your Raspberry Pi and boot it up. After the initial setup process, your Raspberry Pi should be configured for PhotonVision. You can verify this by making sure your Raspberry Pi and computer are connected to the same network and navigating to ``photonvision.local:5800`` in your browser on your computer.
 
-.. note:: If using a Gloworm, you will need to navigate to ``gloworm.local:5800``.
+.. note:: If using a `Gloworm <https://web.archive.org/web/20220525051734/https://gloworm.vision//>`_, you will need to navigate to ``gloworm.local:5800``.
 
 Troubleshooting/Setting a Static IP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

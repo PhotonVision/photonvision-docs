@@ -68,7 +68,7 @@ Vendors
 -------
 * Gloworm
 
-  * `Website/Documentation <http://web.archive.org/web/20220525051935/https://gloworm.vision/>`__
+  * `Website/Documentation <https://web.archive.org/web/20220525051734/https://gloworm.vision//>`__
 
   * `Image <https://github.com/gloworm-vision/pi-img-updator/releases>`__
 
