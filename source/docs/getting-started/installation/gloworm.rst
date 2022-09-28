@@ -2,11 +2,13 @@ Gloworm Installation
 ====================
 While not currently in production, PhotonVision still supports Gloworm vision processing cameras.
 
-Install Steps
+Downloading the Gloworm Image
 -------------
-Download the latest `Gloworm release of PhotonVision <https://github.com/gloworm-vision/pi-gen/releases>`_. You do not need to unzip the file.
+Download the latest `Gloworm release of PhotonVision <https://github.com/gloworm-vision/pi-img-updator/releases>`_. You do not need to extract the downloaded ZIP file.
 
-Plug a USB C cable from your computer into the USB C port on Gloworm labeled with a download icon
+Flashing the Gloworm Image
+---------------------
+Plug a USB C cable from your computer into the USB C port on Gloworm labeled with a download icon.
 
 Use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto the coprocessor.
 
@@ -16,9 +18,11 @@ Select the compute module. If it doesn't show up after 30s try using another USB
 
 Hit flash. Wait for flashing to complete, then disconnect your USB C cable.
 
-Power your device per their documentation and connect it to a robot network.
+Final Steps
+-----------
+Power your device per its documentation and connect it to a robot network.
 
-You should be able to locate the camera at: ``http://gloworm.local:5800/``
+You should be able to locate the camera at ``http://gloworm.local:5800/`` in your browser on your computer when connected to the robot.
 
 Troubleshooting/Setting a Static IP
 -----------------------------------
