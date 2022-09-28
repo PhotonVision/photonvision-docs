@@ -4,7 +4,7 @@ PhotonVision may be run on a Windows Desktop PC for basic testing and evaluation
 
 Installing Java
 ---------------
-PhotonVision requires a JDK installed and on the system path. JDK 11 or higher is needed. You may already have this if you have fully installed the FRC toolchain. If not, `download and install it from here <https://www.oracle.com/java/technologies/downloads/#jdk17-windows>`_.
+PhotonVision requires a JDK installed and on the system path. JDK 11 or higher is needed. You may already have this if you have fully installed the FRC toolchain. If not, `download and install it from here <https://bell-sw.com/pages/liberica_install_guide-11.0.7/>`_.
 
 Downloading the Latest Stable Release of PhotonVision
 -----------------------------------------------------
