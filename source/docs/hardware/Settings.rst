@@ -9,7 +9,9 @@ Here, you can view general data on your system, including version, hardware, you
 
 Networking
 ^^^^^^^^^^
-Here, you can set your team number (note: you must always do this if using PhotonVision on a robot), switch your IP between DCHP and static, and specify your host name. For more information about on-robot networking, click `here. <https://docs.wpilib.org/en/latest/docs/networking/networking-introduction/networking-basics.html>`_
+Here, you can set your team number, switch your IP between DCHP and static, and specify your host name. For more information about on-robot networking, click `here. <https://docs.wpilib.org/en/latest/docs/networking/networking-introduction/networking-basics.html>`_
+
+.. note:: A team number is always required if using PhotonVision on a robot.
 
 LEDs
 ^^^^

@@ -22,7 +22,7 @@ You should be able to locate the camera at: ``http://gloworm.local:5800/``
 
 Troubleshooting/Setting a Static IP
 -----------------------------------
-If ``http://gloworm.local:5800`` does not resolve, or you do not want to use mDNS, try to connect to the IP address directly.
+If ``http://gloworm.local:5800`` will not load in a web browser, or you do not want to use mDNS, try to connect to the IP address directly.
 
 Download and run `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network.
 

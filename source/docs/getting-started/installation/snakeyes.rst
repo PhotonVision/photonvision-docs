@@ -22,7 +22,7 @@ After the initial setup process, your Raspberry Pi should be configured for Phot
 
 Troubleshooting/Setting a Static IP
 -----------------------------------
-If ``http://photonvision.local:5800`` does not resolve, or you do not want to use mDNS, try to connect to the IP address directly.
+If ``http://photonvision.local:5800`` will not load in a web browser, or you do not want to use mDNS, try to connect to the IP address directly.
 
 Download and run `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network.
 
