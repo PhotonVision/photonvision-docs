@@ -3,11 +3,11 @@ Gloworm Installation
 While not currently in production, PhotonVision still supports Gloworm vision processing cameras.
 
 Downloading the Gloworm Image
--------------
+-----------------------------
 Download the latest `Gloworm release of PhotonVision <https://github.com/gloworm-vision/pi-img-updator/releases>`_. You do not need to extract the downloaded ZIP file.
 
 Flashing the Gloworm Image
----------------------
+--------------------------
 Plug a USB C cable from your computer into the USB C port on Gloworm labeled with a download icon.
 
 Use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto the coprocessor.

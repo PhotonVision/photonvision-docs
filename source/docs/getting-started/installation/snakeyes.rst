@@ -7,7 +7,7 @@ Downloading the SnakeEyes Image
 Download the latest release of the SnakeEyes-specific PhotonVision Pi image from the `releases page <https://github.com/PlayingWithFusion/SnakeEyesDocs/releases>`_. You do not need to extract the downloaded ZIP file.
 
 Flashing the SnakeEyes Image
----------------------
+----------------------------
 An 8GB or larger card is recommended.
 
 Use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto a Raspberry Pi. Select the downloaded ``.zip`` file, select your microSD card, and flash.
