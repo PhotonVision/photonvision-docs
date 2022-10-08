@@ -10,7 +10,7 @@ Downloading the Latest Stable Release of PhotonVision
 -----------------------------------------------------
 Download the latest stable release of PhotonVision from the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_.
 
-.. warning:: Be careful to pick the latest stable release. "Draft" or "Pre-Release" versions are not stable and often have bugs. 
+.. warning:: Be careful to pick the latest stable release. "Draft" or "Pre-Release" versions are not stable and often have bugs.
 
 Running PhotonVision
 --------------------
