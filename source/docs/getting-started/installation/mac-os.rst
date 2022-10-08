@@ -1,8 +1,8 @@
 Mac OS Installation
 ===================
-PhotonVision may be run on a non-M1 Mac for basic testing and evaluation.
+Limited macOS support is available.
 
-.. note:: Due to `cscore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ restrictions, the PhotonVision server backend cannot run on macOS.
+.. note:: Due to current `cscore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ restrictions, the PhotonVision server backend may have issues running macOS.
 
 Installing Java
 ---------------

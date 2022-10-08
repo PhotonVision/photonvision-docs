@@ -16,15 +16,17 @@ For more detailed instructions on using Etcher, please see the `Etcher website <
 
 Final Steps
 -----------
-Insert the flashed microSD card into your Raspberry Pi and boot it up. The first boot may take a few minutes as the Pi expands the filesystem. Be sure not to unplug during this process.
+Insert the flashed microSD card into your Raspberry Pi and boot it up. The first boot may take a few minutes as the Pi expands teh filesystem. Be sure not to unplug during this process.
 
 After the initial setup process, your Raspberry Pi should be configured for PhotonVision. You can verify this by making sure your Raspberry Pi and computer are connected to the same network and navigating to ``http://photonvision.local:5800`` in your browser on your computer.
 
 Troubleshooting/Setting a Static IP
 -----------------------------------
-If ``http://photonvision.local:5800`` does not resolve, or you do not want to use mDNS, try to connect to the IP address directly.
+A static IP address may be used as an alternative to the mDNS ``photonvision.local`` address.
 
 Download and run `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network.
+
+.. image:: images/angryIP.png
 
 Once you find it, set the IP to a desired :ref:`static IP in PhotonVision. <docs/hardware/Settings:Networking>`
 
