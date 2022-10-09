@@ -4,7 +4,7 @@ PhotonVision may be run on a Debian-based Linux Desktop PC for basic testing and
 
 Installing Java
 ---------------
-PhotonVision requires a JDK installed and on the system path. JDK 11 or higher is needed. You may already have this if you have fully installed the FRC toolchain. If not, run the following to install it:
+PhotonVision requires a JDK installed and on the system path. JDK 11 or higher is needed. You may already have this if you have installed WPILib. If not, run the following to install it:
 
 .. code-block::
 

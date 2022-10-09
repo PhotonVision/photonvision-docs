@@ -3,6 +3,8 @@ Other Debian-Based Co-Processor Installation
 
 .. warning:: Working with unsupported coprocessors requires some level of "know how" of your target system. The install script has only been tested on Debian/Raspberry Pi OS Buster and Ubuntu Bionic. If any issues arise with your specific OS, please open an issue on our `issues page <https://github.com/PhotonVision/photonvision/issues>`_.
 
+.. note:: We'd love to have your input! If you get PhotonVision working on another coprocessor, consider documenting your steps and submitting a `docs issue <https://github.com/PhotonVision/photonvision-docs/issues>`_., `pull request <https://github.com/PhotonVision/photonvision-docs/pulls>`_ , or `ping us on Discord <https://discord.com/invite/wYxTwym>`_. For example, Limelight and Romi install instructions came about because someone spent the time to figure it out, and did a writeup.
+
 We provide an `install script <https://git.io/JJrEP>`_ for other Debian-based systems (with ``apt``) that will automatically install PhotonVision and make sure that it runs on startup.
 
 .. code-block:: bash
