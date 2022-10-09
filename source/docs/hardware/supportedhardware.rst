@@ -63,21 +63,3 @@ Support Levels
          * No guarantees
      -   * macOS
          * Anything not listed above
-
-Vendors
--------
-* Gloworm
-
-  * `Website/Documentation <http://web.archive.org/web/20220525051935/https://gloworm.vision/>`__
-
-  * `Image <https://github.com/gloworm-vision/pi-img-updator/releases>`__
-
-  * `Discord <https://discord.com/invite/DncQRky>`__
-
-* SnakeEyes
-
-  * `Website <https://www.playingwithfusion.com/productview.php?pdid=133>`__
-
-  * `Image <https://github.com/PlayingWithFusion/SnakeEyesDocs/releases/latest>`__
-
-  * `Documentation <https://github.com/PlayingWithFusion/SnakeEyesDocs/blob/master/PhotonVision/readme.md>`__
