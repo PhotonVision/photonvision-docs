@@ -5,21 +5,14 @@ Imaging
 -------
 Limelight imaging is a very similar process to Gloworm, but with extra steps.
 
-Base Install Steps
-^^^^^^^^^^^^^^^^^^
-Due to the similarities in hardware, follow the :ref:`Gloworm install instructions <docs/getting-started/installation/gloworm:Gloworm Installation>`.
-
-Imaging
--------
-Limelight imaging is a very similar process to Gloworm, but with extra steps.
 
 Base Install Steps
-^^^^^^^^^^^^^^^^^^
+------------------
 Due to the similarities in hardware, follow the :ref:`Gloworm install instructions <docs/getting-started/installation/gloworm:Gloworm Installation>`.
 
 
 Hardware-Specific Steps
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 Download the hardwareConfig.json file for the version of your Limelight:
 
 - :download:`Limelight Version 2 <files/Limelight2/hardwareConfig.json>`.
