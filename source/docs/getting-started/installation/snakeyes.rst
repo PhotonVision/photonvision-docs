@@ -32,7 +32,7 @@ Once you find it, set the IP to a desired :ref:`static IP in PhotonVision. <docs
 
 Updating PhotonVision
 ----------------------
-Download the latest stable .jar from `our releases page <https://github.com/PhotonVision/photonvision/releases>`_, go to the settings tab, and upload the .jar using the Offline Update button.
+Download the latest stable Raspberry Pi .jar (appended with -raspi at the end) from `our releases page <https://github.com/PhotonVision/photonvision/releases>`_, go to the settings tab, and upload the .jar using the Offline Update button.
 
 As an alternative option - Export your settings, reimage your coprocessor using the instructions above, and import your settings back in.
 
