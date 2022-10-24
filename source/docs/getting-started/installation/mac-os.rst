@@ -1,8 +1,9 @@
 Mac OS Installation
 ===================
-Limited macOS support is available.
 
-.. note:: Due to current `cscore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ restrictions, the PhotonVision server backend may have issues running macOS.
+.. warning:: Due to current `cscore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ restrictions, the PhotonVision server backend may have issues running macOS.
+
+VERY Limited macOS support is available.
 
 Installing Java
 ---------------
@@ -22,9 +23,10 @@ To run PhotonVision, open a terminal window of your choice and run the following
 
    $ java -jar /path/to/photonvision/photonvision-xxx.jar
 
-
-If your computer has a compatible webcam connected, PhotonVision should startup without any error messages. If there are error messages, your webcam isn't supported or another issue has occurred. If it is the latter, please open an issue on the `PhotonVision issues page <https://github.com/PhotonVision/photonvision/issues>`_.
+.. warning:: Due to current `cscore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ restrictions, the PhotonVision using test mode is all that is known to work currently.
 
 Accessing the PhotonVision Interface
 ------------------------------------
 Once the Java backend is up and running, you can access the main vision interface by navigating to ``localhost:5800`` inside your browser.
+
+.. warning:: Due to current `cscore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ restrictions, it is unlikley any streams will open from real webcams.
