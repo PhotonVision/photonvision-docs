@@ -5,35 +5,64 @@ PhotonVision is developed and tested on a number of Commercial, Off-the-Shelf vi
 
 Supported Cameras
 -----------------
-* Pi Camera Module V1 and V2
+PhotonVision works with Pi Cameras and most USB Cameras, the recommendations below are known to be working and have been tested. Other cameras such as webcams, virtual cameras, etc. are not officially supported and may not work. It is important to note that fisheye cameras should only be used as a driver camera and not for detecting targets.
 
-  * The V1 is strongly preferred over the V2 due to the V2 having undesirable FOV choices.
+PhotonVision relies on `CSCore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ to detect and process cameras, so camera support is determined based off compatability with CScore along with native support for the camera within your OS (ex. `V4L compatibility <https://en.wikipedia.org/wiki/Video4Linux>`_ if using a Linux machine like a Raspberry Pi).
 
-* USB Cameras
+Pi cameras are always recommended over USB cameras as they have lower latency and better performance compared to your average USB Camera.
 
-  * Recommended: Microsoft LifeCam HD-3000 (available from AndyMark)
+* `Pi Camera Module V1 <https://www.amazon.com/gp/product/B07ZZ2K7WP>`_ (Target Tracking)
 
-  * Most Logitech cameras (specifically the Logitech C270 HD Webcam (PN: 960-000694)) will not work with PhotonVision. The PS3Eye needs a workaround to be usable, for more information see :ref:`our Known Issues page <docs/other/known-issues:Hardware Issues>`
+  * The V1 is strongly preferred over the V2 due to the V2 having undesirable FOV choices
 
-* ELP Cameras
+* `Pi Camera Module V2 <https://www.amazon.com/Official-Raspberry-Pi-8-megapixel-XYGStudy/dp/B01G01JJJ0>`_ (Target Tracking)
+
+* `Microsoft LifeCam HD-3000 <https://www.andymark.com/products/microsoft-lifecam-hd-3000-camera>`_ (Target Tracking)
+
+* `720p ELP Camera <https://www.amazon.com/SVPRO-Camera-Module-100degree-Distortion/dp/B07C1KYBYC>`_ (Target Tracking)
+
+* `720p Fisheye ELP Camera <https://www.amazon.com/ELP-Camera-170degree-Megapixel-Security/dp/B00VTINRMK/>`_ (Driver Camera)
+
+.. note:: If you test a camera and find that it works with PhotonVision, we encourage you to submit that camera to the performance matrix below.
+
+.. warning::
+
+    The following cameras are known to not work:
+	
+    * Most Logitech cameras (specifically the Logitech C270 HD Webcam (PN: 960-000694)) will not work with PhotonVision.
+
+    * The PS3Eye needs a workaround to be usable, for more information see :ref:`our Known Issues page <docs/other/known-issues:Hardware Issues>`
+
+    * Most laptop integrated webcams
 
 Supported Coprocessors
 ----------------------
-* Raspberry Pi 3 (any version)
-* Raspberry Pi 4 (any version)
+* Raspberry Pi 3 / 4, with the newest variants of each being preferred (3B+ and B, respectively).
+* Raspberry Pi 3 is preferred over 4 due to the GPU acceleration avaliable, more technical information available `here. <https://www.chiefdelphi.com/t/announcing-gloworm-an-inexpensive-and-open-source-vision-module/386370/61?u=pietroglyph>`_
 
-Recommended Hardware Combinations
----------------------------------
-The following combinations are ranked from best to worst:
+* Other coprocessors can be used but may require some extra work / command line usage in order to get it working properly 
 
-1. Raspberry Pi 3 with Pi Camera
-2. Raspberry Pi 4 with Pi Camera
-3. Raspberry Pi 4 with USB Camera
-4. Raspberry Pi 3 with USB Camera
 
-GPU Acceleration
-----------------
-PhotonVision uses GPU Acceleration in order to maximize processing performance, however it is only supported on the Raspberry Pi 3, which is why it is recommended over the Pi 4. For the technical information on why it is not supported on the Raspberry Pi 4, please see `here. <https://www.chiefdelphi.com/t/announcing-gloworm-an-inexpensive-and-open-source-vision-module/386370/61?u=pietroglyph>`_
+Performance Matrix
+------------------
+
+.. raw:: html 
+
+	<embed>
+	
+		<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTojOew2d2NQY4PRA98vjkS1ECZ2YNvods-aOdk2x-Q4aF_7r4mcwlyTe8GjUKmUxEiVgGNnJNhEdyd/pubhtml?gid=1779881081&amp;single=true&amp;widget=true&amp;headers=false" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+		
+	</embed>
+
+Please submit performance data to be added to the matrix here: 
+
+.. raw:: html
+
+    <embed>
+	
+	    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf5iK3pX0Tn8bxpRYgcTAy4scUu14rUvJqkTyfzoKc-GiV7Vg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+	
+	</embed>
 
 
 Support Levels
