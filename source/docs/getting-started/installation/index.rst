@@ -1,33 +1,26 @@
 Installation
 ============
 
-Supported Coprocessors
-----------------------
+Wiring
+-------
 
 .. toctree::
    :maxdepth: 1
+   
+   wiring
 
-   raspberry-pi
-   limelight
-   gloworm
-   snakeyes
-
-Desktop Environments
-----------------------
+Install / Image
+---------------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
+   
+   install/index
 
-   windows-pc
-   linux-pc
-   mac-os
 
-Other
------
-
+Networking
+----------
 .. toctree::
    :maxdepth: 1
-
-   other-coprocessors
-   advanced-cmd
-   romi
+   
+   networking
