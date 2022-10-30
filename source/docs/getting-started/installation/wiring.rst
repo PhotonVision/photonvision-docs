@@ -1,11 +1,11 @@
-Wiring 
+Wiring
 ======
 
 
 Off-Robot Wiring
 ----------------
 
-After imaging your coprocessor, run an ethernet cable from your coprocessor to your computer and power on your coprocessor by plugging it into the wall. 
+After imaging your coprocessor, run an ethernet cable from your coprocessor to your computer and power on your coprocessor by plugging it into the wall.
 
 
 On-Robot Wiring
@@ -33,4 +33,4 @@ Coprocessor without Passive POE
 
 ------------------------------------------------------------
 
-Once you have wired your coprocessor, you are now ready to install PhotonVision. 
+Once you have wired your coprocessor, you are now ready to install PhotonVision.
