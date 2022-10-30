@@ -15,12 +15,12 @@ During the Competition
 ----------------------
 * Make sure you take advantage of the field calibration time given at the start of the event:
     * Bring your robot to the field at the allotted time.
-	* Turn on your robot and pull up the dashboard on your driver station.
-	* Point your robot at the target(s) and ensure you get a consistent tracking (you hold one target consistently, the ceiling lights aren't detected, etc.).
-	* If you have problems with your pipeline, go to the pipeline tuning section and retune the pipeline using the guide there. You want to make your exposure as low as possible with a tight hue value to ensure no extra targets are detected.
-	* Move the robot close, far, angled, and around the field to ensure no extra targets are found anywhere when looking for a target.
-	* Go to a practice match to ensure everything is working correctly. 
-	
+    * Turn on your robot and pull up the dashboard on your driver station.
+    * Point your robot at the target(s) and ensure you get a consistent tracking (you hold one target consistently, the ceiling lights aren't detected, etc.).
+    * If you have problems with your pipeline, go to the pipeline tuning section and retune the pipeline using the guide there. You want to make your exposure as low as possible with a tight hue value to ensure no extra targets are detected.
+    * Move the robot close, far, angled, and around the field to ensure no extra targets are found anywhere when looking for a target.
+    * Go to a practice match to ensure everything is working correctly.
+
 * Before every match, check the ethernet connection going into your coprocessor and that it is seated fully.
 * Ensure that exposure is as low as possible and that you don't have the dashboard up when you don't need it to reduce bandwidth.
 * Stream at as low of a resolution as possible while still detecting targets to stay within bandwidth limits.
