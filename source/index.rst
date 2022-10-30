@@ -82,7 +82,6 @@ Sitemap
    docs/programming/nt-api
    docs/integration/index
    docs/examples/index
-   docs/getting-started/Networking
    docs/other/known-issues
    docs/other/troubleshooting-tips
    docs/other/contributing/index
