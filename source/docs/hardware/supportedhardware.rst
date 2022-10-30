@@ -28,7 +28,7 @@ Pi cameras are always recommended over USB cameras as they have lower latency an
 .. warning::
 
     The following cameras are known to not work:
-	
+
     * Most Logitech cameras (specifically the Logitech C270 HD Webcam (PN: 960-000694)) will not work with PhotonVision.
 
     * The PS3Eye needs a workaround to be usable, for more information see :ref:`our Known Issues page <docs/other/known-issues:Hardware Issues>`
@@ -40,29 +40,29 @@ Supported Coprocessors
 * Raspberry Pi 3 / 4, with the newest variants of each being preferred (3B+ and B, respectively).
 * Raspberry Pi 3 is preferred over 4 due to the GPU acceleration avaliable, more technical information available `here. <https://www.chiefdelphi.com/t/announcing-gloworm-an-inexpensive-and-open-source-vision-module/386370/61?u=pietroglyph>`_
 
-* Other coprocessors can be used but may require some extra work / command line usage in order to get it working properly 
+* Other coprocessors can be used but may require some extra work / command line usage in order to get it working properly
 
 
 Performance Matrix
 ------------------
 
-.. raw:: html 
+.. raw:: html
 
-	<embed>
-	
-		<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTojOew2d2NQY4PRA98vjkS1ECZ2YNvods-aOdk2x-Q4aF_7r4mcwlyTe8GjUKmUxEiVgGNnJNhEdyd/pubhtml?gid=1779881081&amp;single=true&amp;widget=true&amp;headers=false" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-		
-	</embed>
+    <embed>
 
-Please submit performance data to be added to the matrix here: 
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTojOew2d2NQY4PRA98vjkS1ECZ2YNvods-aOdk2x-Q4aF_7r4mcwlyTe8GjUKmUxEiVgGNnJNhEdyd/pubhtml?gid=1779881081&amp;single=true&amp;widget=true&amp;headers=false" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    </embed>
+
+Please submit performance data to be added to the matrix here:
 
 .. raw:: html
 
     <embed>
-	
-	    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf5iK3pX0Tn8bxpRYgcTAy4scUu14rUvJqkTyfzoKc-GiV7Vg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-	
-	</embed>
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf5iK3pX0Tn8bxpRYgcTAy4scUu14rUvJqkTyfzoKc-GiV7Vg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    </embed>
 
 
 Support Levels
