@@ -45,4 +45,4 @@ If you would like to access your Ethernet-connected vision device from a compute
 Camera Stream Ports
 -------------------
 
-The camera streams start at they begin at 1181 with two ports for each camera (ex. 1181 and 1182 for camera one, 1183 and 1184 for camera two, etc.). The easiest way to identify the port of the camera that you want is right clicking the stream you want in the dashboard, clicking "Open image in new tab", and then looking at the link for the port (which is listed after the hostname ex. photonvision.local:1182).
+The camera streams start at they begin at 1181 with two ports for each camera (ex. 1181 and 1182 for camera one, 1183 and 1184 for camera two, etc.). The easiest way to identify the port of the camera that you want is by double clicking on the stream, which opens it in a seperate page. The port will be listed below the stream.
