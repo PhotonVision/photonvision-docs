@@ -84,5 +84,4 @@ Sitemap
    docs/examples/index
    docs/getting-started/best-practices
    docs/other/known-issues
-   docs/other/troubleshooting-tips
    docs/other/contributing/index
