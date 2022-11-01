@@ -14,7 +14,7 @@ Use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto a Ra
 
 For more detailed instructions on using Etcher, please see the `Etcher website <https://www.balena.io/etcher/>`_.
 
-.. warning:: Using an older version of Balena Etcher may cause bootlooping (the system will repeatedly boot and restart) when imaging your Raspberry Pi. Updating to the latest Balena Etcher will fix this issue. 
+.. warning:: Using an older version of Balena Etcher may cause bootlooping (the system will repeatedly boot and restart) when imaging your Raspberry Pi. Updating to the latest Balena Etcher will fix this issue.
 
 Final Steps
 -----------

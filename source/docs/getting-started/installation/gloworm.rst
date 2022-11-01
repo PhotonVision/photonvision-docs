@@ -18,7 +18,7 @@ Select the compute module. If it doesn't show up after 30s try using another USB
 
 Hit flash. Wait for flashing to complete, then disconnect your USB C cable.
 
-.. warning:: Using an older version of Balena Etcher may cause bootlooping (the system will repeatedly boot and restart) when imaging your Raspberry Pi. Updating to the latest Balena Etcher will fix this issue. 
+.. warning:: Using an older version of Balena Etcher may cause bootlooping (the system will repeatedly boot and restart) when imaging your Raspberry Pi. Updating to the latest Balena Etcher will fix this issue.
 
 Final Steps
 -----------
