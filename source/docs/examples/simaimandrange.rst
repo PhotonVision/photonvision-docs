@@ -1,7 +1,7 @@
 Simulating Aiming and Getting in Range
 ======================================
 
-The following example comes from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange>`_/`C++ <https://github.com/PhotonVision/photonvision/tree/master/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange>`_). Full code is available at those links.
+The following example comes from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonvision/tree/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange>`_/`C++ <https://github.com/PhotonVision/photonvision/tree/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange>`_). Full code is available at those links.
 
 
 Knowledge and Equipment Needed
