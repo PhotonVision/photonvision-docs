@@ -61,8 +61,7 @@ In the root directory:
 Build and Run the Source
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To compile and run the project, issue the following command in the
-root directory:
+To compile and run the project, issue the following command in the root directory:
 
 .. tab-set::
 
@@ -78,8 +77,7 @@ root directory:
 
       ``gradlew run``
 
-Running the following command under the root directory will build the jar
-under :code:`photon-server/build/libs`:
+Running the following command under the root directory will build the jar under ``photon-server/build/libs``:
 
 .. tab-set::
 
@@ -95,7 +93,7 @@ under :code:`photon-server/build/libs`:
 
       ``gradlew shadowJar``
 
-Using Photonlib Builds
+Using PhotonLib Builds
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The build process includes the following task:
@@ -114,11 +112,9 @@ The build process includes the following task:
 
       ``gradlew generateVendorJson``
 
-This generates a vendordep JSON of your local build
-at :code:`photon-lib/build/generated/vendordeps/photonlib.json`.
+This generates a vendordep JSON of your local build at ``photon-lib/build/generated/vendordeps/photonlib.json``.
 
-The photonlib source can be published to your local maven repository
-after building:
+The photonlib source can be published to your local maven repository after building:
 
 .. tab-set::
 
@@ -134,8 +130,7 @@ after building:
 
       ``gradlew publishToMavenLocal``
 
-After adding the generated vendordep to your project, add the following to
-your project's :code:`build.gradle` under the :code:`plugins {}` block.
+After adding the generated vendordep to your project, add the following to your project's ``build.gradle`` under the ``plugins {}`` block.
 
 .. code-block:: Java
 
