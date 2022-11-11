@@ -4,7 +4,9 @@ PhotonVision may be run on a Windows Desktop PC for basic testing and evaluation
 
 Installing Java
 ---------------
-PhotonVision requires a JDK installed and on the system path. JDK 11 or higher is needed. You may already have this if you have installed WPILib. If not, `download and install it from here <https://adoptopenjdk.net/>`_.
+PhotonVision requires a JDK installed and on the system path. **JDK 11 is needed** (different versions will not work). You may already have this if you have installed WPILib, but ensure that running ``java -version`` shows JDK 11. If not, `download and install it from here <https://adoptium.net/temurin/releases?version=11>`_ and ensure that the new JDK is being used.
+
+.. warning:: Using a JDK other than JDK11 will cause issues when running PhotonVision and is not supported.
 
 Downloading the Latest Stable Release of PhotonVision
 -----------------------------------------------------
