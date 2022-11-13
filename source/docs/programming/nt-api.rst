@@ -77,7 +77,7 @@ These entries are global, meaning that they should be called on the main ``photo
 +-------------+---------+----------------------------------------------------------+
 
 .. warning::
-   Setting the LED mode to -1 (default) when `multiple` cameras are connected may result in unexpected behavior. :ref:`This is a known limitation of PhotonVision. <docs/other/known-issues:LED Control>`
+   Setting the LED mode to -1 (default) when `multiple` cameras are connected may result in unexpected behavior. :ref:`This is a known limitation of PhotonVision. <docs/troubleshooting/common-errors:LED Control>`
 
    Single camera operation should work without issue.
 

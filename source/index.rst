@@ -43,7 +43,7 @@ Content
         Select appropriate hardware for high-quality, easy vision target detection.
 
     .. grid-item-card::  Contributing
-        :link: docs/other/contributing/index
+        :link: docs/contributing/index
         :link-type: doc
 
         Interested in helping with PhotonVision? Learn more about how to contribute to our main code base, documentation, and more.
@@ -83,5 +83,5 @@ Sitemap
    docs/integration/index
    docs/examples/index
    docs/getting-started/best-practices
-   docs/other/known-issues
-   docs/other/contributing/index
+   docs/troubleshooting/index
+   docs/contributing/index

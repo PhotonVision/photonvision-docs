@@ -8,5 +8,3 @@ Hardware
    customhardware
    config
    Settings
-   logging
-

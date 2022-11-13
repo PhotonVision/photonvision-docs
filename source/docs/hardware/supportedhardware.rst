@@ -7,7 +7,7 @@ Supported Cameras
 -----------------
 PhotonVision works with Pi Cameras and most USB Cameras, the recommendations below are known to be working and have been tested. Other cameras such as webcams, virtual cameras, etc. are not officially supported and may not work. It is important to note that fisheye cameras should only be used as a driver camera and not for detecting targets.
 
-PhotonVision relies on `CSCore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ to detect and process cameras, so camera support is determined based off compatability with CScore along with native support for the camera within your OS (ex. `V4L compatibility <https://en.wikipedia.org/wiki/Video4Linux>`_ if using a Linux machine like a Raspberry Pi).
+PhotonVision relies on `CSCore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ to detect and process cameras, so camera support is determined based off compatibility with CScore along with native support for the camera within your OS (ex. `V4L compatibility <https://en.wikipedia.org/wiki/Video4Linux>`_ if using a Linux machine like a Raspberry Pi).
 
 Pi cameras are always recommended over USB cameras as they have lower latency and better performance compared to your average USB Camera.
 
@@ -31,14 +31,14 @@ Pi cameras are always recommended over USB cameras as they have lower latency an
 
     * Most Logitech cameras (specifically the Logitech C270 HD Webcam (PN: 960-000694)) will not work with PhotonVision.
 
-    * The PS3Eye needs a workaround to be usable, for more information see :ref:`our Known Issues page <docs/other/known-issues:Hardware Issues>`
+    * The PS3Eye needs a workaround to be usable, for more information see :ref:`our Known Issues page <docs/troubleshooting/common-errors:Known Issues>`
 
     * Most laptop integrated webcams
 
 Supported Coprocessors
 ----------------------
 * Raspberry Pi 3 / 4, with the newest variants of each being preferred (3B+ and B, respectively).
-* Raspberry Pi 3 is preferred over 4 due to the GPU acceleration avaliable, more technical information available `here. <https://www.chiefdelphi.com/t/announcing-gloworm-an-inexpensive-and-open-source-vision-module/386370/61?u=pietroglyph>`_
+* Raspberry Pi 3 is preferred over 4 due to the GPU acceleration available, more technical information available `here. <https://www.chiefdelphi.com/t/announcing-gloworm-an-inexpensive-and-open-source-vision-module/386370/61?u=pietroglyph>`_
 
 * Other coprocessors can be used but may require some extra work / command line usage in order to get it working properly
 
