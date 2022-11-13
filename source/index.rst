@@ -74,7 +74,7 @@ Sitemap
 .. toctree::
    :maxdepth: 2
 
-   docs/getting-started/about/index
+   docs/getting-started/description
    docs/getting-started/installation/index
    docs/getting-started/pipeline-tuning/index
    docs/hardware/index
