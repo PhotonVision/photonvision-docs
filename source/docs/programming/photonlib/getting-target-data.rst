@@ -101,9 +101,15 @@ You can get the :ref:`best target <docs/getting-started/pipeline-tuning/reflecti
       // Get the current best target.
       photonlib::PhotonTrackedTarget target = result.GetBestTarget();
 
-Getting Target Data
--------------------
-You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getArea()``/``GetArea()``, ``getSkew()``/``GetSkew()``, ``getCorners()``/``GetCorners()``, and ``getCameraToTarget()``/``GetCameraToTarget()`` methods (Java and C++ respectively) within the tracked target class to retrieve the yaw, pitch, area, skew, target corners, and the camera-to-target transform.
+Getting Data From A Target
+--------------------------
+* double ``getYaw()``/``GetYaw()``: The yaw of the target in degrees (positive right).
+* double ``getPitch()``/``GetPitch()``: The pitch of the target in degrees (positive up).
+* double ``getArea()``/``GetArea()``: The area (how much of the camera feed the bounding box takes up) as a percent (0-100).
+* double ``getYaw()``/``GetYaw()``: The skew of the target in degrees (counter-clockwise positive).
+* double[] ``getCorners()``/``GetCorners()``: The 4 corners of the minimum bounding box rectangle.
+* Transform2d ``getCameraToTarget()``/``GetCameraToTarget()``: The camera to target transform. See `2d transform documentation here <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/geometry/transformations.html#transform2d-and-twist2d>`_.
+
 
 .. tab-set-code::
    .. code-block:: java
@@ -126,29 +132,31 @@ You can use the ``getYaw()``/``GetYaw()``, ``getPitch()``/``GetPitch()``, ``getA
       frc::Transform2d pose = target.GetCameraToTarget();
       wpi::SmallVector<std::pair<double, double>, 4> corners = target.GetCorners();
 
+Getting AprilTag Data From A Target
+-----------------------------------
+.. note:: All of the data above (**except skew**) is available when using AprilTags. 
 
-.. note:: The units for yaw, pitch, and skew are degrees and use standard computer vision directionality. Therefore, a negative yaw means that the recognized target is to the left of the center of the screen, a negative pitch means that the recognized target is below the center of the screen, and skew values are counter-clockwise-positive measured with respect to the horizontal (taking portrait/landscape mode into account). Furthermore, area is scaled from 0-100, representing the percentage of the screen taken up by the bounding box.
-
-.. note:: The camera-to-target transform represents a 2d transformation (translation and rotation) to the target. For more information on how this works, please see the `2d transform documentation <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/geometry/transformations.html#transform2d-and-twist2d>`_.
-
-.. note:: ``getCorners()``/``GetCorners()`` will return the 4 corners of the minimum bounding box rectangle (in no particular order). This is useful for users interested in curve fitting and other more advanced techniques.
-
-Getting the Pipeline Latency
-----------------------------
-You can also get the pipeline latency from a pipeline result using the ``getLatencyMillis()``/``GetLatency()`` (Java and C++ respectively) methods.
+* int ``getFiducialId()``/``GetFiducialId()``: The ID of the detected fiducial marker.
+* double ``getPoseAmbiguity()``/``GetPoseAmbiguity()``: How ambiguous the pose of the target is (see below).
+* Transform3d ``getBestCameraToTarget()``/``GetBestCameraToTarget()``: Get the transform that maps camera space (X = forward, Y = left, Z = up) to object/fiducial tag space (X forward, Y left, Z up) with the lowest reprojection error.
+* Transform3d ``getAlternateCameraToTarget()``/``GetAlternateCameraToTarget()``: Get the transform that maps camera space (X = forward, Y = left, Z = up) to object/fiducial tag space (X forward, Y left, Z up) with the highest reprojection error.
 
 .. tab-set-code::
    .. code-block:: java
 
-      // Get the pipeline latency.
-      double latencySeconds = result.getLatencyMillis() / 1000.0;
+      // Get information from target.
+      int targetID = target.getFiducialId();
+      double poseAmbiguity = target.getPoseAmbiguity();
+      Transform3d bestCameraToTarget = target.getBestCameraToTarget();
+      Transform3d alternateCameraToTarget = target.getAlternateCameraToTarget();
 
    .. code-block:: c++
 
-      // Get the pipeline latency.
-      units::second_t latency = result.GetLatency();
-
-.. note:: The C++ version of PhotonLib returns the latency in a unit container. For more information on the Units library, see `here <https://docs.wpilib.org/en/stable/docs/software/basic-programming/cpp-units.html>`_.
+      // Get information from target.
+      int targetID = target.GetFiducialId();
+      double poseAmbiguity = target.GetPoseAmbiguity();
+      frc::Transform3d bestCameraToTarget = target.getBestCameraToTarget();
+      frc::Transform3d alternateCameraToTarget = target.getAlternateCameraToTarget();
 
 Saving Pictures to File
 -----------------------
