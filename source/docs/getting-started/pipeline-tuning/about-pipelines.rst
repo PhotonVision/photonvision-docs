@@ -29,3 +29,7 @@ Colored Shape
 -------------
 
 This pipeline type is based on detecting different shapes like circles, triangles, quadrilaterals, or a polygon. An example usage would be detecting yellow PowerCells from the 2020 FRC game. You can read more about the specific settings available in the contours page.
+
+Note About Multiple Cameras and Pipelines
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+When using more than one camera, it is important to keep in mind that all cameras run one pipeline each, all publish to NT, and all send both streams. This will have a noticeable affect on performance and we recommend users limit themselves to 1-2 cameras per coprocessor. 
