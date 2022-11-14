@@ -23,7 +23,7 @@ Commonly Seen Issues
 
 Networking Issues
 ^^^^^^^^^^^^^^^^^
-Ensure that you have followed :ref:`all the recommendations in the networking section <docs/getting-started/installation/networking:Physical Networking>`. 
+Ensure that you have followed :ref:`all the recommendations in the networking section <docs/getting-started/installation/networking:Physical Networking>`.
 
 Camera won't show up
 ^^^^^^^^^^^^^^^^^^^^
@@ -38,13 +38,13 @@ Read the tips on the :ref:`camera calibration page<docs/getting-started/pipeline
 Not getting data from PhotonLib
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Ensure your coprocessor version and PhotonLib version match. This can be checked by the settings tab and examining the .json itself (respectively). 
+1. Ensure your coprocessor version and PhotonLib version match. This can be checked by the settings tab and examining the .json itself (respectively).
 
 2. Ensure that you have your team number set properly.
 
 Unable to download PhotonLib
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Ensure all of your network firewalls are disabled and you aren't on a school-network. 
+Ensure all of your network firewalls are disabled and you aren't on a school-network.
 
 PhotonVision prompts for login on startup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -52,5 +52,5 @@ This is normal. You don't need to connect a display to your Raspberry Pi to use 
 
 Raspberry Pi enters into boot looping state when using PhotonVision
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-This is most commonly seen when your Pi doesn't have adequate power / is being undervolted. Ensure that your power supply is functioning properly. 
+This is most commonly seen when your Pi doesn't have adequate power / is being undervolted. Ensure that your power supply is functioning properly.
 
