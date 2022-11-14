@@ -1,7 +1,7 @@
 Common Issues / Questions
 =========================
 
-This page will grow as needed in order to cover commonly seen issues by teams. If this page doesn't help you and you need further assistance, feel free to :ref: `Contact Us <docs/index:Contact Us>`_.
+This page will grow as needed in order to cover commonly seen issues by teams. If this page doesn't help you and you need further assistance, feel free to :ref:`Contact Us<index:Contact Us>`.
 
 Known Issues
 ------------
