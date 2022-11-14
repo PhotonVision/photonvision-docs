@@ -7,7 +7,7 @@ Off-Robot Wiring
 
 After imaging your coprocessor, run an ethernet cable from your coprocessor to your computer/router (router is recommended) and power on your coprocessor by plugging it into the wall.
 
-.. note:: When using PhotonVision off robot, try to plug the coprocessor into a physical router if you can. Windows and other OS are known to be buggy networking wise when a coprocessor is directly plugged in. 
+.. note:: When using PhotonVision off robot, try to plug the coprocessor into a physical router if you can. Windows and other OS are known to be buggy networking wise when a coprocessor is directly plugged in.
 
 
 On-Robot Wiring
