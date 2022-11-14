@@ -14,7 +14,6 @@ Reflective
 
 This is the most common pipeline type and it is based on detecting targets with retroreflective tape. In the contours tab of this pipeline type, you can filter the area, width/height ratio, fullness, degree of speckle rejection.
 
-
 Colored Shape
 -------------
 
@@ -26,6 +25,11 @@ AprilTag
 This pipeline type is based on detecting AprilTag fiducial markers. More information about AprilTags can be found in the WPILib documentation. While being more performance intensive than the reflective and colored shape pipeline, it has the benefit of providing easy to use 3D pose information which allows localization.
 
 .. note:: In order to get 3D Pose data about AprilTags, you are required to :ref:`calibrate your camera<docs/getting-started/pipeline-tuning/calibration:Calibration Steps>`.
+
+Note About Multiple Cameras and Pipelines
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When using more than one camera, it is important to keep in mind that all cameras run one pipeline each, all publish to NT, and all send both streams. This will have a noticeable affect on performance and we recommend users limit themselves to 1-2 cameras per coprocessor.
 
 Pipeline Steps
 ^^^^^^^^^^^^^^
@@ -44,5 +48,3 @@ AprilTag Pipelines have 3 steps:
 1. Input: This is the same as the above.
 2. AprilTag: This step include AprilTag specific tuning parameters, such as decimate, blur, threads, pose iterations, and more.
 3. Output: This is the same as the above.
-
-
