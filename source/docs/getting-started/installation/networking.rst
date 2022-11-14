@@ -3,6 +3,7 @@ Networking
 
 Physical Networking
 -------------------
+.. note:: When using PhotonVision off robot, try to plug the coprocessor into a physical router if you can. Windows and other OS are known to be buggy networking wise when a coprocessor is directly plugged in.
 
 PhotonVision *STRONGLY* recommends the usage of a network switch on your robot. This is because the second radio port on the current FRC radios is known to be buggy and cause frequent connection issues that are detrimental during competition. More information can be found in this `ChiefDelphi thread <https://www.chiefdelphi.com/t/why-you-probably-shouldnt-use-the-second-port-on-your-openmesh-om5p-radio-and-embrace-using-an-ethernet-switch-instead/406374>`_ and an in-depth guide on how to install a network switch can be found `on FRC 900's website <https://team900.org/blog/ZebraSwitch/>`_.
 

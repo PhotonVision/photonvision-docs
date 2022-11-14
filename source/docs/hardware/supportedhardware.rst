@@ -7,7 +7,7 @@ Supported Cameras
 -----------------
 PhotonVision works with Pi Cameras and most USB Cameras, the recommendations below are known to be working and have been tested. Other cameras such as webcams, virtual cameras, etc. are not officially supported and may not work. It is important to note that fisheye cameras should only be used as a driver camera and not for detecting targets.
 
-PhotonVision relies on `CSCore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ to detect and process cameras, so camera support is determined based off compatability with CScore along with native support for the camera within your OS (ex. `V4L compatibility <https://en.wikipedia.org/wiki/Video4Linux>`_ if using a Linux machine like a Raspberry Pi).
+PhotonVision relies on `CSCore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ to detect and process cameras, so camera support is determined based off compatibility with CScore along with native support for the camera within your OS (ex. `V4L compatibility <https://en.wikipedia.org/wiki/Video4Linux>`_ if using a Linux machine like a Raspberry Pi).
 
 Pi cameras are always recommended over USB cameras as they have lower latency and better performance compared to your average USB Camera.
 
@@ -38,8 +38,9 @@ Pi cameras are always recommended over USB cameras as they have lower latency an
 Supported Coprocessors
 ----------------------
 * Raspberry Pi 3 / 4, with the newest variants of each being preferred (3B+ and B, respectively).
-* Raspberry Pi 3 is preferred over 4 due to the GPU acceleration avaliable, more technical information available `here. <https://www.chiefdelphi.com/t/announcing-gloworm-an-inexpensive-and-open-source-vision-module/386370/61?u=pietroglyph>`_
-
+* Raspberry Pi 3 is preferred **for retroreflective tracking** over 4 due to the GPU acceleration avaliable, more technical information available `here. <https://www.chiefdelphi.com/t/announcing-gloworm-an-inexpensive-and-open-source-vision-module/386370/61?u=pietroglyph>`_
+* Raspberry Pi 4 is preferred for **AprilTag tracking** due to better hardware and future GPU acceleration.
+* Mini PCs have been testing and show better performance than a Raspberry Pi but require extra effort to wire to the robot / get set up. More information can be found in the set up guide here (HYPERLINK GOES HERE).
 * Other coprocessors can be used but may require some extra work / command line usage in order to get it working properly
 
 
@@ -79,7 +80,7 @@ Support Levels
          * All features will work
          * Everything will be kept up to date
      -   * Gloworm
-         * Raspberry Pi 3 and Raspberry Pi 4 with the official Pi image with the Pi Cam or USB Cameras
+         * Raspberry Pi 3 and Raspberry Pi 4 with the official Pi image with the Pi Cam or CSCore compatible USB Cameras
    * - Compatible
      -   * No guarantee of support on Discord
          * Major features will work

@@ -8,7 +8,7 @@ PhotonVision requires a JDK installed and on the system path. JDK 11 is needed (
 
 .. code-block::
 
-    $ sudo apt install openjdk-11
+    $ sudo apt-get install openjdk-11-jdk
 
 .. warning:: Using a JDK other than JDK11 will cause issues when running PhotonVision and is not supported.
 
