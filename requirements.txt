@@ -1,11 +1,11 @@
-furo==2021.11.23
-sphinx==4.3.0
+furo==2022.09.29
+sphinx==5.3.0
 sphinx-tabs
 sphinxext-opengraph
 doc8
 sphinxcontrib-ghcontributors
 sphinx-notfound-page
 sphinxext-remoteliteralinclude
-sphinx_design==0.0.13
+sphinx_design==0.3.0
 sphinx-rtd-theme==1.0.0
-pygments==2.10.0
+pygments==2.13.0

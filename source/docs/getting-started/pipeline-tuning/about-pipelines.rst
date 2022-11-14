@@ -4,7 +4,7 @@ About Pipelines
 What is a pipeline?
 ^^^^^^^^^^^^^^^^^^^
 
-A vision pipeline represents a series of steps that are used to acquire an image, process it, and analyzing it to find a target. In most FRC games, this means processing an image in order to detect a piece of retroreflective tape or AN AprilTag.
+A vision pipeline represents a series of steps that are used to acquire an image, process it, and analyzing it to find a target. In most FRC games, this means processing an image in order to detect a piece of retroreflective tape or an AprilTag.
 
 Types of Pipelines
 ^^^^^^^^^^^^^^^^^^
@@ -23,9 +23,9 @@ This pipeline type is based on detecting different shapes like circles, triangle
 AprilTag
 --------
 
-This pipeline type is based on detecting AprilTag fiducial markers. More information about AprilTags can be found here (HYPERLINK GOES HERE). While being more performance intensive than the reflective and colored shape pipeline, it has the benefit of providing easy to use 3D pose information which allows localization.
+This pipeline type is based on detecting AprilTag fiducial markers. More information about AprilTags can be found in the WPILib documentation. While being more performance intensive than the reflective and colored shape pipeline, it has the benefit of providing easy to use 3D pose information which allows localization.
 
-.. note:: In order to get 3D Pose data about AprilTags, you are required to calibrate your camera (HYPERLINK GOES HERE).
+.. note:: In order to get 3D Pose data about AprilTags, you are required to :ref:`calibrate your camera<docs/getting-started/pipeline-tuning/calibration:Calibration Steps>`.
 
 Pipeline Steps
 ^^^^^^^^^^^^^^

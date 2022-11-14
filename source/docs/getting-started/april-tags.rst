@@ -14,16 +14,18 @@ AprilTags are a type of visual fiducial marker that is commonly used within robo
 
 A more technical explanation can be found in the `WPILib documentation <https://www.google.com>`_.
 
+.. note:: You can get a PDF of properly sized 16h5 targets :download:`here<assets/alltags.pdf>`.
+
 Getting Started With AprilTags
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Install PhotonVision, wire your coprocessor, and get the dashboard up.
 
 .. note:: When selecting the image during installation, ensure you use one from the 2022 beta or 2023 stable release.
 
-2. Read the documentation in the pipeline tuning section (HYPERLINK GOES HERE) about how to tune a pipeline for AprilTags.
+2. Read the documentation in the :ref:`pipeline tuning section<docs/getting-started/pipeline-tuning/apriltag-tuning:Target Family>` about how to tune a pipeline for AprilTags.
 
-3. Read page on Robot Integration Strategies with AprilTags (HYPERLINK GOES HERE) on different approaches to using the data you get from AprilTags. This includes simply turning to the goal, getting the pose of the target, all the way to real-time, latency compensated pose estimation.
+3. Read page on :ref:`Robot Integration Strategies with AprilTags<docs/integration/aprilTagStrategies:Simple Strategies>` on different approaches to using the data you get from AprilTags. This includes simply turning to the goal, getting the pose of the target, all the way to real-time, latency compensated pose estimation.
 
-4. Read the PhotonLib documentation (HYPERLINK GOES HERE) on how to use AprilTag data in your code.
+4. Read the :ref:`PhotonLib documentation<docs/programming/photonlib/getting-target-data:Getting AprilTag Data From A Target>` on how to use AprilTag data in your code.
 
-5. Read the example code (HYPERLINK GOES HERE) on a fully featured example on different ways to use AprilTags.
+5. Read the :ref:`example code<docs/examples/apriltag:Code>` on a fully featured example on different ways to use AprilTags.

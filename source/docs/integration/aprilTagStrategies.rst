@@ -26,15 +26,14 @@ Equipment
 
 * A gyroscope or IMU measuring actual robot heading
 
-* A printed AprilTag found here (HYPERLINK GOES HERE)
+* A printed AprilTag of the relevant family. 
 
-Global Pose Estimation
-^^^^^^^^^^^^^^^^^^^^^^
-See the previous page (HYPERLINK GOES HERE). Most of the information is the same except now the camera is supplying a ``Pose3D``.
+Global Pose Estimation / Pose Estimation Strategies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Pose Estimation Strategies
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-The nature of how AprilTags will be laid out makes it very likely that you will get multiple observations within a single frame from seeing multiple targets. This requires strategies to fuse these observations together and get a "best guess" as to where your robot is. These strategies could include:
+.. note:: See the previous page for more general information. Most of the information is the same except now the camera is supplying a ``Pose3D``.
+
+The nature of how AprilTags will be laid out makes it very likely that you will get multiple pose measurements within a single frame from seeing multiple targets. This requires strategies to fuse these observations together and get a "best guess" as to where your robot is. These strategies could include:
 
 * A camera seeing multiple targets, taking the average of all the returned poses
 * A camera seeing one target, with an assumed height off the ground, picking the pose which places it to the assumed height
@@ -42,6 +41,6 @@ The nature of how AprilTags will be laid out makes it very likely that you will 
 * A camera seeing one target, and picking a pose most similar to one provided externally (ie, from previous loop's odometry)
 * A camera seeing one target, and picking the pose with the lowest ambiguity.
 
-PhotonVision supports all of these different strategies via our ``RobotPoseEstimator`` class that allows you to select one of the strategies above and get the relevant pose estimation.
+PhotonVision supports all of these different strategies via our ``RobotPoseEstimator`` class (coming soon) that allows you to select one of the strategies above and get the relevant pose estimation.
 
 All of these strategies are valid approaches, and we recommend doing independent testing in order to see which one works best for your team / current game.
