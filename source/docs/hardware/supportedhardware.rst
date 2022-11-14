@@ -37,11 +37,11 @@ Pi cameras are always recommended over USB cameras as they have lower latency an
 
 Supported Coprocessors
 ----------------------
-* Raspberry Pi 3 / 4, with the newest variants of each being preferred (3B+ and B, respectively).
-* Raspberry Pi 3 is preferred over 4 due to the GPU acceleration available, more technical information available `here. <https://www.chiefdelphi.com/t/announcing-gloworm-an-inexpensive-and-open-source-vision-module/386370/61?u=pietroglyph>`_
-
+* Raspberry Pi 3 / 4, with the newest variants of each being preferred (3B+ and B, respectively)
+  * Raspberry Pi 4 is preferred for **AprilTag or Colored Shape tracking** due to its faster processor; the new libcamera driver provides GPU acceleration for both Pi 3 and 4.
+  * Raspberry Pi 3 works well for retroreflective tracking, but lags behind the Pi 4 with AprilTag or Colored shape
+* Mini PCs (such as Beelink N5095) have been testing and show significantly better performance than a Raspberry Pi, but require extra effort to wire to the robot / get set up. More information can be found in the set up guide here (HYPERLINK GOES HERE)
 * Other coprocessors can be used but may require some extra work / command line usage in order to get it working properly
-
 
 Performance Matrix
 ------------------
@@ -79,7 +79,7 @@ Support Levels
          * All features will work
          * Everything will be kept up to date
      -   * Gloworm
-         * Raspberry Pi 3 and Raspberry Pi 4 with the official Pi image with the Pi Cam or USB Cameras
+         * Raspberry Pi 3 and Raspberry Pi 4 with the official Pi image with the Pi Cam or CSCore compatible USB Cameras
    * - Compatible
      -   * No guarantee of support on Discord
          * Major features will work

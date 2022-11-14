@@ -5,10 +5,8 @@ PhotonLib: Robot Code Interface
    :maxdepth: 1
 
    adding-vendordep
-   creating-photon-camera
+   getting-target-data
+   using-target-data
    driver-mode-pipeline-index
-   simple-pipeline-result
-   simple-tracked-target
    controlling-led
-   util-calculations
    simulation
