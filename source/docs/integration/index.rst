@@ -7,4 +7,5 @@ Robot Integration
    background
    simpleStrategies
    advancedStrategies
+   aprilTagStrategies
 

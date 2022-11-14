@@ -1,10 +1,11 @@
-Utility Class: Common Calculations
-==================================
-A ``PhotonUtils`` class with helpful common calculations is included within ``PhotonLib`` to aid teams. This class contains two methods, ``calculateDistanceToTargetMeters()``/``CalculateDistanceToTarget()`` and ``estimateTargetTranslation2d()``/``EstimateTargetTranslation()`` (Java and C++ respectively).
+Using Target Data to Get Position
+=================================
+
+A ``PhotonUtils`` class with helpful common calculations is included within ``PhotonLib`` to aid teams in using target data in order to get positional information on the field. This class contains two methods, ``calculateDistanceToTargetMeters()``/``CalculateDistanceToTarget()`` and ``estimateTargetTranslation2d()``/``EstimateTargetTranslation()`` (Java and C++ respectively).
 
 Calculating Distance to Target
 ------------------------------
-If your camera is at a fixed height on your robot and the height of the target is fixed, you can calculate the distance to the target based on your camera's pitch and the :ref:`pitch to the target <docs/programming/photonlib/simple-tracked-target:Retrieving Data from a Photon Tracked Target>`.
+If your camera is at a fixed height on your robot and the height of the target is fixed, you can calculate the distance to the target based on your camera's pitch and the pitch to the target.
 
 .. tab-set-code::
 
