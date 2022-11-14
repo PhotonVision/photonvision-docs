@@ -1,7 +1,7 @@
 Common Issues / Questions
 =========================
 
-This page will grow as needed in order to cover commonly seen issues by teams. If this page doesn't help you and you need further assistance, feel free to :ref: `Contact Us <docs/index: Contact Us>`_.
+This page will grow as needed in order to cover commonly seen issues by teams. If this page doesn't help you and you need further assistance, feel free to :ref: `Contact Us <docs/index:Contact Us>`_.
 
 Known Issues
 ------------
@@ -33,7 +33,7 @@ If you are using a USB camera, it is possible your USB Camera isn't supported  b
 
 Camera is consistently returning incorrect values when in 3D mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Read the tips on the :ref:`camera calibration page<docs/getting-started/pipeline-tuning/calibration:Calibration with PhotonVision>`, follow the advice there, and redo the calibration.
+Read the tips on the :ref:`camera calibration page<docs/getting-started/pipeline-tuning/calibration:Calibration Tips>`, follow the advice there, and redo the calibration.
 
 Not getting data from PhotonLib
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
