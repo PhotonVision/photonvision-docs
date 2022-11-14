@@ -31,18 +31,17 @@ Pi cameras are always recommended over USB cameras as they have lower latency an
 
     * Most Logitech cameras (specifically the Logitech C270 HD Webcam (PN: 960-000694)) will not work with PhotonVision.
 
-    * The PS3Eye needs a workaround to be usable, for more information see :ref:`our Known Issues page <docs/other/known-issues:Hardware Issues>`
+    * The PS3Eye needs a workaround to be usable, for more information see :ref:`our Known Issues page <docs/troubleshooting/common-errors:Known Issues>`
 
     * Most laptop integrated webcams
 
 Supported Coprocessors
 ----------------------
-* Raspberry Pi 3 / 4, with the newest variants of each being preferred (3B+ and B, respectively).
-* Raspberry Pi 3 is preferred **for retroreflective tracking** over 4 due to the GPU acceleration avaliable, more technical information available `here. <https://www.chiefdelphi.com/t/announcing-gloworm-an-inexpensive-and-open-source-vision-module/386370/61?u=pietroglyph>`_
-* Raspberry Pi 4 is preferred for **AprilTag tracking** due to better hardware and future GPU acceleration.
-* Mini PCs have been testing and show better performance than a Raspberry Pi but require extra effort to wire to the robot / get set up. More information can be found in the set up guide here (HYPERLINK GOES HERE).
+* Raspberry Pi 3 / 4, with the newest variants of each being preferred (3B+ and B, respectively)
+  * Raspberry Pi 4 is preferred for **AprilTag or Colored Shape tracking** due to its faster processor; the new libcamera driver provides GPU acceleration for both Pi 3 and 4.
+  * Raspberry Pi 3 works well for retroreflective tracking, but lags behind the Pi 4 with AprilTag or Colored shape
+* Mini PCs (such as Beelink N5095) have been testing and show significantly better performance than a Raspberry Pi, but require extra effort to wire to the robot / get set up. More information can be found in the set up guide here (HYPERLINK GOES HERE)
 * Other coprocessors can be used but may require some extra work / command line usage in order to get it working properly
-
 
 Performance Matrix
 ------------------
