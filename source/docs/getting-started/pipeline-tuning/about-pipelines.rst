@@ -29,7 +29,7 @@ This pipeline type is based on detecting AprilTag fiducial markers. More informa
 Note About Multiple Cameras and Pipelines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When using more than one camera, it is important to keep in mind that all cameras run one pipeline each, all publish to NT, and all send both streams. This will have a noticeable affect on performance and we recommend users limit themselves to 1-2 cameras per coprocessor. 
+When using more than one camera, it is important to keep in mind that all cameras run one pipeline each, all publish to NT, and all send both streams. This will have a noticeable affect on performance and we recommend users limit themselves to 1-2 cameras per coprocessor.
 
 Pipeline Steps
 ^^^^^^^^^^^^^^
