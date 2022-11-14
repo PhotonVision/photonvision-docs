@@ -1,11 +1,11 @@
 Calibrating Your Camera
 =======================
 
-.. important:: In order to detect AprilTags and use 3D mode, your camera must be calibrated at the desired resolution! Inaccurate calibration will lead to poor performance. 
+.. important:: In order to detect AprilTags and use 3D mode, your camera must be calibrated at the desired resolution! Inaccurate calibration will lead to poor performance.
 
 To calibrate a camera, images of a chessboard (or grid of dots) are taken. by comparing where the grid corners (or dots) should be in object space (for example, a dot once every inch in an 8x6 grid) with where they appear in the camera image, we can find a least-squares estimate for intrinsic camera properties like focal lengths, center point, and distortion coefficients. For more on camera calibration, please review the `OpenCV documentation <https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html>`_.
 
-.. warning:: While any resolution can be calibrated, resolutions lower than 960x720 are often too low to provide accurate results. Additionally, high resolutions may be too performance intensive for a coprocessor like a Raspberry Pi to handle (solutions to this are being looked into). Thus, we recommend 960x720 when using 3D mode. 
+.. warning:: While any resolution can be calibrated, resolutions lower than 960x720 are often too low to provide accurate results. Additionally, high resolutions may be too performance intensive for a coprocessor like a Raspberry Pi to handle (solutions to this are being looked into). Thus, we recommend 960x720 when using 3D mode.
 
 .. note::The calibration data collected during calibration is specific to each physical camera, as well as each individual resolution.
 
@@ -48,7 +48,7 @@ Accurate camera calibration is required in order to get accurate pose measuremen
 
 2. Ensure your the images you take have the target in different positions and angles, with as big of a difference between angles as possible. It is important to make sure the target overlay still lines up with the board while doing this. Tilt no more than 45 degrees.
 
-3. Use as big of a calibration target as your printer can print. 
+3. Use as big of a calibration target as your printer can print.
 
 4. Ensure that your printed pattern has enough white border around it.
 
@@ -62,7 +62,7 @@ Accurate camera calibration is required in order to get accurate pose measuremen
 
 9. Ensure the calibration target is completely flat and does not bend or fold in any way. It should be mounted/taped down to something flat and then used for calibration, do not just hold it up.
 
-Following the ideas above should help in getting an accurate calibration. 
+Following the ideas above should help in getting an accurate calibration.
 
 
 Accessing Calibration Images

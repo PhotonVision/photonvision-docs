@@ -134,7 +134,7 @@ Getting Data From A Target
 
 Getting AprilTag Data From A Target
 -----------------------------------
-.. note:: All of the data above (**except skew**) is available when using AprilTags. 
+.. note:: All of the data above (**except skew**) is available when using AprilTags.
 
 * int ``getFiducialId()``/``GetFiducialId()``: The ID of the detected fiducial marker.
 * double ``getPoseAmbiguity()``/``GetPoseAmbiguity()``: How ambiguous the pose of the target is (see below).

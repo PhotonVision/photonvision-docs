@@ -23,7 +23,7 @@ This pipeline type is based on detecting different shapes like circles, triangle
 AprilTag
 --------
 
-This pipeline type is based on detecting AprilTag fiducial markers. More information about AprilTags can be found here (HYPERLINK GOES HERE). While being more performance intensive than the reflective and colored shape pipeline, it has the benefit of providing easy to use 3D pose information which allows localization. 
+This pipeline type is based on detecting AprilTag fiducial markers. More information about AprilTags can be found here (HYPERLINK GOES HERE). While being more performance intensive than the reflective and colored shape pipeline, it has the benefit of providing easy to use 3D pose information which allows localization.
 
 .. note:: In order to get 3D Pose data about AprilTags, you are required to calibrate your camera (HYPERLINK GOES HERE).
 

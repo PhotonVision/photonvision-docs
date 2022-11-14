@@ -1,12 +1,12 @@
 AprilTag Strategies
 ====================
 
-.. note:: The same strategies covered in the simple and advanced strategy sections still apply to AprilTags, and we encourage you to read them first. This page will discuss the specific nuances to using AprilTags. 
+.. note:: The same strategies covered in the simple and advanced strategy sections still apply to AprilTags, and we encourage you to read them first. This page will discuss the specific nuances to using AprilTags.
 
 Simple Strategies
 -----------------
 
-Prior to the introduction of AprilTags, the most common vision strategy for teams was to use the yaw of the detected target in order to turn to the target, and then score. This is still possible with AprilTags as the yaw of the tag is reported. Similarly, getting the distance to the target via trigonometry will also work. This is discussed in greater detail in the previous page. 
+Prior to the introduction of AprilTags, the most common vision strategy for teams was to use the yaw of the detected target in order to turn to the target, and then score. This is still possible with AprilTags as the yaw of the tag is reported. Similarly, getting the distance to the target via trigonometry will also work. This is discussed in greater detail in the previous page.
 
 Advanced Strategies
 -------------------
@@ -34,7 +34,7 @@ See the previous page (HYPERLINK GOES HERE). Most of the information is the same
 
 Pose Estimation Strategies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-The nature of how AprilTags will be laid out makes it very likely that you will get multiple observations within a single frame from seeing multiple targets. This requires strategies to fuse these observations together and get a "best guess" as to where your robot is. These strategies could include: 
+The nature of how AprilTags will be laid out makes it very likely that you will get multiple observations within a single frame from seeing multiple targets. This requires strategies to fuse these observations together and get a "best guess" as to where your robot is. These strategies could include:
 
 * A camera seeing multiple targets, taking the average of all the returned poses
 * A camera seeing one target, with an assumed height off the ground, picking the pose which places it to the assumed height
@@ -42,6 +42,6 @@ The nature of how AprilTags will be laid out makes it very likely that you will 
 * A camera seeing one target, and picking a pose most similar to one provided externally (ie, from previous loop's odometry)
 * A camera seeing one target, and picking the pose with the lowest ambiguity.
 
-PhotonVision supports all of these different strategies via our ``RobotPoseEstimator`` class that allows you to select one of the strategies above and get the relevant pose estimation. 
+PhotonVision supports all of these different strategies via our ``RobotPoseEstimator`` class that allows you to select one of the strategies above and get the relevant pose estimation.
 
-All of these strategies are valid approaches, and we recommend doing independent testing in order to see which one works best for your team / current game. 
+All of these strategies are valid approaches, and we recommend doing independent testing in order to see which one works best for your team / current game.

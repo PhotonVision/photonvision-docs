@@ -10,15 +10,15 @@ AprilTags
 About AprilTags
 ^^^^^^^^^^^^^^^
 
-AprilTags are a type of visual fiducial marker that is commonly used within robotics and computer vision applications. Visual fiducial markers are artificial landmarks added to a scene to allow "localization" (finding your current position) via images. In simpler terms, it is something that can act as a known point of reference that you can use to find your current location. They are similar to QR codes in which they encode information, however, they hold much less data. This has the added benefit of being much easier to track from long distances and at low resolutions. By placing AprilTags in known locations around the field and detecting them using PhotonVision, you can easily get full field localization / pose estimation. Alternatively, you can use AprilTags the same way you used retroreflective tape, simply using them to turn to goal without any pose estimation. 
+AprilTags are a type of visual fiducial marker that is commonly used within robotics and computer vision applications. Visual fiducial markers are artificial landmarks added to a scene to allow "localization" (finding your current position) via images. In simpler terms, it is something that can act as a known point of reference that you can use to find your current location. They are similar to QR codes in which they encode information, however, they hold much less data. This has the added benefit of being much easier to track from long distances and at low resolutions. By placing AprilTags in known locations around the field and detecting them using PhotonVision, you can easily get full field localization / pose estimation. Alternatively, you can use AprilTags the same way you used retroreflective tape, simply using them to turn to goal without any pose estimation.
 
 A more technical explanation can be found in the `WPILib documentation <https://www.google.com>`_.
 
 Getting Started With AprilTags
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Install PhotonVision, wire your coprocessor, and get the dashboard up. 
+1. Install PhotonVision, wire your coprocessor, and get the dashboard up.
 
-.. note:: When selecting the image during installation, ensure you use one from the 2022 beta or 2023 stable release. 
+.. note:: When selecting the image during installation, ensure you use one from the 2022 beta or 2023 stable release.
 
 2. Read the documentation in the pipeline tuning section (HYPERLINK GOES HERE) about how to tune a pipeline for AprilTags.
 

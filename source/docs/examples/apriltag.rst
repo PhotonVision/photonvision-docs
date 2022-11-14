@@ -1,7 +1,7 @@
 Using AprilTags for Pose Estimation
 ===================================
 
-This is example will show how to use AprilTags for full field robot localization using ``RobotPoseEstimator`` and the WPILib Pose Estimation classes. 
+This is example will show how to use AprilTags for full field robot localization using ``RobotPoseEstimator`` and the WPILib Pose Estimation classes.
 
 .. tab-set::
 

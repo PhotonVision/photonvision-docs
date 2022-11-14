@@ -10,14 +10,14 @@ Resolution changes the resolution of the image captured. While higher resolution
 
 When using the reflective/colored shape pipeline, detection should be run as low of a resolution as possible as you are only trying to detect simple contours (essentially colored blobs).
 
-When using the AprilTag pipeline, you should try to use as high of a resolution as you can while still maintaining a reasonable FPS measurement. This is because higher resolution allows you to detect tags with higher accuracy and from larger distances. 
+When using the AprilTag pipeline, you should try to use as high of a resolution as you can while still maintaining a reasonable FPS measurement. This is because higher resolution allows you to detect tags with higher accuracy and from larger distances.
 
 Exposure and brightness
 -----------------------
 
-Camera exposure and brightness control how bright the captured image will be, although they function differently. Camera exposure changes how long the camera shutter lets in light, which changes the overall brightness of the captured image. This is in contrast to brightness, which is a post-processing effect that boosts the overall brightness of the image at the cost of desaturating colors (making colors look less distinct). 
+Camera exposure and brightness control how bright the captured image will be, although they function differently. Camera exposure changes how long the camera shutter lets in light, which changes the overall brightness of the captured image. This is in contrast to brightness, which is a post-processing effect that boosts the overall brightness of the image at the cost of desaturating colors (making colors look less distinct).
 
-.. important:: For all pipelines, exposure time should be set as low as possible while still allowing for the target to be reliably tracked. This allows for faster processing as decreasing exposure will increase your camera FPS. 
+.. important:: For all pipelines, exposure time should be set as low as possible while still allowing for the target to be reliably tracked. This allows for faster processing as decreasing exposure will increase your camera FPS.
 
 For reflective pipelines, after adjusting exposure and brightness, the target should be lit green (or the color of the vision tracking LEDs used). The more distinct the color of the target, the more likely it will be tracked reliably.
 

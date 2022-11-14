@@ -32,7 +32,7 @@ The edges of the each polygon are adjusted to "snap to" high color differences s
 
 Pose Iterations
 ---------------
-Pose iterations represents the amount of iterations done in order for the AprilTag algorithm to converge on its pose solution(s). A smaller number between 0-100 is recommended. A smaller amount of iterations cause a more noisy set of poses when looking at the tag straight on, while higher values much more consistently stick to a (potentially wrong) pair of poses. WPILib contains many useful filter classes in order to account for a noisy tag reading. 
+Pose iterations represents the amount of iterations done in order for the AprilTag algorithm to converge on its pose solution(s). A smaller number between 0-100 is recommended. A smaller amount of iterations cause a more noisy set of poses when looking at the tag straight on, while higher values much more consistently stick to a (potentially wrong) pair of poses. WPILib contains many useful filter classes in order to account for a noisy tag reading.
 
 Max Error Bits
 --------------
@@ -42,4 +42,4 @@ We recommend a value of 0 for the 16h5 and 7+ for the 36h11 family.
 
 Decision Margin Cutoff
 -----------------------
-The decision margin cutoff is how much “margin” the detector has left before it rejects a tag; increasing this rejects poorer tags. We recommend you keep this value around a 30. 
+The decision margin cutoff is how much “margin” the detector has left before it rejects a tag; increasing this rejects poorer tags. We recommend you keep this value around a 30.
