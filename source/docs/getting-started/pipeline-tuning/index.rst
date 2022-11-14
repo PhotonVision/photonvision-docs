@@ -7,8 +7,8 @@ Pipeline Tuning
 
    about-pipelines
    input
-   thresholding
-   contour-filtering
+   reflectiveAndShape/index
+   apriltag-tuning
    output
    calibration
-   3D
+
