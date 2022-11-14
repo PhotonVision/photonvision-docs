@@ -20,7 +20,7 @@ The PhotonVision user interface is simple and modular, making things easier for 
 
 PhotonLib Vendor Dependency
 ---------------------------
-The PhotonLib vendor dependency allows you to easily get necessary target data (without having to work directly with NetworkTables) while also providing utility methods to get distance and position on the field. This helps your team focus less on getting data and more on using it to do cool things. This also has the benefit of having a structure that ensures all data is from the same timestamp, which is helpful for latency compensation. 
+The PhotonLib vendor dependency allows you to easily get necessary target data (without having to work directly with NetworkTables) while also providing utility methods to get distance and position on the field. This helps your team focus less on getting data and more on using it to do cool things. This also has the benefit of having a structure that ensures all data is from the same timestamp, which is helpful for latency compensation.
 
 User Calibration
 ----------------
@@ -28,7 +28,7 @@ Using PhotonVision allows the user to calibrate for their specific camera, which
 
 High FPS Processing
 -------------------
-Compared to alternative solutions, PhotonVision boasts higher frames per second which allows for a smoother video stream and detection of targets to ensure you aren't losing out on any performance. 
+Compared to alternative solutions, PhotonVision boasts higher frames per second which allows for a smoother video stream and detection of targets to ensure you aren't losing out on any performance.
 
 Low Latency
 -----------
@@ -44,4 +44,4 @@ You can use multiple cameras within PhotonVision, allowing you to see multiple a
 
 Comprehensive Documentation
 ---------------------------
-Using our comprehensive documentation, you will be able to easily start vision processing by following a series of simple steps. 
+Using our comprehensive documentation, you will be able to easily start vision processing by following a series of simple steps.
