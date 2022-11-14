@@ -26,8 +26,6 @@ Equipment
 
 * A gyroscope or IMU measuring actual robot heading
 
-* A printed AprilTag of the relevant family. 
-
 Global Pose Estimation / Pose Estimation Strategies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
