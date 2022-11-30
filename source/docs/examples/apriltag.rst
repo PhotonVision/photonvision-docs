@@ -10,12 +10,12 @@ Code
 
     .. tab-item:: Java
 
-       // Coming soon! (before December 2022)
+       // Coming soon! (before 2023 season)
 
     .. tab-item:: C++ (Header)
 
-       // Coming soon! (before December 2022)
+       // Coming soon! (before 2023 season)
 
     .. tab-item:: C++ (Source)
 
-       // Coming soon! (before December 2022)
+       // Coming soon! (before 2023 season)
