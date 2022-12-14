@@ -14,7 +14,7 @@ AprilTags are a type of visual fiducial marker that is commonly used within robo
 
 A more technical explanation can be found in the `WPILib documentation <https://docs.wpilib.org/en/latest/docs/software/vision-processing/apriltag/apriltag-intro.html>`_.
 
-.. note:: You can get a PDF of properly sized 16h5 targets :download:`here<assets/alltags.pdf>`.
+.. note:: You can get a PDF of properly sized 16h5 targets `here <https://github.com/Tigerbotics7125/AprilTag16h5>`_.
 
 Getting Started With AprilTags
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
