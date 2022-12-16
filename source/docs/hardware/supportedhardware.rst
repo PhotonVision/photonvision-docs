@@ -1,7 +1,7 @@
 Supported Hardware
 ==================
 
-PhotonVision is developed and tested on a number of Commercial, Off-the-Shelf vision processing hardware solutions.
+PhotonVision is developed and tested on a number of Commercial, Off-the-Shelf (COTS) vision processing hardware solutions.
 
 Supported Cameras
 -----------------
@@ -40,7 +40,7 @@ Supported Coprocessors
 * Raspberry Pi 3 / 4, with the newest variants of each being preferred (3B+ and B, respectively).
 * Raspberry Pi 4 is preferred for **AprilTag or Colored Shape tracking** due to its faster processor; the new libcamera driver provides GPU acceleration for both Pi 3 and 4.
 * Raspberry Pi 3 works well for retroreflective tracking, but lags behind the Pi 4 with AprilTag or Colored shape.
-* Mini PCs (such as Beelink N5095) have been testing and show significantly better performance than a Raspberry Pi, but require extra effort to wire to the robot / get set up. More information can be found in the set up guide `here. <https://docs.google.com/document/d/1AU8rK364pTvNaS69ZJ6ZdovyLU_sL_PJ9WSHSJIVoqk/edit?usp=sharing>`_
+* Mini PCs (such as Beelink N5095) have been testing and show significantly better performance than a Raspberry Pi, but require extra effort to wire to the robot / get set up. More information can be found in the set up guide `here. <https://docs.google.com/document/d/1lOSzG8iNE43cK-PgJDDzbwtf6ASyf4vbW8lQuFswxzw/edit?usp=drivesdk>`_
 * Other coprocessors can be used but may require some extra work / command line usage in order to get it working properly.
 
 Performance Matrix
