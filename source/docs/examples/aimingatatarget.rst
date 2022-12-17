@@ -1,7 +1,7 @@
 Aiming at a Target
 ==================
 
-The following example is from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget>`_/`C++ <https://github.com/PhotonVision/photonvision/tree/master/photonlib-cpp-examples/src/main/cpp/examples/aimattarget>`_).
+The following example is from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/aimattarget>`_/`C++ <https://github.com/PhotonVision/photonvision/tree/master/photonlib-cpp-examples/aimattarget>`_).
 
 Knowledge and Equipment Needed
 ------------------------------
