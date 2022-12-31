@@ -1,0 +1,53 @@
+Pi Camera Configuration
+=======================
+
+Background
+----------
+
+The Raspberry Pi camera is routed through and processed by the GPU. Since the GPU boots before the CPU, it must be configured properly for the attached camera. Additionally, this configuration cannot be changed without rebooting.
+
+PhotonVision's Pi images are configured for "auto-detection". This means that the GPU will properly identify and use official Pi Cam V1 (OV5647), V2 (IMX219), and HQ (IMX477) hardware. If you are using one of these cameras, no additional configuration is needed.
+
+However, the GPU is not capable of detecting other cameras automatically. The file ``/boot/config.txt`` is parsed by the GPU at boot time to determine what camera, if any, is expected to be attached. This file must be updated for non-standard cameras.
+
+.. warning:: Incorrect camera configuration will cause the camera to not be detected. It looks exactly the same as if the camera was unplugged.
+
+Updating ``config.txt``
+-----------------------
+
+After flashing the pi image onto an SD card, open the ``boot`` segment in a file browser.
+
+.. note:: Windows may report "There is a problem with this drive". This should be ignored.
+
+Locate ``config.txt`` in the folder, and open it with your favorite text editor.
+
+.. image:: images/bootConfigTxt.png
+
+Within the file, find this block of text:
+
+.. code-block::
+
+    ##############################################################
+    ### PHOTONVISION CAM CONFIG
+    ### Comment/Uncomment to change which camera is supported
+    cameraAutoDetect=1
+    # dtoverlay=imx290,clock-frequency=74250000
+    # dtoverlay=imx290,clock-frequency=37125000
+    # dtoverlay=imx378
+    # dtoverlay=ov9281
+    ##############################################################
+
+Remove the leading ``#`` character to uncomment the line associated with your camera. Add a ``#`` in front of other cameras.
+
+.. note:: All official Pi Cam's (V1, V2, and HQ) should use ``cameraAutoDetect=1``.
+
+.. warning:: Leave lines outside the PhotonVision Camera Config block untouched. They are necessary for proper raspberry pi functionality.
+
+Save the file, close the editor, and eject the drive. The boot configuration should now be ready for your selected camera.
+
+.. note:: Not all cameras have been tested by the development team.
+
+Additional Information
+----------------------
+
+See `the libcamera documentation <https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/camera/libcamera_apps_getting_started.adoc>`_ for more details on configuring cameras.
