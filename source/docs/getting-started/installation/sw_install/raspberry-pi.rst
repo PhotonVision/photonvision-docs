@@ -16,7 +16,7 @@ For more detailed instructions on using Etcher, please see the `Etcher website <
 
 .. warning:: Using an older version of Balena Etcher may cause bootlooping (the system will repeatedly boot and restart) when imaging your Raspberry Pi. Updating to the latest Balena Etcher will fix this issue.
 
-If you are using a non-standard Pi camera, :ref:`additional configuration may be required. <docs/hardware/picamconfig:Pi Camera Configuration>`
+If you are using a non-standard Pi Camera connected to the CSI port, :ref:`additional configuration may be required. <docs/hardware/picamconfig:Pi Camera Configuration>`
 
 Final Steps
 -----------

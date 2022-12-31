@@ -4,7 +4,7 @@ Pi Camera Configuration
 Background
 ----------
 
-The Raspberry Pi camera is routed through and processed by the GPU. Since the GPU boots before the CPU, it must be configured properly for the attached camera. Additionally, this configuration cannot be changed without rebooting.
+The Raspberry Pi CSI Camera port is routed through and processed by the GPU. Since the GPU boots before the CPU, it must be configured properly for the attached camera. Additionally, this configuration cannot be changed without rebooting.
 
 The GPU is not always capable of detecting other cameras automatically. The file ``/boot/config.txt`` is parsed by the GPU at boot time to determine what camera, if any, is expected to be attached. This file must be updated for some cameras.
 
@@ -45,13 +45,9 @@ Within the file, find this block of text:
 
 Remove the leading ``#`` character to uncomment the line associated with your camera. Add a ``#`` in front of other cameras.
 
-.. note:: All official Pi Cam's (V1, V2, and HQ) should use ``cameraAutoDetect=1``.
-
 .. warning:: Leave lines outside the PhotonVision Camera Config block untouched. They are necessary for proper raspberry pi functionality.
 
 Save the file, close the editor, and eject the drive. The boot configuration should now be ready for your selected camera.
-
-.. note:: Not all cameras have been tested by the development team.
 
 Additional Information
 ----------------------
