@@ -1,5 +1,5 @@
-Installation
-============
+Getting Started
+===============
 
 Wiring
 -------
@@ -9,13 +9,13 @@ Wiring
 
    wiring
 
-Install / Image
----------------
+Software Install
+----------------
 
 .. toctree::
    :maxdepth: 3
 
-   install/index
+   sw_install/index
 
 
 Networking

@@ -1,5 +1,5 @@
-Installation
-============
+Software Installation
+=====================
 
 Supported Coprocessors
 ----------------------

@@ -16,7 +16,7 @@ We provide an `install script <https://git.io/JJrEP>`_ for other Debian-based sy
 
 .. note:: Your co-processor will require an Internet connection for this process to work correctly.
 
-For installation on any other co-processors, we recommend reading the :ref:`advanced command line documentation <docs/getting-started/installation/install/advanced-cmd:Advanced Command Line Usage>`.
+For installation on any other co-processors, we recommend reading the :ref:`advanced command line documentation <docs/getting-started/installation/sw_install/advanced-cmd:Advanced Command Line Usage>`.
 
 Updating PhotonVision
 ---------------------
