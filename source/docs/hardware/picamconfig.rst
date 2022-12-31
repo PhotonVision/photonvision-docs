@@ -6,9 +6,7 @@ Background
 
 The Raspberry Pi camera is routed through and processed by the GPU. Since the GPU boots before the CPU, it must be configured properly for the attached camera. Additionally, this configuration cannot be changed without rebooting.
 
-PhotonVision's Pi images are configured for "auto-detection". This means that the GPU will properly identify and use official Pi Cam V1 (OV5647), V2 (IMX219), and HQ (IMX477) hardware. If you are using one of these cameras, no additional configuration is needed.
-
-However, the GPU is not capable of detecting other cameras automatically. The file ``/boot/config.txt`` is parsed by the GPU at boot time to determine what camera, if any, is expected to be attached. This file must be updated for non-standard cameras.
+The GPU is not always capable of detecting other cameras automatically. The file ``/boot/config.txt`` is parsed by the GPU at boot time to determine what camera, if any, is expected to be attached. This file must be updated for some cameras.
 
 .. warning:: Incorrect camera configuration will cause the camera to not be detected. It looks exactly the same as if the camera was unplugged.
 
@@ -27,15 +25,23 @@ Within the file, find this block of text:
 
 .. code-block::
 
-    ##############################################################
-    ### PHOTONVISION CAM CONFIG
-    ### Comment/Uncomment to change which camera is supported
-    cameraAutoDetect=1
-    # dtoverlay=imx290,clock-frequency=74250000
-    # dtoverlay=imx290,clock-frequency=37125000
-    # dtoverlay=imx378
-    # dtoverlay=ov9281
-    ##############################################################
+  ##############################################################
+  ### PHOTONVISION CAM CONFIG
+  ### Comment/Uncomment to change which camera is supported
+  ### Picam V1, V2 or HQ: uncomment (remove leading # ) from camera_auto_detect=1,
+  ### and comment out all following lines
+  ### IMX290/327/OV9281/Any other cameras that require additional overlays:
+  ### Comment out (add a # ) to camera_auto_detect=1, and uncomment the line for
+  ### the sensor you're trying to user
+
+  cameraAutoDetect=1
+
+  # dtoverlay=imx290,clock-frequency=74250000
+  # dtoverlay=imx290,clock-frequency=37125000
+  # dtoverlay=imx378
+  # dtoverlay=ov9281
+
+  ##############################################################
 
 Remove the leading ``#`` character to uncomment the line associated with your camera. Add a ``#`` in front of other cameras.
 
