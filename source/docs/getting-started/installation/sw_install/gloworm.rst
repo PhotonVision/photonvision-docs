@@ -4,7 +4,7 @@ While not currently in production, PhotonVision still supports Gloworm vision pr
 
 Downloading the Gloworm Image
 -----------------------------
-Download the latest `Gloworm release of PhotonVision <https://github.com/gloworm-vision/pi-img-updator/releases>`_. You do not need to extract the downloaded ZIP file.
+Download the latest `Gloworm/Limelight release of PhotonVision <https://github.com/photonvision/photonvision/releases>`_; the image will be suffixed with "image_limelight.xz". You do not need to extract the downloaded archive.
 
 Flashing the Gloworm Image
 --------------------------
@@ -24,11 +24,11 @@ Final Steps
 -----------
 Power your device per its documentation and connect it to a robot network.
 
-You should be able to locate the camera at ``http://gloworm.local:5800/`` in your browser on your computer when connected to the robot.
+You should be able to locate the camera at ``http://photonvision.local:5800/`` in your browser on your computer when connected to the robot.
 
 Troubleshooting/Setting a Static IP
 -----------------------------------
-A static IP address may be used as an alternative to the mDNS ``gloworm.local`` address.
+A static IP address may be used as an alternative to the mDNS ``photonvision.local`` address.
 
 Download and run `Angry IP Scanner <https://angryip.org/download/#windows>`_ to find PhotonVision/your coprocessor on your network.
 
