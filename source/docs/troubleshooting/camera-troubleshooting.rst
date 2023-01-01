@@ -4,10 +4,10 @@ Camera Troubleshooting
 Pi Cameras
 ----------
 
-If you haven't yet, please refer to :ref:`the Pi CSI Camera Configuration page <docs/hardware/picamconfig:Pi Camera Configuration>` for information on updating :code:`config.txt` for your use case. If you've tried that, and things still aren't working, restart PhotonVision using the restart button in the settings tab, and press tilde (\`) in the web UI once connection is restored. This should show the most recent boot log. 
+If you haven't yet, please refer to :ref:`the Pi CSI Camera Configuration page <docs/hardware/picamconfig:Pi Camera Configuration>` for information on updating :code:`config.txt` for your use case. If you've tried that, and things still aren't working, restart PhotonVision using the restart button in the settings tab, and press tilde (\`) in the web UI once connection is restored. This should show the most recent boot log.
 
 +----------------------------------+--------------------------------------------------------+------------------------------------+
-|                                  | Expected output                                        | Bad                                | 
+|                                  | Expected output                                        | Bad                                |
 +==================================+========================================================+====================================+
 | LibCamera driver initialization  | Successfully loaded libpicam shared object             | Failed to load native libraries!   |
 +----------------------------------+--------------------------------------------------------+------------------------------------+
@@ -26,7 +26,7 @@ USB cameras
 USB cameras supported by CSCore require no libcamera driver initialization to work -- however, similar troubleshooting steps apply. Restart PhotonVision using the restart button in the settings tab, and press tilde (\`) in the web UI once connection is restored. We expect to see the following output:
 
 +----------------------------------+--------------------------------------------------------+------------------------------------+
-|                                  | Expected output                                        | Bad                                | 
+|                                  | Expected output                                        | Bad                                |
 +==================================+========================================================+====================================+
 | Camera detected                  | Adding local video device - "foobar" at "/dev/foobar"  | No output from VisionSourceManager |
 +----------------------------------+--------------------------------------------------------+------------------------------------+
