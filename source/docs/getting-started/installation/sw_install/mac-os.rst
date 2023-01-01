@@ -7,15 +7,16 @@ VERY Limited macOS support is available.
 
 Installing Java
 ---------------
-PhotonVision requires a JDK installed and on the system path. JDK 11 is needed (different versions will not work). You may already have this if you have installed WPILib. If not, `download and install it from here <https://adoptium.net/temurin/releases?version=11>`_.
+PhotonVision requires a JDK installed and on the system path. JDK 17 is needed (different versions will not work). You may already have this if you have installed WPILib. If not, `download and install it from here <https://adoptium.net/temurin/releases?version=17>`_.
 
-.. warning:: Using a JDK other than JDK11 will cause issues when running PhotonVision and is not supported.
+.. warning:: Using a JDK other than JDK17 will cause issues when running PhotonVision and is not supported.
 
 Downloading the Latest Stable Release of PhotonVision
 -----------------------------------------------------
-Download the latest stable .jar of PhotonVision from the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_.
+Go to the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_ and download the relevant .jar file for your coprocessor. 
 
-.. note:: Be sure not to download the .jar file with "-raspi" at the end as that is specifically meant for Raspberry Pi coprocessors.
+If you have an M1/M2 mac, download the macarm64.jar file.
+If you have an Intel based mac, download the macx64.jar file.
 
 .. warning:: Be careful to pick the latest stable release. "Draft" or "Pre-Release" versions are not stable and often have bugs.
 

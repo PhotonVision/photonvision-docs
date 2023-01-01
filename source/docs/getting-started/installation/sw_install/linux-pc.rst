@@ -4,19 +4,20 @@ PhotonVision may be run on a Debian-based Linux Desktop PC for basic testing and
 
 Installing Java
 ---------------
-PhotonVision requires a JDK installed and on the system path. JDK 11 is needed (different versions will not work). You may already have this if you have installed WPILib. If not, run the following to install it:
+PhotonVision requires a JDK installed and on the system path. JDK 17 is needed (different versions will not work). If you don't have JDK 17 already, run the following to install it:
 
 .. code-block::
 
-    $ sudo apt-get install openjdk-11-jdk
+    $ sudo apt-get install openjdk-17-jdk
 
-.. warning:: Using a JDK other than JDK11 will cause issues when running PhotonVision and is not supported.
+.. warning:: Using a JDK other than JDK17 will cause issues when running PhotonVision and is not supported.
 
 Downloading the Latest Stable Release of PhotonVision
 -----------------------------------------------------
-Download the latest stable .jar of PhotonVision from the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_.
+Go to the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_ and download the relevant .jar file for your coprocessor. 
 
-.. note:: Be sure not to download the .jar file with "-raspi" at the end as that is specifically meant for Raspberry Pi coprocessors.
+If your coprocessor has a 64 bit ARM based CPU architecture (OrangePi, Raspberry Pi, etc.), download the LinuxArm64 .jar file.
+If your coprocessor has an 64 bit x86 based CPU arcitecture (Mini PC, laptop, etc.), download the Linuxx64 .jar file.
 
 .. warning:: Be careful to pick the latest stable release. "Draft" or "Pre-Release" versions are not stable and often have bugs.
 
