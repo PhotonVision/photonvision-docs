@@ -38,7 +38,7 @@ The entire settings directory can be exported as a ZIP archive from the settings
 .. raw:: html
 
     <video width="85%" controls>
-        <source src="../../../_static/assets/import-export-settings.mp4" type="video/mp4">
+        <source src="../../_static/assets/import-export-settings.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 

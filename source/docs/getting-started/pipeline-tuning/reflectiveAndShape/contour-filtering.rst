@@ -22,7 +22,7 @@ Finally, speckle rejection is an algorithm that can discard contours whose area 
 .. raw:: html
 
         <video width="85%" controls>
-            <source src="../../../_static/assets/AreaRatioFullness.mp4" type="video/mp4">
+            <source src="../../../../_static/assets/AreaRatioFullness.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
@@ -74,6 +74,6 @@ Finally, target sort defines how targets are ranked, from "best" to "worst." The
 .. raw:: html
 
         <video width="85%" controls>
-            <source src="../../../_static/assets/groupingSorting.mp4" type="video/mp4">
+            <source src="../../../../_static/assets/groupingSorting.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
