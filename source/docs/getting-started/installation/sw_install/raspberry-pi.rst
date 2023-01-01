@@ -4,7 +4,9 @@ A Pre-Built Raspberry Pi image is available for ease of installation.
 
 Downloading the Pi Image
 ------------------------
-Download the latest release of the PhotonVision Pi image from the `releases page <https://github.com/PhotonVision/photonvision/releases>`_. You do not need to extract the downloaded ZIP file.
+Download the latest release of the PhotonVision Raspberry image from the `releases page <https://github.com/PhotonVision/photonvision/releases>`_. You do not need to extract the downloaded ZIP file.
+
+.. note:: Make sure you download the image that ends in '-raspi' or '-RasberryPi'.
 
 Flashing the Pi Image
 ---------------------
@@ -37,6 +39,6 @@ Once you find it, set the IP to a desired :ref:`static IP in PhotonVision. <docs
 Updating PhotonVision
 ---------------------
 
-Download the latest stable Raspberry Pi .jar (appended with -raspi at the end) from `our releases page <https://github.com/PhotonVision/photonvision/releases>`_, go to the settings tab, and upload the .jar using the Offline Update button.
+Download the latest stable xxxxx-LinuxArm64.jar from `our releases page <https://github.com/PhotonVision/photonvision/releases>`_, go to the settings tab, and upload the .jar using the Offline Update button.
 
 As an alternative option - Export your settings, reimage your coprocessor using the instructions above, and import your settings back in.

@@ -4,17 +4,13 @@ PhotonVision may be run on a Windows Desktop PC for basic testing and evaluation
 
 Installing Java
 ---------------
-PhotonVision requires a JDK installed and on the system path. **JDK 11 is needed** (different versions will not work). You may already have this if you have installed WPILib, but ensure that running ``java -version`` shows JDK 11. If not, `download and install it from here <https://adoptium.net/temurin/releases?version=11>`_ and ensure that the new JDK is being used.
+PhotonVision requires a JDK installed and on the system path. **JDK 17 is needed** (different versions will not work). You may already have this if you have installed WPILib, but ensure that running ``java -version`` shows JDK 17. If not, `download and install it from here <https://adoptium.net/temurin/releases?version=17>`_ and ensure that the new JDK is being used.
 
-.. warning:: Using a JDK other than JDK11 will cause issues when running PhotonVision and is not supported.
+.. warning:: Using a JDK other than JDK17 will cause issues when running PhotonVision and is not supported.
 
 Downloading the Latest Stable Release of PhotonVision
 -----------------------------------------------------
-Download the latest stable .jar of PhotonVision from the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_.
-
-.. note:: Be sure not to download the .jar file with "-raspi" at the end as that is specifically meant for Raspberry Pi coprocessors.
-
-.. warning:: Be careful to pick the latest stable release. "Draft" or "Pre-Release" versions are not stable and often have bugs.
+Go to the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_ and download the winx64.jar file.
 
 Running PhotonVision
 --------------------
@@ -22,7 +18,7 @@ To run PhotonVision, open a terminal window of your choice and run the following
 
 .. code-block::
 
-   > java -jar C:\path\to\photonvision\photonvision-xxx.jar
+   > java -jar C:\path\to\photonvision\NAME OF JAR FILE GOES HERE.jar
 
 If your computer has a compatible webcam connected, PhotonVision should startup without any error messages. If there are error messages, your webcam isn't supported or another issue has occurred. If it is the latter, please open an issue on the `PhotonVision issues page <https://github.com/PhotonVision/photonvision/issues>`_.
 

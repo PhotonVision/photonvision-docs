@@ -31,3 +31,4 @@ Other
    other-coprocessors
    advanced-cmd
    romi
+   orange-pi
