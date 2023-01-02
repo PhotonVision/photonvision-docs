@@ -15,7 +15,7 @@ Pi cameras are always recommended over USB cameras as they have lower latency an
 * `Pi Camera Module V1 <https://www.amazon.com/gp/product/B07ZZ2K7WP>`_ (General Target Tracking)
 
   * The V1 is strongly preferred over the V2 due to the V2 having undesirable FOV choices
-  
+
 * `Innomaker OV9281 Global Shutter Camera <https://www.amazon.com/Raspberry-External-Monochrome-Bullseye-libcamera/dp/B09WTP5GZH>`_ (AprilTag Tracking)
 
 .. note:: Note that there are many CSI based OV9281 cameras but this is the only one that has been tested by the development team.
@@ -45,7 +45,7 @@ Supported Coprocessors
 ----------------------
 * Raspberry Pi 3 / 4, with the newest variants of each being preferred (3B+ and B, respectively).
 * Raspberry Pi 4 is preferred for all forms of target tracking.
-* Orange Pi 4 / 5 will have better performance but will require more work to get working. 
+* Orange Pi 4 / 5 will have better performance but will require more work to get working.
 * Mini PCs (such as Beelink N5095) have been testing and show significantly better performance than a Raspberry Pi, but require extra effort to wire to the robot / get set up. More information can be found in the set up guide `here. <https://docs.google.com/document/d/1lOSzG8iNE43cK-PgJDDzbwtf6ASyf4vbW8lQuFswxzw/edit?usp=drivesdk>`_
 * Other coprocessors can be used but may require some extra work / command line usage in order to get it working properly.
 
