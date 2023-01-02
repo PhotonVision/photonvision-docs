@@ -5,21 +5,26 @@ PhotonVision is developed and tested on a number of Commercial, Off-the-Shelf (C
 
 Supported Cameras
 -----------------
+
 PhotonVision works with Pi Cameras and most USB Cameras, the recommendations below are known to be working and have been tested. Other cameras such as webcams, virtual cameras, etc. are not officially supported and may not work. It is important to note that fisheye cameras should only be used as a driver camera and not for detecting targets.
 
 PhotonVision relies on `CSCore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ to detect and process cameras, so camera support is determined based off compatibility with CScore along with native support for the camera within your OS (ex. `V4L compatibility <https://en.wikipedia.org/wiki/Video4Linux>`_ if using a Linux machine like a Raspberry Pi).
 
 Pi cameras are always recommended over USB cameras as they have lower latency and better performance compared to your average USB Camera.
 
-* `Pi Camera Module V1 <https://www.amazon.com/gp/product/B07ZZ2K7WP>`_ (Target Tracking)
+* `Pi Camera Module V1 <https://www.amazon.com/gp/product/B07ZZ2K7WP>`_ (General Target Tracking)
 
   * The V1 is strongly preferred over the V2 due to the V2 having undesirable FOV choices
+  
+* `Innomaker OV9281 Global Shutter Camera <https://www.amazon.com/Raspberry-External-Monochrome-Bullseye-libcamera/dp/B09WTP5GZH>`_ (AprilTag Tracking)
 
-* `Pi Camera Module V2 <https://www.amazon.com/Official-Raspberry-Pi-8-megapixel-XYGStudy/dp/B01G01JJJ0>`_ (Target Tracking)
+.. note:: Note that there are many CSI based OV9281 cameras but this is the only one that has been tested by the development team.
 
-* `Microsoft LifeCam HD-3000 <https://www.andymark.com/products/microsoft-lifecam-hd-3000-camera>`_ (Target Tracking)
+* `Arducam USB OV9281 Global Shutter Camera <https://www.amazon.com/Arducam-Distortion-Microphones-Computer-Raspberry/dp/B096M5DKY6>`_ (AprilTag Tracking)
 
-* `720p ELP Camera <https://www.amazon.com/SVPRO-Camera-Module-100degree-Distortion/dp/B07C1KYBYC>`_ (Target Tracking)
+* `720p ELP Camera <https://www.amazon.com/SVPRO-Camera-Module-100degree-Distortion/dp/B07C1KYBYC>`_ (Retroreflective Target Tracking)
+
+* `Microsoft LifeCam HD-3000 <https://www.andymark.com/products/microsoft-lifecam-hd-3000-camera>`_ (Driver Camera)
 
 * `720p Fisheye ELP Camera <https://www.amazon.com/ELP-Camera-170degree-Megapixel-Security/dp/B00VTINRMK/>`_ (Driver Camera)
 
@@ -38,8 +43,8 @@ Pi cameras are always recommended over USB cameras as they have lower latency an
 Supported Coprocessors
 ----------------------
 * Raspberry Pi 3 / 4, with the newest variants of each being preferred (3B+ and B, respectively).
-* Raspberry Pi 4 is preferred for **AprilTag or Colored Shape tracking** due to its faster processor; the new libcamera driver provides GPU acceleration for both Pi 3 and 4.
-* Raspberry Pi 3 works well for retroreflective tracking, but lags behind the Pi 4 with AprilTag or Colored shape.
+* Raspberry Pi 4 is preferred for all forms of target tracking.
+* Orange Pi 4 / 5 will have better performance but will require more work to get working. 
 * Mini PCs (such as Beelink N5095) have been testing and show significantly better performance than a Raspberry Pi, but require extra effort to wire to the robot / get set up. More information can be found in the set up guide `here. <https://docs.google.com/document/d/1lOSzG8iNE43cK-PgJDDzbwtf6ASyf4vbW8lQuFswxzw/edit?usp=drivesdk>`_
 * Other coprocessors can be used but may require some extra work / command line usage in order to get it working properly.
 
