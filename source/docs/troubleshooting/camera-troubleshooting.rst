@@ -39,7 +39,7 @@ Determining detected cameras in Video4Linux (v4l2)
 On Linux devices (including Raspberry Pi), PhotonVision uses WPILib's CSCore to interact with video devices, which internally uses Video4Linux (v4l2). CSCore, and therefore Photon, requires that cameras attached have good v4l drivers for proper functionality. These should be built into the Linux kernel, and do not need to be installed manually. Valid picamera setup (from /boot/config.txt) can also be determined using these steps. The list-devices command will show all valid video devices detected, and list-formats the list of "video modes" each camera can be in.
 
 - For picams: edit the config.txt file as described in the :ref:`picam configuration page <docs/hardware/picamconfig:pi camera configuration>`
-- SSH into your Pi: :code:`ssh pi@photonvision.local` and enter the username "pi"/password "raspberry"
+- SSH into your Pi: :code:`ssh pi@photonvision.local` and enter the username "pi" & password "raspberry"
 - run :code:`v4l2-ctl --list-devices` and :code:`v4l2-ctl --list-formats`
 
 We expect an output similar to the following. For picameras, note the "unicam" entry with path :code:`platform:3f801000.csi` (if we don't see this, that's bad), and a huge list of valid video formats. USB cameras should show up similarly in the output of these commands.
