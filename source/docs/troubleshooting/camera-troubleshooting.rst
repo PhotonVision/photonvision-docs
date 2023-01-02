@@ -23,7 +23,7 @@ If the camera is not detected, the most likely cause is either a config.txt file
 USB cameras
 -----------
 
-USB cameras supported by CSCore require no libcamera driver initialization to work -- however, similar troubleshooting steps apply. Restart PhotonVision using the restart button in the settings tab, and press tilde (\`) in the web UI once connection is restored. We expect to see the following output:
+USB cameras supported by CSCore require no libcamera driver initialization to work -- however, similar troubleshooting steps apply. Restart PhotonVision using the restart button in the settings tab, and press tilde on your keyboard (\`) when you're in the web UI once connection is restored. We expect to see the following output:
 
 +----------------------------------+--------------------------------------------------------+------------------------------------+
 |                                  | Expected output                                        | Bad                                |
