@@ -47,13 +47,13 @@ We expect an output similar to the following. For picameras, note the "unicam" e
 .. tab-set::
   .. tab-item:: Working
 
-        .. code-block:: 
-            
+        .. code-block::
+
             pi@photonvision:~ $ v4l2-ctl --list-devices
             unicam (platform:3f801000.csi):
                 /dev/video0
                 /dev/media3
-        
+
             bcm2835-codec-decode (platform:bcm2835-codec):
                 /dev/video10
                 /dev/video11
@@ -61,7 +61,7 @@ We expect an output similar to the following. For picameras, note the "unicam" e
                 /dev/video18
                 /dev/video31
                 /dev/media2
-        
+
             bcm2835-isp (platform:bcm2835-isp):
                 /dev/video13
                 /dev/video14
@@ -73,7 +73,7 @@ We expect an output similar to the following. For picameras, note the "unicam" e
                 /dev/video23
                 /dev/media0
                 /dev/media1
-        
+
             pi@photonvision:~ $ v4l2-ctl --list-formats
             ioctl: VIDIOC_ENUM_FMT
             Type: Video Capture
@@ -90,7 +90,7 @@ We expect an output similar to the following. For picameras, note the "unicam" e
 
   .. tab-item:: Not Working
 
-        .. code-block:: 
+        .. code-block::
 
             pi@photonvision:~ $ v4l2-ctl --list-devices
             bcm2835-codec-decode (platform:bcm2835-codec):
