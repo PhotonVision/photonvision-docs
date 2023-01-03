@@ -27,9 +27,9 @@ Ensure that you have followed :ref:`all the recommendations in the networking se
 
 Camera won't show up
 ^^^^^^^^^^^^^^^^^^^^
-If you are using a Pi camera, contact us using the link above. Pi cameras should work just out of the box, meaning there is a bigger issue.
+Try these steps to :ref:`troubleshoot your camera connection <docs/troubleshooting/camera-troubleshooting:Camera Troubleshooting>`.
 
-If you are using a USB camera, it is possible your USB Camera isn't supported  by CSCore and therefore won't work with PhotonVision. See :ref:`supported hardware page for more information <docs/hardware/supportedhardware:Supported Cameras>`.
+If you are using a USB camera, it is possible your USB Camera isn't supported by CSCore and therefore won't work with PhotonVision. See :ref:`supported hardware page for more information <docs/hardware/supportedhardware:Supported Cameras>`, or the above Camera Troubleshooting page for more information on determining this locally.
 
 Camera is consistently returning incorrect values when in 3D mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

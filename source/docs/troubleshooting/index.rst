@@ -6,3 +6,4 @@ Troubleshooting
 
    common-errors
    logging
+   camera-troubleshooting
