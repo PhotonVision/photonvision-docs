@@ -7,7 +7,7 @@ PhotonLib includes a ``RobotPoseEstimator`` class, which allows you to combine t
 
 Creating an ``AprilTagFieldLayout``
 -----------------------------------
-``AprilTagFieldLayout`` is used to represent a layout of AprilTags within a space (field, shop at home, classroom, etc.). WPILib provides a JSON that describes the layout of AprilTags on the field which you can then use in the AprilTagFieldLayout constructor. You can also specify a custom layout. 
+``AprilTagFieldLayout`` is used to represent a layout of AprilTags within a space (field, shop at home, classroom, etc.). WPILib provides a JSON that describes the layout of AprilTags on the field which you can then use in the AprilTagFieldLayout constructor. You can also specify a custom layout.
 
 The API documentation can be found in here: `Java <https://github.wpilib.org/allwpilib/docs/beta/java/edu/wpi/first/apriltag/AprilTagFieldLayout.html>`_ and `C++ <https://github.wpilib.org/allwpilib/docs/beta/cpp/classfrc_1_1_april_tag_field_layout.html>`_.
 
@@ -38,13 +38,13 @@ The RobotPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (
 
 .. tab-set-code::
    .. code-block:: java
-      
+
       //Forward Camera
       cam = new PhotonCamera("testCamera");
       Transform3d robotToCam = new Transform3d(new Translation3d(0.5, 0.0, 0.5), new Rotation3d(0,0,0)); //Cam mounted facing forward, half a meter forward of center, half a meter up from center.
-      
+
       // ... Add other cameras here
-      
+
       // Assemble the list of cameras & mount locations
       var camList = new ArrayList<Pair<PhotonCamera, Transform3d>>();
       camList.add(new Pair<PhotonCamera, Transform3d>(cam, robotToCam));
