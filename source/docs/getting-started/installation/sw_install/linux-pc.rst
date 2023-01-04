@@ -4,13 +4,13 @@ PhotonVision may be run on a Debian-based Linux Desktop PC for basic testing and
 
 Installing Java
 ---------------
-PhotonVision requires a JDK installed and on the system path. JDK 17 is needed (different versions will not work). If you don't have JDK 17 already, run the following to install it:
+PhotonVision requires a JDK installed and on the system path. JDK 11 is needed (different versions will not work). If you don't have JDK 11 already, run the following to install it:
 
 .. code-block::
 
-    $ sudo apt-get install openjdk-17-jdk
+    $ sudo apt-get install openjdk-11-jdk
 
-.. warning:: Using a JDK other than JDK17 will cause issues when running PhotonVision and is not supported.
+.. warning:: Using a JDK other than JDK11 will cause issues when running PhotonVision and is not supported.
 
 Downloading the Latest Stable Release of PhotonVision
 -----------------------------------------------------
