@@ -19,7 +19,15 @@ The API documentation can be found in here: `Java <https://github.wpilib.org/all
 
    .. code-block:: c++
 
-      //TODO
+      // Two example tags in our layout -- ID 0 at (3, 3) and 0 rotation, and
+      // id 1 and (5, 5) and 0 rotation.
+      std::vector<frc::AprilTag> tags = {
+          {0, frc::Pose3d(units::meter_t(3), units::meter_t(3), units::meter_t(3),
+                          frc::Rotation3d())},
+          {1, frc::Pose3d(units::meter_t(5), units::meter_t(5), units::meter_t(5),
+                          frc::Rotation3d())}};
+      std::shared_ptr<frc::AprilTagFieldLayout> aprilTags =
+          std::make_shared<frc::AprilTagFieldLayout>(tags, 54_ft, 27_ft);
 
 Creating a ``RobotPoseEstimator``
 ---------------------------------
@@ -52,7 +60,25 @@ The RobotPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (
 
    .. code-block:: c++
 
-      //TODO
+      // Forward Camera
+      std::shared_ptr<photonlib::PhotonCamera> cameraOne =
+          std::make_shared<photonlib::PhotonCamera>("testCamera");
+      // Camera is mounted facing forward, half a meter forward of center, half a
+      // meter up from center.
+      frc::Transform3d robotToCam =
+          frc::Transform3d(frc::Translation3d(0.5_m, 0_m, 0.5_m),
+                          frc::Rotation3d(0_rad, 0_rad, 0_rad));
+
+      // ... Add other cameras here
+
+      // Assemble the list of cameras & mount locations
+      std::vector<
+          std::pair<std::shared_ptr<photonlib::PhotonCamera>, frc::Transform3d>>
+          cameras;
+      cameras.push_back(std::make_pair(cameraOne, robotToCam));
+
+      photonlib::RobotPoseEstimator estimator(
+          aprilTags, photonlib::CLOSEST_TO_REFERENCE_POSE, cameras);
 
 Using a ``RobotPoseEstimator``
 ------------------------------
@@ -61,20 +87,31 @@ Calling ``update()`` on your ``RobotPoseEstimator`` will return a ``Pair<Pose3d,
 .. tab-set-code::
    .. code-block:: java
 
-        public Pair<Pose2d, Double> getEstimatedGlobalPose(Pose2d prevEstimatedRobotPose) {
-            robotPoseEstimator.setReferencePose(prevEstimatedRobotPose);
-            var currentTime = Timer.getFPGATimestamp();
-            var result = robotPoseEstimator.update();
-            if(result.getFirst() != null){
-               return new Pair<Pose2d, Double>(result.getFirst().toPose2d(), currTime - result.getSecond());
-            } else {
-               return new Pair<Pose2d, Double>(null, 0.0);
-            }
-         }
+       public Pair<Pose2d, Double> getEstimatedGlobalPose(Pose3d prevEstimatedRobotPose) {
+          robotPoseEstimator.setReferencePose(prevEstimatedRobotPose);
+          var currentTime = Timer.getFPGATimestamp();
+          var result = robotPoseEstimator.update();
+          if(result.getFirst() != null){
+             return new Pair<Pose2d, Double>(result.getFirst().toPose2d(), currentTime - result.getSecond());
+          } else {
+             return new Pair<Pose2d, Double>(null, 0.0);
+          }
+       }
 
    .. code-block:: c++
 
-      //TODO
+      std::pair<frc::Pose2d, units::millisecond_t> getEstimatedGlobalPose(
+          frc::Pose3d prevEstimatedRobotPose) {
+        robotPoseEstimator.SetReferencePose(prevEstimatedRobotPose);
+        units::millisecond_t currentTime = frc::Timer::GetFPGATimestamp();
+        auto result = robotPoseEstimator.Update();
+        if (result.second) {
+          return std::make_pair<>(result.first.ToPose2d(),
+                                  currentTime - result.second);
+        } else {
+          return std::make_pair(frc::Pose2d(), 0_ms);
+        }
+      }
 
 Additional ``RobotPoseEstimator`` Methods
 -----------------------------------------
