@@ -13,7 +13,7 @@ PhotonVision requires a JDK installed and on the system path. JDK 11 is needed (
 
 Downloading the Latest Stable Release of PhotonVision
 -----------------------------------------------------
-Go to the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_ and download the relevant .jar file for your coprocessor. 
+Go to the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_ and download the relevant .jar file for your coprocessor.
 
 .. note::
    If you have an M1/M2 Mac, download the macarm64.jar file.

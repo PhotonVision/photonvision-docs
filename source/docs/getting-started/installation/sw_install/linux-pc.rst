@@ -14,11 +14,11 @@ PhotonVision requires a JDK installed and on the system path. JDK 11 is needed (
 
 Downloading the Latest Stable Release of PhotonVision
 -----------------------------------------------------
-Go to the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_ and download the relevant .jar file for your coprocessor. 
+Go to the `GitHub releases page <https://github.com/PhotonVision/photonvision/releases>`_ and download the relevant .jar file for your coprocessor.
 
 .. note::
     If your coprocessor has a 64 bit ARM based CPU architecture (OrangePi, Raspberry Pi, etc.), download the LinuxArm64.jar file.
-    
+
     If your coprocessor has an 64 bit x86 based CPU arcitecture (Mini PC, laptop, etc.), download the Linuxx64.jar file.
 
 
