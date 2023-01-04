@@ -14,7 +14,7 @@ The API documentation can be found in here: `Java <https://github.wpilib.org/all
 .. tab-set-code::
    .. code-block:: java
 
-      // the parameter for loadFromResource() will be different depending on the game. 
+      // The parameter for loadFromResource() will be different depending on the game.
       AprilTagFieldLayout aprilTagFieldLayout = new ApriltagFieldLayout(AprilTagFieldLayout.loadFromResource(AprilTagFields.k2022RapidReact.m_resourceFile));
 
    .. code-block:: c++
