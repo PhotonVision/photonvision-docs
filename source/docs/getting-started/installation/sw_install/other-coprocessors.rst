@@ -26,14 +26,11 @@ Updating PhotonVision
 
 PhotonVision can be updated by stopping the service, copying in the updated jar, and restarting the service.
 
-For example, from another Linux computer, run the following:
+For example, from another computer, run the following commands. Substitute the correct username for "[user]" (e.g. Raspberry Pi uses "pi", Orange Pi uses "orangepi".)
 
 .. code-block:: bash
 
-   $ scp [jar name].jar pi@photonvision.local:~/
-   $ ssh pi@photonvision.local
-   $ sudo systemctl stop photonvision.service
+   $ scp [jar name].jar [user]@photonvision.local:~/
+   $ ssh [user]@photonvision.local
    $ sudo mv [jar name].jar /opt/photonvision/photonvision.jar
-   $ sudo systemctl start photonvision.service
-
-
+   $ sudo systemctl restart photonvision.service
