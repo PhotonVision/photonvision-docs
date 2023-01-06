@@ -5,6 +5,9 @@ Other Debian-Based Co-Processor Installation
 
 .. note:: We'd love to have your input! If you get PhotonVision working on another coprocessor, consider documenting your steps and submitting a `docs issue <https://github.com/PhotonVision/photonvision-docs/issues>`_., `pull request <https://github.com/PhotonVision/photonvision-docs/pulls>`_ , or `ping us on Discord <https://discord.com/invite/wYxTwym>`_. For example, Limelight and Romi install instructions came about because someone spent the time to figure it out, and did a writeup.
 
+Installing PhotonVision
+-----------------------
+
 We provide an `install script <https://git.io/JJrEP>`_ for other Debian-based systems (with ``apt``) that will automatically install PhotonVision and make sure that it runs on startup.
 
 .. code-block:: bash
@@ -32,3 +35,5 @@ For example, from another Linux computer, run the following:
    $ sudo systemctl stop photonvision.service
    $ sudo mv [jar name].jar /opt/photonvision/photonvision.jar
    $ sudo systemctl start photonvision.service
+
+

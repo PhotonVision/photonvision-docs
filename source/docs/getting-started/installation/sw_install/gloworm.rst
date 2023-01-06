@@ -40,7 +40,7 @@ Updating PhotonVision
 ---------------------
 Download the latest stable .jar from `the releases page <https://github.com/PhotonVision/photonvision/releases>`_, go to the settings tab, and upload the .jar using the Offline Update button.
 
-.. note:: If you are updating PhotonVision on a Raspberry Pi, download the .jar file that has "raspi" in the name. Otherwise, download the .jar file without "raspi" in the name.
+.. note:: If you are updating PhotonVision on a Gloworm/Limelight, download the LinuxArm64 .jar file.
 
 As an alternative option - Export your settings, reimage your coprocessor using the instructions above, and import your settings back in.
 
