@@ -5,6 +5,7 @@ Hardware
    :maxdepth: 2
 
    supportedhardware
+   picamconfig
    customhardware
    config
    Settings

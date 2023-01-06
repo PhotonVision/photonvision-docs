@@ -1,5 +1,5 @@
-Installation
-============
+Software Installation
+=====================
 
 Supported Coprocessors
 ----------------------
@@ -31,3 +31,4 @@ Other
    other-coprocessors
    advanced-cmd
    romi
+   orange-pi

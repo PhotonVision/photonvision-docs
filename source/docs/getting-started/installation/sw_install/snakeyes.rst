@@ -1,13 +1,13 @@
-Raspberry Pi Installation
-=========================
-A Pre-Built Raspberry Pi image is available for ease of installation.
+SnakeEyes Installation
+======================
+A Pre-Built Raspberry Pi image with configuration for `the SnakeEyes Raspberry Pi Hat <https://www.playingwithfusion.com/productview.php?pdid=133&catid=1014>`_ is available for ease of setup.
 
-Downloading the Pi Image
-------------------------
-Download the latest release of the PhotonVision Pi image from the `releases page <https://github.com/PhotonVision/photonvision/releases>`_. You do not need to extract the downloaded ZIP file.
+Downloading the SnakeEyes Image
+-------------------------------
+Download the latest release of the SnakeEyes-specific PhotonVision Pi image from the `releases page <https://github.com/PlayingWithFusion/SnakeEyesDocs/releases>`_. You do not need to extract the downloaded ZIP file.
 
-Flashing the Pi Image
----------------------
+Flashing the SnakeEyes Image
+----------------------------
 An 8GB or larger card is recommended.
 
 Use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto a Raspberry Pi. Select the downloaded ``.zip`` file, select your microSD card, and flash.
@@ -33,8 +33,20 @@ Download and run `Angry IP Scanner <https://angryip.org/download/#windows>`_ to 
 Once you find it, set the IP to a desired :ref:`static IP in PhotonVision. <docs/hardware/Settings:Networking>`
 
 Updating PhotonVision
----------------------
-
-Download the latest stable Raspberry Pi .jar (appended with -raspi at the end) from `our releases page <https://github.com/PhotonVision/photonvision/releases>`_, go to the settings tab, and upload the .jar using the Offline Update button.
+----------------------
+Download the latest xxxxx-LinuxArm64.jar from `our releases page <https://github.com/PhotonVision/photonvision/releases>`_, go to the settings tab, and upload the .jar using the Offline Update button.
 
 As an alternative option - Export your settings, reimage your coprocessor using the instructions above, and import your settings back in.
+
+Hardware Troubleshooting
+------------------------
+To turn the LED lights off or on you need to modify the ``ledMode`` network tables entry or the ``camera.setLED`` of PhotonLib.
+
+Support Links
+-------------
+
+* `Website <https://www.playingwithfusion.com/productview.php?pdid=133>`__
+
+* `Image <https://github.com/PlayingWithFusion/SnakeEyesDocs/releases/latest>`__
+
+* `Documentation <https://github.com/PlayingWithFusion/SnakeEyesDocs/blob/master/PhotonVision/readme.md>`__
