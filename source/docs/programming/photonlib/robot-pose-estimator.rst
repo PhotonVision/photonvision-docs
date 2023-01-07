@@ -87,16 +87,17 @@ Calling ``update()`` on your ``RobotPoseEstimator`` will return a ``Pair<Pose3d,
 .. tab-set-code::
    .. code-block:: java
 
-       public Pair<Pose2d, Double> getEstimatedGlobalPose(Pose3d prevEstimatedRobotPose) {
-          robotPoseEstimator.setReferencePose(prevEstimatedRobotPose);
-          var currentTime = Timer.getFPGATimestamp();
-          var result = robotPoseEstimator.update();
-          if(result.getFirst() != null){
-             return new Pair<Pose2d, Double>(result.getFirst().toPose2d(), currentTime - result.getSecond());
-          } else {
-             return new Pair<Pose2d, Double>(null, 0.0);
-          }
-       }
+        public Pair<Pose2d, Double> getEstimatedGlobalPose(Pose2d prevEstimatedRobotPose) {
+            robotPoseEstimator.setReferencePose(prevEstimatedRobotPose);
+
+            double currentTime = Timer.getFPGATimestamp();
+            Optional<Pair<Pose3d, Double>> result = robotPoseEstimator.update();
+            if (result.isPresent()) {
+                return new Pair<Pose2d, Double>(result.get().getFirst().toPose2d(), currentTime - result.get().getSecond());
+            } else {
+                return new Pair<Pose2d, Double>(null, 0.0);
+            }
+    }
 
    .. code-block:: c++
 
