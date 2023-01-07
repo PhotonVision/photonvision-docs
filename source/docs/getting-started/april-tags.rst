@@ -28,4 +28,4 @@ Getting Started With AprilTags
 
 4. Read the :ref:`PhotonLib documentation<docs/programming/photonlib/getting-target-data:Getting AprilTag Data From A Target>` on how to use AprilTag data in your code.
 
-5. Read the :ref:`example code<docs/examples/apriltag:Code>` on a fully featured example on different ways to use AprilTags.
+5. Read the :ref:`example code<docs/examples/apriltag:Knowledge and Equipment Needed>` on a fully featured example on different ways to use AprilTags.
