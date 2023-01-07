@@ -16,4 +16,5 @@ This is example will show how to use AprilTags for full field robot localization
 
 All PhotonVision specific code is in ``PhotonCameraWrapper.java`` and the relevant pose estimation parts are in ``DriveTrain.java.``
 
-Please note that this code does not support simulation in the traditional sense (properly simulating each target that can be detected within sim), but you can still see the pose the camera is returning from the tags using Glass / Field2d when you are running PhotonVision on a robot. Make sure you properly set your ip/hostname in ``Robot.java`` when doing this.  
+Please note that this code does not support simulation in the traditional sense (properly simulating each target that can be detected within sim), but you can still see the pose the camera is returning from the tags using Glass / Field2d when you are running PhotonVision on a robot. Make sure you properly set your ip/hostname in ``Robot.java`` when doing this.
+ 
