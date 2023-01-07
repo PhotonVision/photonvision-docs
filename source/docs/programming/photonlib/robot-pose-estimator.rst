@@ -97,7 +97,7 @@ Calling ``update()`` on your ``RobotPoseEstimator`` will return a ``Pair<Pose3d,
             } else {
                 return new Pair<Pose2d, Double>(null, 0.0);
             }
-    }
+        }
 
    .. code-block:: c++
 
