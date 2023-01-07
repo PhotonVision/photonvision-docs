@@ -23,7 +23,7 @@ In this example, while the operator holds a button down, the robot will turn tow
 
     .. tab-item:: Java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/aimattarget/Robot.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/aimattarget/src/main/java/frc/robot/Robot.java
          :language: java
          :lines: 41-98
          :linenos:
@@ -31,7 +31,7 @@ In this example, while the operator holds a button down, the robot will turn tow
 
     .. tab-item:: C++ (Header)
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-cpp-examples/aimattarget/src/main/include/Robot.h
          :language: c++
          :lines: 27-53
          :linenos:
@@ -39,7 +39,7 @@ In this example, while the operator holds a button down, the robot will turn tow
 
     .. tab-item:: C++ (Source)
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-cpp-examples/aimattarget/src/main/cpp/Robot.cpp
          :language: c++
          :lines: 25-52
          :linenos:
