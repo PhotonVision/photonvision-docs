@@ -9,7 +9,7 @@ About
 API
 ^^^
 
-More advanced users may want to create their own NetworkTables entries to retrieve data instead of using :ref:`PhotonLib <docs/programming/photonlib/index:PhotonLib: Robot Code Interface>`. However, it is recommended for most users to use PhotonLib as it simplifies the user code experience.
+.. warning:: NetworkTables is not a supported setup/viable option when using PhotonVision as we only send one target at a time (this is problematic when using AprilTags, which will return data from multiple tags at once). We reccomend using PhotonLib.
 
 The tables below contain the the name of the key for each entry that PhotonVision sends over the network and a short description of the key. The entries should be extracted from a subtable with your camera's nickname (visible in the PhotonVision UI) under the main ``photonvision`` table.
 
