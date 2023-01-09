@@ -36,12 +36,6 @@ First, in the main :code:`Robot` source file, we add support to periodically upd
       :linenos:
       :lineno-start: 118
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/Robot.cpp
-      :language: c++
-      :lines: 72
-      :linenos:
-      :lineno-start: 72
-
 Then, we add in the implementation of our new `DrivetrainSim` class. Please reference the `WPILib documentation on physics simulation <https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robot-simulation/physics-sim.html>`_.
 
 Simulated Vision support is added with the following steps:
@@ -90,8 +84,7 @@ Once we have all the properties of our simulated vision system defined, the work
 
 .. tab-set-code::
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
-      :language: java
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
       :lines: 124-142
       :linenos:
       :lineno-start: 122

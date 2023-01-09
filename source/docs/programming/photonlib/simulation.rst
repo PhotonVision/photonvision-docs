@@ -38,37 +38,26 @@ It requires a number of pieces of configuration to accurately simulate your phys
 
 .. tab-set-code::
 
-     .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+     .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/80e16ece87c735e30755dea271a56a2ce217b588/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
         :language: java
-        :lines: 72-93
+        :lines: 73-93
 
-     .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
-        :language: c++
-        :lines: 78-92
 
 After declaring the system, you should create and add one ``SimVisionTarget`` per target on the field you are attempting to detect.
 
 .. tab-set-code::
 
-      .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+      .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/80e16ece87c735e30755dea271a56a2ce217b588/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
         :language: java
-        :lines: 95-116
-
-      .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
-        :language: c++
-        :lines: 94-109, 45-49
+        :lines: 95-111
 
 Finally, while running the simulation, process simulated camera frames by providing the robot's pose to the system.
 
 .. tab-set-code::
 
-      .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+      .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/80e16ece87c735e30755dea271a56a2ce217b588/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
          :language: java
-         :lines: 136-137
-
-      .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/sim/DrivetrainSim.cpp
-         :language: c++
-         :lines: 46-47
+         :lines: 138-139
 
 This will cause most NetworkTables fields to update properly, representing any targets that are in view of the robot.
 
@@ -98,26 +87,6 @@ A ``SimPhotonCamera`` can be created for this purpose. It provides an interface 
             ArrayList<PhotonTrackedTarget> visibleTgtList = new ArrayList<PhotonTrackedTarget>();
             visibleTgtList.add(new PhotonTrackedTarget(yawDegrees, pitchDegrees, area, skew, camToTargetTrans)); // Repeat for each target that you see
             cam.submitProcessedFrame(0.0, visibleTgtList);
-            //  ...
-        }
-
-   .. code-block:: c++
-
-        #include "photonlib/SimPhotonCamera.h"
-
-        //  ...
-
-        void Robot::SimulationInit(){
-            //  ...
-            cam = SimPhotonCamera("MyCamera");
-            //  ...
-        }
-
-        void Robot::SimulationPeriodic(){
-            //  ...
-            std::vector<PhotonTrackedTarget> visibleTgtList = {};
-            visibleTgtList.push_back(PhotonTrackedTarget(yawAngle, pitchAngle, area, 0.0, camToTargetTrans));
-            cam.SubmitProcessedFrame(0_sec, wpi::MutableArrayRef<PhotonTrackedTarget>(visibleTgtList));
             //  ...
         }
 
