@@ -1,21 +1,19 @@
 Using AprilTags for Pose Estimation
 ===================================
 
-This is example will show how to use AprilTags for full field robot localization using ``RobotPoseEstimator`` and the WPILib Pose Estimation classes.
+The following example is from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/apriltagExample>`_).
 
-Code
-----
 
-.. tab-set::
+Knowledge and Equipment Needed
+------------------------------
 
-    .. tab-item:: Java
+- Everything required in :ref:`Aiming at a Target <docs/examples/aimingatatarget:Knowledge and Equipment Needed>`.
+- Large space where your robot can move around freely
+- An open space with properly mounted 16h5 AprilTags
+- PhotonVision running on your laptop or a coprocessor
 
-       // Coming soon! (before 2023 season)
+This is example will show how to use AprilTags for full field robot localization using ``RobotPoseEstimator``, ``AprilTagFieldLayout``, and the WPILib Pose Estimaton Classes.
 
-    .. tab-item:: C++ (Header)
+All PhotonVision specific code is in ``PhotonCameraWrapper.java`` and the relevant pose estimation parts are in ``DriveTrain.java.``
 
-       // Coming soon! (before 2023 season)
-
-    .. tab-item:: C++ (Source)
-
-       // Coming soon! (before 2023 season)
+Please note that this code does not support simulation in the traditional sense (properly simulating each target that can be detected within sim), but you can still see the pose the camera is returning from the tags using Glass / Field2d when you are running PhotonVision on a robot. Make sure you properly set your ip/hostname in ``Robot.java`` when doing this.
