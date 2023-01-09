@@ -3,7 +3,7 @@ AprilTags and RobotPoseEstimator
 
 .. note:: For more information on how to methods to get AprilTag data, look :ref:`here <docs/programming/photonlib/getting-target-data:Getting AprilTag Data From A Target>`.
 
-PhotonLib includes a ``RobotPoseEstimator`` class, which allows you to combine the pose data from all tags in view in order to get one final pose using different strategies.
+PhotonLib includes a ``RobotPoseEstimator`` class, which allows you to combine the pose data from all tags in view in order to get a field relative pose.
 
 Creating an ``AprilTagFieldLayout``
 -----------------------------------
@@ -34,15 +34,15 @@ Creating a ``RobotPoseEstimator``
 The RobotPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (see above), ``PoseStrategy``, and ``ArrayList<Pair<PhotonCamera, Transform3d>>``. ``PoseStrategy`` has five possible values:
 
 * LOWEST_AMBIGUITY
-    * Choose the Pose with the lowest ambiguity
+    * Choose the Pose with the lowest ambiguity.
 * CLOSEST_TO_CAMERA_HEIGHT
-    * Choose the Pose which is closest to the camera height
+    * Choose the Pose which is closest to the camera height.
 * CLOSEST_TO_REFERENCE_POSE
-    * Choose the Pose which is closest to the camera height
+    * Choose the Pose which is closest to the pose from setReferencePose().
 * CLOSEST_TO_LAST_POSE
-    * Choose the Pose which is closest to the last pose calculated
+    * Choose the Pose which is closest to the last pose calculated.
 * AVERAGE_BEST_TARGETS
-    * Choose the Pose which is the average of all the poses from each tag
+    * Choose the Pose which is the average of all the poses from each tag.
 
 .. tab-set-code::
    .. code-block:: java
