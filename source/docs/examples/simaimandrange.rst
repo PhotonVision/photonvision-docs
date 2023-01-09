@@ -85,6 +85,7 @@ Once we have all the properties of our simulated vision system defined, the work
 .. tab-set-code::
 
     .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
+      :language: java
       :lines: 124-142
       :linenos:
       :lineno-start: 122

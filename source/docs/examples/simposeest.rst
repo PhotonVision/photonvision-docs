@@ -86,7 +86,7 @@ First, we create a new :code:`SimVisionSystem` to represent our camera and copro
     .. tab-item:: Java
        :sync: java
 
-       .. rli::https://raw.githubusercontent.com/PhotonVision/photonvision/80e16ece87c735e30755dea271a56a2ce217b588/photonlib-java-examples/simposeest/src/main/java/frc/robot/DrivetrainSim.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/80e16ece87c735e30755dea271a56a2ce217b588/photonlib-java-examples/simposeest/src/main/java/frc/robot/DrivetrainSim.java
          :language: java
          :lines: 76-95
          :linenos:
