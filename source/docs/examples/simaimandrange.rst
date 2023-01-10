@@ -30,17 +30,11 @@ First, in the main :code:`Robot` source file, we add support to periodically upd
 
 .. tab-set-code::
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/Robot.java
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/Robot.java
       :language: java
       :lines: 118-128
       :linenos:
       :lineno-start: 118
-
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/Robot.cpp
-      :language: c++
-      :lines: 72
-      :linenos:
-      :lineno-start: 72
 
 Then, we add in the implementation of our new `DrivetrainSim` class. Please reference the `WPILib documentation on physics simulation <https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robot-simulation/physics-sim.html>`_.
 
@@ -53,50 +47,32 @@ First, we create a new :code:`SimVisionSystem` to represent our camera and copro
 
 .. tab-set-code::
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
       :language: java
-      :lines: 72-93
+      :lines: 73-93
       :linenos:
       :lineno-start: 72
-
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
-      :language: c++
-      :lines: 78-92
-      :linenos:
-      :lineno-start: 78
-
 
 Next, we create objects to represent the physical location and size of the vision targets we are calibrated to detect. This example models the down-field high goal vision target from the 2020 and 2021 games.
 
 .. tab-set-code::
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
       :language: java
-      :lines: 95-108
+      :lines: 95-111
       :linenos:
       :lineno-start: 95
-
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
-      :language: c++
-      :lines: 94-109
-      :linenos:
-      :lineno-start: 94
 
 Finally, we add our target to the simulated vision system.
 
 .. tab-set-code::
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
       :language: java
-      :lines: 113-114
+      :lines: 116-117
       :linenos:
       :lineno-start: 113
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/include/DrivetrainSim.h
-      :language: c++
-      :lines: 45-49
-      :linenos:
-      :lineno-start: 45
 
 If you have additional targets you want to detect, you can add them in the same way as the first one.
 
@@ -108,16 +84,11 @@ Once we have all the properties of our simulated vision system defined, the work
 
 .. tab-set-code::
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange/sim/DrivetrainSim.java
+    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
       :language: java
-      :lines: 122-140
+      :lines: 124-142
       :linenos:
       :lineno-start: 122
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange/cpp/sim/DrivetrainSim.cpp
-      :language: c++
-      :lines: 31-50
-      :linenos:
-      :lineno-start: 31
 
 The rest is done behind the scenes.
