@@ -3,7 +3,7 @@ PhotonVisionLabVIEW (Unofficial)
 
 What is PhotonVisionLabVIEW
 ----------------------------
-PhotonVisionLabVIEW is a LabVIEW Port of the PhotonVision library
+PhotonVisionLabVIEW is a LabVIEW Port of the PhotonVision library.
 
 .. toctree::
    :maxdepth: 1
