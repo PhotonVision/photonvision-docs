@@ -118,7 +118,7 @@ Additional ``RobotPoseEstimator`` Methods
 -----------------------------------------
 
 ``setReferencePose(Pose3d referencePose)``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Updates the stored reference pose when using the CLOSEST_TO_REFERENCE_POSE strategy.
 
