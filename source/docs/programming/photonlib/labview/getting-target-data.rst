@@ -4,40 +4,48 @@ Getting Target Data
 Getting The Latest Result
 ------------------------
 
-Use ``PhotonCamera_GetLatestResult.vi`` to get the latest pipeline result.
+What is a Photon Pipeline Result
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A ``PhotonPipelineResult`` is a bundle that contains all information about currently detected targets from a camera. You can retrieve the latest pipeline result using ``PhotonCamera_GetLatestResult.vi``
 
 .. image:: images/get_latest_result.png
 
-
-Checking For Targets
+Checking for Existence of Targets
 --------------------
 
-Check if the pipeline has targets by using ``PhotonPipelineResult_HasTargets?.vi``.
+``PhotonCamera_GetLatestResult.vi`` will output a boolean named ``hasTargets?`` to inform the user as to whether the result contains any targets.
+
+.. image:: images/has_targets_2.png
+
+``PhotonPipelineResult_HasTargets?.vi`` can also be used to check for the existence of targets.
 
 .. image:: images/has_targets.png
 
-``PhotonCamera_GetLatestResult.vi`` will also return if the pipeline has targets.
-
-.. image:: images/has_targets_2.png
 
 Getting an Array of Targets
 ---------------------------
 
-Each pipeline result will contain an array of targets to get that array use an unbunlde by name node and select targets.
+What is a Photon Tracked Target?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A tracked target contains information about a target from a pipeline result. This information includes yaw, pitch, area, and robot relative pose.
+
+Each pipeline result contains an array of targets. Use LabVIEW's ``Unbunlde by name`` node to get access to the array of targets.
 
 .. image:: images/get_targets.png
 
 Getting The Best Target
 -----------------------
 
-``PhotonPipelineResult_GetBestTarget.vi`` will return the best target from a pipeline result.
+You can get the `best target <https://docs.photonvision.org/en/latest/docs/getting-started/pipeline-tuning/reflectiveAndShape/contour-filtering.html#contour-grouping-and-sorting>`_ using ``PhotonPipelineResult_GetBestTarget.vi`` 
 
 .. image:: images/get_best_target.png
 
 Getting Target By ID
 --------------------
 
-If you are using an april tag pipeline you can use ``PhotonPipelineResult_GetBestTargetById.vi`` to return a target with a specified ID.
+If you are using an AprilTag pipeline you can use ``PhotonPipelineResult_GetBestTargetById.vi`` will return a target with a specified ID.
 
 .. image:: images/get_target_by_id.png
 

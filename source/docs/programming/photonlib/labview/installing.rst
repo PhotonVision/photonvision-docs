@@ -11,4 +11,4 @@ Previous versions do not have to be uninstalled prior to installing a new versio
 
 Removal
 -------
-To uninstall, open NI Package Manager. Select the Installed tab. Find and highlight JAS_Junk_FRC_TrajLib. Then click the REMOVE button. The uninstall should start. It should take 5 minutes or less.
+To uninstall, open NI Package Manager. Select the Installed tab. Find and highlight PhotonVisionLib. Then click the REMOVE button. The uninstall should start. It should take 5 minutes or less.
