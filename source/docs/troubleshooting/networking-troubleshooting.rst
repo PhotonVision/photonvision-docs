@@ -1,7 +1,7 @@
 Networking Troubleshooting
 ==========================
 
-Before reading further, ensure that you follow all the reccomendations in our networking section. You must be following these guidelines in order for PhotonVision to work properly, other networking setups are not officially supported.
+Before reading further, ensure that you follow all the reccomendations in our networking section. You must be following these guidelines in order for PhotonVision to work properly, other networking setups are not officially supported. 
 
 photonvision.local Not Found
 ----------------------------
