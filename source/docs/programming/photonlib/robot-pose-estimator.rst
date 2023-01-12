@@ -117,8 +117,8 @@ Calling ``update()`` on your ``RobotPoseEstimator`` will return a ``Pair<Pose3d,
 Additional ``RobotPoseEstimator`` Methods
 -----------------------------------------
 
-``setRefrencePose(Pose3d referencePose)``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``setReferencePose(Pose3d referencePose)``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Updates the stored reference pose when using the CLOSEST_TO_REFERENCE_POSE strategy.
 
