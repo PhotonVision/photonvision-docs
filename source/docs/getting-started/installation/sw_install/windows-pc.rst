@@ -2,6 +2,8 @@ Windows PC Installation
 =======================
 PhotonVision may be run on a Windows Desktop PC for basic testing and evaluation.
 
+.. note:: You do not need to install PhotonVision on a Windows PC in order to access the webdashboard (assuming you are using an external coprocessor like a Raspberry Pi).
+
 Install Bonjour
 ---------------
 Bonjour provides more stable networking when using Windows PCs. Install `Bonjour here <https://support.apple.com/downloads/DL999/en_US/BonjourPSSetup.exe>`_ before continuing to ensure a stable experience while using PhotonVision.

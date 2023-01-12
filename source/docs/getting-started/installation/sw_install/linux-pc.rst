@@ -2,6 +2,8 @@ Linux PC Installation
 =====================
 PhotonVision may be run on a Debian-based Linux Desktop PC for basic testing and evaluation.
 
+.. note:: You do not need to install PhotonVision on a Windows PC in order to access the webdashboard (assuming you are using an external coprocessor like a Raspberry Pi).
+
 Installing Java
 ---------------
 PhotonVision requires a JDK installed and on the system path. JDK 11 is needed (different versions will not work). If you don't have JDK 11 already, run the following to install it:
