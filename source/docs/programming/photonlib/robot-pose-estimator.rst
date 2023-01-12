@@ -119,8 +119,8 @@ You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/
 Additional ``RobotPoseEstimator`` Methods
 -----------------------------------------
 
-``setRefrencePose(Pose3d referencePose)``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``setReferencePose(Pose3d referencePose)``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Updates the stored reference pose when using the CLOSEST_TO_REFERENCE_POSE strategy.
 
