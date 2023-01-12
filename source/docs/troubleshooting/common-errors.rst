@@ -22,26 +22,10 @@ Commonly Seen Issues
 --------------------
 
 
-Checklist
-^^^^^^^^^
-
-- Is your camera connected to the robot's radio through a :ref:`network switch <docs/getting-started/installation/networking:Physical Networking>`?
-   - Ethernet straight from a laptop to a coprocessor is unsupported due to the unreliability of link-local connections.
-   - Even if there's a switch between your laptop and coprocessor, you'll still want a radio or router in the loop somehow.
-   - The FRC radio is the *only* router we will officially support due to the innumerable variations between routers.
-- (Raspberry Pi & Limelight only) have you flashed the correct image, and is it up to date?
-   - Limelights and Gloworms should be flashed using the Limelight image (eg, `photonvision-v2023.1.2-linuxarm64-image_limelight.xz`).
-   - Raspberry Pi devices (including Pi 3, Pi 4, CM3 and CM4) should be flashed using the Limelight image (eg, `photonvision-v2023.1.2-linuxarm64-image_RaspberryPi.xz`).
-   - This is due to Limelight-specific hardware configuration that makes the image incompatible with stock Raspberry Pi devices.
-- Is your robot code using a **2023** version of WPILib, and is your coprocessor using the most up to date **2023** release?
-   - 2022 and 2023 versions of either cannot be mix-and-matched!
-   - Your PhotonVision version can be checked on the :ref:`settings tab<docs/hardware/Settings:settings>`.
-- Is your team number correctly set on the :ref:`settings tab<docs/hardware/Settings:settings>`?
-
-
 Networking Issues
 ^^^^^^^^^^^^^^^^^
-Ensure that you have followed :ref:`all the recommendations in the networking section <docs/getting-started/installation/networking:Physical Networking>`.
+
+Please refer to our comprehensive :ref:`networking troubleshooting tips <doccs/troubleshooting/networking-troubleshooting:Networking Troubleshooting>` for debugging suggestions and possible causes.
 
 Camera won't show up
 ^^^^^^^^^^^^^^^^^^^^
