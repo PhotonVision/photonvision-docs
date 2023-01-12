@@ -25,7 +25,7 @@ Commonly Seen Issues
 Checklist
 ^^^^^^^^^
 
-- Is your camera connected to the robot's radio through a :ref:`network switch? <docs/getting-started/installation/networking:Physical Networking>`?
+- Is your camera connected to the robot's radio through a :ref:`network switch <docs/getting-started/installation/networking:Physical Networking>`?
    - Ethernet straight from a laptop to a coprocessor is unsupported due to the unreliability of link-local connections.
    - Even if there's a switch between your laptop and coprocessor, you'll still want a radio or router in the loop somehow.
    - The FRC radio is the *only* router we will officially support due to the innumerable variations between routers.
