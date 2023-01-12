@@ -21,6 +21,24 @@ For now, if you are using multiple cameras, it is recommended that teams set the
 Commonly Seen Issues
 --------------------
 
+
+Checklist
+^^^^^^^^^
+
+- Is your camera connected to the robot's radio through a :ref:`network switch? <docs/getting-started/installation/networking:Physical Networking>`?
+   - Ethernet straight from a laptop to a coprocessor is unsupported due to the unreliability of link-local connections.
+   - Even if there's a switch between your laptop and coprocessor, you'll still want a radio or router in the loop somehow.
+   - The FRC radio is the *only* router we will officially support due to the innumerable variations between routers.
+- (Raspberry Pi & Limelight only) have you flashed the correct image, and is it up to date?
+   - Limelights and Gloworms should be flashed using the Limelight image (eg, `photonvision-v2023.1.2-linuxarm64-image_limelight.xz`).
+   - Raspberry Pi devices (including Pi 3, Pi 4, CM3 and CM4) should be flashed using the Limelight image (eg, `photonvision-v2023.1.2-linuxarm64-image_RaspberryPi.xz`).
+   - This is due to Limelight-specific hardware configuration that makes the image incompatible with stock Raspberry Pi devices.
+- Is your robot code using a **2023** version of WPILib, and is your coprocessor using the most up to date **2023** release?
+   - 2022 and 2023 versions of either cannot be mix-and-matched!
+   - Your PhotonVision version can be checked on the :ref:`settings tab<docs/hardware/Settings:settings>`.
+- Is your team number correctly set on the :ref:`settings tab<docs/hardware/Settings:settings>`?
+
+
 Networking Issues
 ^^^^^^^^^^^^^^^^^
 Ensure that you have followed :ref:`all the recommendations in the networking section <docs/getting-started/installation/networking:Physical Networking>`.
@@ -41,6 +59,18 @@ Not getting data from PhotonLib
 1. Ensure your coprocessor version and PhotonLib version match. This can be checked by the settings tab and examining the .json itself (respectively).
 
 2. Ensure that you have your team number set properly.
+
+3. Use Glass to verify that PhotonVision has connected to the NetworkTables server served by your robot. With Glass connected in client mode to your RoboRIO, we expect to see "photonvision" listed under the Clients tab of the NetworkTables Info pane.
+
+.. image:: images/glass-connections.png
+   :width: 600
+   :alt: Using Glass to check NT connections
+
+4. When creating a `PhotonCamera` in code, does the `cameraName` provided match the name in the upper-right card of the web interface? Glass can be used to verify the RoboRIO is receiving NetworkTables data by inspecting the `photonvision` subtable for your camera nickname.
+
+.. image:: images/camera-subtable.png
+   :width: 600
+   :alt: Using Glass to check camera publishing
 
 Unable to download PhotonLib
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
