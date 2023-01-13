@@ -83,9 +83,9 @@ Calling ``update()`` on your ``PhotonPoseEstimator`` will return an ``EstimatedR
 .. tab-set-code::
    .. code-block:: java
 
-        public Pair<Pose2d, Double> getEstimatedGlobalPose(Pose2d prevEstimatedRobotPose) {
+        public Optional<EstimatedRobotPose> getEstimatedGlobalPose(Pose2d prevEstimatedRobotPose) {
             photonPoseEstimator.setReferencePose(prevEstimatedRobotPose);
-            EstimatedPose result = photonPoseEstimator.update();
+            Optional<EstimatedRobotPose> result = photonPoseEstimator.update();
             return result;
         }
 
