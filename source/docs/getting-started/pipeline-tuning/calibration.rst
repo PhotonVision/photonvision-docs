@@ -3,14 +3,23 @@ Calibrating Your Camera
 
 .. important:: In order to detect AprilTags and use 3D mode, your camera must be calibrated at the desired resolution! Inaccurate calibration will lead to poor performance.
 
-To calibrate a camera, images of a chessboard (or grid of dots) are taken. by comparing where the grid corners (or dots) should be in object space (for example, a dot once every inch in an 8x6 grid) with where they appear in the camera image, we can find a least-squares estimate for intrinsic camera properties like focal lengths, center point, and distortion coefficients. For more on camera calibration, please review the `OpenCV documentation <https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html>`_.
+To calibrate a camera, images of a chessboard (or grid of dots, or other target) are taken. by comparing where the grid corners (or dots) should be in object space (for example, a dot once every inch in an 8x6 grid) with where they appear in the camera image, we can find a least-squares estimate for intrinsic camera properties like focal lengths, center point, and distortion coefficients. For more on camera calibration, please review the `OpenCV documentation <https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html>`_.
 
 .. warning:: While any resolution can be calibrated, resolutions lower than 960x720 are often too low to provide accurate results. Additionally, high resolutions may be too performance intensive for a coprocessor like a Raspberry Pi to handle (solutions to this are being looked into). Thus, we recommend 960x720 when using 3D mode.
 
 .. note::The calibration data collected during calibration is specific to each physical camera, as well as each individual resolution.
 
-Calibration Steps
------------------
+Your camera can be calibrated using either the utility built into PhotonVision, which performs all the calculations on your coprocessor, or using a website such as `calibdb <https://calibdb.net/>`, which uses a USB webcam connected to your laptop. The integrated calibration utility is currently the only one that works with ribbon-cable CSI cameras or Limelights, but for USB webcams, calibdb is the preferred option.
+
+Calibrating using calibdb
+-------------------------
+
+Calibdb uses a modified chessboard/aruco marker combination target called `ChArUco targets <https://docs.opencv.org/3.4/df/d4a/tutorial_charuco_detection.html>`. The website currently only supports Chrome browser. 
+
+Download and print out (or display on a monitor) the calibration by clicking Show Pattern. Click "Calibrate" and align your camera with the ghost overlay of the calibration board. The website automatically calculates the next position and displays it for you. When complete, download the calibration (do **not** use the OpenCV format). Reconnect your camera to your coprocessor and navigate to the PhotonVision web interface's camera tab. Ensure the correct camera is selected, and click the "Import from CalibDB" button. Your calibration data will be automatically saved and applied!
+
+Calibrating using PhotonVision
+------------------------------
 
 1. Navigate to the calibration section in the UI.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
