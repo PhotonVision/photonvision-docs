@@ -30,7 +30,7 @@ The API documentation can be found in here: `Java <https://github.wpilib.org/all
           std::make_shared<frc::AprilTagFieldLayout>(tags, 54_ft, 27_ft);
 
 Creating a ``PhotonPoseEstimator``
----------------------------------
+----------------------------------
 The PhotonPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (see above), ``PoseStrategy``, ``PhotonCamera``, and ``Transform3d``. ``PoseStrategy`` has five possible values:
 
 * LOWEST_AMBIGUITY
@@ -77,7 +77,7 @@ The PhotonPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` 
           aprilTags, photonlib::CLOSEST_TO_REFERENCE_POSE, cameras);
 
 Using a ``PhotonPoseEstimator``
-------------------------------
+-------------------------------
 Calling ``update()`` on your ``PhotonPoseEstimator`` will return an ``EstimatedRobotPose``, which includes a ``Pose3d`` of the latest estimated pose (using the selected strategy) along with a ``double`` of the timestamp when the robot pose was estimated. You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/state-space/state-space-pose-estimators.html>`_ with the result from the ``PhotonPoseEstimator`` every loop using ``addVisionMeasurement()``. See our `code example <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/apriltagExample>`_ for more.
 
 .. tab-set-code::
@@ -105,7 +105,7 @@ Calling ``update()`` on your ``PhotonPoseEstimator`` will return an ``EstimatedR
       }
 
 Additional ``PhotonPoseEstimator`` Methods
------------------------------------------
+------------------------------------------
 
 ``setReferencePose(Pose3d referencePose)``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
