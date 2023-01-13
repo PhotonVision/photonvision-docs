@@ -13,7 +13,7 @@ Calibration Tips
 ----------------
 Accurate camera calibration is required in order to get accurate pose measurements when using AprilTags and 3D mode. The tips below should help ensure success:
 
-1. Practice calibration using your laptop webcam and https://www.calibdb.net/. The target can be found on the website and should be printed out if possible. Once you print it out, try to line up your target with the overlay on the screen as best as possible. The point of this practice is to notice how you are prompted to place targets in certain positions on the screen that make sure you account for all regions of the sensor. Also notice how the target is tilted when taking calibration pictures. When taking calibration pictures for PhotonVision, keep those same principles in mind.
+1. Practice calibration using your laptop webcam and https://www.calibdb.net/. The target can be found on the website and should be printed out if possible. Once you print it out, try to line up your target with the overlay on the screen as best as possible. The point of this practice is to notice how you are prompted to place targets in certain positions on the screen that make sure you account for all regions of the sensor. The chessboard should (in general) not be facing parallel to the camera (straight on), nor should it be aligned with any of the camera axes (ie, rotated only about an axis going left/right, up/down, or out-of-the-camera).
 
 2. Ensure your the images you take have the target in different positions and angles, with as big of a difference between angles as possible. It is important to make sure the target overlay still lines up with the board while doing this. Tilt no more than 45 degrees.
 

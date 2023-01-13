@@ -10,7 +10,7 @@ Checklist
 A few issues make up the majority of support requests. Run through this checklist quickly to catch some common mistakes.
 
 - Is your camera connected to the robot's radio through a :ref:`network switch <docs/getting-started/installation/networking:Physical Networking>`?
-   - Ethernet straight from a laptop to a coprocessor is unsupported due to the unreliability of link-local connections.
+   - Ethernet straight from a laptop to a coprocessor will not work (most likely), due to the unreliability of link-local connections.
    - Even if there's a switch between your laptop and coprocessor, you'll still want a radio or router in the loop somehow.
    - The FRC radio is the *only* router we will officially support due to the innumerable variations between routers.
 - (Raspberry Pi & Limelight only) have you flashed the correct image, and is it up to date?

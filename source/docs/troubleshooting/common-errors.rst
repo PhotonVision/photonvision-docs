@@ -25,7 +25,7 @@ Commonly Seen Issues
 Networking Issues
 ^^^^^^^^^^^^^^^^^
 
-Please refer to our comprehensive :ref:`networking troubleshooting tips <doccs/troubleshooting/networking-troubleshooting:Networking Troubleshooting>` for debugging suggestions and possible causes.
+Please refer to our comprehensive :ref:`networking troubleshooting tips <docs/troubleshooting/networking-troubleshooting:Networking Troubleshooting>` for debugging suggestions and possible causes.
 
 Camera won't show up
 ^^^^^^^^^^^^^^^^^^^^
