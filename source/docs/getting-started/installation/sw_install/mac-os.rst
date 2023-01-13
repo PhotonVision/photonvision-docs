@@ -3,6 +3,8 @@ Mac OS Installation
 
 .. warning:: Due to current `cscore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ restrictions, the PhotonVision server backend may have issues running macOS.
 
+.. note:: You do not need to install PhotonVision on a Windows PC in order to access the webdashboard (assuming you are using an external coprocessor like a Raspberry Pi).
+
 VERY Limited macOS support is available.
 
 Installing Java
