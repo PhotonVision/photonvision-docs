@@ -12,7 +12,7 @@ Knowledge and Equipment Needed
 - An open space with properly mounted 16h5 AprilTags
 - PhotonVision running on your laptop or a coprocessor
 
-This is example will show how to use AprilTags for full field robot localization using ``RobotPoseEstimator``, ``AprilTagFieldLayout``, and the WPILib Pose Estimaton Classes.
+This is example will show how to use AprilTags for full field robot localization using ``PhotonPoseEstimator``, ``AprilTagFieldLayout``, and the WPILib Pose Estimaton Classes.
 
 All PhotonVision specific code is in ``PhotonCameraWrapper.java`` and the relevant pose estimation parts are in ``DriveTrain.java.``
 
