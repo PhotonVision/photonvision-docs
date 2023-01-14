@@ -82,7 +82,7 @@ The RobotPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (
 
 Using a ``RobotPoseEstimator``
 ------------------------------
-Calling ``update()`` on your ``RobotPoseEstimator`` will return a ``Pair<Pose3d, Double>``, which includes a ``Pose3d`` of the latest estimated pose (using the selected strategy) along with a ``Double`` of the latency in milliseconds. You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/state-space/state-space-pose-estimators.html>`_ with the result from the ``RobotPoseEstimator`` every loop using ``addVisionMeasurement()``. See our `code example <https://www.google.com/>`_ for more.
+Calling ``update()`` on your ``RobotPoseEstimator`` will return a ``Pair<Pose3d, Double>``, which includes a ``Pose3d`` of the latest estimated pose (using the selected strategy) along with a ``Double`` of the latency in milliseconds.
 
 .. tab-set-code::
    .. code-block:: java
@@ -113,6 +113,8 @@ Calling ``update()`` on your ``RobotPoseEstimator`` will return a ``Pair<Pose3d,
           return std::make_pair(frc::Pose2d(), 0_ms);
         }
       }
+
+You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/state-space/state-space-pose-estimators.html>`_ with the result from the ``RobotPoseEstimator`` every loop using ``addVisionMeasurement()``. See our :ref:`code example <docs/examples/apriltag:knowledge and equipment needed>` for more.
 
 Additional ``RobotPoseEstimator`` Methods
 -----------------------------------------
