@@ -1,5 +1,5 @@
 AprilTags and PhotonPoseEstimator
-================================
+=================================
 
 .. note:: For more information on how to methods to get AprilTag data, look :ref:`here <docs/programming/photonlib/getting-target-data:Getting AprilTag Data From A Target>`.
 
@@ -81,13 +81,9 @@ Using a ``PhotonPoseEstimator``
 Calling ``update()`` on your ``PhotonPoseEstimator`` will return an ``EstimatedRobotPose``, which includes a ``Pose3d`` of the latest estimated pose (using the selected strategy) along with a ``double`` of the timestamp when the robot pose was estimated. You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/state-space/state-space-pose-estimators.html>`_ with the result from the ``PhotonPoseEstimator`` every loop using ``addVisionMeasurement()``. See our `code example <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/apriltagExample>`_ for more.
 
 .. tab-set-code::
-   .. code-block:: java
-
-        public Optional<EstimatedRobotPose> getEstimatedGlobalPose(Pose2d prevEstimatedRobotPose) {
-            photonPoseEstimator.setReferencePose(prevEstimatedRobotPose);
-            Optional<EstimatedRobotPose> result = photonPoseEstimator.update();
-            return result;
-        }
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/357d8a518a93f7a1f8084a79449249e613b605a7/photonlib-java-examples/apriltagExample/src/main/java/frc/robot/PhotonCameraWrapper.java
+      :language: java
+      :lines: 85-88
 
    .. code-block:: c++
 
