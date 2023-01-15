@@ -104,6 +104,8 @@ Calling ``update()`` on your ``PhotonPoseEstimator`` will return an ``EstimatedR
         }
       }
 
+You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/state-space/state-space-pose-estimators.html>`_ with the result from the ``RobotPoseEstimator`` every loop using ``addVisionMeasurement()``. See our :ref:`code example <docs/examples/apriltag:knowledge and equipment needed>` for more.
+
 Additional ``PhotonPoseEstimator`` Methods
 ------------------------------------------
 

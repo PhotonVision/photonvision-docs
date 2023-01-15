@@ -21,9 +21,11 @@ For now, if you are using multiple cameras, it is recommended that teams set the
 Commonly Seen Issues
 --------------------
 
+
 Networking Issues
 ^^^^^^^^^^^^^^^^^
-Ensure that you have followed :ref:`all the recommendations in the networking section <docs/getting-started/installation/networking:Physical Networking>`.
+
+Please refer to our comprehensive :ref:`networking troubleshooting tips <docs/troubleshooting/networking-troubleshooting:Networking Troubleshooting>` for debugging suggestions and possible causes.
 
 Camera won't show up
 ^^^^^^^^^^^^^^^^^^^^
@@ -41,6 +43,18 @@ Not getting data from PhotonLib
 1. Ensure your coprocessor version and PhotonLib version match. This can be checked by the settings tab and examining the .json itself (respectively).
 
 2. Ensure that you have your team number set properly.
+
+3. Use Glass to verify that PhotonVision has connected to the NetworkTables server served by your robot. With Glass connected in client mode to your RoboRIO, we expect to see "photonvision" listed under the Clients tab of the NetworkTables Info pane.
+
+.. image:: images/glass-connections.png
+   :width: 600
+   :alt: Using Glass to check NT connections
+
+4. When creating a `PhotonCamera` in code, does the `cameraName` provided match the name in the upper-right card of the web interface? Glass can be used to verify the RoboRIO is receiving NetworkTables data by inspecting the `photonvision` subtable for your camera nickname.
+
+.. image:: images/camera-subtable.png
+   :width: 600
+   :alt: Using Glass to check camera publishing
 
 Unable to download PhotonLib
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
