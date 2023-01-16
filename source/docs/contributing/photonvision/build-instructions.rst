@@ -138,29 +138,32 @@ After adding the generated vendordep to your project, add the following to your 
         mavenLocal()
     }
 
-Debugging a local photonvision build
+
+Debugging a local PhotonVision build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Run the program with `./gradlew run --debug-jvm`, and attach to it with VSCode by adding the following to launch.json:
+One way is by running the program using gradle with the :code:`--debug-jvm` flag. Run the program with :code:`./gradlew run --debug-jvm`, and attach to it with VSCode by adding the following to launch.json. Note args can be passed with :code:`--args="foobar"`.
 
-```
-{
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Attach to Remote Program",
-            "request": "attach",
-            "hostName": "localhost",
-            "port": "5005",
-            "projectName": "photon-core",
-        }
-     ]
-]
-```
+.. code-block::
+
+   {
+      // Use IntelliSense to learn about possible attributes.
+      // Hover to view descriptions of existing attributes.
+      // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+      "version": "0.2.0",
+      "configurations": [
+         {
+               "type": "java",
+               "name": "Attach to Remote Program",
+               "request": "attach",
+               "hostName": "localhost",
+               "port": "5005",
+               "projectName": "photon-core",
+         }
+      ]
+   }
+
+PhotonVision can also be run using the gradle tasks plugin with :code:`"args": "--debug-jvm"` added to launch.json.
 
 Running examples
 ~~~~~~~~~~~~~~~~
@@ -173,20 +176,20 @@ You can run one of the many built in examples straight from the command line, to
      - getinrange:simulateJava
      - simaimandrange:simulateJava
      - simposeest:simulateJava
--photonlib-cpp-examples:
+- photonlib-cpp-examples:
      - aimandrange:simulateNative
      - getinrange:simulateNative
 
 To run them, use the commands listed below. Photonlib must first be published to your local maven repository, then the copyPhotonlib task will copy the generated vendordep json file into each example. After that, the simulateJava/simulateNative task can be used like a normal robot project. Robot simulation with attached debugger is technically possible by using simulateExternalJava and modifying the launch script it exports, though unsupported.
 
-```
-~/photonvision$ ./gradlew publishToMavenLocal
+.. code-block::
 
-~/photonvision$ cd photonlib-java-examples
-~/photonvision/photonlib-java-examples$ ./gradlew copyPhotonlib
-~/photonvision/photonlib-java-examples$ ./gradlew <example-name>:simulateJava
+   ~/photonvision$ ./gradlew publishToMavenLocal
 
-~/photonvision$ cd photonlib-cpp-examples
-~/photonvision/photonlib-cpp-examples$ ./gradlew copyPhotonlib
-~/photonvision/photonlib-cpp-examples$ ./gradlew <example-name>:simulateNative
-```
+   ~/photonvision$ cd photonlib-java-examples
+   ~/photonvision/photonlib-java-examples$ ./gradlew copyPhotonlib
+   ~/photonvision/photonlib-java-examples$ ./gradlew <example-name>:simulateJava
+
+   ~/photonvision$ cd photonlib-cpp-examples
+   ~/photonvision/photonlib-cpp-examples$ ./gradlew copyPhotonlib
+   ~/photonvision/photonlib-cpp-examples$ ./gradlew <example-name>:simulateNative
