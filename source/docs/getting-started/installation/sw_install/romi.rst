@@ -12,6 +12,8 @@ SSH into the Raspberry Pi (using a tool like `Putty <https://www.putty.org/>`_ )
 
 Follow the process for installing PhotonVision on :ref:`"Other Debian-Based Co-Processor Installation" <docs/getting-started/installation/sw_install/other-coprocessors:Other Debian-Based Co-Processor Installation>`.  As it mentions this will require an internet connection so plugging into the ethernet jack on the Raspberry Pi will be the easiest solution. The pi must remain writable!
 
+Install libopencv4.5: ``sudo apt-get install libopencv-core4.5``
+
 Next, from the SSH terminal, run ``sudo nano /home/pi/runCamera`` then arrow down to the start of the exec line and press "Enter" to add a new line.  Then add ``#`` before the exec command to comment it out.  Then, arrow up to the new line and type ``sleep 10000``.  Hit "Ctrl + O" and then "Enter" to save the file.  Finally press "Ctrl + X" to exit nano.  Now, reboot the Romi by typing ``sudo reboot``.
 
 .. image:: images/nano.png
