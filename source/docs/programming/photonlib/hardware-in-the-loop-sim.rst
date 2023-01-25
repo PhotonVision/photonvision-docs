@@ -7,7 +7,9 @@ This is useful for testing the physical capabilities of a camera, without having
 The first step is to install PhotonVision on your target device.  Instructions can be found `here <https://docs.photonvision.org/en/latest/docs/getting-started/installation/sw_install/index.html>`_ for all devices.
 
 The next step is to configure PhotonVision for simulation.
+
 .. warning:: Do not leave this toggle on when accessing your device on a full robot.
+
 In the settings GUI, turn on "Run NetworkTables Server".
 
 The final step is to configure your code to connect to the NetworkTables server run by your instance of PhotonVision.
