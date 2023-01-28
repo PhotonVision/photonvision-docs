@@ -1,9 +1,9 @@
-AprilTags and RobotPoseEstimator
-================================
+AprilTags and PhotonPoseEstimator
+=================================
 
 .. note:: For more information on how to methods to get AprilTag data, look :ref:`here <docs/programming/photonlib/getting-target-data:Getting AprilTag Data From A Target>`.
 
-PhotonLib includes a ``RobotPoseEstimator`` class, which allows you to combine the pose data from all tags in view in order to get a field relative pose.
+PhotonLib includes a ``PhotonPoseEstimator`` class, which allows you to combine the pose data from all tags in view in order to get a field relative pose. The ``PhotonPoseEstimator`` class works with one camera per object instance, but more than one instance may be created.
 
 Creating an ``AprilTagFieldLayout``
 -----------------------------------
@@ -15,7 +15,7 @@ The API documentation can be found in here: `Java <https://github.wpilib.org/all
    .. code-block:: java
 
       // The parameter for loadFromResource() will be different depending on the game.
-      AprilTagFieldLayout aprilTagFieldLayout = new ApriltagFieldLayout(AprilTagFieldLayout.loadFromResource(AprilTagFields.k2022RapidReact.m_resourceFile));
+      AprilTagFieldLayout aprilTagFieldLayout = AprilTagFieldLayout.loadFromResource(AprilTagFields.k2023ChargedUp.m_resourceFile);
 
    .. code-block:: c++
 
@@ -29,9 +29,9 @@ The API documentation can be found in here: `Java <https://github.wpilib.org/all
       std::shared_ptr<frc::AprilTagFieldLayout> aprilTags =
           std::make_shared<frc::AprilTagFieldLayout>(tags, 54_ft, 27_ft);
 
-Creating a ``RobotPoseEstimator``
----------------------------------
-The RobotPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (see above), ``PoseStrategy``, and ``ArrayList<Pair<PhotonCamera, Transform3d>>``. ``PoseStrategy`` has five possible values:
+Creating a ``PhotonPoseEstimator``
+----------------------------------
+The PhotonPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (see above), ``PoseStrategy``, ``PhotonCamera``, and ``Transform3d``. ``PoseStrategy`` has five possible values:
 
 * LOWEST_AMBIGUITY
     * Choose the Pose with the lowest ambiguity.
@@ -51,12 +51,8 @@ The RobotPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (
       cam = new PhotonCamera("testCamera");
       Transform3d robotToCam = new Transform3d(new Translation3d(0.5, 0.0, 0.5), new Rotation3d(0,0,0)); //Cam mounted facing forward, half a meter forward of center, half a meter up from center.
 
-      // ... Add other cameras here
-
-      // Assemble the list of cameras & mount locations
-      var camList = new ArrayList<Pair<PhotonCamera, Transform3d>>();
-      camList.add(new Pair<PhotonCamera, Transform3d>(cam, robotToCam));
-      RobotPoseEstimator robotPoseEstimator = new RobotPoseEstimator(aprilTagFieldLayout, PoseStrategy.CLOSEST_TO_REFERENCE_POSE, camList);
+      // Construct PhotonPoseEstimator
+      PhotonPoseEstimator photonPoseEstimator = new PhotonPoseEstimator(aprilTagFieldLayout, PoseStrategy.CLOSEST_TO_REFERENCE_POSE, cam, robotToCam);
 
    .. code-block:: c++
 
@@ -80,24 +76,14 @@ The RobotPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (
       photonlib::RobotPoseEstimator estimator(
           aprilTags, photonlib::CLOSEST_TO_REFERENCE_POSE, cameras);
 
-Using a ``RobotPoseEstimator``
-------------------------------
-Calling ``update()`` on your ``RobotPoseEstimator`` will return a ``Pair<Pose3d, Double>``, which includes a ``Pose3d`` of the latest estimated pose (using the selected strategy) along with a ``Double`` of the latency in milliseconds. You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/state-space/state-space-pose-estimators.html>`_ with the result from the ``RobotPoseEstimator`` every loop using ``addVisionMeasurement()``. See our `code example <https://www.google.com/>`_ for more.
+Using a ``PhotonPoseEstimator``
+-------------------------------
+Calling ``update()`` on your ``PhotonPoseEstimator`` will return an ``EstimatedRobotPose``, which includes a ``Pose3d`` of the latest estimated pose (using the selected strategy) along with a ``double`` of the timestamp when the robot pose was estimated. You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/state-space/state-space-pose-estimators.html>`_ with the result from the ``PhotonPoseEstimator`` every loop using ``addVisionMeasurement()``. See our `code example <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/apriltagExample>`_ for more.
 
 .. tab-set-code::
-   .. code-block:: java
-
-        public Pair<Pose2d, Double> getEstimatedGlobalPose(Pose2d prevEstimatedRobotPose) {
-            robotPoseEstimator.setReferencePose(prevEstimatedRobotPose);
-
-            double currentTime = Timer.getFPGATimestamp();
-            Optional<Pair<Pose3d, Double>> result = robotPoseEstimator.update();
-            if (result.isPresent()) {
-                return new Pair<Pose2d, Double>(result.get().getFirst().toPose2d(), currentTime - result.get().getSecond());
-            } else {
-                return new Pair<Pose2d, Double>(null, 0.0);
-            }
-        }
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/357d8a518a93f7a1f8084a79449249e613b605a7/photonlib-java-examples/apriltagExample/src/main/java/frc/robot/PhotonCameraWrapper.java
+      :language: java
+      :lines: 85-88
 
    .. code-block:: c++
 
@@ -114,8 +100,10 @@ Calling ``update()`` on your ``RobotPoseEstimator`` will return a ``Pair<Pose3d,
         }
       }
 
-Additional ``RobotPoseEstimator`` Methods
------------------------------------------
+You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/state-space/state-space-pose-estimators.html>`_ with the result from the ``RobotPoseEstimator`` every loop using ``addVisionMeasurement()``. See our :ref:`code example <docs/examples/apriltag:knowledge and equipment needed>` for more.
+
+Additional ``PhotonPoseEstimator`` Methods
+------------------------------------------
 
 ``setReferencePose(Pose3d referencePose)``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

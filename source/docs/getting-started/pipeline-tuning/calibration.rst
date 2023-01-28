@@ -9,6 +9,34 @@ To calibrate a camera, images of a chessboard (or grid of dots, or other target)
 
 .. note::The calibration data collected during calibration is specific to each physical camera, as well as each individual resolution.
 
+
+Calibration Tips
+----------------
+Accurate camera calibration is required in order to get accurate pose measurements when using AprilTags and 3D mode. The tips below should help ensure success:
+
+1. Practice calibration using your laptop webcam and https://www.calibdb.net/. The target can be found on the website and should be printed out if possible. Once you print it out, try to line up your target with the overlay on the screen as best as possible. The point of this practice is to notice how you are prompted to place targets in certain positions on the screen that make sure you account for all regions of the sensor. The chessboard should (in general) not be facing parallel to the camera (straight on), nor should it be aligned with any of the camera axes (ie, rotated only about an axis going left/right, up/down, or out-of-the-camera).
+
+2. Ensure your the images you take have the target in different positions and angles, with as big of a difference between angles as possible. It is important to make sure the target overlay still lines up with the board while doing this. Tilt no more than 45 degrees.
+
+3. Use as big of a calibration target as your printer can print.
+
+4. Ensure that your printed pattern has enough white border around it.
+
+5. Ensure your camera stays in one position during the duration of the calibration.
+
+6. Make sure you get all 12 images from varying distances and angles.
+
+7. Take at least one image that covers the total image area, and generally ensure that you get even coverage of the lens with your image set.
+
+8. Have good lighting, having a diffusely lit target would be best (light specifically shining on the target without shadows).
+
+9. Ensure the calibration target is completely flat and does not bend or fold in any way. It should be mounted/taped down to something flat and then used for calibration, do not just hold it up.
+
+Following the ideas above should help in getting an accurate calibration.
+
+Calibration Steps
+=================
+
 Your camera can be calibrated using either the utility built into PhotonVision, which performs all the calculations on your coprocessor, or using a website such as `calibdb <https://calibdb.net/>`, which uses a USB webcam connected to your laptop. The integrated calibration utility is currently the only one that works with ribbon-cable CSI cameras or Limelights, but for USB webcams, calibdb is the preferred option.
 
 Calibrating using calibdb
@@ -49,34 +77,10 @@ Now, we'll capture images of our chessboard from various angles. The most import
             Your browser does not support the video tag.
         </video>
 
-Calibration Tips
-----------------
-Accurate camera calibration is required in order to get accurate pose measurements when using AprilTags and 3D mode. The tips below should help ensure success:
-
-1. Practice calibration using your laptop webcam and https://www.calibdb.net/. The target can be found on the website and should be printed out if possible. Once you print it out, try to line up your target with the overlay on the screen as best as possible. The point of this practice is to notice how you are prompted to place targets in certain positions on the screen that make sure you account for all regions of the sensor. Also notice how the target is tilted when taking calibration pictures. When taking calibration pictures for PhotonVision, keep those same principles in mind.
-
-2. Ensure your the images you take have the target in different positions and angles, with as big of a difference between angles as possible. It is important to make sure the target overlay still lines up with the board while doing this. Tilt no more than 45 degrees.
-
-3. Use as big of a calibration target as your printer can print.
-
-4. Ensure that your printed pattern has enough white border around it.
-
-5. Ensure your camera stays in one position during the duration of the calibration.
-
-6. Make sure you get all 12 images from varying distances and angles.
-
-7. Take at least one image that covers the total image area, and generally ensure that you get even coverage of the lens with your image set.
-
-8. Have good lighting, having a diffusely lit target would be best (light specifically shining on the target without shadows).
-
-9. Ensure the calibration target is completely flat and does not bend or fold in any way. It should be mounted/taped down to something flat and then used for calibration, do not just hold it up.
-
-Following the ideas above should help in getting an accurate calibration.
-
-
 Accessing Calibration Images
 ----------------------------
-For advanced users, these calibrations can be later accessed by :ref:`exporting your config directory <docs/hardware/config:Directory Structure>` and viewing the camera's config.json file. Furthermore, the most recent snapshots will be saved to the calibImgs directory.
+
+For advanced users, these calibrations can be later accessed by :ref:`exporting your config directory <docs/hardware/config:Directory Structure>` and viewing the camera's config.json file. Furthermore, the most recent snapshots will be saved to the calibImgs directory. The example images below are from `the calibdb website <https://calibdb.net>` -- focus on how the target is oriented, as the same general tips for positioning apply for chessboard targets as for ChArUco.
 
 .. image:: images/calibImgs.png
    :width: 600

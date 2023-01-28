@@ -15,7 +15,7 @@ Digital Networking
 ------------------
 PhotonVision *STRONGLY* recommends the usage of Static IPs as it increases reliability on the field and when using PhotonVision in general. To properly set up your static IP, follow the steps below:
 
-.. warning:: Only use a static IP when connected to the robot radio, unless you are well versed in networking or have the relevant "know how".
+.. warning:: Only use a static IP when connected to the **robot radio**, and never when testing at home, unless you are well versed in networking or have the relevant "know how".
 
 1. Ensure your robot is on and you are connected to the robot network.
 2. Navigate to ``photonvision.local:5800`` (this may be different if you are using a Gloworm / Limelight) in your browser.
