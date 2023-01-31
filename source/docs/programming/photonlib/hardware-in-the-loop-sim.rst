@@ -16,6 +16,8 @@ From the PhotonVision UI, go to the sidebar and select the Settings option.  Wit
 The final step is to configure your code to connect to the NetworkTables server run by your instance of PhotonVision.
 The code below shows how to disconnect your simulation from the default NetworkTables server and connect it to the PhotonVision hosted one.
 
+.. note:: This will disable your robot code's internal NT server.  Applications connecting to a NT server must be connected to the PhotonVision NT server if this code has been run.
+
 .. tab-set-code::
    .. code-block:: java
 
