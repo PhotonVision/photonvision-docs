@@ -1,7 +1,7 @@
 Hardware In The Loop Simulation
 ===============================
 
-Hardware in the loop simulation is using a physical device, such as a PhotonVision camera, to enhance simulation capabilities. This is useful for developing and validating code before the camera is attached to a robot.
+Hardware in the loop simulation is using a physical device, such as a PhotonVision camera, to enhance simulation capabilities. This is useful for developing and validating code before the camera is attached to a robot, as well as reducing the work required to get simulation with PhotonVision up and running.
 
 The first step is to install PhotonVision on your target device. Instructions can be found `here <https://docs.photonvision.org/en/latest/docs/getting-started/installation/sw_install/index.html>`_ for all devices.
 
