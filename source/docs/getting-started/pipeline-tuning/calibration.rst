@@ -32,6 +32,8 @@ Accurate camera calibration is required in order to get accurate pose measuremen
 
 9. Ensure the calibration target is completely flat and does not bend or fold in any way. It should be mounted/taped down to something flat and then used for calibration, do not just hold it up.
 
+10. Avoid having targets that are parallel to the lens of the camera / straight on towards the camera as much as possible. You want angles and variations within your calibration images.
+
 Following the ideas above should help in getting an accurate calibration.
 
 Calibration Steps
