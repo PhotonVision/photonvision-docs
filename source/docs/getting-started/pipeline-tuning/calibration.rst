@@ -44,7 +44,7 @@ Your camera can be calibrated using either the utility built into PhotonVision, 
 Calibrating using calibdb
 -------------------------
 
-Calibdb uses a modified chessboard/aruco marker combination target called `ChArUco targets <https://docs.opencv.org/3.4/df/d4a/tutorial_charuco_detection.html>`. The website currently only supports Chrome browser. 
+Calibdb uses a modified chessboard/aruco marker combination target called `ChArUco targets <https://docs.opencv.org/3.4/df/d4a/tutorial_charuco_detection.html>`. The website currently only supports Chrome browser.
 
 Download and print out (or display on a monitor) the calibration by clicking Show Pattern. Click "Calibrate" and align your camera with the ghost overlay of the calibration board. The website automatically calculates the next position and displays it for you. When complete, download the calibration (do **not** use the OpenCV format). Reconnect your camera to your coprocessor and navigate to the PhotonVision web interface's camera tab. Ensure the correct camera is selected, and click the "Import from CalibDB" button. Your calibration data will be automatically saved and applied!
 
