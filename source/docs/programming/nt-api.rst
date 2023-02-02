@@ -34,6 +34,10 @@ Getting Target Information
 +-------------------+--------------+--------------------------------------------------------------------------+
 | ``targetPose``    | ``double[]`` | The pose of the target relative to the robot (x, y, z, qw, qx, qy, qz)   |
 +-------------------+--------------+--------------------------------------------------------------------------+
+| ``targetPixelsX`` | ``double``   | The target crosshair location horizontally, in pixels (origin top-right) |
++-------------------+--------------+--------------------------------------------------------------------------+
+| ``targetPixelsY`` | ``double``   | The target crosshair location vertically, in pixels (origin top-right)   |
++-------------------+--------------+--------------------------------------------------------------------------+
 
 Changing Settings
 -----------------
