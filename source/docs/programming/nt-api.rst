@@ -32,7 +32,7 @@ Getting Target Information
 +-------------------+--------------+--------------------------------------------------------------------------+
 | ``targetSkew``    | ``double``   | The skew of the target in degrees (counter-clockwise positive).          |
 +-------------------+--------------+--------------------------------------------------------------------------+
-| ``targetPose``    | ``double[]`` | The pose of the target relative to the robot (x, y, rotation in degrees) |
+| ``targetPose``    | ``double[]`` | The pose of the target relative to the robot (x, y, z, qw, qx, qy, qz)   |
 +-------------------+--------------+--------------------------------------------------------------------------+
 
 Changing Settings
