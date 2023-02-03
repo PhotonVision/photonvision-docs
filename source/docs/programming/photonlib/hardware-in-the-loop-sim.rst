@@ -5,11 +5,9 @@ Hardware in the loop simulation is using a physical device, such as a PhotonVisi
 
 The first step is to install PhotonVision on your target device. Instructions can be found `here <https://docs.photonvision.org/en/latest/docs/getting-started/installation/sw_install/index.html>`_ for all devices.
 
-The next step is to configure PhotonVision for simulation.
+A small amount of configuration is required after installation. From the PhotonVision UI, go to the sidebar and select the Settings option. Within the settings, turn on "Run NetworkTables Server".
 
 .. warning:: Do not leave this toggle on when accessing your device on a full robot.
-
-A small amount of configuration is required on the coprocessor. From the PhotonVision UI, go to the sidebar and select the Settings option. Within the settings, turn on "Run NetworkTables Server".
 
 .. image:: images/nt-server-toggle.png
 
@@ -33,3 +31,7 @@ The final step is to configure your code to connect to the NetworkTables server 
 
       // Change the IP address to the address of your PhotonVision instance
       // TODO
+
+Now launch simulation, and you should be able to see the PhotonVision table on your simulation's NetworkTables dashboard.
+
+.. image:: images/hardware-in-the-loop-sim.png
