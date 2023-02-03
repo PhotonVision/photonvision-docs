@@ -106,7 +106,7 @@ Getting Data From A Target
 * double ``getYaw()``/``GetYaw()``: The yaw of the target in degrees (positive right).
 * double ``getPitch()``/``GetPitch()``: The pitch of the target in degrees (positive up).
 * double ``getArea()``/``GetArea()``: The area (how much of the camera feed the bounding box takes up) as a percent (0-100).
-* double ``getYaw()``/``GetYaw()``: The skew of the target in degrees (counter-clockwise positive).
+* double ``getSkew()``/``GetSkew()``: The skew of the target in degrees (counter-clockwise positive).
 * double[] ``getCorners()``/``GetCorners()``: The 4 corners of the minimum bounding box rectangle.
 * Transform2d ``getCameraToTarget()``/``GetCameraToTarget()``: The camera to target transform. See `2d transform documentation here <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/geometry/transformations.html#transform2d-and-twist2d>`_.
 
