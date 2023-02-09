@@ -3,13 +3,19 @@ Networking
 
 Physical Networking
 -------------------
-.. note:: When using PhotonVision off robot, try to plug the coprocessor into a physical router if you can. Windows and other OS are known to be buggy networking wise when a coprocessor is directly plugged in.
+.. note:: When using PhotonVision off robot, you *MUST* plug the coprocessor into a physical router/radio. You can then connect your laptop/device used to view the webdashboard to the same network. Any other networking setup will not work and will not be supported in any capacity.
+
+After imaging your coprocessor, run an ethernet cable from your coprocessor to a router/radio and power on your coprocessor by plugging it into the wall. Then connect whatever device you're using to view the webdashboard to the same network and navigate to photonvision.local:5800.
 
 PhotonVision *STRONGLY* recommends the usage of a network switch on your robot. This is because the second radio port on the current FRC radios is known to be buggy and cause frequent connection issues that are detrimental during competition. More information can be found in this `ChiefDelphi thread <https://www.chiefdelphi.com/t/why-you-probably-shouldnt-use-the-second-port-on-your-openmesh-om5p-radio-and-embrace-using-an-ethernet-switch-instead/406374>`_ and an in-depth guide on how to install a network switch can be found `on FRC 900's website <https://team900.org/blog/ZebraSwitch/>`_.
+
+
 
 Digital Networking
 ------------------
 PhotonVision *STRONGLY* recommends the usage of Static IPs as it increases reliability on the field and when using PhotonVision in general. To properly set up your static IP, follow the steps below:
+
+.. warning:: Only use a static IP when connected to the **robot radio**, and never when testing at home, unless you are well versed in networking or have the relevant "know how".
 
 1. Ensure your robot is on and you are connected to the robot network.
 2. Navigate to ``photonvision.local:5800`` (this may be different if you are using a Gloworm / Limelight) in your browser.

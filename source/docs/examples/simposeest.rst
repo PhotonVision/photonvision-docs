@@ -22,9 +22,9 @@ WPILib's :code:`Pose2d` class is used to represent robot positions on the field.
 
 Three different :code:`Pose2d` positions are relevant for this example:
 
-1) Desired Pose: The location the some autonomous routine wants the robot to be in.
+1) Desired Pose: The location some autonomous routine wants the robot to be in.
 2) Estimated Pose: The location the software `believes` the robot to be in, based on physics models and sensor feedback.
-3) Actual Pose: The locations he robot is actually at. The physics simulation generates this in simulation, but it cannot be directly measured on the real robot.
+3) Actual Pose: The locations the robot is actually at. The physics simulation generates this in simulation, but it cannot be directly measured on the real robot.
 
 Estimating Pose
 ^^^^^^^^^^^^^^^

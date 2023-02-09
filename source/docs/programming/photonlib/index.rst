@@ -11,4 +11,5 @@ PhotonLib: Robot Code Interface
    driver-mode-pipeline-index
    controlling-led
    simulation
+   hardware-in-the-loop-sim
    labview/index

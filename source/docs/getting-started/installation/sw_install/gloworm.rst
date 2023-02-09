@@ -52,7 +52,7 @@ To turn the LED lights off or on you need to modify the ``ledMode`` network tabl
 Support Links
 -------------
 
-* `Website/Documentation <http://web.archive.org/web/20220525051935/https://gloworm.vision/>`__
+* `Website/Documentation <https://photonvision.github.io/gloworm-docs/docs/quickstart/#finding-gloworm>`__ (Note: Gloworm is no longer in production)
 
 * `Image <https://github.com/gloworm-vision/pi-img-updator/releases>`__
 

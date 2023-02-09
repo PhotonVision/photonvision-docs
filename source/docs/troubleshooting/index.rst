@@ -7,3 +7,4 @@ Troubleshooting
    common-errors
    logging
    camera-troubleshooting
+   networking-troubleshooting
