@@ -31,7 +31,7 @@ This section will walk you through how to wire your coprocessor to get power.
 Step 3: Networking
 ------------------
 
-This section will walk you though how to connect your coprocessor to a network. This section is very important (and easy to get wrong), so we reccomend you read it throughly.
+This section will walk you though how to connect your coprocessor to a network. This section is very important (and easy to get wrong), so we recommend you read it thoroughly.
 
 .. toctree::
    :maxdepth: 1

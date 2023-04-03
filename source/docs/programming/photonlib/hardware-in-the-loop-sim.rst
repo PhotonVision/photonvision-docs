@@ -29,12 +29,18 @@ The final step is to configure your code to connect to the NetworkTables server 
 
    .. code-block:: c++
 
-      if(RobotBase.IsSimulation()) {
-         auto inst = NetworkTableInstance.getDefault();
-         inst.StopServer();
-         // Change the IP address in the below function to the IP address you use to connect to the PhotonVision UI.
-         inst.SetServer("photonvision.local");
-         inst.StartClient4("Robot Simulation");
+      #include <frc/RobotBase.h>
+      #include <networktables/NetworkTable.h>
+
+      void Robot::RobotInit() {
+        if constexpr (frc::RobotBase::IsSimulation()) {
+          auto inst = nt::NetworkTableInstance::GetDefault();
+          inst.StopServer();
+          // Change the IP address in the below function to the IP address you use to
+          // connect to the PhotonVision UI.
+          inst.SetServer("localhost");
+          inst.StartClient4("Robot Simulation");
+        }
       }
 
 Now launch simulation, and you should be able to see the PhotonVision table on your simulation's NetworkTables dashboard.

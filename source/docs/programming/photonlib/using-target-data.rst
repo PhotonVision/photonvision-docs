@@ -85,7 +85,7 @@ Estimating Field Relative Pose with AprilTags
 
 Getting the Yaw To a Pose
 -------------------------
-``getYawToPose(Pose2d robotPose, Pose2d targetPose)`` returns the ``Rotation2d`` between your robot and a target. This is useful when turning towards an arbitraty target on the field (ex. the center of the hub in 2022).
+``getYawToPose(Pose2d robotPose, Pose2d targetPose)`` returns the ``Rotation2d`` between your robot and a target. This is useful when turning towards an arbitrary target on the field (ex. the center of the hub in 2022).
 
 .. tab-set-code::
    .. code-block:: java

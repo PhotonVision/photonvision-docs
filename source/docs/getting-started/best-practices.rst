@@ -4,7 +4,7 @@ Best Practices For Competition
 Before Competition
 ------------------
 * Ensure you have spares of the relevant electronics if you can afford it (switch, coprocessor, cameras, etc.).
-* Download the latest release .jar onto your computer and update your Pi if necessary (only update if the release is labeled "critical" or similar, we do not recommend updating right before an event in case there are unforseen bugs).
+* Download the latest release .jar onto your computer and update your Pi if necessary (only update if the release is labeled "critical" or similar, we do not recommend updating right before an event in case there are unforeseen bugs).
 * Test out PhotonVision at your home setup.
 * Ensure that you have set up SmartDashboard / Shuffleboard to view your camera streams during matches.
 * Follow all the recommendations under the Networking section in installation (network switch and static IP).
