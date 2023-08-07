@@ -23,9 +23,9 @@ Continue Adding from legacy documentation
 VisionSystemSim Initialization
 ------------------------------
 
-the new system revolves around the class VisionSystemSim (Note this is different than the official soon to be deprecated SimVision). This class is responsible for updates and coordination of simulated elements and "real" interfaces. Photon Vision relies on NT4 and thus the simulation only has to spoof publish to the same topics a real camera object would receive on.
+the new system revolves around the class VisionSystemSim (Note this is different than the official soon to be deprecated SimVision). This class is responsible for updates and coordination of simulated elements and "real" interfaces. 
 
-First lets create a subsystem to hold and call a periodic function to update the simulation.
+First as an example, create a subsystem to hold and call a periodic function to update the simulation.
 
 .. tab-set-code::
    .. code-block:: java
@@ -38,7 +38,7 @@ First lets create a subsystem to hold and call a periodic function to update the
             }
         }
 
-Create the VisionSystemSim
+Create the ``VisionSystemSim``
 
 .. tab-set-code::
    .. code-block:: java
@@ -47,7 +47,7 @@ Create the VisionSystemSim
             VisionSystemSim simVision = new VisionSystemSim("photonvision");
 
 
-then we would like to setup a Transform3d to represent the position of the simulated camera
+then we would like to setup a ``Transform3d`` to represent the position of the simulated camera
 
 .. tab-set-code::
    .. code-block:: java
@@ -58,7 +58,7 @@ then we would like to setup a Transform3d to represent the position of the simul
             new Translation3d(0.0, 0, camHeightOffGround), new Rotation3d(0, camPitch, 0));
 
 
-Then create the real camera object if not already defined in the real robot code. then create the simulated camera object which is linked to the real camera to spoof the NT4 readings for it. The PhotonCameraSim also allows for a json to be loaded to mimick the exact setup of your hardware. I have selected a preset Limelight default which sets the lens distortion and latency. The final two parameters set the percent for tag detection and the max detection range in meters
+Then create the real camera object if not already defined in the real robot code. then create the simulated camera object which is linked to the real camera to publish the NT4 readings for it. The ``PhotonCameraSim`` also allows for a json to be loaded to mimick the exact setup of your hardware. this example selects a preset Limelight preset which sets the lens distortion,latency, and other parameters soted in ``SimCameraProperties``. The final two parameters set the percent for tag detection and the max detection range in meters
 
 .. tab-set-code::
    .. code-block:: java
@@ -70,7 +70,7 @@ Then create the real camera object if not already defined in the real robot code
             simCam = new PhotonCameraSim(realCam, SimCameraProperties.LL2_960_720(),0.05,20);
 
 
-Once the simCam has been created it needs to be added to the instance of VisionSystemSim passing the simulated camera and the Transform3d representing its location relative to the robot origin.
+Once the simCam has been created it needs to be added to the instance of ``VisionSystemSim`` passing the simulated camera and the ``Transform3d`` representing its location relative to the robot origin.
 
 .. tab-set-code::
    .. code-block:: java
@@ -78,7 +78,7 @@ Once the simCam has been created it needs to be added to the instance of VisionS
         simVision.addCamera(simCam, cameratrans);
 
 
-Next targets must be added to the vision system. I have added the default targets from the AprilTagFields object. This can throw and exception to so for now we lazily catch it.
+Next targets must be added to the vision system. The default targets from the AprilTagFields object are added. This can throw an exception if it fails to load the json so the code must catch and take any needed actions. 
 
 .. tab-set-code::
    .. code-block:: java
@@ -91,7 +91,7 @@ Next targets must be added to the vision system. I have added the default target
         }
 
 
-<p class="callout info">Manual targets can be added. One pitfall is that the apriltag ID MUST be set when constructing. ex new VisionTargetSim( targetpose3d, TargetModel.kTag16h5, ID)</p>
+.. note:: Manual targets can be added. One pitfall is that the apriltag ID MUST be set when constructing. ex ``new VisionTargetSim( targetpose3d, TargetModel.kTag16h5, ID)``
 
 Example of a manual target being added
 
@@ -105,7 +105,7 @@ Example of a manual target being added
 Periodic Update
 ---------------
 
-Inside the periodic a robot pose must be given to the vision simulation to generate the frames. This is outside the scope of the current article but there are examples of how that can be simulated in the official photon vision documentation [here](https://docs.photonvision.org/en/latest/docs/programming/photonlib/simulation.html).
+Inside the periodic a robot pose must be given to the vision simulation to generate the frames.
 
 This can either be a Pose3d or Pose2d.
 
@@ -128,10 +128,22 @@ Just remember to check the results to see if hasTargets() is true
         var results = realCam.getLatestResult();
         if (results.hasTargets()) {
             //log targets or use data
+            // ex:
+            // realCam.getLatestResult().getBestTarget();
         }
         else {
             //log empty list
         }
+
+
+
+Simulation Results
+------------------
+You can view generated frames from the camera at the urls listed in CameraPublisher. Both the Raw and Processed versions. Below is an example of a processed frame.
+
+Ex: http://photonvision.local:1182/
+
+.. image:: images/ExampleGeneratedFrame.png
 
 
 AdvantageKit Logging Results (optional)
@@ -155,11 +167,3 @@ then if results.hadTargets() is false simply log an empty array
         
         Logger.getInstance().recordOutput("photonvision/targetposes", new Pose3d[] {});
 
-
-Simulation Results
-------------------
-You can view generated frames from the camera at the urls listed in CameraPublisher. Both the Raw and Processed versions. Below is an example of a processed frame.
-
-Ex: http://photonvision.local:1182/
-
-.. image:: images/ExampleGeneratedFrame.png
