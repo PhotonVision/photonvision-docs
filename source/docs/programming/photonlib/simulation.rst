@@ -17,7 +17,10 @@ A ``SimVisionSystem`` represents the camera, coprocessor, and PhotonVision softw
 
 It requires a number of pieces of configuration to accurately simulate your physical setup. Match them to your configuration in PhotonVision, and to your robot's physical dimensions.
 
-Continue Adding from legacy documentation
+While processing, the given robot ``Pose2d`` or ``Pose3d`` is used to analyze which targets should be in view, and determine where they would have shown up in the camera image. 
+
+.. image:: images/SimArchitecture.svg
+
 
 
 VisionSystemSim Initialization

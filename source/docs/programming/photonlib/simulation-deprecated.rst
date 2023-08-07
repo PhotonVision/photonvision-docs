@@ -1,5 +1,5 @@
-Simulation Support in PhotonLib Legacy
-======================================
+Simulation Support in PhotonLib Deprecated
+==========================================
 
 What Is Supported?
 ------------------
@@ -25,7 +25,7 @@ Targets are considered in view if:
 
 Latency of processing is not yet modeled.
 
-.. image:: images/SimArchitecture.svg
+.. image:: images/SimArchitecture-deprecated.svg
 
 
 
