@@ -10,6 +10,6 @@ PhotonLib: Robot Code Interface
    robot-pose-estimator
    driver-mode-pipeline-index
    controlling-led
-   simulation-legacy
+   simulation-deprecated
    simulation
    hardware-in-the-loop-sim
