@@ -31,7 +31,7 @@ The API documentation can be found in here: `Java <https://github.wpilib.org/all
 
 Creating a ``PhotonPoseEstimator``
 ----------------------------------
-The PhotonPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (see above), ``PoseStrategy``, ``PhotonCamera``, and ``Transform3d``. ``PoseStrategy`` has five possible values:
+The PhotonPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (see above), ``PoseStrategy``, ``PhotonCamera``, and ``Transform3d``. ``PoseStrategy`` has six possible values:
 
 * LOWEST_AMBIGUITY
     * Choose the Pose with the lowest ambiguity.
