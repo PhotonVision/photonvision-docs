@@ -43,6 +43,8 @@ The PhotonPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` 
     * Choose the Pose which is closest to the last pose calculated.
 * AVERAGE_BEST_TARGETS
     * Choose the Pose which is the average of all the poses from each tag.
+* MULTI_TAG_PNP
+    * Calculate a new PNP solution using all visible tags.
 
 .. tab-set-code::
    .. code-block:: java
