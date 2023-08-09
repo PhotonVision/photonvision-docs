@@ -3,7 +3,7 @@ Orange Pi Installation
 
 Downloading Linux Image
 -----------------------
-For an Orange Pi 4, download the latest release of the Armbian Bullseye CLI image from `here <https://redirect.armbian.com/region/NA/orangepi4-lts/Bullseye_current>`_.
+For an Orange Pi 4, download the latest release of the Armbian Bullseye CLI image from `here <https://armbian.tnahosting.net/archive/orangepi4/archive/Armbian_23.02.2_Orangepi4_bullseye_current_5.15.93.img.xz>`_.
 
 For an Orange Pi 5, download the latest release of either Debian Bullseye or Ubuntu Jammy (22.04). For both, you should get the "server" version. You can get the images from the `Orange Pi website <http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-pi-5.html>`_.
 
