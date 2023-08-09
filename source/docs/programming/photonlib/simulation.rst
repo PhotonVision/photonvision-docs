@@ -142,7 +142,7 @@ Simulation Results
 ------------------
 You can view generated frames from the camera at the urls listed in CameraPublisher. Both the Raw and Processed versions. Below is an example of a processed frame.
 
-Ex: http://photonvision.local:1182/
+Ex: ``photonvision.local:1182``
 
 .. image:: images/ExampleGeneratedFrame.png
 
