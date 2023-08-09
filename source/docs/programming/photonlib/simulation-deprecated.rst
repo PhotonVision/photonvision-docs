@@ -3,7 +3,7 @@ Simulation Support in PhotonLib Deprecated
 
 What Is Supported?
 ------------------
-PhotonLib supports simulation of a Photon Vision camera and processor moving about a field on a robot.
+PhotonLib supports simulation of a camera and coprocessor running PhotonVision moving about a field on a robot.
 
 You can use this to help validate your robot code's behavior in simulation without special wrappers or additional hardware.
 
