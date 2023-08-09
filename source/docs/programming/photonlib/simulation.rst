@@ -146,25 +146,3 @@ Ex: http://photonvision.local:1182/
 
 .. image:: images/ExampleGeneratedFrame.png
 
-
-AdvantageKit Logging Results (optional)
----------------------------------------
-Advantage kit can take in a series of Pose3d objects to be displayed at vision targets. There is a small amount of processing that converts the transforms into concrete3d Poses for display
-
-.. tab-set-code::
-   .. code-block:: java
-
-        ArrayList<Pose3d> targets = new ArrayList<Pose3d>();
-        for(PhotonTrackedTarget t :realCam.getLatestResult().getTargets()) {
-            targets.add(current3d.transformBy(cameratrans).transformBy(t.getBestCameraToTarget()));
-        }
-        Logger.getInstance().recordOutput("photonvision/targetposes", targets.toArray(newPose3d[targets.size()]));
-
-
-then if results.hadTargets() is false simply log an empty array
-
-.. tab-set-code::
-   .. code-block:: java
-        
-        Logger.getInstance().recordOutput("photonvision/targetposes", new Pose3d[] {});
-
