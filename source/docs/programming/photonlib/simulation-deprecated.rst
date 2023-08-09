@@ -5,7 +5,7 @@ What Is Supported?
 ------------------
 PhotonLib supports simulation of a camera and coprocessor running PhotonVision moving about a field on a robot.
 
-You can use this to help validate your robot code's behavior in simulation without special wrappers or additional hardware.
+You can use this to help validate your robot code's behavior in simulation without needing a physical robot.
 
 Simulation Vision World Model
 -----------------------------
