@@ -32,7 +32,7 @@ Latency of processing is not yet modeled.
 Simulated Vision System
 -----------------------
 
-A ``SimVisionSystem`` represents the camera, coprocessor, and PhotonVision software moving around on the field.
+A ``SimVisionSystem`` represents the camera and coprocessor running PhotonVision moving around on the field.
 
 It requires a number of pieces of configuration to accurately simulate your physical setup. Match them to your configuration in PhotonVision, and to your robot's physical dimensions.
 
