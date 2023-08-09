@@ -6,14 +6,14 @@ What Is Supported?
 
 .. warning:: This simulation overhaul currently only supports Java. 
 
-PhotonLib supports simulation of a Photon Vision camera and processor moving about a field on a robot.
+PhotonLib supports simulation of a camera and coprocessor running PhotonVision moving about a field on a robot.
 
-You can use this to help validate your robot code's behavior in simulation without special wrappers or additional hardware.
+You can use this to help validate your robot code's behavior in simulation without needing a physical robot.
 
 Simulated Vision System
 -----------------------
 
-A ``VisionSystemSim`` represents the camera, coprocessor, and PhotonVision software moving around on the field.
+A ``VisionSystemSim`` represents the camera, coprocessor, and PhotonVision software moving around on the field. (Note this is different than the official soon to be deprecated SimVision)
 
 The system takes in a series of simulated targets which must be set to the field layout or a custom tag layout. ``VisionSystemSim`` also holds ``PhotonCameraSim`` which must be configured to match the desired physical camera to simulate distortion and latency. 
 

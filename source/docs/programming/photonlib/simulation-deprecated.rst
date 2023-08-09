@@ -1,5 +1,5 @@
 Simulation Support in PhotonLib (Deprecated)
-==========================================
+============================================
 
 What Is Supported?
 ------------------
