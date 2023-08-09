@@ -3,9 +3,9 @@ Simulation Support in PhotonLib (Deprecated)
 
 What Is Supported?
 ------------------
-PhotonLib supports simulation of a Photon Vision camera and processor moving about a field on a robot.
+PhotonLib supports simulation of a camera and coprocessor running PhotonVision moving about a field on a robot.
 
-You can use this to help validate your robot code's behavior in simulation without special wrappers or additional hardware.
+You can use this to help validate your robot code's behavior in simulation without needing a physical robot.
 
 Simulation Vision World Model
 -----------------------------
@@ -32,7 +32,7 @@ Latency of processing is not yet modeled.
 Simulated Vision System
 -----------------------
 
-A ``SimVisionSystem`` represents the camera, coprocessor, and PhotonVision software moving around on the field.
+A ``SimVisionSystem`` represents the camera and coprocessor running PhotonVision moving around on the field.
 
 It requires a number of pieces of configuration to accurately simulate your physical setup. Match them to your configuration in PhotonVision, and to your robot's physical dimensions.
 
