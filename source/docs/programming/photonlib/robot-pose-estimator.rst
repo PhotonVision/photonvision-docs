@@ -44,7 +44,7 @@ The PhotonPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` 
 * AVERAGE_BEST_TARGETS
     * Choose the Pose which is the average of all the poses from each tag.
 * MULTI_TAG_PNP
-    * Calculate a new PNP solution using all visible tags.
+    * Calculates a new robot position estimate by combining all visible tags.
 
 .. tab-set-code::
    .. code-block:: java
