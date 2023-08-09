@@ -13,9 +13,9 @@ You can use this to help validate your robot code's behavior in simulation witho
 Simulated Vision System
 -----------------------
 
-A ``SimVisionSystem`` represents the camera, coprocessor, and PhotonVision software moving around on the field.
+A ``VisionSystemSim`` represents the camera, coprocessor, and PhotonVision software moving around on the field.
 
-It requires a number of pieces of configuration to accurately simulate your physical setup. Match them to your configuration in PhotonVision, and to your robot's physical dimensions.
+The system takes in a series of simulated targets which must be set to the field layout or a custom tag layout. ``VisionSystemSim`` also holds ``PhotonCameraSim`` which must be configured to match the desired physical camera to simulate distortion and latency. 
 
 While processing, the given robot ``Pose2d`` or ``Pose3d`` is used to analyze which targets should be in view, and determine where they would have shown up in the camera image. 
 
@@ -25,8 +25,6 @@ While processing, the given robot ``Pose2d`` or ``Pose3d`` is used to analyze wh
 
 VisionSystemSim Initialization
 ------------------------------
-
-the new system revolves around the class VisionSystemSim (Note this is different than the official soon to be deprecated SimVision). This class is responsible for updates and coordination of simulated elements and "real" interfaces. 
 
 First as an example, create a subsystem to hold and call a periodic function to update the simulation.
 
