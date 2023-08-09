@@ -4,7 +4,7 @@ Simulation Support in PhotonLib
 What Is Supported?
 ------------------
 
-.. warning:: This simulation overhaul currently only supports Java. 
+.. warning:: This simulation overhaul currently only supports Java.
 
 PhotonLib supports simulation of a camera and coprocessor running PhotonVision moving about a field on a robot.
 
@@ -15,9 +15,9 @@ Simulated Vision System
 
 A ``VisionSystemSim`` represents the camera, coprocessor, and PhotonVision software moving around on the field. (Note this is different than the official soon to be deprecated SimVision)
 
-The system takes in a series of simulated targets which must be set to the field layout or a custom tag layout. ``VisionSystemSim`` also holds ``PhotonCameraSim`` which must be configured to match the desired physical camera to simulate distortion and latency. 
+The system takes in a series of simulated targets which must be set to the field layout or a custom tag layout. ``VisionSystemSim`` also holds ``PhotonCameraSim`` which must be configured to match the desired physical camera to simulate distortion and latency.
 
-While processing, the given robot ``Pose2d`` or ``Pose3d`` is used to analyze which targets should be in view, and determine where they would have shown up in the camera image. 
+While processing, the given robot ``Pose2d`` or ``Pose3d`` is used to analyze which targets should be in view, and determine where they would have shown up in the camera image.
 
 .. image:: images/SimArchitecture.svg
 
@@ -79,7 +79,7 @@ Once the simCam has been created it needs to be added to the instance of ``Visio
         simVision.addCamera(simCam, cameratrans);
 
 
-Next targets must be added to the vision system. The default targets from the AprilTagFields object are added. This can throw an exception if it fails to load the json so the code must catch and take any needed actions. 
+Next targets must be added to the vision system. The default targets from the AprilTagFields object are added. This can throw an exception if it fails to load the json so the code must catch and take any needed actions.
 
 .. tab-set-code::
    .. code-block:: java
