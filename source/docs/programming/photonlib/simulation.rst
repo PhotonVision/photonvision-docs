@@ -1,10 +1,10 @@
 Simulation Support in PhotonLib
 ===============================
 
+.. attention:: This page details the current simulation support for Java. For other languages, see :doc:`/docs/programming/photonlib/simulation-deprecated`. 
+
 What Is Supported?
 ------------------
-
-.. warning:: This simulation overhaul currently only supports Java.
 
 PhotonLib supports simulation of a camera and coprocessor running PhotonVision moving about a field on a robot.
 

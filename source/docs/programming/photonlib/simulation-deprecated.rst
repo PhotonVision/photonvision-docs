@@ -1,6 +1,8 @@
 Simulation Support in PhotonLib (Deprecated)
 ============================================
 
+.. attention:: This page details the legacy simulation support. For current Java simulation support, see :doc:`/docs/programming/photonlib/simulation`. 
+
 What Is Supported?
 ------------------
 PhotonLib supports simulation of a camera and coprocessor running PhotonVision moving about a field on a robot.
