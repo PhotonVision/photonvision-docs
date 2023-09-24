@@ -141,7 +141,7 @@ These properties are used in a ``PhotonCameraSim``, which handles generating cap
       // The simulation of this camera. Its values used in real robot code will be updated.
       PhotonCameraSim cameraSim = new PhotonCameraSim(camera, cameraProp);
 
-The ``PhotonCameraSim`` can now be added to the ``VisionSystemSim``. We have to define a robot-to-camera transform, which describes where the camera is relative to the robot pose (this can be measured in CAD or by hand). If the camera is mounted on a mobile mechanism (like a turret) this transform can be updated.
+The ``PhotonCameraSim`` can now be added to the ``VisionSystemSim``. We have to define a robot-to-camera transform, which describes where the camera is relative to the robot pose (this can be measured in CAD or by hand).
 
 .. tab-set-code::
 
@@ -157,14 +157,20 @@ The ``PhotonCameraSim`` can now be added to the ``VisionSystemSim``. We have to 
       // Add this camera to the vision system simulation with the given robot-to-camera transform.
       visionSim.addCamera(cameraSim, robotToCamera);
 
-      // If we'd like to adjust this transform sometime later, we can do so:
+.. important:: You may add multiple cameras to one ``VisionSystemSim``, but not one camera to multiple ``VisionSystemSim``. All targets in the ``VisionSystemSim`` will be visible to all its cameras.
+
+If the camera is mounted on a mobile mechanism (like a turret) this transform can be updated later.
+
+.. tab-set-code::
+
+   .. code-block:: java
+
+      // The turret the camera is mounted on is rotated 5 degrees
       Rotation3d turretRotation = new Rotation3d(0, 0, Math.toRadians(5));
       robotToCamera = new Transform3d(
               robotToCameraTrl.rotateBy(turretRotation),
               robotToCameraRot.rotateBy(turretRotation));
       visionSim.adjustCamera(cameraSim, robotToCamera);
-
-.. important:: You may add multiple cameras to one ``VisionSystemSim``, but not one camera to multiple ``VisionSystemSim``. All targets in the ``VisionSystemSim`` will be visible to all its cameras.
 
 Updating The Simulation World
 -----------------------------
