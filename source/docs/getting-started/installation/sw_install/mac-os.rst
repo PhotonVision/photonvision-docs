@@ -38,4 +38,4 @@ Accessing the PhotonVision Interface
 ------------------------------------
 Once the Java backend is up and running, you can access the main vision interface by navigating to ``localhost:5800`` inside your browser.
 
-.. warning:: Due to current `cscore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ restrictions, it is unlikley any streams will open from real webcams.
+.. warning:: Due to current `cscore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ restrictions, it is unlikely any streams will open from real webcams.

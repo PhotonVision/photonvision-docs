@@ -9,7 +9,7 @@ About
 API
 ^^^
 
-.. warning:: NetworkTables is not a supported setup/viable option when using PhotonVision as we only send one target at a time (this is problematic when using AprilTags, which will return data from multiple tags at once). We reccomend using PhotonLib.
+.. warning:: NetworkTables is not a supported setup/viable option when using PhotonVision as we only send one target at a time (this is problematic when using AprilTags, which will return data from multiple tags at once). We recommend using PhotonLib.
 
 The tables below contain the the name of the key for each entry that PhotonVision sends over the network and a short description of the key. The entries should be extracted from a subtable with your camera's nickname (visible in the PhotonVision UI) under the main ``photonvision`` table.
 
@@ -32,7 +32,11 @@ Getting Target Information
 +-------------------+--------------+--------------------------------------------------------------------------+
 | ``targetSkew``    | ``double``   | The skew of the target in degrees (counter-clockwise positive).          |
 +-------------------+--------------+--------------------------------------------------------------------------+
-| ``targetPose``    | ``double[]`` | The pose of the target relative to the robot (x, y, rotation in degrees) |
+| ``targetPose``    | ``double[]`` | The pose of the target relative to the robot (x, y, z, qw, qx, qy, qz)   |
++-------------------+--------------+--------------------------------------------------------------------------+
+| ``targetPixelsX`` | ``double``   | The target crosshair location horizontally, in pixels (origin top-right) |
++-------------------+--------------+--------------------------------------------------------------------------+
+| ``targetPixelsY`` | ``double``   | The target crosshair location vertically, in pixels (origin top-right)   |
 +-------------------+--------------+--------------------------------------------------------------------------+
 
 Changing Settings
