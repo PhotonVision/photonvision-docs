@@ -3,7 +3,7 @@ About PhotonVision
 
 Description
 ^^^^^^^^^^^
-PhotonVision is free, fast, and easy-to-use vision processing solution for the *FIRST*\ Robotics Competition. PhotonVision is designed to get vision working on your robot *quickly*, without the significant cost of other similar solutions.
+PhotonVision is a free, fast, and easy-to-use vision processing solution for the *FIRST*\ Robotics Competition. PhotonVision is designed to get vision working on your robot *quickly*, without the significant cost of other similar solutions.
 Using PhotonVision, teams can go from setting up a camera and coprocessor to detecting and tracking targets by simply tuning sliders. With an easy to use interface, comprehensive documentation, and a feature rich vendor dependency, no experience is necessary to use PhotonVision. No matter your resources, using PhotonVision is easy compared to its alternatives.
 
 Advantages
@@ -32,7 +32,7 @@ Compared to alternative solutions, PhotonVision boasts higher frames per second 
 
 Low Latency
 -----------
-PhotonVision provides low latency processing to make sure you vision measurements as fast as possible and makes complex vision tasks easier. We guarantee that all measurements are sent from the same timestamp, making life easier for your programmers.
+PhotonVision provides low latency processing to make sure you get vision measurements as fast as possible, which makes complex vision tasks easier. We guarantee that all measurements are sent from the same timestamp, making life easier for your programmers.
 
 Fully Open Source and Active Developer Community
 ------------------------------------------------
@@ -40,7 +40,7 @@ You can find all of our code on `GitHub <https://github.com/PhotonVision>`_, inc
 
 Multi-Camera Support
 --------------------
-You can use multiple cameras within PhotonVision, allowing you to see multiple angles without the need to buy multiple coprocessors. This makes things more affordable and simpler for your team.
+You can use multiple cameras within PhotonVision, allowing you to see multiple angles without the need to buy multiple coprocessors. This makes vision processing more affordable and simpler for your team.
 
 Comprehensive Documentation
 ---------------------------
