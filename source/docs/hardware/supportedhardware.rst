@@ -33,6 +33,7 @@ Pi cameras are always recommended over USB cameras as they have lower latency an
 .. warning::
 
     The following cameras / setups are known to not work:
+
     * Using two of the same USB cameras does not currently work because it is hard to identify the two different cameras.
 
     * Most Logitech cameras (specifically the Logitech C270 HD Webcam (PN: 960-000694)) will not work with PhotonVision.
