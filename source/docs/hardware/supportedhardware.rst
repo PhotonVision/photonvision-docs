@@ -12,15 +12,13 @@ PhotonVision relies on `CSCore <https://github.com/wpilibsuite/allwpilib/tree/ma
 
 Pi cameras are always recommended over USB cameras as they have lower latency and better performance compared to your average USB Camera.
 
+.. note:: The V3 Pi Camera is not currently supported. PRs are welcome to add support. 
+
 * `Pi Camera Module V1 <https://www.amazon.com/gp/product/B07ZZ2K7WP>`_ (General Target Tracking)
 
   * The V1 is strongly preferred over the V2 due to the V2 having undesirable FOV choices
 
-* `Innomaker OV9281 Global Shutter Camera <https://www.amazon.com/Raspberry-External-Monochrome-Bullseye-libcamera/dp/B09WTP5GZH>`_ (AprilTag Tracking)
-
-.. note:: Note that there are many CSI based OV9281 cameras but this is the only one that has been tested by the development team.
-
-* `Arducam USB OV9281 Global Shutter Camera <https://www.amazon.com/Arducam-Distortion-Microphones-Computer-Raspberry/dp/B096M5DKY6>`_ (AprilTag Tracking)
+* `Arducam USB OV9281 Global Shutter Camera or similar USB camera <https://www.amazon.com/Arducam-Distortion-Microphones-Computer-Raspberry/dp/B096M5DKY6>`_ (AprilTag Tracking)
 
 * `720p ELP Camera <https://www.amazon.com/SVPRO-Camera-Module-100degree-Distortion/dp/B07C1KYBYC>`_ (Retroreflective Target Tracking)
 
