@@ -230,14 +230,16 @@ Running examples
 You can run one of the many built in examples straight from the command line, too! They contain a fully featured robot project, and some include simulation support. The projects can be found inside the photonlib-java-examples and photonlib-cpp-examples subdirectories, respectively. The projects currently available include:
 
 - photonlib-java-examples:
-     - aimandrange:simulateJava
-     - aimattarget:simulateJava
-     - getinrange:simulateJava
-     - simaimandrange:simulateJava
-     - simposeest:simulateJava
+   - aimattarget:simulateJava
+   - getinrange:simulateJava
+   - aimandrange:simulateJava
+   - simaimandrange:simulateJava
+   - swervedriveposeestsim:simulateJava
 - photonlib-cpp-examples:
-     - aimandrange:simulateNative
-     - getinrange:simulateNative
+   - aimattarget:simulateNative
+   - getinrange:simulateNative
+   - aimandrange:simulateNative
+   - apriltagExample:simulateNative
 
 To run them, use the commands listed below. Photonlib must first be published to your local maven repository, then the copyPhotonlib task will copy the generated vendordep json file into each example. After that, the simulateJava/simulateNative task can be used like a normal robot project. Robot simulation with attached debugger is technically possible by using simulateExternalJava and modifying the launch script it exports, though unsupported.
 
