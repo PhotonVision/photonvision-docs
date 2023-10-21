@@ -1,148 +1,223 @@
 Simulation Support in PhotonLib
 ===============================
 
-What Is Supported?
+.. attention:: This page details the current simulation support for Java. For other languages, see :doc:`/docs/programming/photonlib/simulation-deprecated`. 
+
+What Is Simulated?
 ------------------
 
-.. warning:: This simulation overhaul currently only supports Java.
+Simulation is a powerful tool teams can use to validate their robot code without needing access to a physical robot. Read more about `simulation in WPILib <https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robot-simulation/introduction.html>`_.
 
-PhotonLib supports simulation of a camera and coprocessor running PhotonVision moving about a field on a robot.
+PhotonLib can simulate cameras on the field and generate target data approximating what would be seen in reality. This simulation attempts to include the following:
 
-You can use this to help validate your robot code's behavior in simulation without needing a physical robot.
+- Camera Properties
+   - Field of Vision
+   - Lens distortion
+   - Image noise
+   - Framerate
+   - Latency
+- Target Data
+   - Detected / minimum-area-rectangle corners
+   - Center yaw/pitch
+   - Contour image area percentage
+   - Fiducial ID
+   - Fiducial ambiguity
+   - Fiducial solvePNP transform estimation
+- Camera Raw/Processed Streams (grayscale)
 
-Simulated Vision System
------------------------
+.. note:: 
 
-A ``VisionSystemSim`` represents the camera, coprocessor, and PhotonVision software moving around on the field. (Note this is different than the official soon to be deprecated SimVision)
+   Simulation does NOT include the following:
 
-The system takes in a series of simulated targets which must be set to the field layout or a custom tag layout. ``VisionSystemSim`` also holds ``PhotonCameraSim`` which must be configured to match the desired physical camera to simulate distortion and latency.
+   - Full physical camera/world simulation (targets are automatically thresholded)
+   - Pipeline switching
+   - Snapshots
 
-While processing, the given robot ``Pose2d`` or ``Pose3d`` is used to analyze which targets should be in view, and determine where they would have shown up in the camera image.
+With this approach required information about the camera and target properties is straightforward, and users can easily setup and experiment with PhotonLib in simulation.
 
-.. image:: images/SimArchitecture.svg
+.. image:: diagrams/SimArchitecture.drawio.svg
+   :alt: A diagram comparing the architecture of a real PhotonVision process to a simulated one.
 
+Drivetrain Simulation Prerequisite
+----------------------------------
 
+A prerequisite for simulating vision frames is knowing where the camera is on the field-- to utilize PhotonVision simulation, you'll need to supply the robot pose periodically. This requires drivetrain simulation for your robot project if you want to generate camera frames as your robot moves around the field.
 
-VisionSystemSim Initialization
-------------------------------
+References for using PhotonVision simulation with drivetrain simulation can be found in the `PhotonLib Java Examples <https://github.com/PhotonVision/photonvision/blob/2a6fa1b6ac81f239c59d724da5339f608897c510/photonlib-java-examples/README.md>`_ for both a differential drivetrain and a swerve drive.
 
-First as an example, create a subsystem to hold and call a periodic function to update the simulation.
+.. important:: The simulated drivetrain pose must be separate from the drivetrain estimated pose if a pose estimator is utilized.
 
-.. tab-set-code::
-   .. code-block:: java
+Vision System Simulation
+------------------------
 
-        public class SimPhotonVision extends SubsystemBase{
-            public SimVisionSystem() {
-            }
-            @Override
-            public void periodic() {
-            }
-        }
-
-Create the ``VisionSystemSim``
-
-.. tab-set-code::
-   .. code-block:: java
-
-        public class SimPhotonVision extends SubsystemBase{
-            VisionSystemSim simVision = new VisionSystemSim("photonvision");
-
-
-then we would like to setup a ``Transform3d`` to represent the position of the simulated camera
-
-.. tab-set-code::
-   .. code-block:: java
-
-        double camPitch = Units.degreesToRadians(10); // radians
-        double camHeightOffGround = 0.8; // meters
-        Transform3d cameratrans = new Transform3d(
-            new Translation3d(0.0, 0, camHeightOffGround), new Rotation3d(0, camPitch, 0));
-
-
-Then create the real camera object if not already defined in the real robot code. then create the simulated camera object which is linked to the real camera to publish the NT4 readings for it. The ``PhotonCameraSim`` also allows for a json to be loaded to mimick the exact setup of your hardware. this example selects a preset Limelight preset which sets the lens distortion,latency, and other parameters soted in ``SimCameraProperties``. The final two parameters set the percent for tag detection and the max detection range in meters
+A ``VisionSystemSim`` represents the simulated world for the camera, and contains the vision targets it can see. It is constructed with a unique label:
 
 .. tab-set-code::
+
    .. code-block:: java
 
-        PhotonCamera realCam;
-        PhotonCameraSim simCam;
-        public SimPhotonVision() {
-            realCam = new PhotonCamera("camera1");
-            simCam = new PhotonCameraSim(realCam, SimCameraProperties.LL2_960_720(),0.05,20);
+      // A vision system sim labelled as "main" in network tables
+      VisionSystemSim visionSim = new VisionSystemSim("main");
 
-
-Once the simCam has been created it needs to be added to the instance of ``VisionSystemSim`` passing the simulated camera and the ``Transform3d`` representing its location relative to the robot origin.
+Vision targets require a ``TargetModel``, which describes the shape of the target. Convenience constructors exist for spheres, cuboids, and planar rectangles. For example, a planar rectangle can be created with:
 
 .. tab-set-code::
+
    .. code-block:: java
 
-        simVision.addCamera(simCam, cameratrans);
+      // A 0.5 x 0.25 meter rectangular target
+      TargetModel targetModel = new TargetModel(0.5, 0.25);
 
-
-Next targets must be added to the vision system. The default targets from the AprilTagFields object are added. This can throw an exception if it fails to load the json so the code must catch and take any needed actions.
+These ``TargetModel`` are paired with a target pose to create a ``VisionTargetSim``. A ``VisionTargetSim`` is added to the ``VisionSystemSim`` to become visible to all of its cameras.
 
 .. tab-set-code::
+
    .. code-block:: java
 
-        try {
-            simVision.addVisionTargets(AprilTagFields.k2023ChargedUp.loadAprilTagLayoutField());
-        }
-        catch(Exception e) {
-            System.out.println("woops can't load the field");
-        }
+      // The pose of where the target is on the field.
+      // Its rotation determines where "forward" or the target x-axis points.
+      // Let's say this target is flat against the far wall center, facing the blue driver stations.
+      Pose3d targetPose = new Pose3d(16, 4, 2, new Rotation3d(0, 0, Math.PI));
+      // The given target model at the given pose
+      VisionTargetSim visionTarget = new VisionTargetSim(targetPose, targetModel);
 
+      // Add this vision target to the vision system simulation to make it visible
+      visionSim.addVisionTargets(visionTarget);
 
-.. note:: Manual targets can be added. One pitfall is that the apriltag ID MUST be set when constructing. ex ``new VisionTargetSim( targetpose3d, TargetModel.kTag16h5, ID)``
+.. note:: The pose of a ``VisionTargetSim`` object can be updated to simulate moving targets. Note, however, that this will break latency simulation for that target.
 
-Example of a manual target being added
+For convenience, an ``AprilTagFieldLayout`` can also be added to automatically create a target for each of its AprilTags.
 
 .. tab-set-code::
+
    .. code-block:: java
 
-        //Example Manual Target Added
-        simVision.addVisionTargets(new VisionTargetSim(t2pose,TargetModel.kTag16h5,2));
+      // The layout of AprilTags which we want to add to the vision system
+      // AprilTagFieldLayout tagLayout = ...;
 
+      visionSim.addAprilTags(tagLayout);
 
-Periodic Update
----------------
+.. note:: The poses of the AprilTags from this layout depend on its current alliance origin (e.g. blue or red). If this origin is changed later, the targets will have to be cleared from the ``VisionSystemSim`` and re-added.
 
-Inside the periodic a robot pose must be given to the vision simulation to generate the frames.
+Camera Simulation
+-----------------
 
-This can either be a Pose3d or Pose2d.
+Now that we have a simulation world with vision targets, we can add simulated cameras to view it.
+
+Before adding a simulated camera, we need to define its properties. This is done with the ``SimCameraProperties`` class:
 
 .. tab-set-code::
+
    .. code-block:: java
 
-        public void periodic() {
-            Pose2d currentPose = Drivetrain.getInstance().getPose();
-            Pose3d current3d = new Pose3d(currentPose)
-            simVision.update(currentPose);
+      // The simulated camera properties
+      SimCameraProperties cameraProp = new SimCameraProperties();
 
-
-Now results can be read from the real camera interface as if it was connected to hardware!
-
-Just remember to check the results to see if hasTargets() is true
+By default, this will create a 960 x 720 resolution camera with a 90 degree diagonal FOV(field-of-view) and no noise, distortion, or latency. If we want to change these properties, we can do so:
 
 .. tab-set-code::
+
    .. code-block:: java
 
-        var results = realCam.getLatestResult();
-        if (results.hasTargets()) {
-            //log targets or use data
-            // ex:
-            // realCam.getLatestResult().getBestTarget();
-        }
-        else {
-            //log empty list
-        }
+      // A 640 x 480 camera with a 100 degree diagonal FOV.
+      cameraProp.setCalibration(640, 480, Rotation2d.fromDegrees(100));
+      // Approximate detection noise with average and standard deviation error in pixels.
+      cameraProp.setCalibError(0.25, 0.08);
+      // Set the camera image capture framerate (Note: this is limited by robot loop rate).
+      cameraProp.setFPS(20);
+      // The average and standard deviation in milliseconds of image data latency.
+      cameraProp.setAvgLatencyMs(35);
+      cameraProp.setLatencyStdDevMs(5);
 
+These properties are used in a ``PhotonCameraSim``, which handles generating captured frames of the field from the simulated camera's perspective, and calculating the target data which is sent to the ``PhotonCamera`` being simulated. 
 
+.. tab-set-code::
 
-Simulation Results
-------------------
-You can view generated frames from the camera at the urls listed in CameraPublisher. Both the Raw and Processed versions. Below is an example of a processed frame.
+   .. code-block:: java
 
-Ex: ``photonvision.local:1182``
+      // The PhotonCamera used in the real robot code.
+      PhotonCamera camera = new PhotonCamera("cameraName");
+      
+      // The simulation of this camera. Its values used in real robot code will be updated.
+      PhotonCameraSim cameraSim = new PhotonCameraSim(camera, cameraProp);
 
-.. image:: images/ExampleGeneratedFrame.png
+The ``PhotonCameraSim`` can now be added to the ``VisionSystemSim``. We have to define a robot-to-camera transform, which describes where the camera is relative to the robot pose (this can be measured in CAD or by hand).
 
+.. tab-set-code::
+
+   .. code-block:: java
+
+      // Our camera is mounted 0.1 meters forward and 0.5 meters up from the robot pose,
+      // (Robot pose is considered the center of rotation at the floor level, or Z = 0)
+      Translation3d robotToCameraTrl = new Translation3d(0.1, 0, 0.5);
+      // and pitched 15 degrees up.
+      Rotation3d robotToCameraRot = new Rotation3d(0, Math.toRadians(-15), 0);
+      Transform3d robotToCamera = new Transform3d(robotToCameraTrl, robotToCameraRot);
+
+      // Add this camera to the vision system simulation with the given robot-to-camera transform.
+      visionSim.addCamera(cameraSim, robotToCamera);
+
+.. important:: You may add multiple cameras to one ``VisionSystemSim``, but not one camera to multiple ``VisionSystemSim``. All targets in the ``VisionSystemSim`` will be visible to all its cameras.
+
+If the camera is mounted on a mobile mechanism (like a turret) this transform can be updated later.
+
+.. tab-set-code::
+
+   .. code-block:: java
+
+      // The turret the camera is mounted on is rotated 5 degrees
+      Rotation3d turretRotation = new Rotation3d(0, 0, Math.toRadians(5));
+      robotToCamera = new Transform3d(
+              robotToCameraTrl.rotateBy(turretRotation),
+              robotToCameraRot.rotateBy(turretRotation));
+      visionSim.adjustCamera(cameraSim, robotToCamera);
+
+Updating The Simulation World
+-----------------------------
+
+To update the ``VisionSystemSim``, we simply have to pass in the simulated robot pose periodically (in ``simulationPeriodic()``).
+
+.. tab-set-code::
+
+   .. code-block:: java
+
+      // Update with the simulated drivetrain pose. This should be called every loop in simulation.
+      visionSim.update(robotPoseMeters);
+
+Targets and cameras can be added and removed, and camera properties can be changed at any time.
+
+Visualizing Results
+-------------------
+
+Each ``VisionSystemSim`` has its own built-in ``Field2d`` for displaying object poses in the simulation world such as the robot, simulated cameras, and actual/measured target poses.
+
+.. tab-set-code::
+
+   .. code-block:: java
+
+      // Get the built-in Field2d used by this VisionSystemSim
+      visionSim.getDebugField();
+
+.. figure:: images/SimExampleField.png
+
+   *A* ``VisionSystemSim``\ *'s internal* ``Field2d`` *customized with target images and colors, as seen in the* `swervedriveposeestsim <https://github.com/PhotonVision/photonvision/tree/2a6fa1b6ac81f239c59d724da5339f608897c510/photonlib-java-examples/swervedriveposeestsim>`_ *example.*
+
+A ``PhotonCameraSim`` can also draw and publish generated camera frames to a MJPEG stream similar to an actual PhotonVision process.
+
+.. tab-set-code::
+
+   .. code-block:: java
+
+      // Enable the raw and processed streams. These are enabled by default.
+      cameraSim.enableRawStream(true);
+      cameraSim.enableProcessedStream(true);
+
+      // Enable drawing a wireframe visualization of the field to the camera streams.
+      // This is extremely resource-intensive and is disabled by default.
+      cameraSim.enableDrawWireframe(true);
+
+These streams follow the port order mentioned in :ref:`docs/getting-started/installation/networking:Camera Stream Ports`. For example, a single simulated camera will have its raw stream at ``localhost:1181`` and processed stream at ``localhost:1182``, which can also be found in the CameraServer tab of Shuffleboard like a normal camera stream.
+
+.. figure:: images/SimExampleFrame.png
+
+   *A frame from the processed stream of a simulated camera viewing some 2023 AprilTags with the field wireframe enabled, as seen in the* `swervedriveposeestsim example <https://github.com/PhotonVision/photonvision/tree/2a6fa1b6ac81f239c59d724da5339f608897c510/photonlib-java-examples/swervedriveposeestsim>`_.
