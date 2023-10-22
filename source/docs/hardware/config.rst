@@ -27,7 +27,7 @@ The directory structure is outlined below.
 * hardwareSettings.json
    - Contains hardware settings. Currently this includes only the LED brightness.
 * networkSettings.json
-   - Contains network settings, including team number, static/dynamic settings, and hostname.
+   - Contains network settings, including team number (or remote network tables address), static/dynamic settings, and hostname.
 
 Importing and Exporting Settings
 --------------------------------
