@@ -1,94 +1,143 @@
 Simulating Aiming and Getting in Range
 ======================================
 
-The following example comes from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonvision/tree/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-java-examples/src/main/java/org/photonlib/examples/simaimandrange>`_/`C++ <https://github.com/PhotonVision/photonvision/tree/661f8b2c0495474015f6ea9a89d65f9788436a05/photonlib-cpp-examples/src/main/cpp/examples/simaimandrange>`_). Full code is available at those links.
+The following example comes from the PhotonLib example repository (`Java <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples/simaimandrange>`_). Full code is available at that link.
 
+.. raw:: html
 
-Knowledge and Equipment Needed
------------------------------------------------
+   <video width="85%" controls>
+      <source src="../../_static/assets/simaimandrange.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
 
-- Everything required in :ref:`Combining Aiming and Getting in Range <docs/examples/aimandrange:Knowledge and Equipment Needed>`.
+.. attention:: A C++ example does not currently exist.
 
 Background
 ----------
 
-The previous examples show how to run PhotonVision on a real robot, with a physical robot drivetrain moving around and interacting with the software.
+The previous examples show how to use PhotonVision on a real robot, with the robot code making use of PhotonVision data published by a coprocessor to move a physical drivetrain.
 
-This example builds upon that, adding support for simulating robot motion and incorporating that motion into a :code:`SimVisionSystem`. This allows you to test control algorithms on your development computer, without requiring access to a real robot.
-
-.. raw:: html
-
-        <video width="85%" controls>
-            <source src="../../_static/assets/simaimandrange.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+This example showcases simulation support added to the previous :ref:`docs/examples/aimandrange:combining aiming and getting in range` example. This means both the physical drivetrain and PhotonVision data can be simulated on your development computer, and you can test your robot code without a real robot. See :ref:`docs/programming/photonlib/simulation:simulation support in photonlib` for more info on PhotonVision simulation.
 
 Walkthrough
 -----------
 
-First, in the main :code:`Robot` source file, we add support to periodically update a new simulation-specific object. This logic only gets used while running in simulation:
+Defining used hardware
+^^^^^^^^^^^^^^^^^^^^^^
+
+Inheriting from the ``aimandrange`` example, we have some basic setup in our ``Robot`` class:
 
 .. tab-set-code::
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/Robot.java
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2024.1.1-beta-1/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/Robot.java
       :language: java
-      :lines: 118-128
+      :lines: 46-59
       :linenos:
-      :lineno-start: 118
+      :lineno-start: 46
 
-Then, we add in the implementation of our new `DrivetrainSim` class. Please reference the `WPILib documentation on physics simulation <https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robot-simulation/physics-sim.html>`_.
-
-Simulated Vision support is added with the following steps:
-
-Creating the Simulated Vision System
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-First, we create a new :code:`SimVisionSystem` to represent our camera and coprocessor running PhotonVision.
+In the ``Robot`` class, we also add support to periodically update new simulation-specific objects. This logic only gets used while running in simulation, and is where we will handle simulating the field, robot, and camera:
 
 .. tab-set-code::
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2024.1.1-beta-1/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/Robot.java
       :language: java
-      :lines: 73-93
+      :lines: 108-124
+      :linenos:
+      :lineno-start: 108
+
+Simulating the Drivetrain
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We implement our new ``DrivetrainSim`` class so we can drive the robot in simulation. Please reference the `WPILib documentation on physics simulation <https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robot-simulation/physics-sim.html>`_.
+
+This drivetrain simulation is defined by the properties provided in the ``Constants`` class:
+
+.. tab-set-code::
+
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2024.1.1-beta-1/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/Constants.java
+      :language: java
+      :lines: 73-90
+      :linenos:
+      :lineno-start: 73
+
+To put it simply, this class will take in the drivetrain inputs (the percentage outputs commanded to the left and right side motors of our differential drivetrain) and simulate the drivetrain dynamics, or how it should respond.
+
+.. tab-set-code::
+
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2024.1.1-beta-1/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
+      :language: java
+      :lines: 72-90
       :linenos:
       :lineno-start: 72
 
-Next, we create objects to represent the physical location and size of the vision targets we are calibrated to detect. This example models the down-field high goal vision target from the 2020 and 2021 games.
+Simulating the Vision System
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ``VisionSim`` class will handle simulating the vision targets on the field and what our camera should see, as well as publishing data to NetworkTables to mimic an actual coprocessor running PhotonVision. For more information on PhotonVision simulation, see :ref:`docs/programming/photonlib/simulation:simulation support in photonlib`.
+
+This class revolves around a ``VisionSystemSim`` and ``PhotonCameraSim``. These handle simulating the field and camera data, respectively.
 
 .. tab-set-code::
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2024.1.1-beta-1/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/VisionSim.java
       :language: java
-      :lines: 95-111
+      :lines: 77-80
       :linenos:
-      :lineno-start: 95
+      :lineno-start: 77
 
-Finally, we add our target to the simulated vision system.
+We'll start by modeling the shape of the vision target we will put on the field (the 2020 High Goal target):
 
 .. tab-set-code::
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2024.1.1-beta-1/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/VisionSim.java
       :language: java
-      :lines: 116-117
+      :lines: 52-62
       :linenos:
-      :lineno-start: 113
+      :lineno-start: 52
 
-
-If you have additional targets you want to detect, you can add them in the same way as the first one.
-
-
-Updating the Simulated Vision System
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Once we have all the properties of our simulated vision system defined, the work to do at runtime becomes very minimal. Simply pass in the robot's pose periodically to the simulated vision system.
+`...` and create a ``VisionTargetSim`` with where the target is on the field, which will be put in the ``VisionSystemSim``:
 
 .. tab-set-code::
 
-    .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/ebef19af3d926cf87292177c9a16d01b71219306/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/DrivetrainSim.java
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2024.1.1-beta-1/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/VisionSim.java
       :language: java
-      :lines: 124-142
+      :lines: 82-86
       :linenos:
-      :lineno-start: 122
+      :lineno-start: 82
 
+Now, we can create our camera simulation to view the simulated field. The camera simulation is defined by the given properties:
+
+.. tab-set-code::
+
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2024.1.1-beta-1/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/VisionSim.java
+      :language: java
+      :lines: 64-75
+      :linenos:
+      :lineno-start: 64
+
+`...` and added to the ``VisionSystemSim``. The ``Transform3d`` used describes where the camera is on the robot.
+
+.. tab-set-code::
+
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2024.1.1-beta-1/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/sim/VisionSim.java
+      :language: java
+      :lines: 88-104
+      :linenos:
+      :lineno-start: 88
+
+Viewing the Simulation World
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once we have all the properties of our simulated drivetrain and vision system defined, the work to do at runtime becomes very minimal. As mentioned at the start, we simply pass in the simulated robot's pose periodically to the simulated vision system in the ``Robot`` class:
+
+.. tab-set-code::
+
+   .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2024.1.1-beta-1/photonlib-java-examples/simaimandrange/src/main/java/frc/robot/Robot.java
+      :language: java
+      :lines: 108-124
+      :linenos:
+      :lineno-start: 108
 
 The rest is done behind the scenes.
+
+Simulating the project will open the simgui tool, where a Field2d shows a top-down view of the robot, camera, and vision target poses. The camera stream is also simulated and made available similar to an actual coprocessor running PhotonVision. This can be seen in Shuffleboard or a browser (for our single simulated camera, the input stream should be at ``localhost:1181`` and output stream at ``localhost:1182``). Both of these are showcased in the video at the top of this page.
