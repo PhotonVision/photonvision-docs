@@ -1,0 +1,16 @@
+3D Tracking
+===========
+
+3D AprilTag tracking will allow you to track XYZ position and orientation of a tag in the camera frame. This is useful for robot pose estimation and other applications like autonomous scoring. In order to use 3D tracking, you must first :ref:`calibrate your camera <docs/calibration/calibration:Calibrating Your Camera>`. Once you have, you need to enable 3D mode in the UI and you will now be able to get 3D pose information from the tag! For information on getting and using this information in your code, see :ref:`the programming reference. <docs/programming/index:Programming Reference>`.
+
+Ambiguity
+---------
+Translating from 2D to 3D using data from the calibration and the four tag corners can lead to "pose ambiguity", where it appears that the AprilTag pose is flipping between two different poses. You can read more about this issue `here. <https://docs.wpilib.org/en/stable/docs/software/vision-processing/apriltag/apriltag-intro.html#d-to-3d-ambiguity>`
+
+VIDEO HERE 
+
+There a few steps you can take to resolve/mitigate this issue:
+
+1. Mount cameras at oblique angles so it is less likely that the tag will be seen straght on.
+2. Use the :ref:`MultiTag system <docs/apriltag-pipelines/multitag:MultiTag Localization>` in order to combine the corners from multiple tags to get a more accurate and unambiguous pose.
+3. Reject all tag poses where the ambiguity ratio (availiable via PhotonLib) is greater than 0.2.

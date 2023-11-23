@@ -26,7 +26,7 @@ Range Alignment
 
 By looking at the position of the target in the "vertical" direction in the image, and applying some trionometery, the distance between the robot and the camera can be deduced.
 
-1. Read the current distance to the target from the vision Coprocessor.
+1. Read the current distance to the target from the vision coprocessor.
 2. If too far in one direction, command the drivetrain to travel in the opposite direction to compensate.
 
 See the :ref:`Getting in Range of the Target <docs/examples/gettinginrangeofthetarget:Knowledge and Equipment Needed>` example for more information.

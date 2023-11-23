@@ -33,6 +33,9 @@ Creating a ``PhotonPoseEstimator``
 ----------------------------------
 The PhotonPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (see above), ``PoseStrategy``, ``PhotonCamera``, and ``Transform3d``. ``PoseStrategy`` has six possible values:
 
+* MULTI_TAG_PNP_ON_COPROCESSOR
+    *  Calculates a new robot position estimate by combining all visible tag corners. Reccomended for all teams as it will be the most accurate.
+    *  Must configure the AprilTagFieldLayout properly in the UI, please see :ref:`here <docs/apriltag-pipelines/multitag:multitag localization>` for more information.
 * LOWEST_AMBIGUITY
     * Choose the Pose with the lowest ambiguity.
 * CLOSEST_TO_CAMERA_HEIGHT
@@ -43,8 +46,6 @@ The PhotonPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` 
     * Choose the Pose which is closest to the last pose calculated.
 * AVERAGE_BEST_TARGETS
     * Choose the Pose which is the average of all the poses from each tag.
-* MULTI_TAG_PNP
-    * Calculates a new robot position estimate by combining all visible tags.
 
 .. tab-set-code::
    .. code-block:: java
@@ -102,7 +103,7 @@ Calling ``update()`` on your ``PhotonPoseEstimator`` will return an ``EstimatedR
         }
       }
 
-You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/state-space/state-space-pose-estimators.html>`_ with the result from the ``RobotPoseEstimator`` every loop using ``addVisionMeasurement()``.
+You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/state-space/state-space-pose-estimators.html>`_ with the result from the ``RobotPoseEstimator`` every loop using ``addVisionMeasurement()``. TODO: add example note
 
 Additional ``PhotonPoseEstimator`` Methods
 ------------------------------------------
