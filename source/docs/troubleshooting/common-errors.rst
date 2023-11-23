@@ -31,11 +31,11 @@ Camera won't show up
 ^^^^^^^^^^^^^^^^^^^^
 Try these steps to :ref:`troubleshoot your camera connection <docs/troubleshooting/camera-troubleshooting:Camera Troubleshooting>`.
 
-If you are using a USB camera, it is possible your USB Camera isn't supported by CSCore and therefore won't work with PhotonVision. See :ref:`supported hardware page for more information <docs/hardware/supportedhardware:Supported Cameras>`, or the above Camera Troubleshooting page for more information on determining this locally.
+If you are using a USB camera, it is possible your USB Camera isn't supported by CSCore and therefore won't work with PhotonVision. See :ref:`supported hardware page for more information <docs/hardware/selecting-hardware:Reccomended Cameras>`, or the above Camera Troubleshooting page for more information on determining this locally.
 
 Camera is consistently returning incorrect values when in 3D mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Read the tips on the :ref:`camera calibration page<docs/getting-started/pipeline-tuning/calibration:Calibration Tips>`, follow the advice there, and redo the calibration.
+Read the tips on the :ref:`camera calibration page<docs/calibration/calibration:Calibration Tips>`, follow the advice there, and redo the calibration.
 
 Not getting data from PhotonLib
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

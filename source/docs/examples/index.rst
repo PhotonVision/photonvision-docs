@@ -7,6 +7,5 @@ Code Examples
    aimingatatarget
    gettinginrangeofthetarget
    aimandrange
-   apriltag
    simaimandrange
    simposeest
