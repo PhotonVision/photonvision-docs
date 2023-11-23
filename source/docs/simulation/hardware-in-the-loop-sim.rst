@@ -3,7 +3,7 @@ Hardware In The Loop Simulation
 
 Hardware in the loop simulation is using a physical device, such as a supported co-processor running PhotonVision, to enhance simulation capabilities. This is useful for developing and validating code before the camera is attached to a robot, as well as reducing the work required to use WPILib simulation with PhotonVision.
 
-The first step is to install PhotonVision on your target device. Instructions can be found `here <https://docs.photonvision.org/en/latest/docs/installation/sw_install/index.html>`_ for all devices.
+The first step is to install PhotonVision on your target device. Instructions can be found :ref:`here <docs/installation/index:Installation & Setup>` for all devices.
 
 A small amount of configuration is required after installation. From the PhotonVision UI, go to the sidebar and select the Settings option. Within the settings, turn on "Run NetworkTables Server".
 
