@@ -1,7 +1,7 @@
 Simulation Support in PhotonLib (Deprecated)
 ============================================
 
-.. attention:: This page details the legacy simulation support. For current Java simulation support, see :doc:`/docs/programming/photonlib/simulation`. 
+.. attention:: This page details the pre-2024 simulation support. For current Java simulation support, see :doc:`/docs/programming/photonlib/simulation`. 
 
 What Is Supported?
 ------------------
@@ -44,7 +44,7 @@ It requires a number of pieces of configuration to accurately simulate your phys
       :language: java
       :lines: 73-93
 
-After declaring the system, you should create and add one ``SimVisionTarget`` per target on the field you are attempting to detect.
+After declaring the system, you should create and add one ``SimVisionTarget`` per target you are attempting to detect.
 
 .. tab-set-code::
 
@@ -67,7 +67,7 @@ Robot software which uses PhotonLib to interact with a camera running PhotonVisi
 Raw-Data Approach
 -----------------
 
-Advanced users may wish to directly provide target information based on an existing detailed simulation.
+Users may wish to directly provide target information based on an existing detailed simulation.
 
 A ``SimPhotonCamera`` can be created for this purpose. It provides an interface where the user can supply target data via a list of ``PhotonTrackedTarget`` objects.
 
