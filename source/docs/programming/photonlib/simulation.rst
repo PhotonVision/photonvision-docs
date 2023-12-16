@@ -6,7 +6,7 @@ Simulation Support in PhotonLib
 What Is Simulated?
 ------------------
 
-Simulation is a powerful tool teams can use to validate their robot code without needing access to a physical robot. Read more about `simulation in WPILib <https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robot-simulation/introduction.html>`_.
+Simulation is a powerful tool for validating robot code without access to a physical robot. Read more about `simulation in WPILib <https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robot-simulation/introduction.html>`_.
 
 PhotonLib can simulate cameras on the field and generate target data approximating what would be seen in reality. This simulation attempts to include the following:
 
@@ -30,10 +30,11 @@ PhotonLib can simulate cameras on the field and generate target data approximati
    Simulation does NOT include the following:
 
    - Full physical camera/world simulation (targets are automatically thresholded)
+   - Image Thresholding Process (camera gain, brightness, etc)
    - Pipeline switching
    - Snapshots
 
-With this approach required information about the camera and target properties is straightforward, and users can easily setup and experiment with PhotonLib in simulation.
+This scope was chosen to balance fidelity of the simulation with the ease of setup, in a way that would best benefit most teams.
 
 .. image:: diagrams/SimArchitecture.drawio.svg
    :alt: A diagram comparing the architecture of a real PhotonVision process to a simulated one.
@@ -41,7 +42,7 @@ With this approach required information about the camera and target properties i
 Drivetrain Simulation Prerequisite
 ----------------------------------
 
-A prerequisite for simulating vision frames is knowing where the camera is on the field-- to utilize PhotonVision simulation, you'll need to supply the robot pose periodically. This requires drivetrain simulation for your robot project if you want to generate camera frames as your robot moves around the field.
+A prerequisite for simulating vision frames is knowing where the camera is on the field-- to utilize PhotonVision simulation, you'll need to supply the simulated robot pose periodically. This requires drivetrain simulation for your robot project if you want to generate camera frames as your robot moves around the field.
 
 References for using PhotonVision simulation with drivetrain simulation can be found in the `PhotonLib Java Examples <https://github.com/PhotonVision/photonvision/blob/2a6fa1b6ac81f239c59d724da5339f608897c510/photonlib-java-examples/README.md>`_ for both a differential drivetrain and a swerve drive.
 
@@ -50,16 +51,18 @@ References for using PhotonVision simulation with drivetrain simulation can be f
 Vision System Simulation
 ------------------------
 
-A ``VisionSystemSim`` represents the simulated world for the camera, and contains the vision targets it can see. It is constructed with a unique label:
+A ``VisionSystemSim`` represents the simulated world for one or more cameras, and contains the vision targets they can see. It is constructed with a unique label:
 
 .. tab-set-code::
 
    .. code-block:: java
 
-      // A vision system sim labelled as "main" in network tables
+      // A vision system sim labelled as "main" in NetworkTables
       VisionSystemSim visionSim = new VisionSystemSim("main");
 
-Vision targets require a ``TargetModel``, which describes the shape of the target. Convenience constructors exist for spheres, cuboids, and planar rectangles. For example, a planar rectangle can be created with:
+PhotonLib will use this label to put a ``Field2d`` widget on NetworkTables at `/VisionSystemSim-[label]/Sim Field`. This label does not need to match any camera name or pipeline name in PhotonVision.
+
+Vision targets require a ``TargetModel``, which describes the shape of the target. For AprilTags, PhotonLib provides ``TargetModel.kAprilTag16h5`` for the tags used in 2023, and ``TargetModel.kAprilTag36h11`` for the tags used starting in 2024. For other target shapes, convenience constructors exist for spheres, cuboids, and planar rectangles. For example, a planar rectangle can be created with:
 
 .. tab-set-code::
 
@@ -93,7 +96,7 @@ For convenience, an ``AprilTagFieldLayout`` can also be added to automatically c
    .. code-block:: java
 
       // The layout of AprilTags which we want to add to the vision system
-      // AprilTagFieldLayout tagLayout = ...;
+      AprilTagFieldLayout tagLayout = AprilTagFieldLayout.loadFromResource(AprilTagFields.k2023ChargedUp.m_resourceFile);
 
       visionSim.addAprilTags(tagLayout);
 
@@ -159,7 +162,7 @@ The ``PhotonCameraSim`` can now be added to the ``VisionSystemSim``. We have to 
 
 .. important:: You may add multiple cameras to one ``VisionSystemSim``, but not one camera to multiple ``VisionSystemSim``. All targets in the ``VisionSystemSim`` will be visible to all its cameras.
 
-If the camera is mounted on a mobile mechanism (like a turret) this transform can be updated later.
+If the camera is mounted on a mobile mechanism (like a turret) this transform can be updated in a periodic loop.
 
 .. tab-set-code::
 
