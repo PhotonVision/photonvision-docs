@@ -93,6 +93,27 @@ Running the following command under the root directory will build the jar under 
 
       ``gradlew shadowJar``
 
+Build and Run the Source on a Raspberry Pi Coprocessor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As a convinenece, the build has built in `deploy` command which builds, deploys, and starts the current source code on a coprocessor. It is generally intended for Raspberry Pi based coprocessors.
+
+An architecture override is required to specify the deploy target's architecture.
+
+.. tab-set::
+
+   .. tab-item:: Linux
+
+      ``./gradlew deploy -PArchOverride=linuxarm64`
+
+   .. tab-item:: macOS
+
+      ``./gradlew deploy -PArchOverride=linuxarm64``
+
+   .. tab-item:: Windows (cmd)
+
+      `gradlew deploy -PArchOverride=linuxarm64``
+
 Using PhotonLib Builds
 ~~~~~~~~~~~~~~~~~~~~~~
 
