@@ -1,7 +1,7 @@
 Simulation Support in PhotonLib
 ===============================
 
-.. attention:: This page details the current simulation support for Java. For other languages, see :doc:`/docs/programming/photonlib/simulation-deprecated`. 
+.. attention:: This page details the current simulation support for Java. For other languages, see :doc:`/docs/programming/photonlib/simulation-deprecated`.
 
 What Is Simulated?
 ------------------
@@ -25,7 +25,7 @@ PhotonLib can simulate cameras on the field and generate target data approximati
    - Fiducial solvePNP transform estimation
 - Camera Raw/Processed Streams (grayscale)
 
-.. note:: 
+.. note::
 
    Simulation does NOT include the following:
 
@@ -132,7 +132,7 @@ By default, this will create a 960 x 720 resolution camera with a 90 degree diag
       cameraProp.setAvgLatencyMs(35);
       cameraProp.setLatencyStdDevMs(5);
 
-These properties are used in a ``PhotonCameraSim``, which handles generating captured frames of the field from the simulated camera's perspective, and calculating the target data which is sent to the ``PhotonCamera`` being simulated. 
+These properties are used in a ``PhotonCameraSim``, which handles generating captured frames of the field from the simulated camera's perspective, and calculating the target data which is sent to the ``PhotonCamera`` being simulated.
 
 .. tab-set-code::
 
@@ -140,7 +140,7 @@ These properties are used in a ``PhotonCameraSim``, which handles generating cap
 
       // The PhotonCamera used in the real robot code.
       PhotonCamera camera = new PhotonCamera("cameraName");
-      
+
       // The simulation of this camera. Its values used in real robot code will be updated.
       PhotonCameraSim cameraSim = new PhotonCameraSim(camera, cameraProp);
 

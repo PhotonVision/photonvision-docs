@@ -1,7 +1,7 @@
 Simulation Support in PhotonLib (Deprecated)
 ============================================
 
-.. attention:: This page details the pre-2024 simulation support. For current Java simulation support, see :doc:`/docs/programming/photonlib/simulation`. 
+.. attention:: This page details the pre-2024 simulation support. For current Java simulation support, see :doc:`/docs/programming/photonlib/simulation`.
 
 What Is Supported?
 ------------------
