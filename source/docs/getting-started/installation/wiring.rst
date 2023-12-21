@@ -28,9 +28,9 @@ Coprocessor without Passive POE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1a. Option 1: Get a micro USB (may be USB-C if using a newer Pi) to USB-A cable and plug the USB A side into a regulator like `this <https://www.amazon.com/KNACRO-Voltage-Regulator-Converter-Module/dp/B01HM12N2C/ref=sr_1_2>`_. Then, wire the regulator into your PDP/PDB and the Micro USB / USB C into your coprocessor.
 
-1b. Option 2: Use a USB power bank to power your coprocessor. There are rules that regulate the usage of power banks so ensure that you aren't breaking them, more information can be found `here <https://www.chiefdelphi.com/t/limelight-powered-by-external-battery/390710>`_.
+1b. Option 2: Use a USB power bank to power your coprocessor. Refer to this year's robot rulebook on legal implementations of this.
 
-2. Run an ethernet cable from your Pi to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the networking section for more info.)
+1. Run an ethernet cable from your Pi to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the networking section for more info.)
 
 
 ------------------------------------------------------------

@@ -27,5 +27,3 @@ Getting Started With AprilTags
 3. Read page on :ref:`Robot Integration Strategies with AprilTags<docs/integration/aprilTagStrategies:Simple Strategies>` on different approaches to using the data you get from AprilTags. This includes simply turning to the goal, getting the pose of the target, all the way to real-time, latency compensated pose estimation.
 
 4. Read the :ref:`PhotonLib documentation<docs/programming/photonlib/getting-target-data:Getting AprilTag Data From A Target>` on how to use AprilTag data in your code.
-
-5. Read the :ref:`example code<docs/examples/apriltag:Knowledge and Equipment Needed>` on a fully featured example on different ways to use AprilTags.

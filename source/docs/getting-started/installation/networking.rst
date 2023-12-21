@@ -7,7 +7,7 @@ Physical Networking
 
 After imaging your coprocessor, run an ethernet cable from your coprocessor to a router/radio and power on your coprocessor by plugging it into the wall. Then connect whatever device you're using to view the webdashboard to the same network and navigate to photonvision.local:5800.
 
-PhotonVision *STRONGLY* recommends the usage of a network switch on your robot. This is because the second radio port on the current FRC radios is known to be buggy and cause frequent connection issues that are detrimental during competition. More information can be found in this `ChiefDelphi thread <https://www.chiefdelphi.com/t/why-you-probably-shouldnt-use-the-second-port-on-your-openmesh-om5p-radio-and-embrace-using-an-ethernet-switch-instead/406374>`_ and an in-depth guide on how to install a network switch can be found `on FRC 900's website <https://team900.org/blog/ZebraSwitch/>`_.
+PhotonVision *STRONGLY* recommends the usage of a network switch on your robot. This is because the second radio port on the current FRC radios is known to be buggy and cause frequent connection issues that are detrimental during competition. An in-depth guide on how to install a network switch can be found `on FRC 900's website <https://team900.org/blog/ZebraSwitch/>`_.
 
 
 
