@@ -104,15 +104,18 @@ An architecture override is required to specify the deploy target's architecture
 
    .. tab-item:: Linux
 
-      ``./gradlew deploy -PArchOverride=linuxarm64`
+      ``./gradlew clean``
+      ``./gradlew deploy -PArchOverride=linuxarm64``
 
    .. tab-item:: macOS
 
+      ``./gradlew clean``
       ``./gradlew deploy -PArchOverride=linuxarm64``
 
    .. tab-item:: Windows (cmd)
 
-      `gradlew deploy -PArchOverride=linuxarm64``
+      ``gradlew clean``
+      ``gradlew deploy -PArchOverride=linuxarm64``
 
 Using PhotonLib Builds
 ~~~~~~~~~~~~~~~~~~~~~~
