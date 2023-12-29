@@ -96,7 +96,7 @@ Running the following command under the root directory will build the jar under 
 Build and Run the Source on a Raspberry Pi Coprocessor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As a convinenece, the build has built in `deploy` command which builds, deploys, and starts the current source code on a coprocessor. It is generally intended for Raspberry Pi based coprocessors.
+As a convinenece, the build has built in `deploy` command which builds, deploys, and starts the current source code on a coprocessor.
 
 An architecture override is required to specify the deploy target's architecture.
 
@@ -116,6 +116,8 @@ An architecture override is required to specify the deploy target's architecture
 
       ``gradlew clean``
       ``gradlew deploy -PArchOverride=linuxarm64``
+
+The ``deploy`` command is tested against Raspberry Pi coprocessors. Other similar coprocessors may work too.
 
 Using PhotonLib Builds
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -163,10 +165,10 @@ After adding the generated vendordep to your project, add the following to your 
     }
 
 
-Debugging a local PhotonVision build
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Debugging PhotonVision Running Locally
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-One way is by running the program using gradle with the :code:`--debug-jvm` flag. Run the program with :code:`./gradlew run --debug-jvm`, and attach to it with VSCode by adding the following to launch.json. Note args can be passed with :code:`--args="foobar"`.
+One way is by running the program using gradle with the :code:`--debug-jvm` flag. Run the program with :code:`./gradlew run --debug-jvm`, and attach to it with VSCode by adding the following to :code:`launch.json`. Note args can be passed with :code:`--args="foobar"`.
 
 .. code-block::
 
@@ -188,6 +190,39 @@ One way is by running the program using gradle with the :code:`--debug-jvm` flag
    }
 
 PhotonVision can also be run using the gradle tasks plugin with :code:`"args": "--debug-jvm"` added to launch.json.
+
+
+Debugging PhotonVision Running on a CoProcessor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Set up a VSCode configuration in :code:`launch.json`
+
+.. code-block::
+
+   {
+      // Use IntelliSense to learn about possible attributes.
+      // Hover to view descriptions of existing attributes.
+      // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+      "version": "0.2.0",
+      "configurations": [
+        {
+            "type": "java",
+            "name": "Attach to CoProcessor",
+            "request": "attach",
+            "hostName": "photonvision.local",
+            "port": "5801",
+            "projectName": "photon-core"
+        },
+      ]
+   }
+
+Stop any existing instance of PhotonVision.
+
+Launch the program with the following additional argument to the JVM: :code:`java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=photonvision.local:5801`
+
+Once the program says it is listening on port 5801, launch the debug configuration in VSCode.
+
+The program will wait for the VSCode debugger to attach before proceeding.
 
 Running examples
 ~~~~~~~~~~~~~~~~
