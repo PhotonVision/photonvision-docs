@@ -1,7 +1,7 @@
 3D Tracking
 ===========
 
-3D AprilTag tracking will allow you to track XYZ position and orientation of a tag in the camera frame. This is useful for robot pose estimation and other applications like autonomous scoring. In order to use 3D tracking, you must first :ref:`calibrate your camera <docs/calibration/calibration:Calibrating Your Camera>`. Once you have, you need to enable 3D mode in the UI and you will now be able to get 3D pose information from the tag! For information on getting and using this information in your code, see :ref:`the programming reference. <docs/programming/index:Programming Reference>`.
+3D AprilTag tracking will allow you to track the real-world position and rotation of a tag relative to the camera's image sensor. This is useful for robot pose estimation and other applications like autonomous scoring. In order to use 3D tracking, you must first :ref:`calibrate your camera <docs/calibration/calibration:Calibrating Your Camera>`. Once you have, you need to enable 3D mode in the UI and you will now be able to get 3D pose information from the tag! For information on getting and using this information in your code, see :ref:`the programming reference. <docs/programming/index:Programming Reference>`.
 
 Ambiguity
 ---------
