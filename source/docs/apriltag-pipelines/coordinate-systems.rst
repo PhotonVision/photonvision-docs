@@ -11,7 +11,7 @@ You define the camera to robot transform in the robot coordinate frame.
 Camera Coordinate Frame
 -----------------------
 
-The camera coordinate system is defined as follows, relative to the camera sensor itself:
+The camera coordinate system is defined as follows, relative to the camera sensor itself, and when looking in the same direction as the sensor points:
 
 * The origin is the center.
 * The x-axis points to the left
