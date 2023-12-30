@@ -34,7 +34,7 @@ Creating a ``PhotonPoseEstimator``
 The PhotonPoseEstimator has a constructor that takes an ``AprilTagFieldLayout`` (see above), ``PoseStrategy``, ``PhotonCamera``, and ``Transform3d``. ``PoseStrategy`` has six possible values:
 
 * MULTI_TAG_PNP_ON_COPROCESSOR
-    *  Calculates a new robot position estimate by combining all visible tag corners. Reccomended for all teams as it will be the most accurate.
+    *  Calculates a new robot position estimate by combining all visible tag corners. Recommended for all teams as it will be the most accurate.
     *  Must configure the AprilTagFieldLayout properly in the UI, please see :ref:`here <docs/apriltag-pipelines/multitag:multitag localization>` for more information.
 * LOWEST_AMBIGUITY
     * Choose the Pose with the lowest ambiguity.
