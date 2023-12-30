@@ -14,7 +14,7 @@ Camera Coordinate Frame
 The camera coordinate system is defined as follows, relative to the camera sensor itself:
 
 * The origin is the center.
-* The x-axis points to the left (when looking at the camera sensor from the front)
+* The x-axis points to the left
 * The y-axis points up.
 * The z-axis points out.
 
