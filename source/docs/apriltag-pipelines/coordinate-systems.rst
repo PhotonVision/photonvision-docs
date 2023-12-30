@@ -24,7 +24,7 @@ AprilTag Coordinate Frame
 The AprilTag coordinate system is defined as follows, relative to the center of the AprilTag itself:
 
 * The origin is the center.
-* The x-axis points to the right when looking at the tag straight on.
+* The x-axis points to your right
 * The y-axis points upwards.
 
 
