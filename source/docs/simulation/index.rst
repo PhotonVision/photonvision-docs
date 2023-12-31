@@ -6,4 +6,5 @@ Simulation
    :titlesonly:
 
    simulation
+   simulation-deprecated
    hardware-in-the-loop-sim
