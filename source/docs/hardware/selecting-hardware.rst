@@ -13,7 +13,7 @@ Minimum System Requirements
     * We don't reccomend using Windows for anything except testing out the system on a local machine.
 * CPU: ARM Cortex-A53 (the CPU on Raspberry Pi 3) or better
 * At least 8GB of storage
-* 2GB of RAM 
+* 2GB of RAM
     * PhotonVision isn't very RAM intensive, but you'll need at least 2GB to run the OS and PhotonVision.
 * The following IO:
     * At least 1 USB or MIPI-CSI port for the camera
@@ -25,9 +25,9 @@ Coprocessor Reccomendations
 
 When selecting a coprocessor, it is important to consider various factors, particularly when it comes to AprilTag detection. Opting for a coprocessor with a more powerful CPU can generally result in higher FPS AprilTag detection, leading to more accurate pose estimation. However, it is important to note that there is a point of diminishing returns, where the benefits of a more powerful CPU may not outweigh the additional cost. Below is a list of supported hardware, along with some notes on each.
 
-* Orange Pi 5 (~$99)
-    * This is the recommended coprocessor for most teams. It has a powerful CPU that can handle AprilTag detection at high FPS, and is relatively cheap compared to processors of a similar power. 
-* Raspberry Pi 4 (~$55)
+* Orange Pi 5 ($99)
+    * This is the recommended coprocessor for most teams. It has a powerful CPU that can handle AprilTag detection at high FPS, and is relatively cheap compared to processors of a similar power.
+* Raspberry Pi 4/5 ($55-$80)
     * This is the recommended coprocessor for teams on a budget. It has a less powerful CPU than the Orange Pi 5, but is still capable of running PhotonVision at a reasonable FPS.
 * Mini PCs (such as Beelink N5095) 
     * This coprcoessor will likely have similar performance to the Orange Pi 5 but has a higher performance ceiling (when using more powerful CPUs). Do note that this would require extra effort to wire to the robot / get set up. More information can be found in the set up guide `here. <https://docs.google.com/document/d/1lOSzG8iNE43cK-PgJDDzbwtf6ASyf4vbW8lQuFswxzw/edit?usp=drivesdk>`_
@@ -40,21 +40,21 @@ PhotonVision works with Pi Cameras and most USB Cameras, the recommendations bel
 
 PhotonVision relies on `CSCore <https://github.com/wpilibsuite/allwpilib/tree/main/cscore>`_ to detect and process cameras, so camera support is determined based off compatibility with CScore along with native support for the camera within your OS (ex. `V4L compatibility <https://en.wikipedia.org/wiki/Video4Linux>`_ if using a Linux machine like a Raspberry Pi).
 
-.. note:: 
+.. note::
     Logitech Cameras and integrated laptop cameras will not work with PhotonVision due to oddities with their drivers. We recommend using a different camera.
 
-.. note:: 
+.. note::
     We do not currently support the usage of two of the same camera on the same coprocessor. You can only use two or more cameras if they are of different models or they are from Arducam, which has a `tool that allows for cameras to be renamed <https://docs.arducam.com/UVC-Camera/Serial-Number-Tool-Guide/>`_.
 
 Reccomended Cameras
 ^^^^^^^^^^^^^^^^^^^
-For colored shape detection, any non-fisheye camera supported by PhotonVision will work. We reccomend the Pi Camera V1 or a high fps USB camera. 
+For colored shape detection, any non-fisheye camera supported by PhotonVision will work. We reccomend the Pi Camera V1 or a high fps USB camera.
 
-For driver camera, we reccomend a USB camera with a fisheye lens, so your driver can see more of the field. 
+For driver camera, we reccomend a USB camera with a fisheye lens, so your driver can see more of the field.
 
-For AprilTag detection, we reccomend you use a global shutter camera that has ~100 degree diagonal FOV. This will allow you to see more AprilTags in frame, and will allow for more accurate pose estimation. You also want a camera that supports high FPS, as this will allow you to update your pose estimator at a higher frequency. 
+For AprilTag detection, we reccomend you use a global shutter camera that has ~100 degree diagonal FOV. This will allow you to see more AprilTags in frame, and will allow for more accurate pose estimation. You also want a camera that supports high FPS, as this will allow you to update your pose estimator at a higher frequency.
 
-* Reccomendations For AprilTag Detection 
+* Reccomendations For AprilTag Detection
     * Arducam USB OV9281
         * This is the reccomended camera for AprilTag detection as it is a high FPS, global shutter camera USB camera that has a ~70 degree FOV.
     * Innomaker OV9281

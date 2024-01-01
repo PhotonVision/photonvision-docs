@@ -24,7 +24,7 @@ For reflective pipelines, after adjusting exposure and brightness, the target sh
 .. note:: Unlike with retroreflective tape, AprilTag tracking is not very dependent on lighting consistency. If you have trouble detecting tags due to low light, you may want to try increasing exposure, but this will likely decrease your achievable framerate.
 
 
-For AprilTag/AruCo pipelines, you want to reduce the "motion blur" as much as possible by lowing your exposure and increasing brightness. Motion blur is the visual streaking/smearing on the camera stream as a result of movement of the camera or object of focus. 
+For AprilTag/AruCo pipelines, you want to reduce the "motion blur" as much as possible by lowing your exposure and increasing brightness. Motion blur is the visual streaking/smearing on the camera stream as a result of movement of the camera or object of focus.
 
 Orientation
 -----------

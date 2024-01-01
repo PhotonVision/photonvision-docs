@@ -7,7 +7,7 @@ Ambiguity
 ---------
 Translating from 2D to 3D using data from the calibration and the four tag corners can lead to "pose ambiguity", where it appears that the AprilTag pose is flipping between two different poses. You can read more about this issue `here. <https://docs.wpilib.org/en/stable/docs/software/vision-processing/apriltag/apriltag-intro.html#d-to-3d-ambiguity>`
 
-VIDEO HERE 
+VIDEO HERE
 
 There a few steps you can take to resolve/mitigate this issue:
 

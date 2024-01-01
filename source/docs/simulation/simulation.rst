@@ -224,3 +224,4 @@ These streams follow the port order mentioned in :ref:`docs/installation/network
 .. figure:: images/SimExampleFrame.png
 
    *A frame from the processed stream of a simulated camera viewing some 2023 AprilTags with the field wireframe enabled, as seen in the* `swervedriveposeestsim example <https://github.com/PhotonVision/photonvision/tree/2a6fa1b6ac81f239c59d724da5339f608897c510/photonlib-java-examples/swervedriveposeestsim>`_.
+   
