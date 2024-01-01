@@ -75,7 +75,7 @@ Now, we'll capture images of our chessboard from various angles. The most import
 .. raw:: html
 
         <video width="85%" controls>
-            <source src="../../../_static/assets/calibration_small.mp4" type="video/mp4">
+            <source src="../../_static/assets/calibration_small.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
