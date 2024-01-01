@@ -32,12 +32,19 @@ You can also create a systemd service that will automatically run on startup. To
 
     [Service]
     WorkingDirectory=/path/to/photonvision
+    # Optional: run photonvision at "nice" -10, which is higher priority than standard
+    # Nice=-10
     ExecStart=/usr/bin/java -jar /path/to/photonvision/photonvision.jar
 
     [Install]
     WantedBy=multi-user.target
 
 Then copy the ``.service`` file to ``/etc/systemd/system/`` using ``cp photonvision.service /etc/systemd/system/photonvision.service``. Then modify the file to have ``644`` permissions using ``chmod 644 /etc/systemd/system/photonvision.service``.
+
+.. note::
+   Many ARM processors have a big.LITTLE architecture where some of the CPU cores are more powerful than others. On this type of architecture, you may get more consistent performance by limiting which cores PhotonVision can use. To do this, add the parameter ``AllowedCPUs`` to the systemd service file in the ``[Service]`` section.
+
+   For instance, for an Orange Pi 5, cores 4 through 7 are the fast ones, and you can target those cores with the line ``AllowedCPUs=4-7``.
 
 Installing the ``systemd`` Service
 ----------------------------------

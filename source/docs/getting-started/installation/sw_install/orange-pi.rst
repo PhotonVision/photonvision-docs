@@ -31,3 +31,6 @@ Plug your Orange Pi into a display via HDMI and plug in a keyboard via USB once 
 Installing PhotonVision
 -----------------------
 From here, you can follow :ref:`this guide <docs/getting-started/installation/sw_install/other-coprocessors:Installing Photonvision>`.
+
+.. note:: You may also want to read the note about big.LITTLE architecture in the :ref:`advanced command line documentation <docs/getting-started/installation/sw_install/advanced-cmd:Advanced Command Line Usage>`.
+
