@@ -76,7 +76,7 @@ When detecting AprilTags, you want to reduce the "motion blur" as much as possib
 Using Multiple Cameras
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Using multiple cameras on your robot will help you detect more AprilTags at once and improve your pose estimation as a result. In order to use multiple cameras, you will need to create multiple `PhotonPoseEstimator`s and add all of their measurements to a single drivetrain `PoseEstimator`. Please note that the accuracy of your robot to camera transform is especially important when using multiple cameras as any error in the transform will cause your pose estimations to "fight" each other. For more information, see :ref:`the programming reference. <docs/programming/index:programming reference>`.
+Using multiple cameras on your robot will help you detect more AprilTags at once and improve your pose estimation as a result. In order to use multiple cameras, you will need to create multiple PhotonPoseEstimators and add all of their measurements to a single drivetrain pose estimator. Please note that the accuracy of your robot to camera transform is especially important when using multiple cameras as any error in the transform will cause your pose estimations to "fight" each other. For more information, see :ref:`the programming reference. <docs/programming/index:programming reference>`.
 
 
 Performance Matrix
