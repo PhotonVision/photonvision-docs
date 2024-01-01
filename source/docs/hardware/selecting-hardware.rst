@@ -29,7 +29,7 @@ When selecting a coprocessor, it is important to consider various factors, parti
     * This is the recommended coprocessor for most teams. It has a powerful CPU that can handle AprilTag detection at high FPS, and is relatively cheap compared to processors of a similar power.
 * Raspberry Pi 4/5 ($55-$80)
     * This is the recommended coprocessor for teams on a budget. It has a less powerful CPU than the Orange Pi 5, but is still capable of running PhotonVision at a reasonable FPS.
-* Mini PCs (such as Beelink N5095) 
+* Mini PCs (such as Beelink N5095)
     * This coprcoessor will likely have similar performance to the Orange Pi 5 but has a higher performance ceiling (when using more powerful CPUs). Do note that this would require extra effort to wire to the robot / get set up. More information can be found in the set up guide `here. <https://docs.google.com/document/d/1lOSzG8iNE43cK-PgJDDzbwtf6ASyf4vbW8lQuFswxzw/edit?usp=drivesdk>`_
 * Other coprocessors can be used but may require some extra work / command line usage in order to get it working properly.
 
