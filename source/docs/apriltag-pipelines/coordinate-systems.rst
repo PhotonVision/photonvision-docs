@@ -26,7 +26,7 @@ The AprilTag coordinate system is defined as follows, relative to the center of 
 * The origin is the center.
 * The x-axis points to your right
 * The y-axis points upwards.
- * The z-axis is normal to the plane the tag is printed on, pointing outward from the visible side of the tag.
+* The z-axis is normal to the plane the tag is printed on, pointing outward from the visible side of the tag.
 
 .. image:: images/apriltag-coords.png
    :align: center
