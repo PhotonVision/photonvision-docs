@@ -227,21 +227,11 @@ The program will wait for the VSCode debugger to attach before proceeding.
 Running examples
 ~~~~~~~~~~~~~~~~
 
-You can run one of the many built in examples straight from the command line, too! They contain a fully featured robot project, and some include simulation support. The projects can be found inside the photonlib-java-examples and photonlib-cpp-examples subdirectories, respectively. The projects currently available include:
+You can run one of the many built in examples straight from the command line, too! They contain a fully featured robot project, and some include simulation support.
 
-- photonlib-java-examples:
-   - aimattarget:simulateJava
-   - getinrange:simulateJava
-   - aimandrange:simulateJava
-   - simaimandrange:simulateJava
-   - swervedriveposeestsim:simulateJava
-- photonlib-cpp-examples:
-   - aimattarget:simulateNative
-   - getinrange:simulateNative
-   - aimandrange:simulateNative
-   - apriltagExample:simulateNative
+The Java and C++ examples can be found inside the `photonlib-java-examples <https://github.com/PhotonVision/photonvision/tree/master/photonlib-java-examples>`_ and `photonlib-cpp-examples <https://github.com/PhotonVision/photonvision/tree/master/photonlib-cpp-examples>`_ subdirectories of the photonvision repository, respectively.
 
-To run them, use the commands listed below. Photonlib must first be published to your local maven repository, then the copyPhotonlib task will copy the generated vendordep json file into each example. After that, the simulateJava/simulateNative task can be used like a normal robot project. Robot simulation with attached debugger is technically possible by using simulateExternalJava and modifying the launch script it exports, though unsupported.
+To run them, use the commands listed below. Photonlib must first be published to your local maven repository, then the ``copyPhotonlib`` task will copy the generated vendordep json file into each example. After that, the ``simulateJava`` (Java) or ``simulateNative`` (C++) task can be used like a normal robot project. Robot simulation with attached debugger is technically possible by using ``simulateExternalJava`` and modifying the launch script it exports, though unsupported.
 
 .. code-block::
 
