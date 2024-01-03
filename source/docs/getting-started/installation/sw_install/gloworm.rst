@@ -4,7 +4,7 @@ While not currently in production, PhotonVision still supports Gloworm vision pr
 
 Downloading the Gloworm Image
 -----------------------------
-Download the latest `Gloworm/Limelight release of PhotonVision <https://github.com/photonvision/photonvision/releases>`_; the image will be suffixed with "image_limelight.xz". You do not need to extract the downloaded archive.
+Download the latest `Gloworm/Limelight release of PhotonVision <https://github.com/photonvision/photonvision/releases>`_; the image will be suffixed with "image_limelight2.xz". You do not need to extract the downloaded archive.
 
 Flashing the Gloworm Image
 --------------------------
