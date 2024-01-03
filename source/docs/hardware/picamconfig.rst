@@ -13,7 +13,7 @@ The GPU is not always capable of detecting other cameras automatically. The file
 Updating ``config.txt``
 -----------------------
 
-After flashing the pi image onto an SD card, open the ``boot`` segment in a file browser.
+After flashing the Pi image onto an SD card, open the ``boot`` segment in a file browser.
 
 .. note:: Windows may report "There is a problem with this drive". This should be ignored.
 
@@ -33,13 +33,17 @@ Within the file, find this block of text:
   ### IMX290/327/OV9281/Any other cameras that require additional overlays:
   ### Comment out (add a # ) to camera_auto_detect=1, and uncomment the line for
   ### the sensor you're trying to user
+  ### On devices with multiple CSI cameras like the CM4 and Pi 5 you will need to
+  ### declare which port each camera is plugged into (assuming your not using
+  ### autodetect). Remove the # before ",cam0" to define if a camera is plugged into
+  ### csi0. The config automatically assumes no port definition to be CSI1.
 
   cameraAutoDetect=1
 
-  # dtoverlay=imx290,clock-frequency=74250000
-  # dtoverlay=imx290,clock-frequency=37125000
-  # dtoverlay=imx378
-  # dtoverlay=ov9281
+  # dtoverlay=imx290,clock-frequency=74250000#,cam0
+  # dtoverlay=imx290,clock-frequency=37125000#,cam0
+  # dtoverlay=imx378#,cam0
+  # dtoverlay=ov9281#,cam0
 
   ##############################################################
 

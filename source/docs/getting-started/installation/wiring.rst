@@ -28,7 +28,13 @@ Coprocessor without Passive POE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1a. Option 1: Get a micro USB (may be USB-C if using a newer Pi) to USB-A cable and plug the USB A side into a regulator like `this <https://www.amazon.com/KNACRO-Voltage-Regulator-Converter-Module/dp/B01HM12N2C/ref=sr_1_2>`_. Then, wire the regulator into your PDP/PDB and the Micro USB / USB C into your coprocessor.
 
-1b. Option 2: Use a USB power bank to power your coprocessor. Refer to this year's robot rulebook on legal implementations of this.
+.. note:: Raspberry Pi 5 may need a higher current power supply like the one in option 1b.
+
+1b. Option 2: Get a DC regulator like `this <https://www.amazon.com/UCTRONICS-Converter-Transformer-Voltage-Regulator/dp/B07XXWQ49N/>`_ and use two wires to the ground and 5v gpio pins on the PI.
+
+.. image:: images/gpiopinout.jpg
+
+1c. Option 3: Use a USB power bank to power your coprocessor. Refer to this year's robot rulebook on legal implementations of this.
 
 1. Run an ethernet cable from your Pi to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the networking section for more info.)
 
