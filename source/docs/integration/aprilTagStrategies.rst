@@ -31,7 +31,7 @@ Global Pose Estimation / Pose Estimation Strategies
 
 .. note:: See the previous page for more general information. Most of the information is the same except now the camera is supplying a ``Pose3D``.
 
-The nature of how AprilTags will be laid out makes it very likely that you will get multiple pose measurements within a single frame from seeing multiple targets. This requires strategies to fuse these observations together and get a "best guess" as to where your robot is. These strategies could include:
+The nature of how AprilTags will be laid out makes it very likely that you will get multiple pose measurements within a single frame from seeing multiple targets. This requires strategies to fuse these observations together and get a "best guess" as to where your robot is. The best way to do this is to use the corners from all visible AprilTags to estimate the robot's pose. This is done by using the ``PhotonPoseEstimator`` class and the "MULTI_TAG_PNP_ON_COPROCESSOR" strategy. Additional strategies include:
 
 * A camera seeing multiple targets, taking the average of all the returned poses
 * A camera seeing one target, with an assumed height off the ground, picking the pose which places it to the assumed height
@@ -41,4 +41,8 @@ The nature of how AprilTags will be laid out makes it very likely that you will 
 
 PhotonVision supports all of these different strategies via our ``PhotonPoseEstimator`` class that allows you to select one of the strategies above and get the relevant pose estimation.
 
-All of these strategies are valid approaches, and we recommend doing independent testing in order to see which one works best for your team / current game.
+Tuning Pose Estimators
+^^^^^^^^^^^^^^^^^^^^^^
+
+Coming soon!
+TODO: Add this back in once simposeest example is added.

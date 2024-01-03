@@ -58,8 +58,8 @@ In the root directory:
 
       ``gradlew buildAndCopyUI``
 
-Build and Run the Source
-~~~~~~~~~~~~~~~~~~~~~~~~
+Build and Run PhotonVision
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To compile and run the project, issue the following command in the root directory:
 
@@ -93,8 +93,8 @@ Running the following command under the root directory will build the jar under 
 
       ``gradlew shadowJar``
 
-Build and Run the Source on a Raspberry Pi Coprocessor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Build and Run PhotonVision on a Raspberry Pi Coprocessor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As a convinenece, the build has built in `deploy` command which builds, deploys, and starts the current source code on a coprocessor.
 
@@ -218,7 +218,7 @@ Set up a VSCode configuration in :code:`launch.json`
 
 Stop any existing instance of PhotonVision.
 
-Launch the program with the following additional argument to the JVM: :code:`java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=photonvision.local:5801`
+Launch the program with the following additional argument to the JVM: :code:`java -jar -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5801 photonvision.jar`
 
 Once the program says it is listening on port 5801, launch the debug configuration in VSCode.
 
