@@ -12,7 +12,7 @@ Flashing the Pi Image
 ---------------------
 An 8GB or larger card is recommended.
 
-Use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto a Raspberry Pi. Select the downloaded ``.zip`` file, select your microSD card, and flash.
+Use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto a Raspberry Pi. Select the downloaded ``.tar.xz`` file, select your microSD card, and flash.
 
 For more detailed instructions on using Etcher, please see the `Etcher website <https://www.balena.io/etcher/>`_.
 
@@ -39,6 +39,4 @@ Once you find it, set the IP to a desired :ref:`static IP in PhotonVision. <docs
 Updating PhotonVision
 ---------------------
 
-Download the latest stable xxxxx-LinuxArm64.jar from `our releases page <https://github.com/PhotonVision/photonvision/releases>`_, go to the settings tab, and upload the .jar using the Offline Update button.
-
-As an alternative option - Export your settings, reimage your coprocessor using the instructions above, and import your settings back in.
+To upgrade a Raspberry Pi device with PhotonVision already installed, follow the :ref:`Raspberry Pi update instructions<docs/installation/updating:offline update>`.

@@ -15,6 +15,7 @@ This section will walk you through how to install PhotonVision on your coprcoess
    :maxdepth: 3
 
    sw_install/index
+   updating
 
 
 Step 2: Wiring
