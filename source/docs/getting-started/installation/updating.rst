@@ -31,6 +31,8 @@ Unless otherwise noted on the release page, config files should be backward comp
 Installing Pre-Release Versions
 -------------------------------
 
+.. warning:: If testing a pre-release version of PhotonVision with a robot, PhotonLib must be updated to match the version downloaded! If not, packet schema definitions may not match and unexpected things will occur.
+
 Github Actions builds pre-release version of PhotonVision automatically on PRs and on each commit merged to master. To test a particular commit to master, navigate to the `PhotonVision commit list <https://github.com/PhotonVision/photonvision/commits/master/>`_ and click on the check mark (below). Scroll to "Build / Build fat JAR - PLATFORM", click details, and then summary. From here, JAR and image files can be downloaded to be flashed or uploaded using "Offline Update".
 
 .. image:: gh_actions_1.png
