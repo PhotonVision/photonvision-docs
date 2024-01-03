@@ -9,7 +9,7 @@ Content
 .. grid:: 2
 
     .. grid-item-card::  Getting Started
-        :link: docs/getting-started/index
+        :link: docs/installation/index
         :link-type: doc
 
         Get started with installing PhotonVision, creating a pipeline, and tuning it for usage in competitions.
@@ -68,22 +68,44 @@ License
 
 PhotonVision is licensed under the `GNU GPL v3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`_.
 
-Sitemap
--------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 0
+   :caption: Getting Started
+   :hidden:
 
-
-   docs/getting-started/description
-   docs/getting-started/april-tags
-   docs/getting-started/installation/index
-   docs/getting-started/pipeline-tuning/index
+   docs/description
    docs/hardware/index
+   docs/installation/index
+   docs/settings
+
+.. toctree::
+   :maxdepth: 0
+   :caption: Pipeline Tuning and Calibration
+   :hidden:
+
+   docs/pipelines/index
+   docs/apriltag-pipelines/index
+   docs/reflectiveAndShape/index
+   docs/calibration/calibration
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Programming Reference
+   :hidden:
+
    docs/programming/photonlib/index
-   docs/programming/nt-api
+   docs/simulation/index
    docs/integration/index
    docs/examples/index
-   docs/getting-started/best-practices
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Additional Resources
+   :hidden:
+
    docs/troubleshooting/index
+   docs/additional-resources/best-practices
+   docs/additional-resources/config
+   docs/additional-resources/nt-api
    docs/contributing/index

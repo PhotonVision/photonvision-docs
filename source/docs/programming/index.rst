@@ -7,4 +7,3 @@ Programming Reference
    :maxdepth: 1
 
    photonlib/index
-   nt-api
