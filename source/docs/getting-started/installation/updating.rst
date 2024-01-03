@@ -27,3 +27,19 @@ Unless noted in the release page, an offline update allows you to quickly upgrad
 Unless otherwise noted on the release page, config files should be backward compatible with previous version of PhotonVision, and this offline update process should preserve any pipelines and calibrations previously performed. For paranoia, we suggest exporting settings from the Settings tab prior to performing an offline update.
 
 .. note:: Carefully review release notes to ensure that reflashing the device (for supported devices) or other installation steps are not required, as dependencies needed for PhotonVision may change between releases
+
+Installing Pre-Release Versions
+-------------------------------
+
+Github Actions builds pre-release version of PhotonVision automatically on PRs and on each commit merged to master. To test a particular commit to master, navigate to the `PhotonVision commit list <https://github.com/PhotonVision/photonvision/commits/master/>`_ and click on the check mark (below). Scroll to "Build / Build fat JAR - PLATFORM", click details, and then summary. From here, JAR and image files can be downloaded to be flashed or uploaded using "Offline Update".
+
+.. image:: gh_actions_1.png
+   :alt: Github Actions Badge
+
+.. image:: gh_actions_2.png
+   :alt: Github Actions artifact list
+
+Built JAR files (but not image files) can also be downloaded from PRs before they are merged. Navigate to the PR in GitHub, and select Checks at the top. Click on "Build" to display the same artifact list as above.
+
+.. image:: gh_actions_3.png
+   :alt: Github Actions artifacts from PR
