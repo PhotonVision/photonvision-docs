@@ -10,7 +10,7 @@ The Raspberry Pi boards feature dedicated CSI ports (1 on Pi 3 and 4, while Pi 5
 .. warning:: Long ribbon cables are not recommended for use in FRC as they are very fragile and may be susceptible to noise.
 
 Pi 3 and 4
------------------------
+----------
 
 The Raspberry Pi 3 and 4 both have a single 15 pin CSI camera port.
 
@@ -18,7 +18,7 @@ The Raspberry Pi 3 and 4 both have a single 15 pin CSI camera port.
 .. image:: images/pi4cable.png
 
 Pi 5
------------------------
+----
 
 The Raspberry Pi 5 has two much smaller 22 pin CSI camera port.
 

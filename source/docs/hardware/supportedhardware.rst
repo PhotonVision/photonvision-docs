@@ -44,7 +44,7 @@ Pi cameras are always recommended over USB cameras as they have lower latency an
 
 Supported Coprocessors
 ----------------------
-* Raspberry Pi 3 / 4 / 5, with the newest variants of each being preferred (3B+ and B, respectively).
+* Raspberry Pi 4 and 5, with the newest variants of each being preferred (3B+ and B, respectively).
 * Raspberry Pi 4 is preferred for all forms of target tracking, Raspberry Pi 5 will have better preformance however has much less testing.
 * Orange Pi 4 / 5 will have better performance but will require more work to get working.
 * Mini PCs (such as Beelink N5095) have been testing and show significantly better performance than a Raspberry Pi, but require extra effort to wire to the robot / get set up. More information can be found in the set up guide `here. <https://docs.google.com/document/d/1lOSzG8iNE43cK-PgJDDzbwtf6ASyf4vbW8lQuFswxzw/edit?usp=drivesdk>`_

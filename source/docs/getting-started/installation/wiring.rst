@@ -30,7 +30,7 @@ Coprocessor without Passive POE
 
 .. note:: Raspberry Pi 5 may need a higher current power supply like the one in option 1b.
 
-1b. Option 2: Get a DC regulator like `this<https://www.amazon.com/UCTRONICS-Converter-Transformer-Voltage-Regulator/dp/B07XXWQ49N/>` and use two wires to the ground and 5v gpio pins on the PI.
+1b. Option 2: Get a DC regulator like `this <https://www.amazon.com/UCTRONICS-Converter-Transformer-Voltage-Regulator/dp/B07XXWQ49N/>`_ and use two wires to the ground and 5v gpio pins on the PI.
 
 .. image:: images/gpiopinout.jpg
 
