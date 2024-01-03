@@ -10,9 +10,9 @@ In the example release above, we see:
 
 - Image files for flashing directly to supported coprocessors.
 
-  - Raspberry Pi 3/4/5/CM4: follow our :ref:`Raspberry Pi flashing instructions<docs/getting-started/installation/sw_install/raspberry-pi:Raspberry Pi Installation>`.
-  - For LimeLight devices: follow our :ref:`LimeLight flashing instructions<docs/getting-started/installation/sw_install/limelight:Imaging>`.
-  - For Orange Pi 5 devices: follow our :ref:`Orange Pi flashing instructions<docs/getting-started/installation/sw_install/orange-pi:Orange Pi Installation>`.
+  - Raspberry Pi 3/4/5/CM4: follow our :ref:`Raspberry Pi flashing instructions<docs/installation/sw_install/raspberry-pi:raspberry pi installation>`.
+  - For LimeLight devices: follow our :ref:`LimeLight flashing instructions<docs/installation/sw_install/limelight:imaging>`.
+  - For Orange Pi 5 devices: follow our :ref:`Orange Pi flashing instructions<docs/installation/sw_install/orange-pi:orange pi installation>`.
 
 - JAR files for the suite of supported operating systems for use with Offline Update. In general:
 

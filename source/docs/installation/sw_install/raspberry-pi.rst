@@ -39,4 +39,4 @@ Once you find it, set the IP to a desired :ref:`static IP in PhotonVision. <docs
 Updating PhotonVision
 ---------------------
 
-To upgrade a Raspberry Pi device with PhotonVision already installed, follow the :ref:`Raspberry Pi update instructions<docs/getting-started/installation/updating>`.
+To upgrade a Raspberry Pi device with PhotonVision already installed, follow the :ref:`Raspberry Pi update instructions<docs/installation/updating:offline update>`.
