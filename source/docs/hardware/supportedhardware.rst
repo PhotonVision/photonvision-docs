@@ -20,19 +20,20 @@ Pi cameras are always recommended over USB cameras as they have lower latency an
 
 .. note:: Note that there are many CSI based OV9281 cameras but this is the only one that has been tested by the development team.
 
-* `Arducam USB OV9281 Global Shutter Camera <https://www.amazon.com/Arducam-Distortion-Microphones-Computer-Raspberry/dp/B096M5DKY6>`_ (AprilTag Tracking)
+* Arducam USB OV9281 Global Shutter Camera (AprilTag Tracking)
 
-* `720p ELP Camera <https://www.amazon.com/SVPRO-Camera-Module-100degree-Distortion/dp/B07C1KYBYC>`_ (Retroreflective Target Tracking)
+* 720p ELP Camera (Retroreflective Target Tracking)
 
-* `Microsoft LifeCam HD-3000 <https://www.andymark.com/products/microsoft-lifecam-hd-3000-camera>`_ (Driver Camera)
+* Microsoft LifeCam HD-3000 (Driver Camera)
 
-* `720p Fisheye ELP Camera <https://www.amazon.com/ELP-Camera-170degree-Megapixel-Security/dp/B00VTINRMK/>`_ (Driver Camera)
+* 720p Fisheye ELP Camera (Driver Camera)
 
 .. note:: If you test a camera and find that it works with PhotonVision, we encourage you to submit that camera to the performance matrix below.
 
 .. warning::
 
     The following cameras / setups are known to not work:
+
     * Using two of the same USB cameras does not currently work because it is hard to identify the two different cameras.
 
     * Most Logitech cameras (specifically the Logitech C270 HD Webcam (PN: 960-000694)) will not work with PhotonVision.
