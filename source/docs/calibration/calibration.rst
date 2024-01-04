@@ -119,6 +119,7 @@ Start by `Installing mrcal <https://mrcal.secretsauce.net/install.html>`_. Note 
 Let's now cd into the calibration folder we created using calibrationUtils.py above. From here, you can follow the mrcal tour, just replacing the VNL filename and camera imager size as necessary. My camera calibration was at 1280x720, so I've set the XY limits to that below.
 
 ::
+
    $ cd /path/to/output/folder
    $ ls
    matt@photonvision:~/Documents/Downloads/2024-01-02_lifecam_1280$ ls
