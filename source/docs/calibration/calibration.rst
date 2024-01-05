@@ -102,7 +102,7 @@ Calibration images can also be extracted from the downloaded JSON file using `th
 
 ::
 
-    ``python3 /path/to/calibrationUtils.py path/to/photon_calibration.json /path/to/output/folder``
+  python3 /path/to/calibrationUtils.py path/to/photon_calibration.json /path/to/output/folder
 
 .. image:: images/unpacked-json.png
    :width: 600
@@ -114,16 +114,18 @@ Investigating Calibration Data with mrcal
 
 `mrcal <https://mrcal.secretsauce.net/tour.html>`_ is a command-line tool for camera calibration and visualization. PhotonVision has the option to use the mrcal backend during camera calibration to estimate intrinsics. mrcal can also be used post-calibration to inspect snapshots and provide feedback. These steps will closely follow the `mrcal tour <https://mrcal.secretsauce.net/tour-initial-calibration.html>`_ -- I'm aggregating commands and notes here, but the mrcal documentation is much more thorough.
 
-Start by `Installing mrcal <https://mrcal.secretsauce.net/install.html>`_. Note that while mrcal *calibration* using Photon is supported on all platforms, but investigation right now only works on Linux. Some users have also reported luck using `WSL 2 on Windows <https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps>`_ as well. You may also need to install ``feedgnuplot``. On Ubuntu systems, these commands should be run from a standalone terminal and *not* the one `built into vscode <https://github.com/ros2/ros2/issues/1406>`_.
+Start by `Installing mrcal <https://mrcal.secretsauce.net/install.html>`_. Note that while mrcal *calibration* using Photon is supported on all platforms, but investigation right now only works on Linux. Some users have also reported luck using `WSL 2 on Windows <https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps>`ap_ as well. You may also need to install ``feedgnuplot``. On Ubuntu systems, these commands should be run from a standalone terminal and *not* the one `built into vscode <https://github.com/ros2/ros2/issues/1406>`_.
 
-Let's now cd into the calibration folder we created using calibrationUtils.py above. From here, you can follow the mrcal tour, just replacing the VNL filename and camera imager size as necessary. My camera calibration was at 1280x720, so I've set the XY limits to that below.
+Let's run ``calibrationUtils.py`` as described above, and then cd into the output folder. From here, you can follow the mrcal tour, just replacing the VNL filename and camera imager size as necessary. My camera calibration was at 1280x720, so I've set the XY limits to that below.
 
 ::
 
    $ cd /path/to/output/folder
    $ ls
    matt@photonvision:~/Documents/Downloads/2024-01-02_lifecam_1280$ ls
-   corners.vnl  img0.png  img10.png  img11.png  img12.png  img13.png  img1.png  img2.png  img3.png  img4.png  img5.png  img6.png  img7.png  img8.png  img9.png
+     corners.vnl  img0.png  img10.png  img11.png  img12.png  img13.png  img1.png
+     img2.png  img3.png  img4.png  img5.png  img6.png  img7.png  img8.png
+     img9.png  cameramodel_0.cameramodel
 
    $ < corners.vnl       \
      vnl-filter -p x,y | \
@@ -132,40 +134,9 @@ Let's now cd into the calibration folder we created using calibrationUtils.py ab
 .. image:: images/mrcal-coverage.svg
    :alt: A diagram showing the locations of all detected chessboard corners.
 
-As you can see, we didn't do a fantastic job of covering our whole camera sensor -- there's a big gap across the whole right side, for example. We also only have 14 calibration images.
+As you can see, we didn't do a fantastic job of covering our whole camera sensor -- there's a big gap across the whole right side, for example. We also only have 14 calibration images. We've also got our "cameramodel" file, which can be used by mrcal to display additional debug info.
 
-Now let's recalibrate using mrcal again. This gets us a mrcal "camera model", which we can then use to make more fun graphs. The output of this calibration ought to be equivilant to Photon (as long as we are both using LENSMODEL_OPENCV8), and is a fine workaround until Photon is able to directly export mrcal camera models. Set --object-width-n and --object-height-n to the size of your chessboard (in number of corner intersections), and object-spacing to the distance between squares in meters.
-
-::
-
-   mrcal-calibrate-cameras      \
-  --corners-cache corners.vnl   \
-  --lensmodel LENSMODEL_OPENCV8 \
-  --focal 1900                  \
-  --object-spacing 0.0254       \
-  --object-width-n 10           \
-  --object-height-n 10          \
-  '*.png'
-
-   ## initial solve: geometry only
-   ## RMS error: 2.0843541974763395
-
-   ## initial solve: geometry and LENSMODEL_STEREOGRAPHIC core only
-   =================== optimizing everything except board warp from seeded intrinsics
-   mrcal.c(5414): Threw out some outliers. New count = 15/2800 (0.5%). Going again
-   mrcal.c(5414): Threw out some outliers. New count = 30/2800 (1.1%). Going again
-   mrcal.c(5414): Threw out some outliers. New count = 45/2800 (1.6%). Going again
-   mrcal.c(5414): Threw out some outliers. New count = 55/2800 (2.0%). Going again
-   ## final, full optimization
-   ## RMS error: 0.23268085804416724
-   RMS reprojection error: 0.2 pixels
-   Worst residual (by measurement): 1.4 pixels
-   Noutliers: 55 out of 1400 total points: 3.9% of the data
-   calobject_warp = [-1.33321838e-05 -2.09788225e-04]
-
-   Wrote ./camera-0.cameramodel
-
-Let's also inspect our reprojection error residuals. We expect their magnitudes and directions to be random -- if there's patterns in the colors shown, then our calibration probably doesn't fully explain our physical camera sensor.
+Let's inspect our reprojection error residuals. We expect their magnitudes and directions to be random -- if there's patterns in the colors shown, then our calibration probably doesn't fully explain our physical camera sensor.
 
 ::
 
@@ -179,6 +150,10 @@ Let's also inspect our reprojection error residuals. We expect their magnitudes 
    :alt: A diagram showing residual directions
 
 Clearly we don't have anywhere near enough data to draw any meaningful conclusions (yet). But for fun, let's dig into `camera uncertainty estimation <https://mrcal.secretsauce.net/tour-uncertainty.html>`_. This diagram shows how expected projection error changes due to noise in calibration inputs. Lower projection error across a larger area of the sensor imply a better calibration that more fully covers the whole sensor. For my calibration data, you can tell the projection error isolines (lines of constant expected projection error) are skewed to the left, following my dataset (which was also skewed left).
+
+::
+
+   $ mrcal-show-projection-uncertainty --unset key ./cameramodel_0.cameramodel
 
 .. image:: images/camera-uncertainty.svg
    :alt: A diagram showing camera uncertainty
