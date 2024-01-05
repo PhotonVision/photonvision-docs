@@ -1,5 +1,5 @@
 Pi Camera Wiring
-=======================
+================
 
 Background
 ----------
@@ -8,6 +8,7 @@ The Raspberry Pi boards feature dedicated CSI ports (1 on Pi 3 and 4, while Pi 5
 
 .. warning:: Incorrect camera connection may not work or cause damage to the board or camera.
 .. warning:: Long ribbon cables are not recommended for use in FRC as they are very fragile and may be susceptible to noise.
+.. warning:: Please note which connector your Raspberry Pi has before you purchase one (they have different pin counts).
 
 Pi 3 and 4
 ----------
