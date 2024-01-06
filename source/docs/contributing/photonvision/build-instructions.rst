@@ -105,16 +105,19 @@ An architecture override is required to specify the deploy target's architecture
    .. tab-item:: Linux
 
       ``./gradlew clean``
+
       ``./gradlew deploy -PArchOverride=linuxarm64``
 
    .. tab-item:: macOS
 
       ``./gradlew clean``
+
       ``./gradlew deploy -PArchOverride=linuxarm64``
 
    .. tab-item:: Windows (cmd)
 
       ``gradlew clean``
+
       ``gradlew deploy -PArchOverride=linuxarm64``
 
 The ``deploy`` command is tested against Raspberry Pi coprocessors. Other similar coprocessors may work too.
