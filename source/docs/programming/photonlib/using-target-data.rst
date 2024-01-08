@@ -11,7 +11,7 @@ Estimating Field Relative Pose with AprilTags
    .. code-block:: java
 
       // Calculate robot's field relative pose
-      Pose3D robotPose = PhotonUtils.estimateFieldToRobotAprilTag(target.getBestCameraToTarget(), aprilTagFieldLayout.getTagPose(target.getFiducialId()), cameraToRobot);
+      Pose3d robotPose = PhotonUtils.estimateFieldToRobotAprilTag(target.getBestCameraToTarget(), aprilTagFieldLayout.getTagPose(target.getFiducialId()), cameraToRobot);
    .. code-block:: c++
 
      //TODO
