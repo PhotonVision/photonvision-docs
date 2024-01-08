@@ -15,7 +15,7 @@ The API documentation can be found in here: `Java <https://github.wpilib.org/all
    .. code-block:: java
 
       // The parameter for loadFromResource() will be different depending on the game.
-      AprilTagFieldLayout aprilTagFieldLayout = AprilTagFieldLayout.loadFromResource(AprilTagFields.k2023ChargedUp.m_resourceFile);
+      AprilTagFieldLayout aprilTagFieldLayout = AprilTagFieldLayout.loadFromResource(AprilTagFields.k2024Crescendo.m_resourceFile);
 
    .. code-block:: c++
 
