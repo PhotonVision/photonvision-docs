@@ -96,7 +96,7 @@ For convenience, an ``AprilTagFieldLayout`` can also be added to automatically c
    .. code-block:: java
 
       // The layout of AprilTags which we want to add to the vision system
-      AprilTagFieldLayout tagLayout = AprilTagFieldLayout.loadFromResource(AprilTagFields.k2023ChargedUp.m_resourceFile);
+      AprilTagFieldLayout tagLayout = AprilTagFieldLayout.loadFromResource(AprilTagFields.k2024Crescendo.m_resourceFile);
 
       visionSim.addAprilTags(tagLayout);
 
