@@ -12,15 +12,15 @@ To simulate with hardware in the loop, a one-line change is required. From the P
 During normal robot operation, a team's number would be entered into this field so that the PhotonVision coprocessor connects to the roboRIO as a NT client. Instead, enter the IP address of your computer running the simulation here.
 
 .. note::
-    
+
    To find the IP address of your Windows computer, open command prompt and run ``ipconfig``.
 
    .. code-block:: console
-   
+
       C:/Users/you>ipconfig
 
       Windows IP Configuration
-   
+
       Ethernet adapter Ethernet:
 
          Connection-specific DNS Suffix  . : home
