@@ -3,45 +3,35 @@ Hardware In The Loop Simulation
 
 Hardware in the loop simulation is using a physical device, such as a supported co-processor running PhotonVision, to enhance simulation capabilities. This is useful for developing and validating code before the camera is attached to a robot, as well as reducing the work required to use WPILib simulation with PhotonVision.
 
-The first step is to install PhotonVision on your target device. Instructions can be found :ref:`here <docs/installation/index:Installation & Setup>` for all devices.
+Before continuing, ensure PhotonVision is installed on your target device. Instructions can be found :ref:`here <docs/installation/index:Installation & Setup>` for all devices.
 
-A small amount of configuration is required after installation. From the PhotonVision UI, go to the sidebar and select the Settings option. Within the settings, turn on "Run NetworkTables Server".
+Your coprocessor and computer running simulation will have to be connected to the same network, like a home router. Connecting the coprocessor directly to the computer will not work.
 
-.. warning:: Do not leave this toggle on when accessing your device on a full robot.
+To simulate with hardware in the loop, a one-line change is required. From the PhotonVision UI, go to the sidebar and select the Settings option. Within the Networking settings, find "Team Number/NetworkTables Server Address".
 
-.. image:: images/nt-server-toggle.png
+During normal robot operation, a team's number would be entered into this field so that the PhotonVision coprocessor connects to the roboRIO as a NT client. Instead, enter the IP address of your computer running the simulation here.
 
-The final step is to configure your code to connect to the NetworkTables server run by your instance of PhotonVision. The code below shows how to disconnect your simulation from the default NetworkTables server and connect it to the PhotonVision hosted one.
+.. note::
 
-.. note:: This will disable your robot code's internal NT server. Applications connecting to a NT server (e.g. Shuffleboard or Glass) must be connected to the PhotonVision NT server if this code has been run.
+   To find the IP address of your Windows computer, open command prompt and run ``ipconfig``.
 
-.. tab-set-code::
+   .. code-block:: console
 
-   .. code-block:: java
+      C:/Users/you>ipconfig
 
-      if(RobotBase.isSimulation()) {
-         NetworkTableInstance inst = NetworkTableInstance.getDefault();
-         inst.stopServer();
-         // Change the IP address in the below function to the IP address you use to connect to the PhotonVision UI.
-         inst.setServer("photonvision.local");
-         inst.startClient4("Robot Simulation");
-      }
+      Windows IP Configuration
 
-   .. code-block:: c++
+      Ethernet adapter Ethernet:
 
-      #include <frc/RobotBase.h>
-      #include <networktables/NetworkTable.h>
+         Connection-specific DNS Suffix  . : home
+         Link-local IPv6 Address . . . . . : fe80::b41d:e861:ef01:9dba%10
+         IPv4 Address. . . . . . . . . . . : 192.168.254.13
+         Subnet Mask . . . . . . . . . . . : 255.255.255.0
+         Default Gateway . . . . . . . . . : 192.168.254.254
 
-      void Robot::RobotInit() {
-        if constexpr (frc::RobotBase::IsSimulation()) {
-          auto inst = nt::NetworkTableInstance::GetDefault();
-          inst.StopServer();
-          // Change the IP address in the below function to the IP address you use to
-          // connect to the PhotonVision UI.
-          inst.SetServer("localhost");
-          inst.StartClient4("Robot Simulation");
-        }
-      }
+.. image:: images/coproc-client-to-desktop-sim.png
+
+No code changes are required, PhotonLib should function similarly to normal operation.
 
 Now launch simulation, and you should be able to see the PhotonVision table on your simulation's NetworkTables dashboard.
 
