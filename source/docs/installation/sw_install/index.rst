@@ -9,7 +9,7 @@ Supported Coprocessors
 
    raspberry-pi
    limelight
-   gloworm
+   orange-pi
    snakeyes
 
 Desktop Environments
@@ -31,4 +31,4 @@ Other
    other-coprocessors
    advanced-cmd
    romi
-   orange-pi
+   gloworm
