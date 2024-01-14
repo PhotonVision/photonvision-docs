@@ -7,7 +7,9 @@ Before continuing, ensure PhotonVision is installed on your target device. Instr
 
 Your coprocessor and computer running simulation will have to be connected to the same network, like a home router. Connecting the coprocessor directly to the computer will not work.
 
-To simulate with hardware in the loop, a one-line change is required. From the PhotonVision UI, go to the sidebar and select the Settings option. Within the Networking settings, find "Team Number/NetworkTables Server Address". During normal robot operation, a team's number would be entered into this field so that the PhotonVision coprocessor connects to the roboRIO as a NT client. You can also put the IP address of another NT Server instead of the roboRIO, like a desktop computer running a simulated robot.
+To simulate with hardware in the loop, a one-line change is required. From the PhotonVision UI, go to the sidebar and select the Settings option. Within the Networking settings, find "Team Number/NetworkTables Server Address".
+
+During normal robot operation, a team's number would be entered into this field so that the PhotonVision coprocessor connects to the roboRIO as a NT client. Instead, enter the IP address of your computer running the simulation here.
 
 .. note::
     
