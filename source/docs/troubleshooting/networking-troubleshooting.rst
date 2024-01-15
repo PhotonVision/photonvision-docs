@@ -1,7 +1,7 @@
 Networking Troubleshooting
 ==========================
 
-Before reading further, ensure that you follow all the recommendations :ref:`in our networking section <docs/getting-started/installation/networking:Physical Networking>`. You should follow these guidelines in order for PhotonVision to work properly; other networking setups are not officially supported.
+Before reading further, ensure that you follow all the recommendations :ref:`in our networking section <docs/installation/networking:Physical Networking>`. You should follow these guidelines in order for PhotonVision to work properly; other networking setups are not officially supported.
 
 
 Checklist
@@ -9,7 +9,7 @@ Checklist
 
 A few issues make up the majority of support requests. Run through this checklist quickly to catch some common mistakes.
 
-- Is your camera connected to the robot's radio through a :ref:`network switch <docs/getting-started/installation/networking:Physical Networking>`?
+- Is your camera connected to the robot's radio through a :ref:`network switch <docs/installation/networking:Physical Networking>`?
    - Ethernet straight from a laptop to a coprocessor will not work (most likely), due to the unreliability of link-local connections.
    - Even if there's a switch between your laptop and coprocessor, you'll still want a radio or router in the loop somehow.
    - The FRC radio is the *only* router we will officially support due to the innumerable variations between routers.
@@ -19,8 +19,8 @@ A few issues make up the majority of support requests. Run through this checklis
    - This is due to Limelight-specific hardware configuration that makes the image incompatible with stock Raspberry Pi devices.
 - Is your robot code using a **2023** version of WPILib, and is your coprocessor using the most up to date **2023** release?
    - 2022 and 2023 versions of either cannot be mix-and-matched!
-   - Your PhotonVision version can be checked on the :ref:`settings tab<docs/hardware/Settings:settings>`.
-- Is your team number correctly set on the :ref:`settings tab<docs/hardware/Settings:settings>`?
+   - Your PhotonVision version can be checked on the :ref:`settings tab<docs/settings:settings>`.
+- Is your team number correctly set on the :ref:`settings tab<docs/settings:settings>`?
 
 
 photonvision.local Not Found

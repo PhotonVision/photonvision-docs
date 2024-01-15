@@ -88,7 +88,7 @@ You can get a list of tracked targets using the ``getTargets()``/``GetTargets()`
 
 Getting the Best Target
 -----------------------
-You can get the :ref:`best target <docs/getting-started/pipeline-tuning/reflectiveAndShape/contour-filtering:Contour Grouping and Sorting>` using ``getBestTarget()``/``GetBestTarget()`` (Java and C++ respectively) method from the pipeline result.
+You can get the :ref:`best target <docs/reflectiveAndShape/contour-filtering:Contour Grouping and Sorting>` using ``getBestTarget()``/``GetBestTarget()`` (Java and C++ respectively) method from the pipeline result.
 
 .. tab-set-code::
    .. code-block:: java
