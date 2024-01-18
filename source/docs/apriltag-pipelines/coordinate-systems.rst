@@ -1,10 +1,10 @@
-Coordiante Systems
+Coordinate Systems
 ==================
 
-Field and Robot Coordiante Frame
+Field and Robot Coordinate Frame
 --------------------------------
 
-PhotonVision follows the WPILib conventions for the robot and field coordinate-systems, as defined `here <https://docs.wpilib.org/en/stable/docs/software/advanced-controls/geometry/coordinate-systems.html>`_.
+PhotonVision follows the WPILib conventions for the robot and field coordinate systems, as defined `here <https://docs.wpilib.org/en/stable/docs/software/advanced-controls/geometry/coordinate-systems.html>`_.
 
 You define the camera to robot transform in the robot coordinate frame.
 
@@ -21,7 +21,7 @@ The camera coordinate system is defined as follows, relative to the camera senso
 AprilTag Coordinate Frame
 -------------------------
 
-The AprilTag coordinate system is defined as follows, relative to the center of the AprilTag itself, and when viewing the tag as a robot would.=:
+The AprilTag coordinate system is defined as follows, relative to the center of the AprilTag itself, and when viewing the tag as a robot would:
 
 * The origin is the center.
 * The x-axis points to your right
