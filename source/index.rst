@@ -87,6 +87,7 @@ PhotonVision is licensed under the `GNU GPL v3 <https://www.gnu.org/licenses/gpl
    docs/pipelines/index
    docs/apriltag-pipelines/index
    docs/reflectiveAndShape/index
+   docs/objectDetection/index
    docs/calibration/calibration
 
 .. toctree::
