@@ -1,14 +1,19 @@
 About Object Detection
 ======================
 
-.. image:: images/notes-ui.png
-
 How does it work?
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
-PhotonVision supports object detection using neural network accelerator hardware built into Orange Pi 5/5+ coprocessors. The Neural Processing Unit, or NPU, is `used by Photon <https://github.com/PhotonVision/rknn_jni/tree/main>`_ to massively accelerate certain math operations like those needed for running ML-based object detection.
+PhotonVision supports object detection using neural network accelerator hardware built into Orange Pi 5/5+ coprocessors. The Neural Processing Unit, or NPU, is `used by PhotonVision <https://github.com/PhotonVision/rknn_jni/tree/main>`_ to massively accelerate certain math operations like those needed for running ML-based object detection.
 
 For the 2024 season, Photon ships with a **pre-trained NOTE detector** (shown above), as well as a mechanism for swapping in custom models. Future development will focus on enabling lower friction management of multiple custom models.
+
+.. image:: images/notes-ui.png
+
+Tracking Objects
+^^^^^^^^^^^^^^^^
+
+Before you get started with object detection, ensure that you have followed the previous sections on installation, wiring and networking. Next, open the Web UI, go to the top right card, and swtich to the “Object Detection” type. You should see a screen similar to the image above.
 
 Tuning and Filtering
 ^^^^^^^^^^^^^^^^^^^^
@@ -22,7 +27,7 @@ Compared to other pipelines, object detection exposes very few tuning handles. T
             Your browser does not support the video tag.
         </video>
 
-The same area, aspect ratio, and target orientation/sort parameters from :ref:`reflective pipelines <docs/reflectiveAndShape/contour-filtering:Reflective>` are also exposed in the object detection hard.
+The same area, aspect ratio, and target orientation/sort parameters from :ref:`reflective pipelines <docs/reflectiveAndShape/contour-filtering:Reflective>` are also exposed in the object detection card.
 
 Training Custom Models
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -31,6 +36,8 @@ Coming soon!
 
 Uploading Custom Models
 ^^^^^^^^^^^^^^^^^^^^^^^
+
+.. warning:: PhotonVision currently ONLY supports YOLOV5 models trained and converted to ``.rknn`` format for RK3588 CPUs! Other models require different post-processing code and will NOT work. The model conversion process is also highly particular. Proceed with care.
 
 Our `pre-trained NOTE model <https://github.com/PhotonVision/photonvision/blob/master/photon-server/src/main/resources/models/note-640-640-yolov5s.rknn>`_ is automatically extracted from the JAR when PhotonVision starts, only if a file named “note-640-640-yolov5s.rknn” and "labels.txt" does not exist in the folder ``photonvision_config/models/``. This technically allows power users to replace the model and label files with new ones without rebuilding Photon from source and uploading a new JAR.
 
