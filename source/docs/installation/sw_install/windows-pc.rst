@@ -28,6 +28,8 @@ To run PhotonVision, open a terminal window of your choice and run the following
 
 If your computer has a compatible webcam connected, PhotonVision should startup without any error messages. If there are error messages, your webcam isn't supported or another issue has occurred. If it is the latter, please open an issue on the `PhotonVision issues page <https://github.com/PhotonVision/photonvision/issues>`_.
 
+.. warning:: Using an integrated laptop camera may cause issues when trying to run PhotonVision. If you are unable to run PhotonVision on a laptop with an integrated camera, try disabling the camera's driver in Windows Device Manager.
+
 Accessing the PhotonVision Interface
 ------------------------------------
 Once the Java backend is up and running, you can access the main vision interface by navigating to ``localhost:5800`` inside your browser.
