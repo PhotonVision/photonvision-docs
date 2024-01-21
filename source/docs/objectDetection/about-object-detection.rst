@@ -6,7 +6,7 @@ How does it work?
 
 PhotonVision supports object detection using neural network accelerator hardware built into Orange Pi 5/5+ coprocessors. The Neural Processing Unit, or NPU, is `used by PhotonVision <https://github.com/PhotonVision/rknn_jni/tree/main>`_ to massively accelerate certain math operations like those needed for running ML-based object detection.
 
-For the 2024 season, Photon ships with a **pre-trained NOTE detector** (shown above), as well as a mechanism for swapping in custom models. Future development will focus on enabling lower friction management of multiple custom models.
+For the 2024 season, PhotonVision ships with a **pre-trained NOTE detector** (shown above), as well as a mechanism for swapping in custom models. Future development will focus on enabling lower friction management of multiple custom models.
 
 .. image:: images/notes-ui.png
 
