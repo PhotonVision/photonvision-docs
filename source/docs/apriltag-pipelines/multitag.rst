@@ -8,7 +8,7 @@ PhotonVision can combine AprilTag detections from multiple simultaniously observ
 Enabling MultiTag
 ^^^^^^^^^^^^^^^^^
 
-Ensure that 3D mode is enabled (and do so if not). Navigate to the Output tab and enable "Do Multi-Target Estimation". This enables MultiTag using the uploaded field layout JSON to calculate your camera's pose in the field. This 3D transform will be shown as an additional table in the "targets" tab, along with the IDs of AprilTags used to compute this transform.
+Ensure that your camera is calibrated and 3D mode is enabled. Navigate to the Output tab and enable "Do Multi-Target Estimation". This enables MultiTag using the uploaded field layout JSON to calculate your camera's pose in the field. This 3D transform will be shown as an additional table in the "targets" tab, along with the IDs of AprilTags used to compute this transform.
 
 .. image:: images/multitag-ui.png
    :width: 600
