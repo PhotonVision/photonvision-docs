@@ -15,6 +15,8 @@ Tracking Objects
 
 Before you get started with object detection, ensure that you have followed the previous sections on installation, wiring and networking. Next, open the Web UI, go to the top right card, and swtich to the “Object Detection” type. You should see a screen similar to the image above.
 
+PhotonVision currently ships with a NOTE detector based on a `YOLOv5 model <https://docs.ultralytics.com/yolov5/>`_. This model is trained to detect one or more object "classes" (such as cars, stoplights, or in our case, NOTES) in an input image. For each detected object, the model outputs a bounding box around where in the image the object is located, what class the object belongs to, and a unitless confidence between 0 and 1. This means that while its fairly easy to say that "this rectangle probably contains a NOTE", this model doesn't give us any more information about the NOTE's orientation or location; further math in user code would be required to make estimates about where an object is physically located relative to the camera.
+
 Tuning and Filtering
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -37,7 +39,7 @@ Coming soon!
 Uploading Custom Models
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-.. warning:: PhotonVision currently ONLY supports YOLOV5 models trained and converted to ``.rknn`` format for RK3588 CPUs! Other models require different post-processing code and will NOT work. The model conversion process is also highly particular. Proceed with care.
+.. warning:: PhotonVision currently ONLY supports YOLOv5 models trained and converted to ``.rknn`` format for RK3588 CPUs! Other models require different post-processing code and will NOT work. The model conversion process is also highly particular. Proceed with care.
 
 Our `pre-trained NOTE model <https://github.com/PhotonVision/photonvision/blob/master/photon-server/src/main/resources/models/note-640-640-yolov5s.rknn>`_ is automatically extracted from the JAR when PhotonVision starts, only if a file named “note-640-640-yolov5s.rknn” and "labels.txt" does not exist in the folder ``photonvision_config/models/``. This technically allows power users to replace the model and label files with new ones without rebuilding Photon from source and uploading a new JAR.
 
