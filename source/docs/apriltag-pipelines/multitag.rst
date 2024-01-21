@@ -48,6 +48,6 @@ PhotonVision ships by default with the `2024 field layout JSON <https://github.c
    :width: 600
    :alt: The currently saved field layout in the Photon UI
 
-An updated field layout can be uploaded by navigating to the "Device Control" card of the Settings tab and clicking "Import Settings". In the pop-up dialog, select the "Apriltag Layout" type and choose a updated layout JSON (in the same format as the WPILib field layout JSON linked above) using the paperclip icon, and select "Import Settings". The apriltag layout in the "AprilTag Field Layout" card below should update to reflect the new layout.
+An updated field layout can be uploaded by navigating to the "Device Control" card of the Settings tab and clicking "Import Settings". In the pop-up dialog, select the "Apriltag Layout" type and choose a updated layout JSON (in the same format as the WPILib field layout JSON linked above) using the paperclip icon, and select "Import Settings". The AprilTag layout in the "AprilTag Field Layout" card below should update to reflect the new layout.
 
 .. note:: Currently, there is no way to update this layout using PhotonLib, although this feature is under consideration.
