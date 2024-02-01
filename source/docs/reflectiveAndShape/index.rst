@@ -1,5 +1,5 @@
-Colored Shape Detection
-=======================
+Colored Shape & Reflective
+==========================
 
 .. toctree::
    :maxdepth: 0

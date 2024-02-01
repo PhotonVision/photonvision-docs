@@ -9,25 +9,19 @@ Creating an ``AprilTagFieldLayout``
 -----------------------------------
 ``AprilTagFieldLayout`` is used to represent a layout of AprilTags within a space (field, shop at home, classroom, etc.). WPILib provides a JSON that describes the layout of AprilTags on the field which you can then use in the AprilTagFieldLayout constructor. You can also specify a custom layout.
 
-The API documentation can be found in here: `Java <https://github.wpilib.org/allwpilib/docs/beta/java/edu/wpi/first/apriltag/AprilTagFieldLayout.html>`_ and `C++ <https://github.wpilib.org/allwpilib/docs/beta/cpp/classfrc_1_1_april_tag_field_layout.html>`_.
+The API documentation can be found in here: `Java <https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/apriltag/AprilTagFieldLayout.html>`_ and `C++ <https://github.wpilib.org/allwpilib/docs/release/cpp/classfrc_1_1_april_tag_field_layout.html>`_.
 
 .. tab-set-code::
    .. code-block:: java
 
-      // The parameter for loadFromResource() will be different depending on the game.
-      AprilTagFieldLayout aprilTagFieldLayout = AprilTagFieldLayout.loadFromResource(AprilTagFields.k2024Crescendo.m_resourceFile);
+      // The field from AprilTagFields will be different depending on the game.
+      AprilTagFieldLayout aprilTagFieldLayout = AprilTagFields.k2024Crescendo.loadAprilTagLayoutField();
 
    .. code-block:: c++
 
-      // Two example tags in our layout -- ID 0 at (3, 3) and 0 rotation, and
-      // id 1 and (5, 5) and 0 rotation.
-      std::vector<frc::AprilTag> tags = {
-          {0, frc::Pose3d(units::meter_t(3), units::meter_t(3), units::meter_t(3),
-                          frc::Rotation3d())},
-          {1, frc::Pose3d(units::meter_t(5), units::meter_t(5), units::meter_t(5),
-                          frc::Rotation3d())}};
-      std::shared_ptr<frc::AprilTagFieldLayout> aprilTags =
-          std::make_shared<frc::AprilTagFieldLayout>(tags, 54_ft, 27_ft);
+      // The parameter for LoadAPrilTagLayoutField will be different depending on the game.
+      frc::AprilTagFieldLayout aprilTagFieldLayout = frc::LoadAprilTagLayoutField(frc::AprilTagField::k2024Crescendo);
+
 
 Creating a ``PhotonPoseEstimator``
 ----------------------------------
