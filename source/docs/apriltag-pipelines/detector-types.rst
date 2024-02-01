@@ -1,7 +1,7 @@
 AprilTag Pipeline Types
 =======================
 
-PhotonVision offers two different AprilTag pipeline types based on different implementations of the underlying algorithm. Each one has its advantages / disadvatages, which are detailed below.
+PhotonVision offers two different AprilTag pipeline types based on different implementations of the underlying algorithm. Each one has its advantages / disadvantages, which are detailed below.
 
 .. note:: Note that both of these pipeline types detect AprilTag markers and are just two different algorithms for doing so.
 
