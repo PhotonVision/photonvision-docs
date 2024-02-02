@@ -78,7 +78,7 @@ Each pipeline result has a ``hasTargets()``/``HasTargets()`` (Java and C++ respe
 
    .. code-block:: python
 
-     // Check if the latest result has any targets.
+     # Check if the latest result has any targets.
       hasTargets = result.hasTargets()
 
 .. warning:: In Java/C++, You must *always* check if the result has a target via ``hasTargets()``/``HasTargets()`` before getting targets or else you may get a null pointer exception. Further, you must use the same result in every subsequent call in that loop.
@@ -107,6 +107,7 @@ You can get a list of tracked targets using the ``getTargets()``/``GetTargets()`
 
    .. code-block:: python
 
+      # Get a list of currently tracked targets.
       targets = result.getTargets()
 
 Getting the Best Target
