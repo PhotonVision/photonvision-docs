@@ -52,7 +52,7 @@ Use the ``getLatestResult()``/``GetLatestResult()`` (Java and C++ respectively) 
 
      .. code-block:: python
 
-         # Query the latest result from PhotonVision         
+         # Query the latest result from PhotonVision
          result = self.camera.getLatestResult()
 
 
