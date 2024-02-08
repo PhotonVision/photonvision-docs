@@ -12,7 +12,7 @@ Installing Python Dependencies
 ------------------------------
 You must install a set of Python dependencies in order to build the documentation. To do so, you can run the following command in the root project directory:
 
-``pip install -r requirements.txt``
+``python -m pip install -r requirements.txt``
 
 Building the Documentation
 --------------------------
