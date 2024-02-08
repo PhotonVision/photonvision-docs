@@ -18,9 +18,9 @@ On-Robot Wiring
 Recommended: Coprocessor with Passive POE (Gloworm, Pi with SnakeEyes)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Plug the `passive POE injector <https://www.revrobotics.com/rev-11-1210/>`_ into the coprocessor and wire it to PDP/PDB (NOT the VRM).
+1. Plug the `passive POE injector <https://www.revrobotics.com/rev-11-1210/>`_ into the coprocessor and wire it to PDP/PDH (NOT the VRM).
 
-2. Add a breaker to relevant slot in your PDP/PDB
+2. Add a breaker to relevant slot in your PDP/PDH
 
 3. Run an ethernet cable from the passive POE injector to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the networking section for more info.)
 
