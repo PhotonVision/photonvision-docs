@@ -26,11 +26,11 @@ Recommended: Coprocessor with Passive POE (Gloworm, Pi with SnakeEyes)
 
 Coprocessor without Passive POE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1a. Option 1: Get a micro USB (may be USB-C if using a newer Pi) to USB-A cable and plug the USB A side into a regulator like `this <https://www.amazon.com/KNACRO-Voltage-Regulator-Converter-Module/dp/B01HM12N2C/ref=sr_1_2>`_. Then, wire the regulator into your PDP/PDB and the Micro USB / USB C into your coprocessor.
+1a. Option 1: Get a micro USB (may be USB-C if using a newer Pi) to USB-A cable and plug the USB A side into a regulator like `this <https://www.pololu.com/product/4082>`_. Then, wire the regulator into your PDP/PDH and the Micro USB / USB C into your coprocessor.
 
 1b. Option 2: Use a USB power bank to power your coprocessor. Refer to this year's robot rulebook on legal implementations of this.
 
-1. Run an ethernet cable from your Pi to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the networking section for more info.)
+2. Run an ethernet cable from your Pi to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the networking section for more info.)
 
 
 ------------------------------------------------------------
