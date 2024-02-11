@@ -33,8 +33,9 @@ Coprocessor without Passive POE
 2. Run an ethernet cable from your Pi to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the `networking <networking.rst>`_ section for more info.)
 
 This diagram shows how to use the regulator to power a coprocessor.
-.. image:: images/pololu-wiring.png
-    :alt: A flowchart-type diagram showing how to connect wires from the PDP or PDH to the voltage regulator and then a Coprocessor.
+
+.. image:: images/pololu-diagram.png
+   :alt: A flowchart-type diagram showing how to connect wires from the PDP or PDH to the voltage regulator and then a Coprocessor.
 
 ------------------------------------------------------------
 
