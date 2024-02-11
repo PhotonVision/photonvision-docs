@@ -24,8 +24,8 @@ The ``PhotonCamera`` class has two constructors: one that takes a ``NetworkTable
 
      .. code-block:: python
 
-         # Change this to match the name of your camera
-         self.camera = PhotonCamera("photonvision")
+         # Change this to match the name of your camera as shown in the web ui
+         self.camera = PhotonCamera("your_camera_name_here")
 
 
 .. warning:: Teams must have unique names for all of their cameras regardless of which coprocessor they are attached to.
