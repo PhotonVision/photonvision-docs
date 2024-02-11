@@ -15,22 +15,22 @@ On-Robot Wiring
 
 .. note:: We recommend users use the `SnakeEyes Pi Hat <https://www.playingwithfusion.com/productview.php?pdid=133>`_ as it provides passive power over ethernet (POE) and other useful features to simplify wiring and make your life easier.
 
-Recommended: Coprocessor with Passive POE (Gloworm, Pi with SnakeEyes)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Recommended: Coprocessor with Passive POE (Gloworm, Pi with SnakeEyes, Limelight)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Plug the `passive POE injector <https://www.revrobotics.com/rev-11-1210/>`_ into the coprocessor and wire it to PDP/PDH (NOT the VRM).
 
 2. Add a breaker to relevant slot in your PDP/PDH
 
-3. Run an ethernet cable from the passive POE injector to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the networking section for more info.)
+3. Run an ethernet cable from the passive POE injector to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the `networking <networking.rst>`_ section for more info.)
 
 Coprocessor without Passive POE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1a. Option 1: Get a micro USB (may be USB-C if using a newer Pi) to USB-A cable and plug the USB A side into a regulator like `this <https://www.pololu.com/product/4082>`_. Then, wire the regulator into your PDP/PDH and the Micro USB / USB C into your coprocessor.
+1a. Option 1: Get a micro USB (may be USB-C if using a newer Pi) pigtail cable and plug the USB A side into a regulator like `this <https://www.pololu.com/product/4082>`_. Then, wire the regulator into your PDP/PDH and the Micro USB / USB C into your coprocessor.
 
 1b. Option 2: Use a USB power bank to power your coprocessor. Refer to this year's robot rulebook on legal implementations of this.
 
-2. Run an ethernet cable from your Pi to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the networking section for more info.)
+2. Run an ethernet cable from your Pi to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the `networking <networking.rst>`_ section for more info.)
 
 
 ------------------------------------------------------------
