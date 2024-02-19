@@ -1,7 +1,7 @@
 MultiTag Localization
 =====================
 
-PhotonVision can combine AprilTag detections from multiple simultaniously observed AprilTags from a particular camera wih information about where tags are expected to be located on the field to produce a better estimate of where the camera (and therefore robot) is located on the field. PhotonVision can calculate this multi-target result on your coprocessor, reducing CPU usage on your RoboRio. This result is sent over NetworkTables along with other detected targets as part of the ``PhotonPipelineResult`` provided by PhotonLib.
+PhotonVision can combine AprilTag detections from multiple simultaniously observed AprilTags from a particular camera with information about where tags are expected to be located on the field to produce a better estimate of where the camera (and therefore robot) is located on the field. PhotonVision can calculate this multi-target result on your coprocessor, reducing CPU usage on your RoboRio. This result is sent over NetworkTables along with other detected targets as part of the ``PhotonPipelineResult`` provided by PhotonLib.
 
 .. warning:: MultiTag requires an accurate field layout JSON be uploaded! Differences between this layout and tag's physical location will drive error in the estimated pose output.
 
