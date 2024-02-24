@@ -1,7 +1,7 @@
 .. image:: assets/PhotonVision-Header-onWhite.png
   :alt: PhotonVision
 
-Welcome to the official documentation of PhotonVision! PhotonVision is the free, fast, and easy-to-use vision processing solution for the *FIRST*\  Robotics Competition. PhotonVision is designed to get vision working on your robot *quickly*, without the significant cost of other similar solutions. PhotonVision supports a variety of COTS hardware, including the Raspberry Pi 3 and 4, the `Gloworm smart camera <https://photonvision.github.io/gloworm-docs/docs/quickstart/#finding-gloworm>`_, and the `SnakeEyes Pi hat <https://www.playingwithfusion.com/productview.php?pdid=133>`_.
+Welcome to the official documentation of PhotonVision! PhotonVision is the free, fast, and easy-to-use vision processing solution for the *FIRST*\  Robotics Competition. PhotonVision is designed to get vision working on your robot *quickly*, without the significant cost of other similar solutions. PhotonVision supports a variety of COTS hardware, including the Raspberry Pi 3 and 4, the `Gloworm smart camera <https://photonvision.github.io/gloworm-docs/docs/quickstart/#finding-gloworm>`_, the `SnakeEyes Pi hat <https://www.playingwithfusion.com/productview.php?pdid=133>`_, and the Orange Pi 5.
 
 Content
 -------
@@ -32,7 +32,7 @@ Content
         :link: docs/examples/index
         :link-type: doc
 
-        View various step by step guides on how to use data from PhotonVision in your code, along with a game-specific example.
+        View various step by step guides on how to use data from PhotonVision in your code, along with game-specific examples.
 
 .. grid:: 2
 
@@ -40,7 +40,7 @@ Content
         :link: docs/hardware/index
         :link-type: doc
 
-        Select appropriate hardware for high-quality, easy vision target detection.
+        Select appropriate hardware for high-quality and  easy vision target detection.
 
     .. grid-item-card::  Contributing
         :link: docs/contributing/index
