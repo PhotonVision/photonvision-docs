@@ -26,17 +26,17 @@ Recommended: Coprocessor with Passive POE (Gloworm, Pi with SnakeEyes, Limelight
 
 Coprocessor without Passive POE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1a. Option 1: Get a micro USB (may be USB-C if using a newer Pi) pigtail cable and plug the USB A side into a regulator like `this <https://www.pololu.com/product/4082>`_. Then, wire the regulator into your PDP/PDH and the Micro USB / USB C into your coprocessor.
+1a. Option 1: Get a micro USB (may be USB-C if using a newer Pi) pigtail cable and connect the wire ends to a regulator like `this <https://www.pololu.com/product/4082>`_. Then, wire the regulator into your PDP/PDH and the Micro USB / USB C into your coprocessor.
 
 1b. Option 2: Use a USB power bank to power your coprocessor. Refer to this year's robot rulebook on legal implementations of this.
 
 2. Run an ethernet cable from your Pi to your network switch / radio (we *STRONGLY* recommend the usage of a network switch, see the `networking <networking.rst>`_ section for more info.)
 
-This diagram shows how to use the regulator to power a coprocessor.
+This diagram shows how to use the recommended regulator to power a coprocessor.
 
 .. image:: images/pololu-diagram.png
-   :alt: A flowchart-type diagram showing how to connect wires from the PDP or PDH to the voltage regulator and then a Coprocessor.
+   :alt: A flowchart-type diagram showing how to connect wires from the PDP or PDH to the recommended voltage regulator and then a Coprocessor.
 
-------------------------------------------------------------
+.. note:: The regulator comes with optional screw terminals that may be used to connect the PDP/PDH and Coprocessor power wires if you do not wish to solder them.
 
 Once you have wired your coprocessor, you are now ready to install PhotonVision.
