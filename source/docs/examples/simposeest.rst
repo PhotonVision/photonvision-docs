@@ -47,7 +47,7 @@ For both simulation and on-robot code, we create objects to represent the physic
          :lineno-start: 83
 
 
-To incorporate Photon Vision, we need to create a :code:`PhotonCamera`:
+To incorporate PhotonVision, we need to create a :code:`PhotonCamera`:
 
 .. tab-set::
 
