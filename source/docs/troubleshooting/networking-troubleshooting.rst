@@ -17,8 +17,8 @@ A few issues make up the majority of support requests. Run through this checklis
    - Limelights 2/2+ and Gloworms should be flashed using the Limelight 2 image (eg, `photonvision-v2024.2.8-linuxarm64_limelight2.img.xz`).
    - Limelights 3 should be flashed using the Limelight 3 image (eg, `photonvision-v2024.2.8-linuxarm64_limelight3.img.xz`).
    - Raspberry Pi devices (including Pi 3, Pi 4, CM3 and CM4) should be flashed using the Raspberry Pi image (eg, `photonvision-v2024.2.8-linuxarm64_RaspberryPi.img.xz`).
-   - Orange Pi devices (including OPi 5 and OPi 5 plus) should be flashed using the Orange Pi image (eg, `photonvision-v2024.2.8-linuxarm64_orangepi5.img.xz`).
-   - This is due to Limelight-specific hardware configuration that makes the image incompatible with stock Raspberry Pi devices.
+   - Orange Pi 5 devices should be flashed using the Orange Pi 5 image (eg, `photonvision-v2024.2.8-linuxarm64_orangepi5.img.xz`).
+   - Orange Pi 5+ devices should be flashed using the Orange Pi 5+ image (eg, `photonvision-v2024.2.8-linuxarm64_orangepi5plus.img.xz`).
 - Is your robot code using a **2023** version of WPILib, and is your coprocessor using the most up to date **2023** release?
    - 2022 and 2023 versions of either cannot be mix-and-matched!
    - Your PhotonVision version can be checked on the :ref:`settings tab<docs/settings:settings>`.
