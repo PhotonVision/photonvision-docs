@@ -17,7 +17,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PhotonVision'
-copyright = '2023, PhotonVision'
+copyright = '2024, PhotonVision'
 author = 'Banks Troutman, Matt Morley'
 
 # -- General configuration ---------------------------------------------------

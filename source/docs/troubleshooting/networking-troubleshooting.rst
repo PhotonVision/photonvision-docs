@@ -17,8 +17,8 @@ A few issues make up the majority of support requests. Run through this checklis
    - Limelights and Gloworms should be flashed using the Limelight image (eg, `photonvision-v2023.1.2-linuxarm64-image_limelight.xz`).
    - Raspberry Pi devices (including Pi 3, Pi 4, CM3 and CM4) should be flashed using the Limelight image (eg, `photonvision-v2023.1.2-linuxarm64-image_RaspberryPi.xz`).
    - This is due to Limelight-specific hardware configuration that makes the image incompatible with stock Raspberry Pi devices.
-- Is your robot code using a **2023** version of WPILib, and is your coprocessor using the most up to date **2023** release?
-   - 2022 and 2023 versions of either cannot be mix-and-matched!
+- Is your robot code using a **2024** version of WPILib, and is your coprocessor using the most up to date **2024** release?
+   - 2022, 2023 and 2024 versions of either cannot be mix-and-matched!
    - Your PhotonVision version can be checked on the :ref:`settings tab<docs/settings:settings>`.
 - Is your team number correctly set on the :ref:`settings tab<docs/settings:settings>`?
 
@@ -39,7 +39,7 @@ Please check that:
 1. You don't have the NetworkTables Server on (toggleable in the settings tab). Turn this off when doing work on a robot.
 2. You have your team number set properly in the settings tab.
 3. Your camera name in the ``PhotonCamera`` constructor matches the name in the UI.
-4. You are using the 2023 version of WPILib and RoboRIO image.
+4. You are using the 2024 version of WPILib and RoboRIO image.
 5. Your robot is on.
 
 If all of the above are met and you still have issues, feel free to :ref:`contact us <index:contact us>` and provide the following information:
