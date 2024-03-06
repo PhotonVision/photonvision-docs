@@ -13,10 +13,12 @@ A few issues make up the majority of support requests. Run through this checklis
    - Ethernet straight from a laptop to a coprocessor will not work (most likely), due to the unreliability of link-local connections.
    - Even if there's a switch between your laptop and coprocessor, you'll still want a radio or router in the loop somehow.
    - The FRC radio is the *only* router we will officially support due to the innumerable variations between routers.
-- (Raspberry Pi & Limelight only) have you flashed the correct image, and is it up to date?
-   - Limelights and Gloworms should be flashed using the Limelight image (eg, `photonvision-v2023.1.2-linuxarm64-image_limelight.xz`).
-   - Raspberry Pi devices (including Pi 3, Pi 4, CM3 and CM4) should be flashed using the Limelight image (eg, `photonvision-v2023.1.2-linuxarm64-image_RaspberryPi.xz`).
-   - This is due to Limelight-specific hardware configuration that makes the image incompatible with stock Raspberry Pi devices.
+- (Raspberry Pi, Orange Pi & Limelight only) have you flashed the correct image, and is it up to date?
+   - Limelights 2/2+ and Gloworms should be flashed using the Limelight 2 image (eg, `photonvision-v2024.2.8-linuxarm64_limelight2.img.xz`).
+   - Limelights 3 should be flashed using the Limelight 3 image (eg, `photonvision-v2024.2.8-linuxarm64_limelight3.img.xz`).
+   - Raspberry Pi devices (including Pi 3, Pi 4, CM3 and CM4) should be flashed using the Raspberry Pi image (eg, `photonvision-v2024.2.8-linuxarm64_RaspberryPi.img.xz`).
+   - Orange Pi 5 devices should be flashed using the Orange Pi 5 image (eg, `photonvision-v2024.2.8-linuxarm64_orangepi5.img.xz`).
+   - Orange Pi 5+ devices should be flashed using the Orange Pi 5+ image (eg, `photonvision-v2024.2.8-linuxarm64_orangepi5plus.img.xz`).
 - Is your robot code using a **2024** version of WPILib, and is your coprocessor using the most up to date **2024** release?
    - 2022, 2023 and 2024 versions of either cannot be mix-and-matched!
    - Your PhotonVision version can be checked on the :ref:`settings tab<docs/settings:settings>`.
