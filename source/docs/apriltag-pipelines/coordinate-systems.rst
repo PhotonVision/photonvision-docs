@@ -19,6 +19,12 @@ OpenCV by default uses x-left/y-down/z-out for camera transforms. PhotonVision a
 * The z-axis points upwards
 
 
+.. image:: images/camera-coord.png
+   :scale: 45 %
+   :align: center
+
+|
+
 .. image:: images/multiple-tags.png
    :scale: 45 %
    :align: center
