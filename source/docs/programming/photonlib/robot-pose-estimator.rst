@@ -98,6 +98,15 @@ Calling ``update()`` on your ``PhotonPoseEstimator`` will return an ``EstimatedR
       }
 
 You should be updating your `drivetrain pose estimator <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/state-space/state-space-pose-estimators.html>`_ with the result from the ``RobotPoseEstimator`` every loop using ``addVisionMeasurement()``. TODO: add example note
+.. tab-set-code::
+   .. code-block:: java
+      var result = photonCam_1.getLatestResult();
+      if (result.hasTargets()) { //Make 
+        var update = photonPoseEstimator.update();
+        Pose3d currentPose3d = update.get().estimatedPose; 
+        botPose = currentPose3d.toPose2d();
+        photonTimestamp = update.get().timestampSeconds;
+      }
 
 Additional ``PhotonPoseEstimator`` Methods
 ------------------------------------------
