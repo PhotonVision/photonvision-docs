@@ -22,6 +22,12 @@ The ``PhotonCamera`` class has two constructors: one that takes a ``NetworkTable
         :language: c++
         :lines: 42-43
 
+     .. code-block:: python
+
+         # Change this to match the name of your camera as shown in the web ui
+         self.camera = PhotonCamera("your_camera_name_here")
+
+
 .. warning:: Teams must have unique names for all of their cameras regardless of which coprocessor they are attached to.
 
 Getting the Pipeline Result
@@ -44,6 +50,13 @@ Use the ``getLatestResult()``/``GetLatestResult()`` (Java and C++ respectively) 
          :language: c++
          :lines: 35-36
 
+     .. code-block:: python
+
+         # Query the latest result from PhotonVision
+         result = self.camera.getLatestResult()
+
+
+
 .. note:: Unlike other vision software solutions, using the latest result guarantees that all information is from the same timestamp. This is achievable because the PhotonVision backend sends a byte-packed string of data which is then deserialized by PhotonLib to get target data. For more information, check out the `PhotonLib source code <https://github.com/PhotonVision/photonvision/tree/master/photon-lib>`_.
 
 
@@ -63,7 +76,13 @@ Each pipeline result has a ``hasTargets()``/``HasTargets()`` (Java and C++ respe
       // Check if the latest result has any targets.
       bool hasTargets = result.HasTargets();
 
-.. warning:: You must *always* check if the result has a target via ``hasTargets()``/``HasTargets()`` before getting targets or else you may get a null pointer exception. Further, you must use the same result in every subsequent call in that loop.
+   .. code-block:: python
+
+     # Check if the latest result has any targets.
+      hasTargets = result.hasTargets()
+
+.. warning:: In Java/C++, You must *always* check if the result has a target via ``hasTargets()``/``HasTargets()`` before getting targets or else you may get a null pointer exception. Further, you must use the same result in every subsequent call in that loop.
+
 
 Getting a List of Targets
 -------------------------
@@ -86,6 +105,11 @@ You can get a list of tracked targets using the ``getTargets()``/``GetTargets()`
       // Get a list of currently tracked targets.
       wpi::ArrayRef<photonlib::PhotonTrackedTarget> targets = result.GetTargets();
 
+   .. code-block:: python
+
+      # Get a list of currently tracked targets.
+      targets = result.getTargets()
+
 Getting the Best Target
 -----------------------
 You can get the :ref:`best target <docs/reflectiveAndShape/contour-filtering:Contour Grouping and Sorting>` using ``getBestTarget()``/``GetBestTarget()`` (Java and C++ respectively) method from the pipeline result.
@@ -100,6 +124,12 @@ You can get the :ref:`best target <docs/reflectiveAndShape/contour-filtering:Con
 
       // Get the current best target.
       photonlib::PhotonTrackedTarget target = result.GetBestTarget();
+
+
+   .. code-block:: python
+
+      # TODO - Not currently supported
+
 
 Getting Data From A Target
 --------------------------
@@ -132,6 +162,16 @@ Getting Data From A Target
       frc::Transform2d pose = target.GetCameraToTarget();
       wpi::SmallVector<std::pair<double, double>, 4> corners = target.GetCorners();
 
+   .. code-block:: python
+
+      # Get information from target.
+      yaw = target.getYaw()
+      pitch = target.getPitch()
+      area = target.getArea()
+      skew = target.getSkew()
+      pose = target.getCameraToTarget()
+      corners = target.getDetectedCorners()
+
 Getting AprilTag Data From A Target
 -----------------------------------
 .. note:: All of the data above (**except skew**) is available when using AprilTags.
@@ -158,6 +198,14 @@ Getting AprilTag Data From A Target
       frc::Transform3d bestCameraToTarget = target.getBestCameraToTarget();
       frc::Transform3d alternateCameraToTarget = target.getAlternateCameraToTarget();
 
+   .. code-block:: python
+
+      # Get information from target.
+      targetID = target.getFiducialId()
+      poseAmbiguity = target.getPoseAmbiguity()
+      bestCameraToTarget = target.getBestCameraToTarget()
+      alternateCameraToTarget = target.getAlternateCameraToTarget()
+
 Saving Pictures to File
 -----------------------
 A ``PhotonCamera`` can save still images from the input or output video streams to file. This is useful for debugging what a camera is seeing while on the field and confirming targets are being identified properly.
@@ -181,5 +229,13 @@ Images are stored within the PhotonVision configuration directory. Running the "
 
       // Capture post-process camera stream image
       camera.TakeOutputSnapshot();
+
+    .. code-block:: python
+
+      # Capture pre-process camera stream image
+      camera.takeInputSnapshot()
+
+      # Capture post-process camera stream image
+      camera.takeOutputSnapshot()
 
 .. note:: Saving images to file takes a bit of time and uses up disk space, so doing it frequently is not recommended. In general, the camera will save an image every 500ms. Calling these methods faster will not result in additional images. Consider tying image captures to a button press on the driver controller, or an appropriate point in an autonomous routine.

@@ -3,7 +3,7 @@ Updating PhotonVision
 
 PhotonVision provides many different files on a single release page. Each release contains JAR files for performing "offline updates" of a device with PhotonVision already installed, as well as full image files to "flash" to supported coprocessors.
 
-.. image:: release-page.png
+.. image:: images/release-page.png
    :alt: Example GitHub release page
 
 In the example release above, we see:
@@ -37,13 +37,13 @@ Pre-release/development version of PhotonVision can be tested by installing/down
 
 Github Actions builds pre-release version of PhotonVision automatically on PRs and on each commit merged to master. To test a particular commit to master, navigate to the `PhotonVision commit list <https://github.com/PhotonVision/photonvision/commits/master/>`_ and click on the check mark (below). Scroll to "Build / Build fat JAR - PLATFORM", click details, and then summary. From here, JAR and image files can be downloaded to be flashed or uploaded using "Offline Update".
 
-.. image:: gh_actions_1.png
+.. image:: images/gh_actions_1.png
    :alt: Github Actions Badge
 
-.. image:: gh_actions_2.png
+.. image:: images/gh_actions_2.png
    :alt: Github Actions artifact list
 
 Built JAR files (but not image files) can also be downloaded from PRs before they are merged. Navigate to the PR in GitHub, and select Checks at the top. Click on "Build" to display the same artifact list as above.
 
-.. image:: gh_actions_3.png
+.. image:: images/gh_actions_3.png
    :alt: Github Actions artifacts from PR

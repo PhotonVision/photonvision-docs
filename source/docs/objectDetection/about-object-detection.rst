@@ -13,7 +13,7 @@ For the 2024 season, PhotonVision ships with a **pre-trained NOTE detector** (sh
 Tracking Objects
 ^^^^^^^^^^^^^^^^
 
-Before you get started with object detection, ensure that you have followed the previous sections on installation, wiring and networking. Next, open the Web UI, go to the top right card, and swtich to the “Object Detection” type. You should see a screen similar to the image above.
+Before you get started with object detection, ensure that you have followed the previous sections on installation, wiring and networking. Next, open the Web UI, go to the top right card, and switch to the “Object Detection” type. You should see a screen similar to the image above.
 
 PhotonVision currently ships with a NOTE detector based on a `YOLOv5 model <https://docs.ultralytics.com/yolov5/>`_. This model is trained to detect one or more object "classes" (such as cars, stoplights, or in our case, NOTES) in an input image. For each detected object, the model outputs a bounding box around where in the image the object is located, what class the object belongs to, and a unitless confidence between 0 and 1.
 
