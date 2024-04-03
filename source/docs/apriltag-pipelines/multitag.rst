@@ -1,14 +1,14 @@
 MultiTag Localization
 =====================
 
-PhotonVision can combine AprilTag detections from multiple simultaniously observed AprilTags from a particular camera with information about where tags are expected to be located on the field to produce a better estimate of where the camera (and therefore robot) is located on the field. PhotonVision can calculate this multi-target result on your coprocessor, reducing CPU usage on your RoboRio. This result is sent over NetworkTables along with other detected targets as part of the ``PhotonPipelineResult`` provided by PhotonLib.
+PhotonVision can combine AprilTag detections from multiple simultaneously observed AprilTags from a particular camera with information about where tags are expected to be located on the field to produce a better estimate of where the camera (and therefore robot) is located on the field. PhotonVision can calculate this multi-target result on your coprocessor, reducing CPU usage on your RoboRio. This result is sent over NetworkTables along with other detected targets as part of the ``PhotonPipelineResult`` provided by PhotonLib.
 
-.. warning:: MultiTag requires an accurate field layout JSON be uploaded! Differences between this layout and tag's physical location will drive error in the estimated pose output.
+.. warning:: MultiTag requires an accurate field layout JSON to be uploaded! Differences between this layout and the tags' physical location will drive error in the estimated pose output.
 
 Enabling MultiTag
 ^^^^^^^^^^^^^^^^^
 
-Ensure that your camera is calibrated and 3D mode is enabled. Navigate to the Output tab and enable "Do Multi-Target Estimation". This enables MultiTag using the uploaded field layout JSON to calculate your camera's pose in the field. This 3D transform will be shown as an additional table in the "targets" tab, along with the IDs of AprilTags used to compute this transform.
+Ensure that your camera is calibrated and 3D mode is enabled. Navigate to the Output tab and enable "Do Multi-Target Estimation". This enables MultiTag to use the uploaded field layout JSON to calculate your camera's pose in the field. This 3D transform will be shown as an additional table in the "targets" tab, along with the IDs of AprilTags used to compute this transform.
 
 .. image:: images/multitag-ui.png
    :width: 600
@@ -48,6 +48,6 @@ PhotonVision ships by default with the `2024 field layout JSON <https://github.c
    :width: 600
    :alt: The currently saved field layout in the Photon UI
 
-An updated field layout can be uploaded by navigating to the "Device Control" card of the Settings tab and clicking "Import Settings". In the pop-up dialog, select the "Apriltag Layout" type and choose a updated layout JSON (in the same format as the WPILib field layout JSON linked above) using the paperclip icon, and select "Import Settings". The AprilTag layout in the "AprilTag Field Layout" card below should update to reflect the new layout.
+An updated field layout can be uploaded by navigating to the "Device Control" card of the Settings tab and clicking "Import Settings". In the pop-up dialog, select the "AprilTag Layout" type and choose an updated layout JSON (in the same format as the WPILib field layout JSON linked above) using the paperclip icon, and select "Import Settings". The AprilTag layout in the "AprilTag Field Layout" card below should be updated to reflect the new layout.
 
 .. note:: Currently, there is no way to update this layout using PhotonLib, although this feature is under consideration.
