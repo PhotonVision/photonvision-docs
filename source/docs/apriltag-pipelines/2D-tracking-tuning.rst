@@ -4,7 +4,7 @@
 Tracking Apriltags
 ------------------
 
-Before you get started tracking AprilTags, ensure that you have followed the previous sections on installation, wiring and networking. Next, open the Web UI, go to the top right card, and swtich to the "AprilTag" or "Aruco" type. You should see a screen similar to the one below.
+Before you get started tracking AprilTags, ensure that you have followed the previous sections on installation, wiring and networking. Next, open the Web UI, go to the top right card, and switch to the "AprilTag" or "Aruco" type. You should see a screen similar to the one below.
 
 .. image:: images/apriltag.png
    :align: center
