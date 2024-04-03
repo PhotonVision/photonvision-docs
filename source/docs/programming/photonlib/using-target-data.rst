@@ -79,7 +79,7 @@ You can get a `translation <https://docs.wpilib.org/en/latest/docs/software/adva
    .. code-block:: c++
 
       // Calculate a translation from the camera to the target.
-      frc::Translation2d translation = photonlib::PhotonUtils::EstimateCameraToTargetTranslationn(
+      frc::Translation2d translation = photonlib::PhotonUtils::EstimateCameraToTargetTranslation(
         distance, frc::Rotation2d(units::degree_t(-target.GetYaw())));
 
 .. note:: We are negating the yaw from the camera from CV (computer vision) conventions to standard mathematical conventions. In standard mathematical conventions, as you turn counter-clockwise, angles become more positive.

@@ -19,7 +19,7 @@ The API documentation can be found in here: `Java <https://github.wpilib.org/all
 
    .. code-block:: c++
 
-      // The parameter for LoadAPrilTagLayoutField will be different depending on the game.
+      // The parameter for LoadAprilTagLayoutField will be different depending on the game.
       frc::AprilTagFieldLayout aprilTagFieldLayout = frc::LoadAprilTagLayoutField(frc::AprilTagField::k2024Crescendo);
 
 

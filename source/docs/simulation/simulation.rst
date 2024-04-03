@@ -29,7 +29,7 @@ PhotonLib can simulate cameras on the field and generate target data approximati
 
    Simulation does NOT include the following:
 
-   - Full physical camera/world simulation (targets are automatically thresholded)
+   - Full physical camera/world simulation (target thresholds are automatically set)
    - Image Thresholding Process (camera gain, brightness, etc)
    - Pipeline switching
    - Snapshots

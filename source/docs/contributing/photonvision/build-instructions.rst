@@ -96,7 +96,7 @@ Running the following command under the root directory will build the jar under 
 Build and Run PhotonVision on a Raspberry Pi Coprocessor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As a convinenece, the build has built in `deploy` command which builds, deploys, and starts the current source code on a coprocessor.
+As a convenience, the build has built in `deploy` command which builds, deploys, and starts the current source code on a coprocessor.
 
 An architecture override is required to specify the deploy target's architecture.
 
@@ -242,7 +242,7 @@ You can run one of the many built in examples straight from the command line, to
      - aimandrange:simulateNative
      - getinrange:simulateNative
 
-To run them, use the commands listed below. Photonlib must first be published to your local maven repository, then the copyPhotonlib task will copy the generated vendordep json file into each example. After that, the simulateJava/simulateNative task can be used like a normal robot project. Robot simulation with attached debugger is technically possible by using simulateExternalJava and modifying the launch script it exports, though unsupported.
+To run them, use the commands listed below. PhotonLib must first be published to your local maven repository, then the copyPhotonlib task will copy the generated vendordep json file into each example. After that, the simulateJava/simulateNative task can be used like a normal robot project. Robot simulation with attached debugger is technically possible by using simulateExternalJava and modifying the launch script it exports, though unsupported.
 
 .. code-block::
 

@@ -6,10 +6,10 @@
 Ambiguity
 ---------
 
-Translating from 2D to 3D using data from the calibration and the four tag corners can lead to "pose ambiguity", where it appears that the AprilTag pose is flipping between two different poses. You can read more about this issue `here. <https://docs.wpilib.org/en/stable/docs/software/vision-processing/apriltag/apriltag-intro.html#d-to-3d-ambiguity>` Ambiguity is calculated as the ratio of reprojection errors between two pose solutions (if they exist), where reprojection error is the error corresponding to the image distance between where the apriltag's corners are detected vs where we expect to see them based on the tag's estimated camera relative pose.
+Translating from 2D to 3D using data from the calibration and the four tag corners can lead to "pose ambiguity", where it appears that the AprilTag pose is flipping between two different poses. You can read more about this issue `here. <https://docs.wpilib.org/en/stable/docs/software/vision-processing/apriltag/apriltag-intro.html#d-to-3d-ambiguity>` Ambiguity is calculated as the ratio of reprojection errors between two pose solutions (if they exist), where reprojection error is the error corresponding to the image distance between where the AprilTag's corners are detected vs where we expect to see them based on the tag's estimated camera relative pose.
 
 There a few steps you can take to resolve/mitigate this issue:
 
-1. Mount cameras at oblique angles so it is less likely that the tag will be seen straght on.
+1. Mount cameras at oblique angles so it is less likely that the tag will be seen straight on.
 2. Use the :ref:`MultiTag system <docs/apriltag-pipelines/multitag:MultiTag Localization>` in order to combine the corners from multiple tags to get a more accurate and unambiguous pose.
-3. Reject all tag poses where the ambiguity ratio (availiable via PhotonLib) is greater than 0.2.
+3. Reject all tag poses where the ambiguity ratio (available via PhotonLib) is greater than 0.2.

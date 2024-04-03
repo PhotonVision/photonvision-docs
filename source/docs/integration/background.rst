@@ -6,7 +6,7 @@ Vision Processing's Purpose
 
 Each year, the FRC game requires a fundamental operation: **Align the Robot to a Goal**.
 
-Regardless of whether that alignment point is for picking up gamepieces, or for scoring, fast and effective robots must be able to align to them quickly and repeatably.
+Regardless of whether that alignment point is for picking up game pieces, or for scoring, fast and effective robots must be able to align to them quickly and repeatably.
 
 Software strategies can be used to help augment the ability of a human operator, or step in when a human operator is not allowed to control the robot.
 
