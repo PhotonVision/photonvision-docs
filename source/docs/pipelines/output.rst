@@ -13,7 +13,7 @@ This section also includes a switch to enable processing and sending multiple ta
 .. raw:: html
 
         <video width="85%" controls>
-            <source src="../../../_static/assets/offsetandmultiple.mp4" type="video/mp4">
+            <source src="../../_static/assets/offsetandmultiple.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
