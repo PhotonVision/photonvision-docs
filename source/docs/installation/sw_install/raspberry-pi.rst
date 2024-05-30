@@ -18,6 +18,10 @@ For more detailed instructions on using Etcher, please see the `Etcher website <
 
 .. warning:: Using a version of Balena Etcher older than 1.18.11 may cause bootlooping (the system will repeatedly boot and restart) when imaging your Raspberry Pi. Updating to 1.18.11 will fix this issue.
 
+Alternatively, you can use the `Raspberry Pi Imager <https://www.raspberrypi.org/software/>`_ to flash the image. 
+
+Select "Choose OS" and then "Use custom" to select the downloaded image file. Select your microSD card and flash.
+
 If you are using a non-standard Pi Camera connected to the CSI port, :ref:`additional configuration may be required. <docs/hardware/picamconfig:Pi Camera Configuration>`
 
 Final Steps
