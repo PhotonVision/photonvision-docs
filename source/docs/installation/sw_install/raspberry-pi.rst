@@ -16,7 +16,7 @@ Use the 1.18.11 version of `Balena Etcher <https://github.com/balena-io/etcher/r
 
 For more detailed instructions on using Etcher, please see the `Etcher website <https://www.balena.io/etcher/>`_.
 
-.. warning:: Using a version of Balena Etcher older than 1.18.11 may cause bootlooping (the system will repeatedly boot and restart) when imaging your Raspberry Pi. Updating to the latest Balena Etcher will fix this issue.
+.. warning:: Using a version of Balena Etcher older than 1.18.11 may cause bootlooping (the system will repeatedly boot and restart) when imaging your Raspberry Pi. Updating to 1.18.11 will fix this issue.
 
 If you are using a non-standard Pi Camera connected to the CSI port, :ref:`additional configuration may be required. <docs/hardware/picamconfig:Pi Camera Configuration>`
 
