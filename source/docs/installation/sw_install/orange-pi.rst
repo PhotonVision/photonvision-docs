@@ -12,11 +12,11 @@ Flashing the Pi Image
 ---------------------
 An 8GB or larger SD card is recommended.
 
-Use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto a Orange Pi. Select the downloaded image file, select your microSD card, and flash.
+Use the 1.18.11 version of `Balena Etcher <https://github.com/balena-io/etcher/releases/tag/v1.18.11>`_ to flash an image onto a Orange Pi. Select the downloaded image file, select your microSD card, and flash.
 
 For more detailed instructions on using Etcher, please see the `Etcher website <https://www.balena.io/etcher/>`_.
 
-.. warning:: Using an older version of Balena Etcher may cause bootlooping (the system will repeatedly boot and restart) when imaging your Orange Pi. Updating to the latest Balena Etcher will fix this issue.
+.. warning:: Using a version of Balena Etcher older than 1.18.11 may cause bootlooping (the system will repeatedly boot and restart) when imaging your Orange Pi. Updating to the latest Balena Etcher will fix this issue.
 
 .. note:: If you are working on Linux, "dd" can be used in the command line to flash an image.
 
