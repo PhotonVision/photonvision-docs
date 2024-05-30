@@ -18,7 +18,7 @@ For more detailed instructions on using Etcher, please see the `Etcher website <
 
 .. warning:: Using a version of Balena Etcher older than 1.18.11 may cause bootlooping (the system will repeatedly boot and restart) when imaging your Orange Pi. Updating to 1.18.11 will fix this issue.
 
-Alternatively, you can use the `Raspberry Pi Imager <https://www.raspberrypi.org/software/>`_ to flash the image. 
+Alternatively, you can use the `Raspberry Pi Imager <https://www.raspberrypi.com/software/>`_ to flash the image. 
 
 Select "Choose OS" and then "Use custom" to select the downloaded image file. Select your microSD card and flash.
 
