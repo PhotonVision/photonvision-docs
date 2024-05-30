@@ -52,4 +52,4 @@ Save the file, close the editor, and eject the drive. The boot configuration sho
 Additional Information
 ----------------------
 
-See `the libcamera documentation <https://github.com/raspberrypi/documentation/blob/679fab721855a3e8f17aa51819e5c2a7c447e98d/documentation/asciidoc/computers/camera/rpicam_configuration.adoc#L15>`_ for more details on configuring cameras.
+See `the libcamera documentation <https://github.com/raspberrypi/documentation/blob/679fab721855a3e8f17aa51819e5c2a7c447e98d/documentation/asciidoc/computers/camera/rpicam_configuration.adoc>`_ for more details on configuring cameras.
