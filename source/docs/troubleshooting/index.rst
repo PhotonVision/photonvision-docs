@@ -8,3 +8,4 @@ Troubleshooting
    logging
    camera-troubleshooting
    networking-troubleshooting
+   unix-commands
