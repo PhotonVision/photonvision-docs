@@ -1,14 +1,12 @@
 Useful Unix Commands
 ====================
 
-This document provides a list of useful Unix commands for troubleshooting.
-
 SSH
 ---
 
-SSH (Secure Shell) is used to securely connect to remote systems. In our case we want to SSH from the host machine (device on the same network as your coprocessor) to your coprocessor / remote device. 
+SSH (Secure Shell) is used to securely connect from a local to a remote system (ex. from a laptop to a coprocessor).
 
-.. note:: Unlike the others on this page, this command is not Unix specific and can be done on Windows and MacOS from their respective terminals.
+.. note:: Unlike the other commands on this page, ssh is not Unix specific and can be done on Windows and MacOS from their respective terminals.
 
 Example:
 
@@ -19,7 +17,7 @@ Example:
 ifconfig
 --------
 
-Run ``ifconfig`` with your coprocessor connected to a monitor / keyboard in order to see its IP address and other network configuration information.
+Run ``ifconfig`` with your coprocessor connected to a monitor in order to see its IP address and other network configuration information.
 
 
 SCP
