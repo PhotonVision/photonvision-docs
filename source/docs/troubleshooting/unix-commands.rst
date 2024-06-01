@@ -28,7 +28,7 @@ SCP
 Example:
 
 .. code-block:: bash
-    
+
     scp [file] username@hostname:/path/to/destination
 
 v4l2-ctl
@@ -39,11 +39,11 @@ v4l2-ctl
 List available video devices (used to verify the device recognized a connected camera):
 
 .. code-block:: bash
-    
+
     v4l2-ctl --list-devices
 
 List supported formats and resolutions for a specific video device:
 
 .. code-block:: bash
-    
+
     v4l2-ctl --list-formats-ext --device /path/to/video_device
