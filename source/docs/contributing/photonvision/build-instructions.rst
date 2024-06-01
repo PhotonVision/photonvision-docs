@@ -23,7 +23,7 @@ Get the source code from git:
 
    git clone https://github.com/PhotonVision/photonvision
 
-or alternatively download to source code from github and extract the zip:
+or alternatively download the source code from github and extract the zip:
 
 .. image:: assets/git-download.png
    :width: 600
@@ -96,7 +96,7 @@ Running the following command under the root directory will build the jar under 
 Build and Run PhotonVision on a Raspberry Pi Coprocessor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As a convinenece, the build has built in `deploy` command which builds, deploys, and starts the current source code on a coprocessor.
+As a convenience, the build has a built-in `deploy` command which builds, deploys, and starts the current source code on a coprocessor.
 
 An architecture override is required to specify the deploy target's architecture.
 

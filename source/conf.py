@@ -17,7 +17,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PhotonVision'
-copyright = '2023, PhotonVision'
+copyright = '2024, PhotonVision'
 author = 'Banks Troutman, Matt Morley'
 
 # -- General configuration ---------------------------------------------------
@@ -118,3 +118,9 @@ html_theme_options = {
 suppress_warnings = ['epub.unknown_project_files']
 
 sphinx_tabs_valid_builders = ['epub', 'linkcheck']
+
+# Excluded links for linkcheck
+# These should be periodically checked by hand to ensure that they are still functional
+linkcheck_ignore = [
+'https://www.raspberrypi.com/software/'
+]

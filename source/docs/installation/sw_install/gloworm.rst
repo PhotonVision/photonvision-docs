@@ -10,7 +10,7 @@ Flashing the Gloworm Image
 --------------------------
 Plug a USB C cable from your computer into the USB C port on Gloworm labeled with a download icon.
 
-Use `Balena Etcher <https://www.balena.io/etcher/>`_ to flash an image onto the coprocessor.
+Use the 1.18.11 version of `Balena Etcher <https://github.com/balena-io/etcher/releases/tag/v1.18.11>`_ to flash an image onto the coprocessor.
 
 Run BalenaEtcher as an administrator. Select the downloaded ``.zip`` file.
 
@@ -18,7 +18,7 @@ Select the compute module. If it doesn't show up after 30s try using another USB
 
 Hit flash. Wait for flashing to complete, then disconnect your USB C cable.
 
-.. warning:: Using an older version of Balena Etcher may cause bootlooping (the system will repeatedly boot and restart) when imaging your Gloworm. Updating to the latest Balena Etcher will fix this issue.
+.. warning:: Using a version of Balena Etcher older than 1.18.11 may cause bootlooping (the system will repeatedly boot and restart) when imaging your Gloworm. Updating to 1.18.11 will fix this issue.
 
 Final Steps
 -----------
