@@ -55,11 +55,17 @@ If running an arm64 or architecture, you will need to add the following to your 
     deb [trusted=yes] http://mrcal.secretsauce.net/packages/DISTRO/public/ DISTRO main
 
 Where `DISTRO` is one of:
+
 - buster
+
 - bulleye
+
 - bookworm
+
 - bionic
+
 - focal
+
 - jammy
 
 .. note::
