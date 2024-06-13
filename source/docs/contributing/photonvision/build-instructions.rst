@@ -9,7 +9,7 @@ Development Setup
 Prerequisites
 ~~~~~~~~~~~~~
 
-| **Java Development Kit:** This project requires Java Development Kit (JDK) 11 to be compiled. This is the same Java version that comes with WPILib. If you don't have this JDK with WPILib, you can follow the instructions to install JDK 11 for your platform `here <https://bell-sw.com/pages/liberica_install_guide-11.0.7//>`_.
+| **Java Development Kit:** This project requires Java Development Kit (JDK) 17 to be compiled. This is the same Java version that comes with WPILib for 2025+. If you don't have this JDK with WPILib, you can follow the instructions to install JDK 17 for your platform `here <https://bell-sw.com/pages/downloads/#jdk-17-lts>`_.
 | **Node JS:** The UI is written in Node JS. To compile the UI, Node 14.18.0 to Node 16.0.0 is required. To install Node JS follow the instructions for your platform `on the official Node JS website <https://nodejs.org/en/download/>`_.  However, modify this line
 
 .. code-block:: bash
