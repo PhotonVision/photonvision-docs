@@ -39,3 +39,35 @@ If your computer has a compatible webcam connected, PhotonVision should startup 
 Accessing the PhotonVision Interface
 ------------------------------------
 Once the Java backend is up and running, you can access the main vision interface by navigating to ``localhost:5800`` inside your browser.
+
+MrCal JNI Error
+---------------
+If you run into an issue running PhotonVision on Linux where it cannot load the MrCal JNI, you may need to install dependencies with the following command:
+
+.. code-block::
+
+    $ sudo apt install mrcal libmrcal-dev python3-mrcal
+
+If running an arm64 or architecture, you will need to add the following to your `/etc/apt/sources.list`
+
+.. code-block::
+
+    deb [trusted=yes] http://mrcal.secretsauce.net/packages/DISTRO/public/ DISTRO main
+
+Where `DISTRO` is one of:
+
+- buster
+
+- bulleye
+
+- bookworm
+
+- bionic
+
+- focal
+
+- jammy
+
+.. note::
+
+    Further information can be found at https://mrcal.secretsauce.net/install.html
