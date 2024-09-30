@@ -138,8 +138,7 @@ Getting Data From A Target
 * double ``getArea()``/``GetArea()``: The area (how much of the camera feed the bounding box takes up) as a percent (0-100).
 * double ``getSkew()``/``GetSkew()``: The skew of the target in degrees (counter-clockwise positive).
 * double[] ``getCorners()``/``GetCorners()``: The 4 corners of the minimum bounding box rectangle.
-* Transform2d ``getCameraToTarget()``/``GetCameraToTarget()``: The camera to target transform. See `2d transform documentation here <https://docs.wpilib.org/en/latest/docs/software/advanced-controls/geometry/transformations.html#transform2d-and-twist2d>`_.
-
+* Transform3d ``getBestCameraToTarget()``/``GetBestCameraToTarget()``: The camera to target transform.
 
 .. tab-set-code::
    .. code-block:: java
@@ -149,8 +148,8 @@ Getting Data From A Target
       double pitch = target.getPitch();
       double area = target.getArea();
       double skew = target.getSkew();
-      Transform2d pose = target.getCameraToTarget();
-      List<TargetCorner> corners = target.getCorners();
+      Transform3d pose = target.getBestCameraToTarget();
+      List<TargetCorner> corners = target.getDetectedCorners();
 
    .. code-block:: c++
 
@@ -159,8 +158,8 @@ Getting Data From A Target
       double pitch = target.GetPitch();
       double area = target.GetArea();
       double skew = target.GetSkew();
-      frc::Transform2d pose = target.GetCameraToTarget();
-      wpi::SmallVector<std::pair<double, double>, 4> corners = target.GetCorners();
+      frc::Transform3d pose = target.GetBestCameraToTarget();
+      wpi::SmallVector<std::pair<double, double>, 4> corners = target.GetDetectedCorners();
 
    .. code-block:: python
 
