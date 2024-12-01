@@ -128,7 +128,8 @@ You can get the :ref:`best target <docs/reflectiveAndShape/contour-filtering:Con
 
    .. code-block:: python
 
-      # TODO - Not currently supported
+      # Get the current best target.
+      target = result.getBestTarget()
 
 
 Getting Data From A Target
